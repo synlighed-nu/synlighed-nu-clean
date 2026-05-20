@@ -3,22 +3,29 @@ import React from 'react';
 export default function SynlighedNu() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
+      
       {/* NAVIGATION */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#002B5B] rounded-full flex items-center justify-center">
+            <div className="w-9 h-9 bg-[#002B5B] rounded-full flex items-center justify-center">
               <span className="text-white text-2xl">👁</span>
             </div>
             <div>
-              <div className="font-bold text-xl">Synlighed.nu</div>
-              <div className="text-xs text-gray-500 -mt-1">Hurtigere. Bedre. Billigere.</div>
+              <div className="font-bold text-xl tracking-tight">Synlighed.nu</div>
+              <div className="text-[10px] text-gray-500 -mt-1">Hurtigere. Bedre. Billigere.</div>
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <a href="https://x.com/SynlighedNu" target="_blank" className="text-sm font-medium hover:underline">Følg på X</a>
-            <a href="https://opencollective.com/synlighed-nu" target="_blank" 
-               className="bg-[#002B5B] text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-[#001a3d] transition">
+
+          <div className="flex items-center gap-6 text-sm">
+            <a href="#afstemning" className="hover:underline">Afstemning</a>
+            <a href="#de-store-greb" className="hover:underline">De store greb</a>
+            <a href="https://x.com/SynlighedNu" target="_blank" className="hover:underline">X</a>
+            <a 
+              href="https://opencollective.com/synlighed-nu" 
+              target="_blank"
+              className="bg-[#002B5B] text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-[#001f3d] transition"
+            >
               Støt projektet
             </a>
           </div>
@@ -26,244 +33,222 @@ export default function SynlighedNu() {
       </nav>
 
       {/* HERO */}
-      <div className="pt-20 pb-16 px-6 max-w-5xl mx-auto text-center">
-        <div className="inline-block bg-[#002B5B] text-white text-sm px-4 py-1 rounded-full mb-4">
-          Borgerdrevet initiativ
+      <div className="pt-20 pb-16 px-6 max-w-4xl mx-auto text-center">
+        <div className="flex justify-center mb-6">
+          <div className="w-16 h-16 bg-[#002B5B] rounded-full flex items-center justify-center">
+            <span className="text-white text-4xl">👁</span>
+          </div>
         </div>
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
+
+        <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-3">
           Synlighed først.
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-          Vi bruger hundreder af milliarder af skattekroner hvert eneste år.<br />
-          Alligevel ved de fleste danskere ikke, hvor pengene går hen — eller hvad vi reelt får for dem.
+        
+        <p className="text-2xl text-gray-600 mb-10">
+          Hurtigere. Bedre. Billigere.
         </p>
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#deja-vu" className="bg-[#002B5B] text-white px-8 py-3 rounded-2xl font-semibold text-lg hover:bg-[#001a3d] transition">
-            Se problemerne
+          <a 
+            href="#afstemning" 
+            className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition"
+          >
+            Stem på det vigtigste
           </a>
-          <a href="#bliv-med" className="border border-[#002B5B] px-8 py-3 rounded-2xl font-semibold text-lg hover:bg-gray-50 transition">
-            Bliv en del af det
+          <a 
+            href="#de-store-greb" 
+            className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition"
+          >
+            Se de store greb
           </a>
         </div>
       </div>
 
       {/* HVORFOR SYNLIGHED? */}
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-8">Hvorfor Synlighed?</h2>
-        <div className="space-y-5 text-lg text-gray-700">
-          <p>
-            Vi bruger hundreder af milliarder af skattekroner hvert eneste år. 
-            Penge der kommer fra din og min løn, fra virksomheder og fra vores fælles velfærd.
-          </p>
-          <p>Alligevel ved de fleste danskere ikke:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Hvor præcist pengene går hen</li>
-            <li>Hvad vi reelt får for dem</li>
-            <li>Hvilke alternativer og trade-offs der findes</li>
-            <li>Hvem der reelt tjener på beslutningerne</li>
-          </ul>
-          <p>
-            Det skaber et system, hvor politikere og embedsmænd kan gemme sig bag fine ord, 
-            symbolpolitik og uigennemsigtige kompromisser — mens de rigtige problemer vokser.
-          </p>
-          <p className="font-medium text-[#002B5B]">
-            Synlighed.nu er et initiativ for fuld offentlig gennemsigtighed over alle offentlige udgifter.
-          </p>
-        </div>
+      <div className="max-w-3xl mx-auto px-6 pb-16 text-center">
+        <p className="text-lg text-gray-600">
+          Vi bruger milliarder af skattekroner hver dag – men de fleste kan ikke se, hvor pengene går hen, 
+          hvad vi får for dem, eller hvilke konsekvenser der følger med. Det skal ændres.
+        </p>
       </div>
 
-      {/* DÉJÀ VU */}
-      <div id="deja-vu" className="bg-gray-50 py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="text-[#E30613] font-semibold tracking-[3px] text-sm mb-2">DÉJÀ VU</div>
-            <h2 className="text-4xl font-bold">Vi har hørt det før</h2>
-            <p className="text-gray-600 mt-3 max-w-xl mx-auto">De samme problemer. De samme løfter. År efter år.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Billig strøm", desc: "En stor motorvej af elkabler skaber ikke billig el. Lokal produktion kan give op til 25% besparelse." },
-              { title: "Rent drikkevand", desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte grundvandet." },
-              { title: "Billige boliger", desc: "Boligstøtte holder priserne kunstigt høje. De unge uden velhavende forældre holdes ude af markedet." },
-              { title: "Billig transport", desc: "DSB køber strøm på markedet i stedet for at producere den lokalt. Det gør transporten unødvendigt dyr." }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-3xl border">
-                <div className="text-2xl mb-3">⚠️</div>
-                <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* BOLIGSTØTTE */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">BOLIG</div>
-            <h3 className="text-3xl font-bold leading-tight">Boligstøtte – en skrue uden ende</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Ca. 592.000 husstande modtager boligstøtte for milliarder af kroner årligt. På overfladen lyder det som en god ordning. Men mekanismen bag er et klassisk eksempel på, hvordan gode intentioner kan forstærke det problem, de skulle løse.</p>
-            <ul className="list-disc pl-5 space-y-1.5">
-              <li>Støtten holder efterspørgslen kunstigt høj</li>
-              <li>Høj efterspørgsel driver priserne yderligere op</li>
-              <li>De unge uden velhavende forældre bliver holdt ude af markedet</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* ENERGI */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t bg-gray-50">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">ENERGI</div>
-            <h3 className="text-3xl font-bold leading-tight">En stor motorvej af elkabler skaber ikke billig el</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Når strømmen skal transporteres over lange afstande, går der betydelige mængder tabt i nettet. Ved at producere strømmen lokalt kan vi reducere det samlede energibehov med op til 25 %.</p>
-            <p>Alligevel prioriterer vi massive centraliserede projekter. Vi erstatter robust, lokal infrastruktur med centraliseret, sårbar og dyr infrastruktur.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* SUNDHED */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">SUNDHED</div>
-            <h3 className="text-3xl font-bold leading-tight">280 milliarder kr. om året – behandling frem for forebyggelse</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Offentlige sundhedsudgifter ligger på ca. 280 milliarder kroner årligt. Alligevel går langt størstedelen til behandling, når sygdommen først er opstået — ikke til reel forebyggelse.</p>
-            <p>Vi har skabt et system, der er ekstremt dygtigt til at behandle sygdom, men kun middelmådigt til at forebygge den.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* REKLAME OG SYGDOM */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t bg-gray-50">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">REKLAME & SYGDOM</div>
-            <h3 className="text-3xl font-bold leading-tight">Vi forbyder cigaretter – men ikke ultraforarbejdet mad</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Vi forbyder reklame for cigaretter og alkohol, men tillader massiv markedsføring af ultraforarbejdede produkter fyldt med sukker, salt og fedt.</p>
-            <p>Vi behandler symptomerne med 280 milliarder kroner årligt, mens vi samtidig giver industrien fri adgang til at skabe efterspørgsel efter de produkter, der gør os syge.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* RENT DRIKKEVAND */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">DRIKKEVAND</div>
-            <h3 className="text-3xl font-bold leading-tight">Vi forurener vores egen kilde</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Pesticidrester findes i over halvdelen af alle undersøgte boringer. Vi bruger milliarder på at rense vand, mens vi samtidig tillader massiv sprøjtning, der forurener grundvandet.</p>
-            <p>Vi betaler dobbelt: Først for at forurene kilden, bagefter for at rense det op.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* OFFENTLIG TRANSPORT */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t bg-gray-50">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">TRANSPORT</div>
-            <h3 className="text-3xl font-bold leading-tight">Vi gør offentlig transport dyrere – ikke billigere</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Vi mangler fokus på det mest grundlæggende: Hvordan gør vi offentlig transport billigere – ikke dyrere?</p>
-            <p>DSB køber strøm på det volatile elmarked i stedet for at producere en stor del lokalt. Lokal strømproduktion er den eneste realistiske vej til reel billigere transport.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* KREATIVITET / UDDANNELSE */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">UDDANNELSE</div>
-            <h3 className="text-3xl font-bold leading-tight">Vi uddanner kreativiteten ud af børnene</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Ca. 90 % af børn i børnehavealderen scorer på genius-niveau i divergent tænkning. Når de når gymnasiet, er det kun ca. 10 %. Som voksne er tallet under 2 %.</p>
-            <p>Skolesystemet belønner én rigtig svar-kultur og konformitet frem for fri leg, eksperimenteren og kritisk tænkning.</p>
-            <p className="font-medium">Kreativitet er ikke en luksus. Det er en forudsætning for et frit og funktionelt demokrati.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* MEDIERNES ROLLE */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t bg-gray-50">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">MEDIERNE</div>
-            <h3 className="text-3xl font-bold leading-tight">Uden synlighed bliver det svært at stille de rigtige spørgsmål</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Når store beslutninger og milliarder af kroner forbliver uigennemsigtige, risikerer den politiske journalistik at blive præget af gentagelser frem for reel kontrol.</p>
-            <p className="font-medium">Synlighed er en forudsætning for god journalistik. Uden adgang til klare data bliver det svært at stille de rigtige spørgsmål.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* DEMOKRATI 2.0 */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t">
-        <div className="grid md:grid-cols-12 gap-x-12 gap-y-8 items-start">
-          <div className="md:col-span-5">
-            <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">DEMOKRATI</div>
-            <h3 className="text-3xl font-bold leading-tight">Demokrati 2.0 – vi må udvikle det, ellers taber vi det</h3>
-          </div>
-          <div className="md:col-span-7 text-gray-700 space-y-4 text-[15px] leading-relaxed">
-            <p>Det gamle demokrati er blevet misbrugt, fordi vi har ladet det stå stille. Vi har brug for at opgradere det med synlighed, agil reasoning og klare grundprincipper.</p>
-            <p>Uden denne udvikling risikerer vi at glide videre mod idiokrati – et samfund styret af laveste fællesnævner og kortsigtede interesser.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* FØRSTE SKRIDT */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t bg-gray-50">
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <div className="text-[#E30613] font-semibold tracking-widest text-sm mb-2">FØRSTE SKRIDT</div>
-          <h3 className="text-3xl font-bold">En åben platform for fuld synlighed</h3>
-        </div>
-        <div className="max-w-4xl mx-auto bg-white border rounded-3xl p-8">
-          <h4 className="font-semibold text-xl mb-4">AI som neutral medspiller</h4>
-          <p className="text-gray-700">Platformen skal ikke kun vise tal. Den skal fungere som en neutral hjælper, hvor du kan stille spørgsmål som:</p>
-          <ul className="list-disc pl-5 mt-3 space-y-2 text-gray-700">
-            <li>“Hvor meget bruger vi på X, og hvad får vi egentlig for det?”</li>
-            <li>“Hvad sker der, hvis vi flytter penge fra Y til Z?”</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* CTA - BLIV EN DEL AF DET */}
-      <div id="bliv-med" className="bg-[#002B5B] text-white py-20 px-6 text-center">
+      {/* AKTUEL AFSTEMNING */}
+      <div id="afstemning" className="max-w-5xl mx-auto px-6 py-16 border-t">
         <div className="max-w-2xl mx-auto">
-          <h3 className="text-3xl font-bold mb-4">Vil du være med?</h3>
-          <p className="text-gray-300 mb-8 text-lg">
-            Hvis du også er træt af, at vi ikke kan gennemskue, hvor pengene går hen – så følg med.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://x.com/SynlighedNu" target="_blank" className="bg-white text-[#002B5B] px-8 py-3.5 rounded-2xl font-semibold text-lg hover:bg-gray-100 transition">Følg på X</a>
-            <a href="https://opencollective.com/synlighed-nu" target="_blank" className="border border-white px-8 py-3.5 rounded-2xl font-semibold text-lg hover:bg-white/10 transition">Støt projektet</a>
+          
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <div className="text-[#E30613] font-semibold tracking-[2px] text-sm mb-1">AFSTEMNING • RUNDE 1</div>
+              <h2 className="text-4xl font-bold tracking-tight">Hvad mener du er vigtigst?</h2>
+            </div>
+            <div className="text-right">
+              <div className="text-sm text-gray-500">Lukker om</div>
+              <div className="text-2xl font-semibold text-[#002B5B]">58 dage</div>
+            </div>
           </div>
-          <p className="mt-8 text-sm text-gray-400">Hurtigere. Bedre. Billigere. — Det er ikke bare et slogan.</p>
+
+          <p className="text-gray-600 mb-8">
+            Vælg dine 3 vigtigste områder. Din stemme er anonym.
+          </p>
+
+          {/* Top 3 Form */}
+          <div className="bg-white border rounded-3xl p-8">
+            <form className="space-y-6">
+              
+              {/* 1. Vigtigst */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">1. Vigtigst</label>
+                <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
+                  <option value="">Vælg område...</option>
+                  <option>Boligstøtte – omkostninger og konsekvenser</option>
+                  <option>Energi – lokal vs. central produktion</option>
+                  <option>Sundhed – behandling vs. forebyggelse</option>
+                  <option>Rent drikkevand – beskyttelse vs. oprensning</option>
+                  <option>Udlændingepolitik – omkostninger og incitamenter</option>
+                  <option>Kreativitet og uddannelse</option>
+                  <option>Offentlig administration – incitamenter og effektivitet</option>
+                </select>
+              </div>
+
+              {/* 2. Næst-vigtigst */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">2. Næst-vigtigst</label>
+                <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
+                  <option value="">Vælg område...</option>
+                  <option>Boligstøtte – omkostninger og konsekvenser</option>
+                  <option>Energi – lokal vs. central produktion</option>
+                  <option>Sundhed – behandling vs. forebyggelse</option>
+                  <option>Rent drikkevand – beskyttelse vs. oprensning</option>
+                  <option>Udlændingepolitik – omkostninger og incitamenter</option>
+                  <option>Kreativitet og uddannelse</option>
+                  <option>Offentlig administration – incitamenter og effektivitet</option>
+                </select>
+              </div>
+
+              {/* 3. Tredje-vigtigst */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">3. Tredje-vigtigst</label>
+                <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
+                  <option value="">Vælg område...</option>
+                  <option>Boligstøtte – omkostninger og konsekvenser</option>
+                  <option>Energi – lokal vs. central produktion</option>
+                  <option>Sundhed – behandling vs. forebyggelse</option>
+                  <option>Rent drikkevand – beskyttelse vs. oprensning</option>
+                  <option>Udlændingepolitik – omkostninger og incitamenter</option>
+                  <option>Kreativitet og uddannelse</option>
+                  <option>Offentlig administration – incitamenter og effektivitet</option>
+                </select>
+              </div>
+
+              <button 
+                type="submit"
+                className="mt-4 w-full bg-[#002B5B] hover:bg-[#001f3d] text-white py-4 rounded-2xl font-semibold text-lg transition active:scale-[0.985]"
+              >
+                Afgiv din stemme
+              </button>
+            </form>
+
+            <p className="text-center text-xs text-gray-500 mt-4">
+              Du kan kun stemme én gang pr. 60-dages periode.
+            </p>
+          </div>
+
+          <div className="mt-6 text-sm text-gray-600 text-center max-w-md mx-auto">
+            Vi bruger afstemningen som vigtigt input, men prioriterer også ud fra system-effekter, 
+            feedback-loops og hvor vi kan skabe størst effekt hurtigst.
+          </div>
+        </div>
+      </div>
+
+      {/* VORES PRIORITERING */}
+      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center">
+        <h3 className="text-xl font-semibold mb-3">Vores nuværende prioritering</h3>
+        <p className="text-gray-600 text-sm max-w-md mx-auto">
+          Selvom afstemningen er vigtig, prioriterer vi også ud fra hvor vi kan skabe størst systemisk effekt hurtigst. 
+          Vi viser både folkets stemme og vores begrundelse – altid med åben reasoning.
+        </p>
+      </div>
+
+      {/* DE STORE GREB */}
+      <div id="de-store-greb" className="max-w-5xl mx-auto px-6 py-16 border-t bg-gray-50">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <div className="text-[#E30613] font-semibold tracking-[2px] text-sm mb-2">DE STORE GREB</div>
+          <h2 className="text-4xl font-bold tracking-tight">De fundamentale problemer</h2>
+          <p className="text-gray-600 mt-3">
+            Mange problemer har de samme rodårsager. Her er de store greb, der går igen.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {[
+            { title: "Incitamenter", desc: "Systemet belønner ofte proces og administration frem for resultater." },
+            { title: "Centralisering", desc: "Store centrale løsninger skaber afhængighed og høje omkostninger." },
+            { title: "Forebyggelse vs. behandling", desc: "Vi bruger langt flere penge på at reparere end på at undgå problemer." },
+            { title: "Mangel på synlighed", desc: "Uden klar indsigt i omkostninger og konsekvenser kan vi ikke træffe gode beslutninger." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white border rounded-2xl p-6">
+              <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
+              <p className="text-gray-600 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* DE KONKRETE OMRÅDER */}
+      <div className="max-w-5xl mx-auto px-6 py-16">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="text-3xl font-bold tracking-tight">De konkrete områder</h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            { title: "Boligstøtte", desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Det holder priserne kunstigt høje." },
+            { title: "Energi", desc: "Lokal produktion kan give direkte besparelser på op til 25 %. Alligevel prioriteres centrale løsninger." },
+            { title: "Sundhed", desc: "280 mia. kr. årligt. Stort fokus på medicin og behandling – meget lidt på reel forebyggelse." },
+            { title: "Rent drikkevand", desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte." },
+            { title: "Udlændingepolitik", desc: "Hvad koster den samlede politik reelt – og hvilke incitamenter skaber den på lang sigt?" },
+            { title: "Kreativitet & uddannelse", desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning." },
+            { title: "Offentlig administration", desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?" }
+          ].map((item, i) => (
+            <div key={i} className="border rounded-2xl p-6">
+              <h4 className="font-semibold mb-2">{item.title}</h4>
+              <p className="text-sm text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* BLIV EN DEL AF DET */}
+      <div className="max-w-3xl mx-auto px-6 py-16 border-t text-center">
+        <h2 className="text-3xl font-bold tracking-tight mb-4">Bliv en del af det</h2>
+        <p className="text-gray-600 mb-8 max-w-md mx-auto">
+          Følg os på X, deltag i afstemningerne og støt projektet, hvis du tror på mere synlighed og bedre beslutninger.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="https://x.com/SynlighedNu" 
+            target="_blank"
+            className="border border-[#002B5B] px-8 py-3.5 rounded-2xl font-semibold hover:bg-gray-50 transition"
+          >
+            Følg på X
+          </a>
+          <a 
+            href="https://opencollective.com/synlighed-nu" 
+            target="_blank"
+            className="bg-[#002B5B] text-white px-8 py-3.5 rounded-2xl font-semibold hover:bg-[#001f3d] transition"
+          >
+            Støt på Open Collective
+          </a>
         </div>
       </div>
 
       {/* FOOTER */}
-      <footer className="text-center py-8 text-sm text-gray-500 border-t">
-        Synlighed.nu — Et borgerdrevet initiativ for mere gennemsigtighed i det offentlige.
+      <footer className="border-t py-8 text-center text-xs text-gray-500">
+        Synlighed.nu — Hurtigere. Bedre. Billigere.<br />
+        Initiativ til agil reasoning og fuld offentlig synlighed i Danmark.
       </footer>
+
     </div>
   );
 }
