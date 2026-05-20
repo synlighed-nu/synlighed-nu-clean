@@ -9,9 +9,9 @@ export default function SynlighedNu() {
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
             <img 
-              src="/images/logo-eye.jpg" 
+              src="/images/eye.png" 
               alt="Synlighed.nu" 
-              className="h-10 w-10 object-contain"
+              className="h-9 w-9 object-contain"
             />
             <div>
               <div className="font-bold text-xl tracking-tighter">Synlighed.nu</div>
@@ -34,36 +34,48 @@ export default function SynlighedNu() {
         </div>
       </nav>
 
-      {/* HERO */}
-      <div className="pt-20 pb-16 px-6 max-w-4xl mx-auto text-center">
-        <div className="flex justify-center mb-8">
-          <img 
-            src="/images/logo-full.jpg" 
-            alt="Synlighed.nu - Hurtigere. Bedre. Billigere." 
-            className="h-20 md:h-24 w-auto object-contain"
-          />
-        </div>
-
-        <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-3">
-          Synlighed først.
-        </h1>
+      {/* HERO med subtilt grid */}
+      <div className="pt-20 pb-16 px-6 relative overflow-hidden"
+           style={{
+             backgroundImage: `
+               linear-gradient(#002B5B 1px, transparent 1px),
+               linear-gradient(90deg, #002B5B 1px, transparent 1px)
+             `,
+             backgroundSize: '48px 48px',
+             backgroundPosition: 'center',
+             opacity: 1
+           }}>
         
-        <p className="text-2xl text-gray-600 mb-10">
-          Hurtigere. Bedre. Billigere.
-        </p>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/images/eye.png" 
+              alt="Synlighed.nu" 
+              className="h-20 w-20 object-contain"
+            />
+          </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#afstemning" className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition">
-            Stem på det vigtigste
-          </a>
-          <a href="#de-store-greb" className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition">
-            Se de store greb
-          </a>
+          <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-3">
+            Synlighed først.
+          </h1>
+          
+          <p className="text-2xl text-gray-600 mb-10">
+            Hurtigere. Bedre. Billigere.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#afstemning" className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition">
+              Stem på det vigtigste
+            </a>
+            <a href="#de-store-greb" className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition">
+              Se de store greb
+            </a>
+          </div>
         </div>
       </div>
 
       {/* HVORFOR SYNLIGHED? */}
-      <div className="max-w-3xl mx-auto px-6 pb-16 text-center">
+      <div className="max-w-3xl mx-auto px-6 py-16 text-center">
         <p className="text-lg text-gray-600">
           Vi bruger milliarder af skattekroner hver dag – men de fleste kan ikke se, hvor pengene går hen, 
           hvad vi får for dem, eller hvilke konsekvenser der følger med.
@@ -216,15 +228,9 @@ export default function SynlighedNu() {
             { title: "Kreativitet & uddannelse", desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning.", slug: "kreativitet" },
             { title: "Offentlig administration", desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?", slug: "administration" }
           ].map((item, i) => (
-            <a 
-              key={i} 
-              href={`#${item.slug}`}
-              className="group border rounded-2xl p-6 active:bg-gray-50 transition block"
-            >
+            <a key={i} href={`#${item.slug}`} className="group border rounded-2xl p-6 active:bg-gray-50 transition block">
               <div className="flex justify-between items-start mb-2">
-                <h4 className="font-semibold text-lg pr-4 group-active:text-[#002B5B]">
-                  {item.title}
-                </h4>
+                <h4 className="font-semibold text-lg pr-4 group-active:text-[#002B5B]">{item.title}</h4>
                 <span className="text-[#002B5B] text-xl flex-shrink-0">→</span>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
@@ -243,11 +249,7 @@ export default function SynlighedNu() {
           Alle er velkomne til at give feedback og deltage i dialogen – uanset om du støtter økonomisk eller ej. 
           Skriv direkte til os på X. Vi læser og svarer så vidt muligt.
         </p>
-        <a 
-          href="https://x.com/SynlighedNu" 
-          target="_blank"
-          className="inline-block border border-[#002B5B] px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-50 transition"
-        >
+        <a href="https://x.com/SynlighedNu" target="_blank" className="inline-block border border-[#002B5B] px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-50 transition">
           Skriv til os på X
         </a>
       </div>
