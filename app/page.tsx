@@ -8,23 +8,34 @@ export default function SynlighedNu() {
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-[#002B5B] rounded-full flex items-center justify-center">
-              <span className="text-white text-2xl">👁</span>
+            {/* Forbedret Logo */}
+            <div className="w-10 h-10 bg-[#002B5B] rounded-full flex items-center justify-center relative overflow-hidden">
+              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <div className="w-3.5 h-3.5 bg-[#002B5B] rounded-full relative">
+                  {/* Simpel eye + grid effekt */}
+                  <div className="absolute inset-0 grid grid-cols-2 gap-px p-0.5">
+                    <div className="bg-white/30 rounded-sm"></div>
+                    <div className="bg-white/30 rounded-sm"></div>
+                    <div className="bg-white/30 rounded-sm"></div>
+                    <div className="bg-white/30 rounded-sm"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div>
-              <div className="font-bold text-xl tracking-tight">Synlighed.nu</div>
+              <div className="font-bold text-xl tracking-tighter">Synlighed.nu</div>
               <div className="text-[10px] text-gray-500 -mt-1">Hurtigere. Bedre. Billigere.</div>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 text-sm">
+          <div className="flex items-center gap-6 text-sm font-medium">
             <a href="#afstemning" className="hover:underline">Afstemning</a>
             <a href="#de-store-greb" className="hover:underline">De store greb</a>
             <a href="https://x.com/SynlighedNu" target="_blank" className="hover:underline">X</a>
             <a 
               href="https://opencollective.com/synlighed-nu" 
               target="_blank"
-              className="bg-[#002B5B] text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-[#001f3d] transition"
+              className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-5 py-2 rounded-xl text-sm font-semibold transition"
             >
               Støt projektet
             </a>
@@ -32,11 +43,20 @@ export default function SynlighedNu() {
         </div>
       </nav>
 
-      {/* HERO */}
+      {/* HERO - Opdateret og skarpere */}
       <div className="pt-20 pb-16 px-6 max-w-4xl mx-auto text-center">
         <div className="flex justify-center mb-6">
-          <div className="w-16 h-16 bg-[#002B5B] rounded-full flex items-center justify-center">
-            <span className="text-white text-4xl">👁</span>
+          <div className="w-20 h-20 bg-[#002B5B] rounded-full flex items-center justify-center shadow-lg">
+            <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+              <div className="w-4 h-4 bg-[#002B5B] rounded-full relative">
+                <div className="absolute inset-0 grid grid-cols-2 gap-px p-px">
+                  <div className="bg-white/40 rounded-sm"></div>
+                  <div className="bg-white/40 rounded-sm"></div>
+                  <div className="bg-white/40 rounded-sm"></div>
+                  <div className="bg-white/40 rounded-sm"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -49,16 +69,10 @@ export default function SynlighedNu() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="#afstemning" 
-            className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition"
-          >
+          <a href="#afstemning" className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition">
             Stem på det vigtigste
           </a>
-          <a 
-            href="#de-store-greb" 
-            className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition"
-          >
+          <a href="#de-store-greb" className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition">
             Se de store greb
           </a>
         </div>
@@ -68,15 +82,15 @@ export default function SynlighedNu() {
       <div className="max-w-3xl mx-auto px-6 pb-16 text-center">
         <p className="text-lg text-gray-600">
           Vi bruger milliarder af skattekroner hver dag – men de fleste kan ikke se, hvor pengene går hen, 
-          hvad vi får for dem, eller hvilke konsekvenser der følger med. Det skal ændres.
+          hvad vi får for dem, eller hvilke konsekvenser der følger med.
         </p>
       </div>
 
-      {/* AKTUEL AFSTEMNING */}
+      {/* AKTUEL AFSTEMNING med stemme-tæller */}
       <div id="afstemning" className="max-w-5xl mx-auto px-6 py-16 border-t">
         <div className="max-w-2xl mx-auto">
           
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-4">
             <div>
               <div className="text-[#E30613] font-semibold tracking-[2px] text-sm mb-1">AFSTEMNING • RUNDE 1</div>
               <h2 className="text-4xl font-bold tracking-tight">Hvad mener du er vigtigst?</h2>
@@ -87,7 +101,15 @@ export default function SynlighedNu() {
             </div>
           </div>
 
-          <p className="text-gray-600 mb-8">
+          {/* Stemme-tæller */}
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 bg-gray-100 px-4 py-1.5 rounded-full">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-gray-700">1.248 stemmer afgivet i denne runde</span>
+            </div>
+          </div>
+
+          <p className="text-gray-600 mb-8 text-center">
             Vælg dine 3 vigtigste områder. Din stemme er anonym.
           </p>
 
@@ -95,7 +117,6 @@ export default function SynlighedNu() {
           <div className="bg-white border rounded-3xl p-8">
             <form className="space-y-6">
               
-              {/* 1. Vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">1. Vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -110,7 +131,6 @@ export default function SynlighedNu() {
                 </select>
               </div>
 
-              {/* 2. Næst-vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">2. Næst-vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -125,7 +145,6 @@ export default function SynlighedNu() {
                 </select>
               </div>
 
-              {/* 3. Tredje-vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">3. Tredje-vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -174,9 +193,7 @@ export default function SynlighedNu() {
         <div className="max-w-3xl mx-auto text-center mb-10">
           <div className="text-[#E30613] font-semibold tracking-[2px] text-sm mb-2">DE STORE GREB</div>
           <h2 className="text-4xl font-bold tracking-tight">De fundamentale problemer</h2>
-          <p className="text-gray-600 mt-3">
-            Mange problemer har de samme rodårsager. Her er de store greb, der går igen.
-          </p>
+          <p className="text-gray-600 mt-3">Mange problemer har de samme rodårsager. Her er de store greb, der går igen.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -226,18 +243,10 @@ export default function SynlighedNu() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="https://x.com/SynlighedNu" 
-            target="_blank"
-            className="border border-[#002B5B] px-8 py-3.5 rounded-2xl font-semibold hover:bg-gray-50 transition"
-          >
+          <a href="https://x.com/SynlighedNu" target="_blank" className="border border-[#002B5B] px-8 py-3.5 rounded-2xl font-semibold hover:bg-gray-50 transition">
             Følg på X
           </a>
-          <a 
-            href="https://opencollective.com/synlighed-nu" 
-            target="_blank"
-            className="bg-[#002B5B] text-white px-8 py-3.5 rounded-2xl font-semibold hover:bg-[#001f3d] transition"
-          >
+          <a href="https://opencollective.com/synlighed-nu" target="_blank" className="bg-[#002B5B] text-white px-8 py-3.5 rounded-2xl font-semibold hover:bg-[#001f3d] transition">
             Støt på Open Collective
           </a>
         </div>
