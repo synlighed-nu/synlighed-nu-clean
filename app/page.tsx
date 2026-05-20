@@ -84,7 +84,7 @@ export default function SynlighedNu() {
         </p>
       </div>
 
-      {/* HVORFOR X? (ny kort forklaring) */}
+      {/* HVORFOR X? */}
       <div className="max-w-3xl mx-auto px-6 pb-12 text-center">
         <p className="text-sm text-gray-500">
           Vi bruger primært <strong>X</strong> som platform, fordi det giver den mest direkte, 
@@ -123,7 +123,6 @@ export default function SynlighedNu() {
           {/* Top 3 Form */}
           <div className="bg-white border rounded-3xl p-8">
             <form className="space-y-6">
-              
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">1. Vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -218,31 +217,46 @@ export default function SynlighedNu() {
         </div>
       </div>
 
-      {/* DE KONKRETE OMRÅDER */}
+      {/* DE KONKRETE OMRÅDER - Mobil optimeret version */}
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl font-bold tracking-tight">De konkrete områder</h2>
+          <p className="text-gray-600 mt-2">Tryk på et område for at læse mere.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { title: "Boligstøtte", desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Det holder priserne kunstigt høje." },
-            { title: "Energi", desc: "Lokal produktion kan give direkte besparelser på op til 25 %. Alligevel prioriteres centrale løsninger." },
-            { title: "Sundhed", desc: "280 mia. kr. årligt. Stort fokus på medicin og behandling – meget lidt på reel forebyggelse." },
-            { title: "Rent drikkevand", desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte." },
-            { title: "Udlændingepolitik", desc: "Hvad koster den samlede politik reelt – og hvilke incitamenter skaber den på lang sigt?" },
-            { title: "Kreativitet & uddannelse", desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning." },
-            { title: "Offentlig administration", desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?" }
+            { title: "Boligstøtte", desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Det holder priserne kunstigt høje.", slug: "boligstoette" },
+            { title: "Energi", desc: "Lokal produktion kan give direkte besparelser på op til 25 %. Alligevel prioriteres centrale løsninger.", slug: "energi" },
+            { title: "Sundhed", desc: "280 mia. kr. årligt. Stort fokus på medicin og behandling – meget lidt på reel forebyggelse.", slug: "sundhed" },
+            { title: "Rent drikkevand", desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte.", slug: "rent-drikkevand" },
+            { title: "Udlændingepolitik", desc: "Hvad koster den samlede politik reelt – og hvilke incitamenter skaber den på lang sigt?", slug: "udlaendingepolitik" },
+            { title: "Kreativitet & uddannelse", desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning.", slug: "kreativitet" },
+            { title: "Offentlig administration", desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?", slug: "administration" }
           ].map((item, i) => (
-            <div key={i} className="border rounded-2xl p-6">
-              <h4 className="font-semibold mb-2">{item.title}</h4>
-              <p className="text-sm text-gray-600">{item.desc}</p>
-            </div>
+            <a 
+              key={i} 
+              href={`#${item.slug}`}
+              className="group border rounded-2xl p-6 active:bg-gray-50 transition block"
+            >
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-semibold text-lg pr-4 group-active:text-[#002B5B]">
+                  {item.title}
+                </h4>
+                <span className="text-[#002B5B] text-xl flex-shrink-0">→</span>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+              
+              {/* Ekstra tydeligt link til mobil */}
+              <div className="mt-4 text-sm font-medium text-[#002B5B] flex items-center gap-1">
+                Læs mere <span className="text-lg">→</span>
+              </div>
+            </a>
           ))}
         </div>
       </div>
 
-      {/* FEEDBACK & DIALOG (ny sektion) */}
+      {/* FEEDBACK & DIALOG */}
       <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center">
         <h3 className="text-xl font-semibold mb-3">Feedback & Dialog</h3>
         <p className="text-gray-600 text-sm max-w-md mx-auto mb-4">
