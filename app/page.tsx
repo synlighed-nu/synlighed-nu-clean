@@ -8,11 +8,9 @@ export default function SynlighedNu() {
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            {/* Forbedret Logo */}
             <div className="w-10 h-10 bg-[#002B5B] rounded-full flex items-center justify-center relative overflow-hidden">
               <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                 <div className="w-3.5 h-3.5 bg-[#002B5B] rounded-full relative">
-                  {/* Simpel eye + grid effekt */}
                   <div className="absolute inset-0 grid grid-cols-2 gap-px p-0.5">
                     <div className="bg-white/30 rounded-sm"></div>
                     <div className="bg-white/30 rounded-sm"></div>
@@ -43,7 +41,7 @@ export default function SynlighedNu() {
         </div>
       </nav>
 
-      {/* HERO - Opdateret og skarpere */}
+      {/* HERO */}
       <div className="pt-20 pb-16 px-6 max-w-4xl mx-auto text-center">
         <div className="flex justify-center mb-6">
           <div className="w-20 h-20 bg-[#002B5B] rounded-full flex items-center justify-center shadow-lg">
@@ -86,7 +84,16 @@ export default function SynlighedNu() {
         </p>
       </div>
 
-      {/* AKTUEL AFSTEMNING med stemme-tæller */}
+      {/* HVORFOR X? (ny kort forklaring) */}
+      <div className="max-w-3xl mx-auto px-6 pb-12 text-center">
+        <p className="text-sm text-gray-500">
+          Vi bruger primært <strong>X</strong> som platform, fordi det giver den mest direkte, 
+          offentlige og ufiltrerede dialog. Her kan alle se, hvad der bliver sagt – uden lukkede algoritmer. 
+          Det passer bedst til projektets formål: fuld synlighed og åben reasoning.
+        </p>
+      </div>
+
+      {/* AKTUEL AFSTEMNING */}
       <div id="afstemning" className="max-w-5xl mx-auto px-6 py-16 border-t">
         <div className="max-w-2xl mx-auto">
           
@@ -233,6 +240,22 @@ export default function SynlighedNu() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* FEEDBACK & DIALOG (ny sektion) */}
+      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center">
+        <h3 className="text-xl font-semibold mb-3">Feedback & Dialog</h3>
+        <p className="text-gray-600 text-sm max-w-md mx-auto mb-4">
+          Alle er velkomne til at give feedback og deltage i dialogen – uanset om du støtter økonomisk eller ej. 
+          Skriv direkte til os på X. Vi læser og svarer så vidt muligt.
+        </p>
+        <a 
+          href="https://x.com/SynlighedNu" 
+          target="_blank"
+          className="inline-block border border-[#002B5B] px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-50 transition"
+        >
+          Skriv til os på X
+        </a>
       </div>
 
       {/* BLIV EN DEL AF DET */}
