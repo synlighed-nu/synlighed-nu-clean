@@ -31,25 +31,14 @@ export default function SynlighedNu() {
         </div>
       </nav>
 
-      {/* HERO - Professionel og ren med subtilt grid */}
-      <div 
-        className="pt-24 pb-20 px-6 relative"
-        style={{
-          backgroundImage: `
-            linear-gradient(#002B5B 0.8px, transparent 0.8px),
-            linear-gradient(90deg, #002B5B 0.8px, transparent 0.8px)
-          `,
-          backgroundSize: '52px 52px',
-          backgroundPosition: 'center',
-          opacity: 0.9
-        }}
-      >
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+      {/* HERO - Ren og professionel */}
+      <div className="pt-24 pb-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-8">
             <img 
               src="/images/eye.png" 
               alt="Synlighed.nu" 
-              className="h-16 w-16 object-contain"
+              className="h-20 w-20 object-contain"
             />
           </div>
 
