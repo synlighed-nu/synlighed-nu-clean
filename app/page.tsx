@@ -8,7 +8,6 @@ export default function SynlighedNu() {
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            {/* Bruger det rene øje-logo */}
             <img 
               src="/images/logo-eye.jpg" 
               alt="Synlighed.nu" 
@@ -35,7 +34,7 @@ export default function SynlighedNu() {
         </div>
       </nav>
 
-      {/* HERO - Bruger det fulde logo */}
+      {/* HERO */}
       <div className="pt-20 pb-16 px-6 max-w-4xl mx-auto text-center">
         <div className="flex justify-center mb-8">
           <img 
@@ -63,9 +62,6 @@ export default function SynlighedNu() {
         </div>
       </div>
 
-      {/* Resten af siden fortsætter som før... */}
-      {/* (Jeg har beholdt alt det andet indhold fra tidligere version) */}
-
       {/* HVORFOR SYNLIGHED? */}
       <div className="max-w-3xl mx-auto px-6 pb-16 text-center">
         <p className="text-lg text-gray-600">
@@ -86,6 +82,7 @@ export default function SynlighedNu() {
       {/* AKTUEL AFSTEMNING */}
       <div id="afstemning" className="max-w-5xl mx-auto px-6 py-16 border-t">
         <div className="max-w-2xl mx-auto">
+          
           <div className="flex items-center justify-between mb-4">
             <div>
               <div className="text-[#E30613] font-semibold tracking-[2px] text-sm mb-1">AFSTEMNING • RUNDE 1</div>
@@ -170,8 +167,113 @@ export default function SynlighedNu() {
         </div>
       </div>
 
-      {/* Resten af siden (De store greb, De konkrete områder, Feedback, Bliv en del af det, Footer) */}
-      {/* ... (samme som tidligere version) ... */}
+      {/* VORES PRIORITERING */}
+      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center">
+        <h3 className="text-xl font-semibold mb-3">Vores nuværende prioritering</h3>
+        <p className="text-gray-600 text-sm max-w-md mx-auto">
+          Selvom afstemningen er vigtig, prioriterer vi også ud fra hvor vi kan skabe størst systemisk effekt hurtigst. 
+          Vi viser både folkets stemme og vores begrundelse – altid med åben reasoning.
+        </p>
+      </div>
+
+      {/* DE STORE GREB */}
+      <div id="de-store-greb" className="max-w-5xl mx-auto px-6 py-16 border-t bg-gray-50">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <div className="text-[#E30613] font-semibold tracking-[2px] text-sm mb-2">DE STORE GREB</div>
+          <h2 className="text-4xl font-bold tracking-tight">De fundamentale problemer</h2>
+          <p className="text-gray-600 mt-3">Mange problemer har de samme rodårsager. Her er de store greb, der går igen.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {[
+            { title: "Incitamenter", desc: "Systemet belønner ofte proces og administration frem for resultater." },
+            { title: "Centralisering", desc: "Store centrale løsninger skaber afhængighed og høje omkostninger." },
+            { title: "Forebyggelse vs. behandling", desc: "Vi bruger langt flere penge på at reparere end på at undgå problemer." },
+            { title: "Mangel på synlighed", desc: "Uden klar indsigt i omkostninger og konsekvenser kan vi ikke træffe gode beslutninger." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white border rounded-2xl p-6">
+              <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
+              <p className="text-gray-600 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* DE KONKRETE OMRÅDER */}
+      <div className="max-w-5xl mx-auto px-6 py-16">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="text-3xl font-bold tracking-tight">De konkrete områder</h2>
+          <p className="text-gray-600 mt-2">Tryk på et område for at læse mere.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            { title: "Boligstøtte", desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Det holder priserne kunstigt høje.", slug: "boligstoette" },
+            { title: "Energi", desc: "Lokal produktion kan give direkte besparelser på op til 25 %. Alligevel prioriteres centrale løsninger.", slug: "energi" },
+            { title: "Sundhed", desc: "280 mia. kr. årligt. Stort fokus på medicin og behandling – meget lidt på reel forebyggelse.", slug: "sundhed" },
+            { title: "Rent drikkevand", desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte.", slug: "rent-drikkevand" },
+            { title: "Udlændingepolitik", desc: "Hvad koster den samlede politik reelt – og hvilke incitamenter skaber den på lang sigt?", slug: "udlaendingepolitik" },
+            { title: "Kreativitet & uddannelse", desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning.", slug: "kreativitet" },
+            { title: "Offentlig administration", desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?", slug: "administration" }
+          ].map((item, i) => (
+            <a 
+              key={i} 
+              href={`#${item.slug}`}
+              className="group border rounded-2xl p-6 active:bg-gray-50 transition block"
+            >
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-semibold text-lg pr-4 group-active:text-[#002B5B]">
+                  {item.title}
+                </h4>
+                <span className="text-[#002B5B] text-xl flex-shrink-0">→</span>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+              <div className="mt-4 text-sm font-medium text-[#002B5B] flex items-center gap-1">
+                Læs mere <span className="text-lg">→</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* FEEDBACK & DIALOG */}
+      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center">
+        <h3 className="text-xl font-semibold mb-3">Feedback & Dialog</h3>
+        <p className="text-gray-600 text-sm max-w-md mx-auto mb-4">
+          Alle er velkomne til at give feedback og deltage i dialogen – uanset om du støtter økonomisk eller ej. 
+          Skriv direkte til os på X. Vi læser og svarer så vidt muligt.
+        </p>
+        <a 
+          href="https://x.com/SynlighedNu" 
+          target="_blank"
+          className="inline-block border border-[#002B5B] px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-50 transition"
+        >
+          Skriv til os på X
+        </a>
+      </div>
+
+      {/* BLIV EN DEL AF DET */}
+      <div className="max-w-3xl mx-auto px-6 py-16 border-t text-center">
+        <h2 className="text-3xl font-bold tracking-tight mb-4">Bliv en del af det</h2>
+        <p className="text-gray-600 mb-8 max-w-md mx-auto">
+          Følg os på X, deltag i afstemningerne og støt projektet, hvis du tror på mere synlighed og bedre beslutninger.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://x.com/SynlighedNu" target="_blank" className="border border-[#002B5B] px-8 py-3.5 rounded-2xl font-semibold hover:bg-gray-50 transition">
+            Følg på X
+          </a>
+          <a href="https://opencollective.com/synlighed-nu" target="_blank" className="bg-[#002B5B] text-white px-8 py-3.5 rounded-2xl font-semibold hover:bg-[#001f3d] transition">
+            Støt på Open Collective
+          </a>
+        </div>
+      </div>
+
+      {/* FOOTER */}
+      <footer className="border-t py-8 text-center text-xs text-gray-500">
+        Synlighed.nu — Hurtigere. Bedre. Billigere.<br />
+        Initiativ til agil reasoning og fuld offentlig synlighed i Danmark.
+      </footer>
 
     </div>
   );
