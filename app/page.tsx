@@ -4,17 +4,10 @@ export default function SynlighedNu() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       
-      {/* NAVIGATION */}
+      {/* NAVIGATION - Ren tekst version */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-          <div className="flex items-center gap-3">
-            <img 
-              src="/images/eye.png" 
-              alt="Synlighed.nu" 
-              className="h-9 w-9 object-contain"
-            />
-            <div className="font-semibold text-xl tracking-tight">Synlighed.nu</div>
-          </div>
+          <div className="font-semibold text-2xl tracking-tighter">Synlighed.nu</div>
 
           <div className="flex items-center gap-8 text-sm font-medium">
             <a href="#afstemning" className="hover:text-[#002B5B]/80 transition">Afstemning</a>
@@ -31,17 +24,10 @@ export default function SynlighedNu() {
         </div>
       </nav>
 
-      {/* HERO - Ren og professionel */}
-      <div className="pt-24 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center mb-8">
-            <img 
-              src="/images/eye.png" 
-              alt="Synlighed.nu" 
-              className="h-20 w-20 object-contain"
-            />
-          </div>
-
+      {/* HERO - Ren og stærk uden billede */}
+      <div className="pt-24 pb-20 px-6 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          
           <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-4">
             Synlighed først.
           </h1>
@@ -68,7 +54,7 @@ export default function SynlighedNu() {
       </div>
 
       {/* HVORFOR SYNLIGHED? */}
-      <div className="max-w-3xl mx-auto px-6 py-16 text-center">
+      <div className="max-w-3xl mx-auto px-6 py-16 text-center bg-white">
         <p className="text-lg text-gray-600 leading-relaxed">
           Vi bruger milliarder af skattekroner hver dag – men de fleste kan ikke se, hvor pengene går hen, 
           hvad vi får for dem, eller hvilke konsekvenser der følger med.
@@ -76,7 +62,7 @@ export default function SynlighedNu() {
       </div>
 
       {/* HVORFOR X? */}
-      <div className="max-w-3xl mx-auto px-6 pb-12 text-center">
+      <div className="max-w-3xl mx-auto px-6 pb-12 text-center bg-white">
         <p className="text-sm text-gray-500 max-w-md mx-auto">
           Vi bruger primært <strong>X</strong> som platform, fordi det giver den mest direkte, 
           offentlige og ufiltrerede dialog. Det passer bedst til projektets formål: fuld synlighed og åben reasoning.
@@ -84,7 +70,7 @@ export default function SynlighedNu() {
       </div>
 
       {/* AKTUEL AFSTEMNING */}
-      <div id="afstemning" className="max-w-5xl mx-auto px-6 py-16 border-t">
+      <div id="afstemning" className="max-w-5xl mx-auto px-6 py-16 border-t bg-white">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-6">
             <div>
@@ -169,7 +155,7 @@ export default function SynlighedNu() {
       </div>
 
       {/* VORES PRIORITERING */}
-      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center">
+      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center bg-white">
         <h3 className="text-xl font-semibold mb-3">Vores nuværende prioritering</h3>
         <p className="text-gray-600 text-sm max-w-md mx-auto">
           Selvom afstemningen er vigtig, prioriterer vi også ud fra hvor vi kan skabe størst systemisk effekt hurtigst. 
@@ -201,7 +187,7 @@ export default function SynlighedNu() {
       </div>
 
       {/* DE KONKRETE OMRÅDER */}
-      <div className="max-w-5xl mx-auto px-6 py-16">
+      <div className="max-w-5xl mx-auto px-6 py-16 bg-white">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl font-bold tracking-tight">De konkrete områder</h2>
           <p className="text-gray-600 mt-2">Tryk på et område for at læse mere.</p>
@@ -232,7 +218,7 @@ export default function SynlighedNu() {
       </div>
 
       {/* FEEDBACK & DIALOG */}
-      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center">
+      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center bg-white">
         <h3 className="text-xl font-semibold mb-3">Feedback & Dialog</h3>
         <p className="text-gray-600 text-sm max-w-md mx-auto mb-4">
           Alle er velkomne til at give feedback og deltage i dialogen – uanset om du støtter økonomisk eller ej. 
@@ -244,7 +230,7 @@ export default function SynlighedNu() {
       </div>
 
       {/* BLIV EN DEL AF DET */}
-      <div className="max-w-3xl mx-auto px-6 py-16 border-t text-center">
+      <div className="max-w-3xl mx-auto px-6 py-16 border-t text-center bg-white">
         <h2 className="text-3xl font-bold tracking-tight mb-4">Bliv en del af det</h2>
         <p className="text-gray-600 mb-8 max-w-md mx-auto">
           Følg os på X, deltag i afstemningerne og støt projektet, hvis du tror på mere synlighed og bedre beslutninger.
@@ -261,7 +247,7 @@ export default function SynlighedNu() {
       </div>
 
       {/* FOOTER */}
-      <footer className="border-t py-8 text-center text-xs text-gray-500">
+      <footer className="border-t py-8 text-center text-xs text-gray-500 bg-white">
         Synlighed.nu — Hurtigere. Bedre. Billigere.<br />
         Initiativ til agil reasoning og fuld offentlig synlighed i Danmark.
       </footer>
