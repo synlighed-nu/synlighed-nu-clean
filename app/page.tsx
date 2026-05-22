@@ -4,7 +4,7 @@ export default function SynlighedNu() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       
-      {/* NAVIGATION - Ren tekst version */}
+      {/* NAVIGATION - Ren tekst */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="font-semibold text-2xl tracking-tighter">Synlighed.nu</div>
@@ -24,10 +24,9 @@ export default function SynlighedNu() {
         </div>
       </nav>
 
-      {/* HERO - Ren og stærk uden billede */}
+      {/* HERO */}
       <div className="pt-24 pb-20 px-6 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-4">
             Synlighed først.
           </h1>
@@ -37,16 +36,10 @@ export default function SynlighedNu() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#afstemning" 
-              className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition"
-            >
+            <a href="#afstemning" className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition">
               Stem på det vigtigste
             </a>
-            <a 
-              href="#de-store-greb" 
-              className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition"
-            >
+            <a href="#de-store-greb" className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition">
               Se de store greb
             </a>
           </div>
@@ -187,67 +180,40 @@ export default function SynlighedNu() {
       </div>
 
       {/* DE KONKRETE OMRÅDER */}
-<div className="max-w-5xl mx-auto px-6 py-16 bg-white">
-  <div className="max-w-3xl mx-auto text-center mb-10">
-    <h2 className="text-3xl font-bold tracking-tight">De konkrete områder</h2>
-    <p className="text-gray-600 mt-2">Tryk på et område for at læse mere.</p>
-  </div>
+      <div className="max-w-5xl mx-auto px-6 py-16 bg-white">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="text-3xl font-bold tracking-tight">De konkrete områder</h2>
+          <p className="text-gray-600 mt-2">Tryk på et område for at læse mere.</p>
+        </div>
 
-  <div className="grid md:grid-cols-2 gap-6">
-    {[
-      { 
-        title: "Boligstøtte", 
-        desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Det holder priserne kunstigt høje.", 
-        slug: "boligstoette" 
-      },
-      { 
-        title: "Energi", 
-        desc: "Lokal produktion fjerner unødvendige tab i elnettet og central infrastruktur. I et ideelt samfund med lokal energi ville vi skulle producere ca. 25 % mindre energi samlet set. Alligevel satses der fortsat på store, centraliserede løsninger.", 
-        slug: "energi" 
-      },
-      { 
-        title: "Sundhed", 
-        desc: "280 mia. kr. årligt. Stort fokus på medicin og behandling – meget lidt på reel forebyggelse.", 
-        slug: "sundhed" 
-      },
-      { 
-        title: "Rent drikkevand", 
-        desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte.", 
-        slug: "rent-drikkevand" 
-      },
-      { 
-        title: "Udlændingepolitik", 
-        desc: "Hvad koster den samlede politik reelt – og hvilke incitamenter skaber den på lang sigt?", 
-        slug: "udlaendingepolitik" 
-      },
-      { 
-        title: "Kreativitet & uddannelse", 
-        desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning.", 
-        slug: "kreativitet" 
-      },
-      { 
-        title: "Offentlig administration", 
-        desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?", 
-        slug: "administration" 
-      }
-    ].map((item, i) => (
-      <a 
-        key={i} 
-        href={`#${item.slug}`} 
-        className="group border rounded-2xl p-6 active:bg-gray-50 transition block"
-      >
-        <div className="flex justify-between items-start mb-2">
-          <h4 className="font-semibold text-lg pr-4 group-active:text-[#002B5B]">{item.title}</h4>
-          <span className="text-[#002B5B] text-xl flex-shrink-0">→</span>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            { title: "Boligstøtte", desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Det holder priserne kunstigt høje.", slug: "boligstoette" },
+            { 
+              title: "Energi", 
+              desc: "Lokal produktion fjerner unødvendige tab i elnettet og central infrastruktur. I et ideelt samfund med lokal energi ville vi skulle producere ca. 25 % mindre energi samlet set. Alligevel satses der fortsat på store, centraliserede løsninger.", 
+              slug: "energi" 
+            },
+            { title: "Sundhed", desc: "280 mia. kr. årligt. Stort fokus på medicin og behandling – meget lidt på reel forebyggelse.", slug: "sundhed" },
+            { title: "Rent drikkevand", desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte.", slug: "rent-drikkevand" },
+            { title: "Udlændingepolitik", desc: "Hvad koster den samlede politik reelt – og hvilke incitamenter skaber den på lang sigt?", slug: "udlaendingepolitik" },
+            { title: "Kreativitet & uddannelse", desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning.", slug: "kreativitet" },
+            { title: "Offentlig administration", desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?", slug: "administration" }
+          ].map((item, i) => (
+            <a key={i} href={`#${item.slug}`} className="group border rounded-2xl p-6 active:bg-gray-50 transition block">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-semibold text-lg pr-4 group-active:text-[#002B5B]">{item.title}</h4>
+                <span className="text-[#002B5B] text-xl flex-shrink-0">→</span>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+              <div className="mt-4 text-sm font-medium text-[#002B5B] flex items-center gap-1">
+                Læs mere <span className="text-lg">→</span>
+              </div>
+            </a>
+          ))}
         </div>
-        <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-        <div className="mt-4 text-sm font-medium text-[#002B5B] flex items-center gap-1">
-          Læs mere <span className="text-lg">→</span>
-        </div>
-      </a>
-    ))}
-  </div>
-</div>
+      </div>
+
       {/* FEEDBACK & DIALOG */}
       <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center bg-white">
         <h3 className="text-xl font-semibold mb-3">Feedback & Dialog</h3>
