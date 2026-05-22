@@ -49,16 +49,15 @@ export default function SynlighedNu() {
       <div className="max-w-3xl mx-auto px-6 pb-12 text-center bg-white">
         <p className="text-sm text-gray-500 max-w-md mx-auto">
           Vi bruger primært <strong>X</strong> som platform, fordi det giver den mest direkte og ufiltrerede dialog. 
-          Det passer perfekt til projektets formål: fuld synlighed og{' '}
+          Det passer perfekt til projektets formål: fuld synlighed,{' '}
           <span className="inline-flex items-center gap-1">
             agil reasoning
-            <span 
-              onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt. I stedet for at bruge måneder på at diskutere noget, tager vi beslutninger hurtigt – men altid med god begrundelse. Som en god håndværker, der løser problemer på stedet i stedet for at vente på en stor rapport.")}
-              className="cursor-pointer text-[#E30613] font-bold text-lg leading-none hover:text-red-600"
-            >
-              ?
-            </span>
-          </span>
+            <span onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt. I stedet for at bruge måneder på at diskutere noget, tager vi beslutninger hurtigt – men altid med god begrundelse. Som en god håndværker, der løser problemer på stedet i stedet for at vente på en stor rapport.")} className="cursor-pointer text-[#E30613] font-bold text-lg leading-none hover:text-red-600">?</span>
+          </span> og{' '}
+          <span className="inline-flex items-center gap-1">
+            axium
+            <span onClick={() => showExplanation("Axium", "Axium er de få, helt grundlæggende regler vi aldrig går på kompromis med. Eksempel: Rent drikkevand er et axium – det skal altid prioriteres, uanset hvad der ellers sker. Det er fundamentet hele systemet bygger på.")} className="cursor-pointer text-[#E30613] font-bold text-lg leading-none hover:text-red-600">?</span>
+          </span>.
         </p>
       </div>
 
@@ -145,12 +144,7 @@ export default function SynlighedNu() {
           Vi viser både folkets stemme og vores begrundelse – altid med åben{' '}
           <span className="inline-flex items-center gap-1">
             agil reasoning
-            <span 
-              onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt. I stedet for at bruge måneder på at diskutere noget, tager vi beslutninger hurtigt – men altid med god begrundelse.")}
-              className="cursor-pointer text-[#E30613] font-bold text-lg leading-none hover:text-red-600"
-            >
-              ?
-            </span>
+            <span onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt...")} className="cursor-pointer text-[#E30613] font-bold text-lg leading-none hover:text-red-600">?</span>
           </span>.
         </p>
       </div>
@@ -237,7 +231,7 @@ export default function SynlighedNu() {
         Synlighed.nu — Hurtigere. Bedre. Billigere.<br />
         Initiativ til agil reasoning og fuld offentlig synlighed i Danmark.
         <div className="mt-4 text-[10px] text-gray-400">
-          Version: 22. maj 2025 – v2.2 (med synlige ?-ikoner)
+          Version: 22. maj 2025 – v2.3 (med Axium og synlige ?-ikoner)
         </div>
       </footer>
 
