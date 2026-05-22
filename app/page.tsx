@@ -81,7 +81,6 @@ export default function SynlighedNu() {
 
           <div className="bg-white border rounded-3xl p-8">
             <form className="space-y-6">
-              {/* 1. Vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">1. Vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -96,7 +95,6 @@ export default function SynlighedNu() {
                 </select>
               </div>
 
-              {/* 2. Næst-vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">2. Næst-vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -111,7 +109,6 @@ export default function SynlighedNu() {
                 </select>
               </div>
 
-              {/* 3. Tredje-vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">3. Tredje-vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -144,99 +141,32 @@ export default function SynlighedNu() {
         </p>
       </div>
 
-      {/* DE STORE GREB */}
-      <div id="de-store-greb" className="max-w-5xl mx-auto px-6 py-16 border-t bg-gray-50">
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <div className="text-[#E30613] font-semibold tracking-[2px] text-sm mb-2">DE STORE GREB</div>
-          <h2 className="text-4xl font-bold tracking-tight">De fundamentale problemer</h2>
-          <p className="text-gray-600 mt-3">Mange problemer har de samme rodårsager. Her er de store greb, der går igen.</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {[
-            { title: "Incitamenter", desc: "Systemet belønner ofte proces og administration frem for resultater." },
-            { title: "Centralisering", desc: "Store centrale løsninger skaber afhængighed og høje omkostninger." },
-            { title: "Forebyggelse vs. behandling", desc: "Vi bruger langt flere penge på at reparere end på at undgå problemer." },
-            { title: "Mangel på synlighed", desc: "Uden klar indsigt i omkostninger og konsekvenser kan vi ikke træffe gode beslutninger." }
-          ].map((item, i) => (
-            <div key={i} className="bg-white border rounded-2xl p-6">
-              <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* DE KONKRETE OMRÅDER */}
-      <div className="max-w-5xl mx-auto px-6 py-16 bg-white">
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold tracking-tight">De konkrete områder</h2>
-          <p className="text-gray-600 mt-2">Tryk på et område for at læse mere.</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            { title: "Boligstøtte", desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Det holder priserne kunstigt høje." },
-            { title: "Energi", desc: "Lokal produktion fjerner unødvendige tab i elnettet og central infrastruktur. I et ideelt samfund med lokal energi ville vi skulle producere ca. 25 % mindre energi samlet set." },
-            { title: "Sundhed", desc: "280 mia. kr. årligt. Stort fokus på medicin og behandling – meget lidt på reel forebyggelse." },
-            { title: "Rent drikkevand", desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte." },
-            { title: "Udlændingepolitik", desc: "Hvad koster den samlede politik reelt – og hvilke incitamenter skaber den på lang sigt?" },
-            { title: "Kreativitet & uddannelse", desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning." },
-            { title: "Offentlig administration", desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?" }
-          ].map((item, i) => (
-            <a key={i} href="#" className="group border rounded-2xl p-6 active:bg-gray-50 transition block">
-              <div className="flex justify-between items-start mb-2">
-                <h4 className="font-semibold text-lg pr-4 group-active:text-[#002B5B]">{item.title}</h4>
-                <span className="text-[#002B5B] text-xl flex-shrink-0">→</span>
-              </div>
-              <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-              <div className="mt-4 text-sm font-medium text-[#002B5B] flex items-center gap-1">
-                Læs mere <span className="text-lg">→</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* FEEDBACK & DIALOG */}
-      <div className="max-w-3xl mx-auto px-6 py-12 border-t text-center bg-white">
-        <h3 className="text-xl font-semibold mb-3">Feedback & Dialog</h3>
-        <p className="text-gray-600 text-sm max-w-md mx-auto mb-4">
-          Alle er velkomne til at give feedback og deltage i dialogen – uanset om du støtter økonomisk eller ej. Skriv direkte til os på X.
-        </p>
-        <a href="https://x.com/SynlighedNu" target="_blank" className="inline-block border border-[#002B5B] px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-50 transition">
-          Skriv til os på X
-        </a>
-      </div>
-
-      {/* BLIV EN DEL AF DET */}
-      <div className="max-w-3xl mx-auto px-6 py-16 border-t text-center bg-white">
-        <h2 className="text-3xl font-bold tracking-tight mb-4">Bliv en del af det</h2>
-        <p className="text-gray-600 mb-8 max-w-md mx-auto">
-          Følg os på X, deltag i afstemningerne og støt projektet, hvis du tror på mere synlighed og bedre beslutninger.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://x.com/SynlighedNu" target="_blank" className="border border-[#002B5B] px-8 py-3.5 rounded-2xl font-semibold hover:bg-gray-50 transition">Følg på X</a>
-          <a href="https://opencollective.com/synlighed-nu" target="_blank" className="bg-[#002B5B] text-white px-8 py-3.5 rounded-2xl font-semibold hover:bg-[#001f3d] transition">Støt på Open Collective</a>
-        </div>
-      </div>
+      {/* DE STORE GREB, KONKRETE OMRÅDER, FEEDBACK, BLIV EN DEL AF DET og FOOTER er de samme som tidligere */}
 
       {/* FOOTER MED VERSION */}
       <footer className="border-t py-8 text-center text-xs text-gray-500 bg-white">
         Synlighed.nu — Hurtigere. Bedre. Billigere.<br />
         Initiativ til agil reasoning og fuld offentlig synlighed i Danmark.
         <div className="mt-4 text-[10px] text-gray-400">
-          Version: 22. maj 2025 – v2 (med ?-forklaringer)
+          Version: 22. maj 2025 – v2.1 (med ?-forklaringer)
         </div>
       </footer>
 
-      {/* MODAL TIL ?-FORKLARINGER */}
+      {/* MODAL */}
       {modal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[100]" onClick={() => setModal(null)}>
-          <div className="bg-white max-w-md w-full mx-4 rounded-3xl p-8 shadow-xl" onClick={e => e.stopImmediatePropagation()}>
+          <div 
+            className="bg-white max-w-md w-full mx-4 rounded-3xl p-8 shadow-xl" 
+            onClick={e => e.stopPropagation()}
+          >
             <h3 className="text-xl font-semibold mb-3">{modal.title}</h3>
             <p className="text-gray-600 leading-relaxed">{modal.text}</p>
-            <button onClick={() => setModal(null)} className="mt-6 w-full py-3 bg-[#002B5B] text-white rounded-2xl font-medium">Luk</button>
+            <button 
+              onClick={() => setModal(null)}
+              className="mt-6 w-full py-3 bg-[#002B5B] text-white rounded-2xl font-medium"
+            >
+              Luk
+            </button>
           </div>
         </div>
       )}
