@@ -48,11 +48,17 @@ export default function SynlighedNu() {
       {/* HVORFOR X */}
       <div className="max-w-3xl mx-auto px-6 pb-12 text-center bg-white">
         <p className="text-sm text-gray-500 max-w-md mx-auto">
-          Vi bruger primært <strong>X</strong> som platform, fordi det giver den mest direkte, offentlige og ufiltrerede dialog. 
-          Det passer bedst til projektets formål: fuld synlighed og{' '}
-          <span onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt. I stedet for at bruge måneder på at diskutere noget, tager vi beslutninger hurtigt – men altid med god begrundelse. Som en god håndværker, der løser problemer på stedet i stedet for at vente på en stor rapport.")} className="cursor-pointer text-[#002B5B] underline decoration-dotted hover:text-[#001f3d]">
+          Vi bruger primært <strong>X</strong> som platform, fordi det giver den mest direkte og ufiltrerede dialog. 
+          Det passer perfekt til projektets formål: fuld synlighed og{' '}
+          <span className="inline-flex items-center gap-1">
             agil reasoning
-          </span>.
+            <span 
+              onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt. I stedet for at bruge måneder på at diskutere noget, tager vi beslutninger hurtigt – men altid med god begrundelse. Som en god håndværker, der løser problemer på stedet i stedet for at vente på en stor rapport.")}
+              className="cursor-pointer text-[#E30613] font-bold text-lg leading-none hover:text-red-600"
+            >
+              ?
+            </span>
+          </span>
         </p>
       </div>
 
@@ -137,7 +143,15 @@ export default function SynlighedNu() {
         <p className="text-gray-600 text-sm max-w-md mx-auto">
           Selvom afstemningen er vigtig, prioriterer vi også ud fra hvor vi kan skabe størst systemisk effekt hurtigst. 
           Vi viser både folkets stemme og vores begrundelse – altid med åben{' '}
-          <span onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt...")} className="cursor-pointer text-[#002B5B] underline decoration-dotted">agil reasoning</span>.
+          <span className="inline-flex items-center gap-1">
+            agil reasoning
+            <span 
+              onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt. I stedet for at bruge måneder på at diskutere noget, tager vi beslutninger hurtigt – men altid med god begrundelse.")}
+              className="cursor-pointer text-[#E30613] font-bold text-lg leading-none hover:text-red-600"
+            >
+              ?
+            </span>
+          </span>.
         </p>
       </div>
 
@@ -223,7 +237,7 @@ export default function SynlighedNu() {
         Synlighed.nu — Hurtigere. Bedre. Billigere.<br />
         Initiativ til agil reasoning og fuld offentlig synlighed i Danmark.
         <div className="mt-4 text-[10px] text-gray-400">
-          Version: 22. maj 2025 – v2.1 (med ?-forklaringer)
+          Version: 22. maj 2025 – v2.2 (med synlige ?-ikoner)
         </div>
       </footer>
 
