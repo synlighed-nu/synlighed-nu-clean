@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 export default function SynlighedNu() {
@@ -30,12 +32,8 @@ export default function SynlighedNu() {
           <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-4">Synlighed først.</h1>
           <p className="text-2xl text-gray-600 mb-10">Hurtigere. Bedre. Billigere.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#afstemning" className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition">
-              Stem på det vigtigste
-            </a>
-            <a href="#de-store-greb" className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition">
-              Se de store greb
-            </a>
+            <a href="#afstemning" className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition">Stem på det vigtigste</a>
+            <a href="#de-store-greb" className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition">Se de store greb</a>
           </div>
         </div>
       </div>
@@ -52,10 +50,7 @@ export default function SynlighedNu() {
         <p className="text-sm text-gray-500 max-w-md mx-auto">
           Vi bruger primært <strong>X</strong> som platform, fordi det giver den mest direkte, offentlige og ufiltrerede dialog. 
           Det passer bedst til projektets formål: fuld synlighed og{' '}
-          <span 
-            onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt. I stedet for at bruge måneder på at diskutere noget, tager vi beslutninger hurtigt – men altid med god begrundelse. Som en god håndværker, der løser problemer på stedet i stedet for at vente på en stor rapport.")}
-            className="cursor-pointer text-[#002B5B] underline decoration-dotted hover:text-[#001f3d]"
-          >
+          <span onClick={() => showExplanation("Agil reasoning", "At tænke og handle hurtigt og fornuftigt. I stedet for at bruge måneder på at diskutere noget, tager vi beslutninger hurtigt – men altid med god begrundelse. Som en god håndværker, der løser problemer på stedet i stedet for at vente på en stor rapport.")} className="cursor-pointer text-[#002B5B] underline decoration-dotted hover:text-[#001f3d]">
             agil reasoning
           </span>.
         </p>
@@ -86,6 +81,7 @@ export default function SynlighedNu() {
 
           <div className="bg-white border rounded-3xl p-8">
             <form className="space-y-6">
+              {/* 1. Vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">1. Vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -100,6 +96,7 @@ export default function SynlighedNu() {
                 </select>
               </div>
 
+              {/* 2. Næst-vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">2. Næst-vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -114,6 +111,7 @@ export default function SynlighedNu() {
                 </select>
               </div>
 
+              {/* 3. Tredje-vigtigst */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">3. Tredje-vigtigst</label>
                 <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
@@ -183,10 +181,7 @@ export default function SynlighedNu() {
             { title: "Sundhed", desc: "280 mia. kr. årligt. Stort fokus på medicin og behandling – meget lidt på reel forebyggelse." },
             { title: "Rent drikkevand", desc: "Pesticidrester findes i over halvdelen af boringerne. Vi renser i stedet for at beskytte." },
             { title: "Udlændingepolitik", desc: "Hvad koster den samlede politik reelt – og hvilke incitamenter skaber den på lang sigt?" },
-            { 
-              title: "Kreativitet & uddannelse", 
-              desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning." 
-            },
+            { title: "Kreativitet & uddannelse", desc: "Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning." },
             { title: "Offentlig administration", desc: "Hvor stor en del af pengene går til proces, kontrol og administration frem for reel værdi?" }
           ].map((item, i) => (
             <a key={i} href="#" className="group border rounded-2xl p-6 active:bg-gray-50 transition block">
@@ -235,7 +230,7 @@ export default function SynlighedNu() {
         </div>
       </footer>
 
-      {/* MODAL */}
+      {/* MODAL TIL ?-FORKLARINGER */}
       {modal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[100]" onClick={() => setModal(null)}>
           <div className="bg-white max-w-md w-full mx-4 rounded-3xl p-8 shadow-xl" onClick={e => e.stopImmediatePropagation()}>
