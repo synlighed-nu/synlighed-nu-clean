@@ -23,7 +23,22 @@ export default function SynlighedNu() {
       <WhySection />
       <VotingSection />
       <BigMoves />
-      <ConcreteAreas />
+            <ConcreteAreas />
+      {/* Støt projektet – stor CTA i bunden (bedre på mobil) */}
+      <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-100 bg-white">
+        <div className="bg-[#002B5B] text-white rounded-3xl p-10 text-center">
+          <h3 className="text-3xl font-semibold mb-3">Vil du hjælpe med at gøre Danmark mere gennemsigtigt?</h3>
+          <p className="text-[#E30613] text-xl mb-8">Støt projektet med det beløb du synes er rigtigt</p>
+          <a 
+            href="https://opencollective.com/synlighed-nu" 
+            target="_blank"
+            className="inline-block bg-white text-[#002B5B] hover:bg-[#E30613] hover:text-white px-10 py-5 rounded-2xl text-2xl font-semibold transition-colors"
+          >
+            Støt projektet nu →
+          </a>
+        </div>
+      </div>
+
       <Footer />
 
       {/* Modal */}
