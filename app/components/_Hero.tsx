@@ -9,11 +9,17 @@ export default function Hero() {
         <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-4">
           Synlighed først.
         </h1>
-        <p className="text-2xl text-gray-600 mb-10">
+        <p className="text-2xl text-gray-600 mb-6">
           Hurtigere. Bedre. Billigere.
         </p>
         
-        {/* Kun én knap nu */}
+        {/* Forklaring lige nedenunder mottoet */}
+        <p className="text-xl font-medium text-[#002B5B] max-w-2xl mx-auto mb-10">
+          Det er det modsatte af, hvordan tingene ofte fungerer i det offentlige i dag – 
+          hvor processer bliver <strong>langsommere, dyrere og dårligere</strong>.
+        </p>
+
+        {/* Kun én knap */}
         <div className="flex justify-center">
           <a 
             href="#afstemning" 
