@@ -1,8 +1,39 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+
+const areas = [
+  "Boligstøtte – omkostninger og konsekvenser",
+  "Energi – lokal vs. central produktion",
+  "Sundhed – behandling vs. forebyggelse",
+  "Rent drikkevand – beskyttelse vs. oprensning",
+  "Udlændingepolitik – omkostninger og incitamenter",
+  "Kreativitet og uddannelse",
+  "Offentlig administration – incitamenter og effektivitet"
+];
 
 export default function VotingSection() {
+  const [selection1, setSelection1] = useState('');
+  const [selection2, setSelection2] = useState('');
+  const [selection3, setSelection3] = useState('');
+
+  // Hjælpefunktion til at filtrere allerede valgte emner
+  const getAvailableOptions = (exclude1: string, exclude2: string, exclude3: string) => {
+    return areas.filter(area => 
+      area !== exclude1 && area !== exclude2 && area !== exclude3
+    );
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!selection1 || !selection2 || !selection3) {
+      alert("Du skal vælge 3 forskellige områder");
+      return;
+    }
+    console.log("Stemmer afgivet:", { selection1, selection2, selection3 });
+    alert("Tak for din stemme! (Dette er demo – i rigtig version gemmes den anonymt)");
+  };
+
   return (
     <div id="afstemning" className="max-w-5xl mx-auto px-6 py-16 border-t bg-white">
       <div className="max-w-2xl mx-auto">
@@ -24,49 +55,53 @@ export default function VotingSection() {
           </div>
         </div>
 
-        <p className="text-gray-600 mb-8">Vælg dine 3 vigtigste områder. Din stemme er anonym.</p>
+        <p className="text-gray-600 mb-8">Vælg dine 3 vigtigste områder. Du kan ikke vælge det samme emne flere gange.</p>
 
         <div className="bg-white border rounded-3xl p-8">
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            
+            {/* 1. Vigtigst */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">1. Vigtigst</label>
-              <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
+              <select 
+                value={selection1}
+                onChange={(e) => setSelection1(e.target.value)}
+                className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]"
+              >
                 <option value="">Vælg område...</option>
-                <option>Boligstøtte – omkostninger og konsekvenser</option>
-                <option>Energi – lokal vs. central produktion</option>
-                <option>Sundhed – behandling vs. forebyggelse</option>
-                <option>Rent drikkevand – beskyttelse vs. oprensning</option>
-                <option>Udlændingepolitik – omkostninger og incitamenter</option>
-                <option>Kreativitet og uddannelse</option>
-                <option>Offentlig administration – incitamenter og effektivitet</option>
+                {getAvailableOptions(selection2, selection3, '').map(area => (
+                  <option key={area} value={area}>{area}</option>
+                ))}
               </select>
             </div>
 
+            {/* 2. Næst-vigtigst */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">2. Næst-vigtigst</label>
-              <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
+              <select 
+                value={selection2}
+                onChange={(e) => setSelection2(e.target.value)}
+                className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]"
+              >
                 <option value="">Vælg område...</option>
-                <option>Boligstøtte – omkostninger og konsekvenser</option>
-                <option>Energi – lokal vs. central produktion</option>
-                <option>Sundhed – behandling vs. forebyggelse</option>
-                <option>Rent drikkevand – beskyttelse vs. oprensning</option>
-                <option>Udlændingepolitik – omkostninger og incitamenter</option>
-                <option>Kreativitet og uddannelse</option>
-                <option>Offentlig administration – incitamenter og effektivitet</option>
+                {getAvailableOptions(selection1, selection3, '').map(area => (
+                  <option key={area} value={area}>{area}</option>
+                ))}
               </select>
             </div>
 
+            {/* 3. Tredje-vigtigst */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">3. Tredje-vigtigst</label>
-              <select className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]">
+              <select 
+                value={selection3}
+                onChange={(e) => setSelection3(e.target.value)}
+                className="w-full border border-gray-300 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-[#002B5B]"
+              >
                 <option value="">Vælg område...</option>
-                <option>Boligstøtte – omkostninger og konsekvenser</option>
-                <option>Energi – lokal vs. central produktion</option>
-                <option>Sundhed – behandling vs. forebyggelse</option>
-                <option>Rent drikkevand – beskyttelse vs. oprensning</option>
-                <option>Udlændingepolitik – omkostninger og incitamenter</option>
-                <option>Kreativitet og uddannelse</option>
-                <option>Offentlig administration – incitamenter og effektivitet</option>
+                {getAvailableOptions(selection1, selection2, '').map(area => (
+                  <option key={area} value={area}>{area}</option>
+                ))}
               </select>
             </div>
 
