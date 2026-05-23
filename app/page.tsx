@@ -26,7 +26,7 @@ export default function SynlighedNu() {
       <BigMoves />
       <ConcreteAreas />
 
-      {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
+            {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
       <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
         <div className="text-center mb-10">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
@@ -46,11 +46,11 @@ export default function SynlighedNu() {
             I George Orwells <strong>1984</strong> bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.
           </p>
           
-          <p>
-            Begge dystopier er advarsler om det samme: et samfund uden kritisk tænkning og kreativitet kollapser – enten i dumhed eller i total kontrol.
+          <p className="font-semibold text-center text-lg my-8 text-[#002B5B]">
+            Vi prioriterer der, hvor ændringer skaber mest effekt – ikke bare mest opmærksomhed.
           </p>
           
-          <p className="font-semibold">
+          <p>
             Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år. 
             Uden løbende forbedring bevæger vi os langsomt mod en blanding af begge dystopier.
           </p>
