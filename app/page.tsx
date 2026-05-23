@@ -34,7 +34,7 @@ export default function SynlighedNu() {
       <VotingSection />
       <BigMoves />
 
-      {/* Kreativitet – egen sektion */}
+      {/* === KREATIVITET – EGEN SEKTION === */}
       <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
@@ -65,7 +65,7 @@ export default function SynlighedNu() {
 
       <ConcreteAreas showExplanation={showExplanation} />
 
-      {/* Demokrati 2.0 */}
+      {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
       <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
         <div className="text-center mb-10">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
