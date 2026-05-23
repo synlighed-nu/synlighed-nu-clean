@@ -84,7 +84,7 @@ export default function SynlighedNu() {
     </p>
     
     <p>
-      I filmen <strong><a href="https://da.wikipedia.org/wiki/Idiokrati" target="_blank" className="underline hover:text-[#E30613] transition-colors">Idiokrati</a></strong> bliver samfundet dumt, fordi ingen længere tænker kritisk. 
+      I filmen <strong><a href="https://en.wikipedia.org/wiki/Idiocracy" target="_blank" className="underline hover:text-[#E30613] transition-colors">Idiokrati</a></strong> bliver samfundet dumt, fordi ingen længere tænker kritisk. 
       I George Orwells klassiker <strong><a href="https://da.wikipedia.org/wiki/1984_(roman)" target="_blank" className="underline hover:text-[#E30613] transition-colors">1984</a></strong> bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.
     </p>
     
