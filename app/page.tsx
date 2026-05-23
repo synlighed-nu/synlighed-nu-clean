@@ -25,7 +25,7 @@ export default function SynlighedNu() {
       <VotingSection />
       <BigMoves />
 
-      {/* === KREATIVITET – EGEN SEKTION === */}
+            {/* === KREATIVITET – EGEN SEKTION === */}
       <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
@@ -46,10 +46,22 @@ export default function SynlighedNu() {
             Vores uddannelsessystem kvæler systematisk divergent tænkning og kreativitet. 
             Det er ikke kun et uddannelsesproblem – det er et samfundsproblem.
           </p>
-          
+
+          {/* Direkte TED-link */}
+          <div className="mt-10 inline-flex items-center gap-3 bg-white border border-gray-300 rounded-3xl px-6 py-4 hover:border-[#E30613] transition-colors">
+            <span className="text-[#E30613] text-2xl">▶</span>
+            <a 
+              href="https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity" 
+              target="_blank"
+              className="font-semibold text-[#002B5B] hover:text-[#E30613] transition-colors"
+            >
+              Se Sir Ken Robinsons TED Talk<br />
+              <span className="text-sm font-normal text-gray-500">"Do schools kill creativity?" (2006)</span>
+            </a>
+          </div>
+
           <p className="text-sm text-gray-500 mt-10">
-            Kilde: George Land &amp; Beth Jarman (1968–1992), longitudinal studie med 1.600 børn.<br />
-            Populært formidlet af Sir Ken Robinson i hans TED Talk “Do schools kill creativity?” (2006).
+            Kilde: George Land &amp; Beth Jarman (1968–1992), longitudinal studie med 1.600 børn.
           </p>
         </div>
       </section>
