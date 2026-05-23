@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 bg-transparent backdrop-blur-md z-50 border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 py-4">
 
         {/* @SynlighedNu */}
@@ -16,7 +16,7 @@ export default function Nav() {
           @SynlighedNu
         </a>
 
-        {/* Knapper med transparent baggrund */}
+        {/* Knapper */}
         <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
           <a 
             href="#afstemning"
