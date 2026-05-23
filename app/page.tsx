@@ -54,7 +54,7 @@ export default function SynlighedNu() {
         </div>
       </section>
 
-      <ConcreteAreas />
+      <ConcreteAreas showExplanation={showExplanation} />
 
       {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
       <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
