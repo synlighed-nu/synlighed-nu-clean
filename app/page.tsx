@@ -21,11 +21,20 @@ export default function SynlighedNu() {
     <div className="min-h-screen bg-white text-[#002B5B] pt-20">
       <Nav />
       <Hero />
+
+      {/* Forklaring af mottoet lige under "Synlighed først." */}
+      <div className="max-w-4xl mx-auto px-6 py-8 text-center border-b border-gray-100">
+        <p className="text-xl font-medium text-[#002B5B]">
+          Det er det modsatte af, hvordan tingene ofte fungerer i det offentlige i dag – 
+          hvor processer bliver <strong>langsommere, dyrere og dårligere</strong>.
+        </p>
+      </div>
+
       <WhySection />
       <VotingSection />
       <BigMoves />
 
-      {/* === KREATIVITET – EGEN SEKTION === */}
+      {/* Kreativitet – egen sektion */}
       <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
@@ -56,7 +65,7 @@ export default function SynlighedNu() {
 
       <ConcreteAreas showExplanation={showExplanation} />
 
-      {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
+      {/* Demokrati 2.0 */}
       <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
         <div className="text-center mb-10">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
@@ -106,7 +115,7 @@ export default function SynlighedNu() {
         </div>
       </section>
 
-      {/* Støt projektet – stor CTA i bunden */}
+      {/* Støt projektet */}
       <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-100 bg-white">
         <div className="bg-[#002B5B] text-white rounded-3xl p-10 text-center">
           <h3 className="text-3xl font-semibold mb-3">Vil du hjælpe med at gøre Danmark mere gennemsigtigt?</h3>
