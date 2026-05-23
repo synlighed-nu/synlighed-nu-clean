@@ -33,7 +33,7 @@ export default function ConcreteAreas({ showExplanation }) {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 bg-white">
       <div className="max-w-3xl mx-auto text-center mb-10">
-        <h2 className="text-3xl font-bold tracking-tight">De konkrete områder.</h2>
+        <h2 className="text-3xl font-bold tracking-tight">De konkrete områder</h2>
         <p className="text-gray-600 mt-2">Tryk på et område for at læse mere.</p>
       </div>
 
