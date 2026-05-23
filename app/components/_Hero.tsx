@@ -12,18 +12,14 @@ export default function Hero() {
         <p className="text-2xl text-gray-600 mb-10">
           Hurtigere. Bedre. Billigere.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        
+        {/* Kun én knap nu */}
+        <div className="flex justify-center">
           <a 
             href="#afstemning" 
-            className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-9 py-4 rounded-2xl font-semibold text-lg transition"
+            className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-10 py-4 rounded-2xl font-semibold text-lg transition"
           >
             Stem på det vigtigste
-          </a>
-          <a 
-            href="#de-store-greb" 
-            className="border border-[#002B5B] hover:bg-gray-50 px-9 py-4 rounded-2xl font-semibold text-lg transition"
-          >
-            Se de store greb
           </a>
         </div>
       </div>
