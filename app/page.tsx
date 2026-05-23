@@ -22,14 +22,6 @@ export default function SynlighedNu() {
       <Nav />
       <Hero />
 
-      {/* Forklaring af mottoet lige under "Synlighed først." */}
-      <div className="max-w-4xl mx-auto px-6 py-8 text-center border-b border-gray-100">
-        <p className="text-xl font-medium text-[#002B5B]">
-          Det er det modsatte af, hvordan tingene ofte fungerer i det offentlige i dag – 
-          hvor processer bliver <strong>langsommere, dyrere og dårligere</strong>.
-        </p>
-      </div>
-
       <WhySection />
       <VotingSection />
       <BigMoves />
