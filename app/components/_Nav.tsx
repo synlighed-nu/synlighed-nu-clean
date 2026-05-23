@@ -12,24 +12,29 @@ export default function Nav() {
           Synlighed.nu
         </div>
 
-        {/* Links */}
-        <div className="flex items-center gap-8 text-sm font-medium">
+        {/* Navigation */}
+        <div className="flex items-center gap-4">
+          
+          {/* Knapper */}
           <a 
-            href="#afstemning" 
-            className="hover:text-[#002B5B]/80 transition-colors"
+            href="#afstemning"
+            className="px-6 py-2.5 bg-[#002B5B] hover:bg-[#001B3D] text-white text-sm font-semibold rounded-2xl transition-colors"
           >
             Afstemning
           </a>
+          
           <a 
-            href="#de-store-greb" 
-            className="hover:text-[#002B5B]/80 transition-colors"
+            href="#de-store-greb"
+            className="px-6 py-2.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-2xl transition-colors"
           >
             De store greb
           </a>
+
+          {/* X-link (stadig som tekst-link) */}
           <a 
             href="https://x.com/SynlighedNu" 
             target="_blank"
-            className="hover:text-[#002B5B]/80 transition-colors"
+            className="px-5 py-2.5 text-sm font-medium hover:text-[#002B5B] transition-colors"
           >
             X
           </a>
