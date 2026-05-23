@@ -16,7 +16,7 @@ export default function SynlighedNu() {
       <WhySection />
       <VotingSection />
       <BigMoves />
-      <ConcreteAreas />
+      <ConcreteAreas showExplanation={showExplanation} />
       <Footer />
     </div>
   );
