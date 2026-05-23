@@ -38,7 +38,7 @@ export default function SynlighedNu() {
         
         <div className="prose prose-lg max-w-none text-gray-700 text-center">
           <p className="text-2xl font-semibold mb-8">
-            Fra ca. 90 % kreative i børnehaven<br />
+            Fra ca. 98 % kreative i børnehaven<br />
             til kun ca. 10 % i gymnasiet<br />
             og helt ned til 2 % som voksne.
           </p>
