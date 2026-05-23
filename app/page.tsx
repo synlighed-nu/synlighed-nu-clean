@@ -55,8 +55,7 @@ export default function SynlighedNu() {
             Vores uddannelsessystem kvæler systematisk divergent tænkning og kreativitet. 
             Det er ikke kun et uddannelsesproblem – det er et samfundsproblem.
           </p>
-
-          {/* Direkte TED-link */}
+          
           <div className="mt-10 inline-flex items-center gap-3 bg-white border border-gray-300 hover:border-[#E30613] px-8 py-5 rounded-3xl transition-all group">
             <span className="text-[#E30613] text-3xl">▶</span>
             <a 
