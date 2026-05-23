@@ -26,7 +26,7 @@ export default function SynlighedNu() {
       <BigMoves />
 
       {/* === KREATIVITET – EGEN SEKTION === */}
-      <section className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white">
+      <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
         </div>
