@@ -24,9 +24,39 @@ export default function SynlighedNu() {
       <WhySection />
       <VotingSection />
       <BigMoves />
-      <ConcreteAreas showExplanation={showExplanation} />
 
-            {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
+      {/* === KREATIVITET – EGEN SEKTION === */}
+      <section className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white">
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
+        </div>
+        
+        <h2 className="text-4xl font-bold text-center tracking-tighter mb-6 text-[#002B5B]">
+          Kreativitet
+        </h2>
+        
+        <div className="prose prose-lg max-w-none text-gray-700 text-center">
+          <p className="text-2xl font-semibold mb-8">
+            Fra ca. 90 % kreative i børnehaven<br />
+            til kun ca. 10 % i gymnasiet<br />
+            og helt ned til 2 % som voksne.
+          </p>
+          
+          <p className="text-lg leading-relaxed max-w-2xl mx-auto">
+            Vores uddannelsessystem kvæler systematisk divergent tænkning og kreativitet. 
+            Det er ikke kun et uddannelsesproblem – det er et samfundsproblem.
+          </p>
+          
+          <p className="text-sm text-gray-500 mt-10">
+            Kilde: George Land &amp; Beth Jarman (1968–1992), longitudinal studie med 1.600 børn.<br />
+            Populært formidlet af Sir Ken Robinson i hans TED Talk “Do schools kill creativity?” (2006).
+          </p>
+        </div>
+      </section>
+
+      <ConcreteAreas />
+
+      {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
       <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
         <div className="text-center mb-10">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
