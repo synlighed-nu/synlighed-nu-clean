@@ -9,7 +9,7 @@ export default function Footer() {
         Synlighed.nu — Hurtigere. Bedre. Billigere.<br />
         Initiativ til agil reasoning og fuld offentlig synlighed i Danmark.
         <div className="mt-4 text-[10px] text-gray-400">
-          Version: 22. maj 2025 – v2.4 (med Axium og komponent-struktur)
+         Version: 22. maj 2025 – v2.5 (med komponent-struktur)
         </div>
       </div>
     </footer>
