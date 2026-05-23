@@ -13,12 +13,6 @@ export default function Nav() {
           <a href="#de-store-greb" className="hover:text-[#002B5B]/80 transition">De store greb</a>
           <a href="https://x.com/SynlighedNu" target="_blank" className="hover:text-[#002B5B]/80 transition">X</a>
           <a 
-            href="https://opencollective.com/synlighed-nu" 
-            target="_blank"
-            className="bg-[#002B5B] hover:bg-[#001f3d] text-white px-5 py-2 rounded-xl text-sm font-semibold transition"
-          >
-            Støt projektet
-          </a>
         </div>
       </div>
     </nav>
