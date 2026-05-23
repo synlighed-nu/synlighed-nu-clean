@@ -10,7 +10,7 @@ export default function ConcreteAreas({ showExplanation }: ConcreteAreasProps) {
   const areas = [
     { 
       title: "Boligstøtte", 
-      desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Det holder priserne kunstigt høje." 
+      desc: "Ca. 592.000 husstande modtager boligstøtte for milliarder årligt. Den hjælper mange i dag, men holder samtidig boligpriserne kunstigt høje og gør det svært for unge og førstegangskøbere at komme ind på markedet. Vi vil skabe et sundere boligmarked, hvor færre har brug for støtte – uden at straffe dem, der allerede er afhængige af den."
     },
     { 
       title: "Energi", 
@@ -43,20 +43,20 @@ export default function ConcreteAreas({ showExplanation }: ConcreteAreasProps) {
 
       <div className="grid md:grid-cols-2 gap-6">
         {areas.map((item, i) => (
-          <a 
+          <div 
             key={i} 
-            href="#" 
-            className="group border rounded-2xl p-6 active:bg-gray-50 transition block"
+            onClick={() => showExplanation(item.title, item.desc)}
+            className="group border rounded-3xl p-6 hover:border-[#002B5B] hover:shadow-md transition-all cursor-pointer"
           >
             <div className="flex justify-between items-start mb-2">
-              <h4 className="font-semibold text-lg pr-4 group-active:text-[#002B5B]">{item.title}</h4>
+              <h4 className="font-semibold text-lg pr-4 group-hover:text-[#002B5B]">{item.title}</h4>
               <span className="text-[#002B5B] text-xl flex-shrink-0">→</span>
             </div>
             <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
             <div className="mt-4 text-sm font-medium text-[#002B5B] flex items-center gap-1">
               Læs mere <span className="text-lg">→</span>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
