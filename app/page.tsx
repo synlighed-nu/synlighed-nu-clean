@@ -17,7 +17,7 @@ export default function SynlighedNu() {
     setModal({ title, text });
   };
   return (
-    <div className="min-h-screen bg-white text-[#002B5B]">
+    <div className="min-h-screen bg-white text-[#002B5B] pt-20">
       <Nav />
       <Hero />
       <WhySection />
