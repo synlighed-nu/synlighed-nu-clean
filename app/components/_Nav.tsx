@@ -16,25 +16,32 @@ export default function Nav() {
           @SynlighedNu
         </a>
 
-        {/* Knapper – tættere på logoet */}
+        {/* Knapper med transparent baggrund */}
         <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
           <a 
             href="#afstemning"
-            className="px-7 py-3 bg-[#002B5B] hover:bg-[#001B3D] text-white text-base font-semibold rounded-3xl transition-colors"
+            className="px-6 py-3 bg-white/70 hover:bg-white border border-[#002B5B]/30 hover:border-[#002B5B] text-[#002B5B] text-sm font-semibold rounded-3xl transition-all backdrop-blur-sm"
           >
             Afstemning
           </a>
           
           <a 
             href="#de-store-greb"
-            className="px-7 py-3 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-base font-semibold rounded-3xl transition-colors"
+            className="px-6 py-3 bg-white/70 hover:bg-white border border-[#002B5B]/30 hover:border-[#002B5B] text-[#002B5B] text-sm font-semibold rounded-3xl transition-all backdrop-blur-sm"
           >
             De store greb
           </a>
 
           <a 
+            href="#kreativitet"
+            className="px-6 py-3 bg-white/70 hover:bg-white border border-[#002B5B]/30 hover:border-[#002B5B] text-[#002B5B] text-sm font-semibold rounded-3xl transition-all backdrop-blur-sm"
+          >
+            Kreativitet
+          </a>
+
+          <a 
             href="#demokrati-2-0"
-            className="px-7 py-3 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-base font-semibold rounded-3xl transition-colors"
+            className="px-6 py-3 bg-white/70 hover:bg-white border border-[#002B5B]/30 hover:border-[#002B5B] text-[#002B5B] text-sm font-semibold rounded-3xl transition-all backdrop-blur-sm"
           >
             Demokrati 2.0
           </a>
