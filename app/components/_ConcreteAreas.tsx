@@ -2,7 +2,11 @@
 
 import React from 'react';
 
-export default function ConcreteAreas({ showExplanation }) {
+interface ConcreteAreasProps {
+  showExplanation: (title: string, text: string) => void;
+}
+
+export default function ConcreteAreas({ showExplanation }: ConcreteAreasProps) {
   const areas = [
     { 
       title: "Boligstøtte", 
