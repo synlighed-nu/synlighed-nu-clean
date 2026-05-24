@@ -19,7 +19,7 @@ export default function SynlighedNu() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#002B5B] pt-20">
+    <div className="min-h-screen bg-white text-[#002B5B] pt-28">
       <Nav />
       <Hero />
 
