@@ -74,7 +74,7 @@ export default function SynlighedNu() {
       
       <ConcreteAreas showExplanation={showExplanation} />
 
-            {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
+                  {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
       <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white print:break-before-page">
         <div className="text-center mb-10">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
@@ -117,7 +117,7 @@ export default function SynlighedNu() {
               <p className="text-gray-600">Evnen til at handle hurtigt og fornuftigt, når virkeligheden er kendt.</p>
             </div>
             <div className="bg-white border border-gray-200 rounded-3xl p-6">
-              <h4 className="font-semibold mb-2">Axium</h4>
+              <h4 className="font-semibold mb-2">Axiom</h4>
               <p className="text-gray-600">Nogle få grundlæggende regler der aldrig må forhandles væk.</p>
             </div>
           </div>
