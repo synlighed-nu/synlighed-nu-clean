@@ -18,6 +18,7 @@ const axioms = [
   "Tillid opstår ikke af kontrol. Den opstår af synlighed.",
   "Det er lettere at begrave et problem i en rapport end at løse det.",
   "Fremtiden tilhører dem, der tør stille de rigtige spørgsmål."
+  "Synlighed begynder først, når man tør erkende sine begrænsninger."
 ];
 
 export default function Axioms() {
