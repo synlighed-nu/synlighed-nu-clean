@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const axioms = [
   "Vi bruger milliarder – men ved ikke hvad der virker.",
@@ -33,7 +34,12 @@ export default function Axioms() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-12 bg-white border-t border-gray-100">
       <div className="text-center">
-        <span className="inline-block px-4 py-1 bg-[#002B5B] text-white text-xs font-semibold tracking-widest rounded-full mb-6">AXIUM</span>
+        <Link 
+          href="/axium"
+          className="inline-block px-4 py-1 bg-[#002B5B] hover:bg-[#001B3D] text-white text-xs font-semibold tracking-widest rounded-full mb-6 transition-colors"
+        >
+          AXIUM
+        </Link>
         
         <div className="min-h-[110px] flex items-center justify-center">
           <p className="text-xl md:text-2xl font-medium text-[#002B5B] leading-tight transition-opacity duration-700">
@@ -41,7 +47,6 @@ export default function Axioms() {
           </p>
         </div>
 
-        {/* prikker */}
         <div className="flex justify-center gap-2 mt-8">
           {axioms.map((_, i) => (
             <button
