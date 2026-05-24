@@ -9,6 +9,7 @@ import VotingSection from './components/_VotingSection';
 import BigMoves from './components/_BigMoves';
 import ConcreteAreas from './components/_ConcreteAreas';
 import Footer from './components/_Footer';
+import Axioms from './components/_Axioms';
 
 export default function SynlighedNu() {
   const [modal, setModal] = useState<{ title: string; text: string } | null>(null);
@@ -21,6 +22,9 @@ export default function SynlighedNu() {
     <div className="min-h-screen bg-white text-[#002B5B] pt-20">
       <Nav />
       <Hero />
+
+      {/* AXIOMS */}
+      <Axioms />
 
       <WhySection />
       <VotingSection />
