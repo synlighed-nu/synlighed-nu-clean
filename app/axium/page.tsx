@@ -10,8 +10,8 @@ export default function AxiumPage() {
 
         <div className="grid md:grid-cols-2 gap-8">
           
-          {/* Boligstøtte */}
-          <a href="https://www.dst.dk/da/Statistik/emner/levevilkaar/boligforhold/boligstoette" target="_blank" 
+          {/* Boligstøtte - NY KORREKT LINK */}
+          <a href="https://www.dst.dk/da/Statistik/emner/sociale-forhold/social-stoette/boligstoette" target="_blank" 
              className="group bg-white border border-gray-200 hover:border-[#002B5B] rounded-3xl p-8 transition-all">
             <h3 className="font-semibold text-2xl mb-3">Boligstøtte</h3>
             <p className="text-gray-600 mb-6">Ca. 592.000 husstande modtager boligstøtte for milliarder årligt.</p>
