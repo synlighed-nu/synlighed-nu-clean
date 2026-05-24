@@ -16,7 +16,7 @@ const axioms = [
   "Vi åbner systemet – én del ad gangen.",
   "Hurtigere. Bedre. Billigere. er det modsatte af staten i dag.",
   "Demokrati bliver til idiokrati uden løbende opgradering.",
-  "Axium er de få regler der aldrig må forhandles væk.",
+  "Axiom er de få regler der aldrig må forhandles væk.",
   "Offentlig administration bør være et reasoning-værk – ikke et embed-værk.",
   "Synlighed begynder først, når man tør erkende sine begrænsninger."
 ];
@@ -35,10 +35,10 @@ export default function Axioms() {
     <div className="max-w-4xl mx-auto px-6 py-12 bg-white border-t border-gray-100">
       <div className="text-center">
         <Link 
-          href="/axium"
+          href="/axiom"
           className="inline-block px-4 py-1 bg-[#002B5B] hover:bg-[#001B3D] text-white text-xs font-semibold tracking-widest rounded-full mb-6 transition-colors"
         >
-          AXIUM
+          AXIOM
         </Link>
         
         <div className="min-h-[110px] flex items-center justify-center">
