@@ -1,4 +1,4 @@
-export default function AxiumPage() {
+export default function AxiomPage() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B] pt-28 pb-20">
       <div className="max-w-5xl mx-auto px-6">
