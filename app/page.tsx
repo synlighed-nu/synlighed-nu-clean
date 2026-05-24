@@ -32,7 +32,6 @@ export default function SynlighedNu() {
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
         </div>
         <h2 className="text-4xl font-bold text-center tracking-tighter mb-6 text-[#002B5B]">Kreativitet</h2>
-        {/* resten af kreativitet-sektionen som før */}
         <div className="prose prose-lg max-w-none text-gray-700 text-center">
           <p className="text-2xl font-semibold mb-8">
             Fra ca. 98 % kreative i børnehaven<br />
@@ -59,13 +58,33 @@ export default function SynlighedNu() {
       <ConcreteAreas showExplanation={showExplanation} />
 
       {/* DEMOKRATI 2.0 */}
-      <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 print:break-before-page">
-        {/* hele demokrati 2.0 indhold som før */}
+      <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white print:break-before-page">
         <div className="text-center mb-10">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
         </div>
         <h2 className="text-4xl font-bold text-center tracking-tighter mb-6">Demokrati 2.0</h2>
-        {/* ... resten af teksten ... */}
+        <div className="prose prose-lg max-w-none text-gray-700">
+          <p className="text-xl text-center mb-10">Vi ved, hvor det nuværende demokrati ender, hvis vi ikke udvikler det.</p>
+          <p>I filmen <strong>Idiokrati</strong> bliver samfundet dumt, fordi ingen længere tænker kritisk. I George Orwells klassiker <strong>1984</strong> bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.</p>
+          <p className="font-semibold text-center text-lg my-8 text-[#002B5B]">Vi prioriterer der, hvor ændringer skaber mest effekt – ikke bare mest opmærksomhed.</p>
+          <p>Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år. Uden løbende forbedring bevæger vi os langsomt mod en blanding af begge dystopier.</p>
+          <p className="text-2xl font-semibold text-center my-10 text-[#002B5B]">Derfor er Demokrati 2.0 ikke en mulighed – det er en nødvendighed.</p>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-12 print:break-inside-avoid">
+            <div className="bg-white border border-gray-200 rounded-3xl p-6">
+              <h4 className="font-semibold mb-2">Fuld synlighed</h4>
+              <p className="text-gray-600">Så alle kan se, hvor skattekronerne går hen og hvilke konsekvenser beslutningerne har.</p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-3xl p-6">
+              <h4 className="font-semibold mb-2">Agil reasoning</h4>
+              <p className="text-gray-600">Evnen til at handle hurtigt og fornuftigt, når virkeligheden er kendt.</p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-3xl p-6">
+              <h4 className="font-semibold mb-2">Axium</h4>
+              <p className="text-gray-600">Nogle få grundlæggende regler der aldrig må forhandles væk.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Støt projektet */}
