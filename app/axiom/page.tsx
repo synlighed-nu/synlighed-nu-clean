@@ -2,7 +2,7 @@ export default function AxiomPage() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B] pt-28 pb-20">
       <div className="max-w-5xl mx-auto px-6">
-        <h1 className="text-5xl font-bold tracking-tighter text-center mb-4">AXIUM</h1>
+        <h1 className="text-5xl font-bold tracking-tighter text-center mb-4">AXIOM</h1>
         <p className="text-center text-xl text-gray-600 mb-16 max-w-2xl mx-auto">
           Her samler vi de vigtigste officielle kilder og genveje.<br />
           Fakta, statistik og rapporter – ét klik væk.
