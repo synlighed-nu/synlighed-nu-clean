@@ -27,7 +27,7 @@ export default function SynlighedNu() {
       <BigMoves />
 
       {/* === KREATIVITET – EGEN SEKTION === */}
-      <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white">
+      <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white print:break-before-page">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
         </div>
@@ -69,57 +69,57 @@ export default function SynlighedNu() {
       <ConcreteAreas showExplanation={showExplanation} />
 
       {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
-<section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
-  <div className="text-center mb-10">
-    <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
-  </div>
-  
-  <h2 className="text-4xl font-bold text-center tracking-tighter mb-6">
-    Demokrati 2.0
-  </h2>
-  
-  <div className="prose prose-lg max-w-none text-gray-700">
-    <p className="text-xl text-center mb-10">
-      Vi ved, hvor det nuværende demokrati ender, hvis vi ikke udvikler det.
-    </p>
-    
-    <p>
-      I filmen <strong><a href="https://en.wikipedia.org/wiki/Idiocracy" target="_blank" className="underline hover:text-[#E30613] transition-colors">Idiokrati</a></strong> bliver samfundet dumt, fordi ingen længere tænker kritisk. 
-      I George Orwells klassiker <strong><a href="https://da.wikipedia.org/wiki/1984_(roman)" target="_blank" className="underline hover:text-[#E30613] transition-colors">1984</a></strong> bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.
-    </p>
-    
-    <p className="font-semibold text-center text-lg my-8 text-[#002B5B]">
-      Vi prioriterer der, hvor ændringer skaber mest effekt – ikke bare mest opmærksomhed.
-    </p>
-    
-    <p>
-      Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år. 
-      Uden løbende forbedring bevæger vi os langsomt mod en blanding af begge dystopier.
-    </p>
-    
-    <p className="text-2xl font-semibold text-center my-10 text-[#002B5B]">
-      Derfor er Demokrati 2.0 ikke en mulighed – det er en nødvendighed.
-    </p>
+      <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 print:break-before-page">
+        <div className="text-center mb-10">
+          <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
+        </div>
+        
+        <h2 className="text-4xl font-bold text-center tracking-tighter mb-6">
+          Demokrati 2.0
+        </h2>
+        
+        <div className="prose prose-lg max-w-none text-gray-700">
+          <p className="text-xl text-center mb-10">
+            Vi ved, hvor det nuværende demokrati ender, hvis vi ikke udvikler det.
+          </p>
+          
+          <p>
+            I filmen <strong>Idiokrati</strong> bliver samfundet dumt, fordi ingen længere tænker kritisk. 
+            I George Orwells klassiker <strong>1984</strong> bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.
+          </p>
+          
+          <p className="font-semibold text-center text-lg my-8 text-[#002B5B]">
+            Vi prioriterer der, hvor ændringer skaber mest effekt – ikke bare mest opmærksomhed.
+          </p>
+          
+          <p>
+            Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år. 
+            Uden løbende forbedring bevæger vi os langsomt mod en blanding af begge dystopier.
+          </p>
+          
+          <p className="text-2xl font-semibold text-center my-10 text-[#002B5B]">
+            Derfor er Demokrati 2.0 ikke en mulighed – det er en nødvendighed.
+          </p>
 
-    <div className="grid md:grid-cols-3 gap-6 mt-12">
-      <div className="bg-white border border-gray-200 rounded-3xl p-6">
-        <h4 className="font-semibold mb-2">Fuld synlighed</h4>
-        <p className="text-gray-600">Så alle kan se, hvor skattekronerne går hen og hvilke konsekvenser beslutningerne har.</p>
-      </div>
-      <div className="bg-white border border-gray-200 rounded-3xl p-6">
-        <h4 className="font-semibold mb-2">Agil reasoning</h4>
-        <p className="text-gray-600">Evnen til at handle hurtigt og fornuftigt, når virkeligheden er kendt.</p>
-      </div>
-      <div className="bg-white border border-gray-200 rounded-3xl p-6">
-        <h4 className="font-semibold mb-2">Axium</h4>
-        <p className="text-gray-600">Nogle få grundlæggende regler der aldrig må forhandles væk.</p>
-      </div>
-    </div>
-  </div>
-</section>
+          <div className="grid md:grid-cols-3 gap-6 mt-12 print:break-inside-avoid">
+            <div className="bg-white border border-gray-200 rounded-3xl p-6">
+              <h4 className="font-semibold mb-2">Fuld synlighed</h4>
+              <p className="text-gray-600">Så alle kan se, hvor skattekronerne går hen og hvilke konsekvenser beslutningerne har.</p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-3xl p-6">
+              <h4 className="font-semibold mb-2">Agil reasoning</h4>
+              <p className="text-gray-600">Evnen til at handle hurtigt og fornuftigt, når virkeligheden er kendt.</p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-3xl p-6">
+              <h4 className="font-semibold mb-2">Axium</h4>
+              <p className="text-gray-600">Nogle få grundlæggende regler der aldrig må forhandles væk.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Støt projektet */}
-      <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-100 bg-white">
+      <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-100 bg-white print:break-before-page">
         <div className="bg-[#002B5B] text-white rounded-3xl p-10 text-center">
           <h3 className="text-3xl font-semibold mb-3">Vil du hjælpe med at gøre Danmark mere gennemsigtigt?</h3>
           <p className="text-[#E30613] text-xl mb-8">Støt projektet med det beløb du synes er rigtigt</p>
