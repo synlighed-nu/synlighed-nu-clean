@@ -30,35 +30,48 @@ export default function SynlighedNu() {
       <VotingSection />
       <BigMoves />
 
-      {/* KREATIVITET */}
-      <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-20 border-t border-gray-200 bg-white print:break-before-page">
-        <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
+            {/* === KREATIVITET – KRITISK OMRÅDE === */}
+      <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white print:break-before-page">
+        <div className="text-center mb-8">
+          <span className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
         </div>
-        <h2 className="text-4xl font-bold text-center tracking-tighter mb-6 text-[#002B5B]">Kreativitet</h2>
-        <div className="prose prose-lg max-w-none text-gray-700 text-center">
-          <p className="text-2xl font-semibold mb-8">
+        
+        <h2 className="text-4xl font-bold text-center tracking-tighter mb-8">Kreativitet</h2>
+        
+        <div className="prose prose-lg max-w-none text-gray-700">
+          <p className="text-2xl font-medium text-center mb-10">
             Fra ca. 98 % kreative i børnehaven<br />
             til kun ca. 10 % i gymnasiet<br />
             og helt ned til 2 % som voksne.
           </p>
-          <p className="text-lg leading-relaxed max-w-2xl mx-auto">
-            Vores uddannelsessystem kvæler systematisk divergent tænkning og kreativitet. 
+          
+          <p className="text-center mb-12">
+            Vores uddannelsessystem kvæler systematisk divergent tænkning og kreativitet.<br />
             Det er ikke kun et uddannelsesproblem – det er et samfundsproblem.
           </p>
-          <div className="mt-10 inline-flex items-center gap-3 bg-white border border-gray-300 hover:border-[#E30613] px-8 py-5 rounded-3xl transition-all group">
-            <span className="text-[#E30613] text-3xl">▶</span>
-            <a href="https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity" target="_blank" className="font-semibold text-[#002B5B] group-hover:text-[#E30613]">
-              Se Sir Ken Robinsons TED Talk<br />
-              <span className="text-sm font-normal text-gray-500">"Do schools kill creativity?" (2006)</span>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-8 text-center mb-10">
+            <a 
+              href="https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity" 
+              target="_blank"
+              className="inline-flex items-center gap-3 bg-white hover:bg-gray-50 border border-gray-300 rounded-2xl px-8 py-6 text-left transition group"
+            >
+              <div className="w-12 h-12 bg-[#002B5B] text-white rounded-2xl flex items-center justify-center flex-shrink-0 group-active:scale-95 transition">
+                ▶
+              </div>
+              <div>
+                <div className="font-semibold">Se Sir Ken Robinsons TED Talk</div>
+                <div className="text-sm text-gray-600">"Do schools kill creativity?" (2006)</div>
+              </div>
             </a>
           </div>
-          <p className="text-sm text-gray-500 mt-12">
-            Kilde: George Land &amp; Beth Jarman (1968–1992), longitudinal studie med 1.600 børn.
+
+          <p className="text-sm text-gray-500 text-center">
+            Kilde: George Land & Beth Jarman (1968–1992), longitudinal studie med 1.600 børn.
           </p>
         </div>
       </section>
-
+      
       <ConcreteAreas showExplanation={showExplanation} />
 
             {/* === DEMOKRATI 2.0 – EGEN SEKTION === */}
