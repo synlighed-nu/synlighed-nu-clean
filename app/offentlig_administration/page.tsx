@@ -20,15 +20,20 @@ export default function OffentligAdministrationPage() {
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
-            Over de næste 5 år kan vi gradvist ændre incitamenterne i den offentlige sektor, 
-            så der belønnes resultater og reel værdiskabelse frem for proces og kontrol.
+            Over de næste 5 år kan vi ændre incitamenterne i den offentlige sektor, så der belønnes resultater og reel værdiskabelse frem for proces og kontrol.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-12 mb-4">Forslag til berørte medarbejdere</h3>
+          <p>
+            Hvis en medarbejder har været ansat i det offentlige i mere end 2 år, skal vedkommende være berettiget til en <strong>fratrædelsesordning på 1 år</strong> med fuld løn. 
+            Det giver tryghed, tid til omstilling og mindsker risikoen for kaos under de nødvendige forandringer.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
           <ul className="list-disc pl-6 space-y-3">
             <li>En stor del af skattekronerne går til administration og kontrol</li>
             <li>Systemet belønner proces frem for resultater</li>
-            <li>Det skaber ineffektivitet og unødvendig bureaukrati</li>
+            <li>Det skaber ineffektivitet og unødvendigt bureaukrati</li>
             <li>Borgerne oplever langsommelighed og ringe værdi for pengene</li>
           </ul>
 
