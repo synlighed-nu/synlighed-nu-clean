@@ -22,23 +22,25 @@ export default function BoligstottePage() {
             Ca. 592.000 husstande modtager boligstøtte for <strong>ca. 18 milliarder kroner årligt</strong>.
           </p>
           
-          <p>
-            Det svarer til **næsten én hel Øresundsbro hvert eneste år**.
+          <p className="text-xl font-semibold text-[#E30613]">
+            Det svarer til næsten én hel Øresundsbro hvert eneste år.
           </p>
 
           <p>
-            Støtten hjælper mange i dag, men holder samtidig boligpriserne kunstigt høje. 
-            Det gør det sværere for unge og førstegangskøbere at komme ind på markedet.
+            Støtten hjælper mange i dag, men holder samtidig boligpriserne kunstigt høje og gør det sværere for unge og førstegangskøbere at komme ind på markedet.
           </p>
 
+          <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
-            I stedet for at bruge de 18 milliarder på at bygge flere boliger – hvilket ville sænke priserne – 
-            bruger staten pengene på at kompensere for de høje priser. 
-            Resultatet er et system, hvor færre mennesker får brug for støtte – uden at straffe dem, 
-            der allerede er afhængige af den.
+            Over de næste 5 år kunne vi gradvist afvikle boligstøtten samtidig med, at vi bygger et stort antal nye boliger, 
+            der er 100 % selvforsynende med sol, vind og batterier. 
+          </p>
+          <p>
+            På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud – 
+            i stedet for at bruge 18 milliarder kroner om året på at holde priserne oppe.
           </p>
 
-          <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem?</h3>
+          <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
           <ul className="list-disc pl-6 space-y-3">
             <li>Holder boligpriserne kunstigt høje</li>
             <li>Skaber afhængighed af offentlig støtte</li>
