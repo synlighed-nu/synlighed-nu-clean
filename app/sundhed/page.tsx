@@ -11,7 +11,7 @@ export default function SundhedPage() {
         
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
-            Offentlige sundhedsudgifter ligger på ca. 280 milliarder kroner årligt.
+            Offentlige sundhedsudgifter ligger på ca. <strong>280 milliarder kroner årligt</strong>.
           </p>
           
           <p>
@@ -19,13 +19,17 @@ export default function SundhedPage() {
           </p>
 
           <p className="text-xl font-semibold text-[#E30613]">
-            Vi behandler konsekvenser i stedet for at ændre årsager.
+            Vi bruger milliarder på at reparere mennesker, vi kunne have holdt sunde.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
-            Over de næste 5 år kunne vi gradvist flytte ressourcer fra behandling til forebyggelse, 
-            samtidig med at vi bygger sundere samfund (kost, motion, miljø og mentale helbred).
+            Over de næste 5 år kunne vi gradvist flytte en større del af ressourcerne fra behandling til forebyggelse. 
+            Det betyder bl.a. bedre mad- og måltidsvaner i dagtilbud, skoler og på arbejdspladser, tidlig opsporing af ernæringsproblemer hos ældre og stærkere fokus på fysisk aktivitet og mentale helbred.
+          </p>
+
+          <p>
+            Forebyggelse er både billigere og bedre end behandling – og det er den eneste måde at bryde den negative spiral på.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
