@@ -11,21 +11,21 @@ export default function SundhedPage() {
         
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
-            Offentlige sundhedsudgifter ligger på ca. <strong>280 milliarder kroner årligt</strong>.
+            Vi bruger ca. <strong>280 milliarder kroner årligt</strong> på sundhed.
           </p>
           
           <p>
-            Der er stort fokus på medicin og behandling – men meget lidt på reel forebyggelse af sygdom.
+            Stort fokus på medicin og behandling – meget lidt på at forebygge sygdom.
           </p>
 
           <p className="text-xl font-semibold text-[#E30613]">
-            Vi bruger milliarder på at reparere mennesker, vi kunne have holdt sunde.
+            Vi reparerer mennesker, vi kunne have holdt sunde.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
-            Over de næste 5 år kunne vi gradvist flytte en større del af ressourcerne fra behandling til forebyggelse. 
-            Det betyder bl.a. bedre mad- og måltidsvaner i dagtilbud, skoler og på arbejdspladser, tidlig opsporing af ernæringsproblemer hos ældre og stærkere fokus på fysisk aktivitet og mentale helbred.
+            Over de næste 5 år kan vi gradvist flytte ressourcer fra behandling til reel forebyggelse: 
+            bedre mad- og måltidsvaner i dagtilbud, skoler og på arbejdspladser, tidlig opsporing hos ældre og stærkere fokus på fysisk og mental sundhed.
           </p>
 
           <p>
@@ -34,7 +34,7 @@ export default function SundhedPage() {
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
           <ul className="list-disc pl-6 space-y-3">
-            <li>Penge bruges primært på at reparere i stedet for at forebygge</li>
+            <li>Penge bruges primært på at reparere frem for at forebygge</li>
             <li>Medicinindustrien har stor indflydelse på prioriteringer</li>
             <li>Forebyggelse giver både bedre sundhed og store langsigtede besparelser</li>
             <li>Systemet belønner behandling frem for sundhed</li>
