@@ -23,6 +23,10 @@ export default function BoligstottePage() {
           </p>
           
           <p>
+            Det svarer til **næsten én hel Øresundsbro hvert eneste år**.
+          </p>
+
+          <p>
             Støtten hjælper mange i dag, men holder samtidig boligpriserne kunstigt høje. 
             Det gør det sværere for unge og førstegangskøbere at komme ind på markedet.
           </p>
