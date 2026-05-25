@@ -10,13 +10,13 @@ export default function Nav() {
     <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 print:hidden">
       <div className="max-w-6xl mx-auto px-4 py-4">
         
-        {/* Logo / Titel */}
+        {/* Top row med logo og hamburger */}
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-semibold tracking-tighter text-[#002B5B]">
             @SynlighedNu
           </Link>
 
-          {/* Hamburger-knap – kun synlig på mobil */}
+          {/* Hamburger – kun på mobil */}
           <button 
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-[#002B5B] text-3xl focus:outline-none"
@@ -36,7 +36,7 @@ export default function Nav() {
         {/* Mobil menu */}
         {menuOpen && (
           <div className="md:hidden mt-4 bg-white border border-gray-200 rounded-3xl py-4 px-4 shadow-lg">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2">
               <a href="#afstemning" onClick={() => setMenuOpen(false)} className="px-6 py-4 text-center font-medium hover:bg-gray-100 rounded-2xl">Afstemning</a>
               <a href="#de-store-greb" onClick={() => setMenuOpen(false)} className="px-6 py-4 text-center font-medium hover:bg-gray-100 rounded-2xl">De store greb</a>
               <a href="#kreativitet" onClick={() => setMenuOpen(false)} className="px-6 py-4 text-center font-medium hover:bg-gray-100 rounded-2xl">Kreativitet</a>
