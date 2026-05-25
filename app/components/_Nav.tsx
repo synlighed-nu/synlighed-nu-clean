@@ -7,15 +7,12 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
   if (simple) {
     return (
       <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 print:hidden">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-[#002B5B] hover:text-[#001B3D] font-semibold flex items-center gap-2">
-            ← Synlighed.nu
-          </Link>
+        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           <Link 
-            href="/"
-            className="text-sm font-medium text-[#002B5B] hover:underline"
+            href="/" 
+            className="flex items-center gap-2 text-[#002B5B] hover:text-[#001B3D] font-semibold"
           >
-            Til forsiden
+            ← Synlighed.nu
           </Link>
         </div>
       </nav>

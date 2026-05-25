@@ -9,13 +9,7 @@ export default function BoligstottePage() {
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
         {/* Tilbage-knap */}
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 text-[#002B5B] hover:text-[#001B3D] font-medium mb-8 group"
-        >
-          ← Tilbage til forsiden
-        </Link>
-
+       
         <h1 className="text-5xl font-bold tracking-tighter mb-6">Boligstøtte</h1>
         
         <div className="prose prose-lg max-w-none text-gray-700">
