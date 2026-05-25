@@ -24,8 +24,7 @@ export default function RentDrikkevandPage() {
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
-            Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider, 
-            samtidig med at vi sikrer bedre lokal håndtering af drikkevand.
+            Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
@@ -39,11 +38,11 @@ export default function RentDrikkevandPage() {
           <div className="mt-12 bg-gray-50 border border-gray-200 rounded-3xl p-8">
             <p className="font-medium text-[#002B5B]">Officiel kilde:</p>
             <a 
-              href="https://www.geus.dk/" 
+              href="https://www.geus.dk/vandressourcer/vandkvalitet/grundvandskvalitet/opgoerelser" 
               target="_blank"
               className="text-[#002B5B] hover:underline flex items-center gap-2 mt-3"
             >
-              GEUS – Geologisk Undersøgelse <span className="text-xl">↗</span>
+              GEUS – Opgørelser over pesticider i grundvand <span className="text-xl">↗</span>
             </a>
           </div>
         </div>
