@@ -48,11 +48,18 @@ export default function OffentligAdministrationPage() {
                 KL – Benspænd fra staten skaber unødvendigt bureaukrati <span className="text-xl">↗</span>
               </a>
               <a 
-                href="https://rigsrevisionen.dk/" 
+                href="https://www.rigsrevisionen.dk/" 
                 target="_blank"
                 className="block text-[#002B5B] hover:underline flex items-center gap-2"
               >
-                Rigsrevisionen – Rapporter om offentlig forvaltning <span className="text-xl">↗</span>
+                Rigsrevisionen – Revision af statens administration <span className="text-xl">↗</span>
+              </a>
+              <a 
+                href="https://www.dst.dk/da/Statistik/emner/oekonomi/offentlig-oekonomi/offentlig-sektors-oekonomi" 
+                target="_blank"
+                className="block text-[#002B5B] hover:underline flex items-center gap-2"
+              >
+                Danmarks Statistik – Offentlig sektors økonomi og administration <span className="text-xl">↗</span>
               </a>
             </div>
           </div>
