@@ -63,28 +63,8 @@ export default function SynlighedNu() {
         </div>
       </section>
 
-      {/* Simpel og diskret blå boks i bunden */}
-      <div className="bg-[#002B5B] text-white py-10 text-center">
-        <div className="max-w-4xl mx-auto px-6 text-sm">
-          <p className="font-medium">
-            Synlighed.nu © 2026 – Vi gør det offentlige gennemsigtigt
-          </p>
-          <p className="text-white/80 mt-1">
-            Hurtigere. Bedre. Billigere. med agil reasoning og fuld synlighed.
-          </p>
-          <p className="mt-6">
-            <a href="/bliv-frivillig" className="text-white/70 hover:text-white underline text-xs">
-              Bliv frivillig →
-            </a>
-          </p>
-          <p className="text-white/60 text-xs mt-8">
-            @SynlighedNu
-          </p>
-        </div>
-      </div>
-
       <Footer />
-
+      
       {/* Modal */}
       {modal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" onClick={() => setModal(null)}>
