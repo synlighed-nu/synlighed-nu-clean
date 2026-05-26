@@ -15,7 +15,7 @@ export default function SynlighedNu() {
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      {/* === UNIVERSAL TOP – HOVEDINDLEDNING === */}
+      {/* === UNIVERSAL TOP === */}
       <div className="text-center pt-20 pb-16 px-6">
         <h1 className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
           Synlighed først.
@@ -33,19 +33,39 @@ export default function SynlighedNu() {
       <WhySection />
       <VotingSection />
       <BigMoves />
-      <ConcreteAreas />   {/* ← her fjernes showExplanation */}
+      <ConcreteAreas />
 
-      {/* Demokrati 2.0 */}
-      <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
-        <div className="text-center mb-10">
-          <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
-        </div>
-        <h2 className="text-4xl font-bold text-center tracking-tighter mb-6">Demokrati 2.0</h2>
-        <div className="prose prose-lg max-w-none text-gray-700 text-center">
-          <p className="text-2xl font-semibold text-[#002B5B]">Det gamle demokrati er blevet misbrugt, fordi vi ikke har udviklet det.</p>
-          <p className="mt-8">Uden løbende forbedring bevæger vi os mod idiokrati eller kontrol. Vi skal opgradere det med fuld synlighed, agil reasoning og klare axiom’er.</p>
-        </div>
-      </section>
+      {/* === TO KRITISKE BOKSE I BUNDEN === */}
+      <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
+        
+        {/* Kreativitet boks */}
+        <a href="/kreativitet" className="group block">
+          <div className="text-center mb-4">
+            <span className="inline-block px-5 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#E30613] transition-all h-full">
+            <h2 className="text-3xl font-bold tracking-tighter mb-4">Kreativitet</h2>
+            <p className="text-gray-600">Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning.</p>
+            <div className="mt-6 text-[#E30613] font-medium flex items-center gap-2">
+              Læs mere <span className="text-xl">→</span>
+            </div>
+          </div>
+        </a>
+
+        {/* Demokrati 2.0 boks */}
+        <a href="/demokrati-2-0" className="group block">
+          <div className="text-center mb-4">
+            <span className="inline-block px-5 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#E30613] transition-all h-full">
+            <h2 className="text-3xl font-bold tracking-tighter mb-4">Demokrati 2.0</h2>
+            <p className="text-gray-600">Det gamle demokrati er blevet misbrugt, fordi vi ikke har udviklet det. Uden forbedring ender vi i idiokrati.</p>
+            <div className="mt-6 text-[#E30613] font-medium flex items-center gap-2">
+              Læs mere <span className="text-xl">→</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
       <Footer />
     </div>
