@@ -1,27 +1,53 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function SpeakerButton() {
   const speak = () => {
     const utterance = new SpeechSynthesisUtterance();
-    
-    // Finder al tekst på siden (undtagen navigation og footer)
-    const mainContent = document.querySelector('main, section, .prose') || document.body;
-    utterance.text = mainContent?.textContent || document.body.textContent || '';
-    
+    const mainContent = document.querySelector('main, .prose, section') || document.body;
+
+    // Fjern tidligere markeringer
+    document.querySelectorAll('.speaking-highlight').forEach(el => {
+      el.classList.remove('speaking-highlight');
+    });
+
+    utterance.text = mainContent.textContent || '';
     utterance.lang = 'da-DK';
-    utterance.rate = 0.95;
-    utterance.pitch = 1.0;
-    
-    window.speechSynthesis.cancel(); // Stopper eventuel tidligere oplæsning
+    utterance.rate = 0.92;
+    utterance.pitch = 1;
+
+    // Highlight-effekt mens det læses
+    utterance.onboundary = (event) => {
+      const text = utterance.text;
+      const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+      const currentIndex = Math.min(Math.floor(event.charIndex / 80), sentences.length - 1);
+
+      // Fjern gamle highlights
+      document.querySelectorAll('.speaking-highlight').forEach(el => el.classList.remove('speaking-highlight'));
+
+      // Find og highlight den aktuelle sætning
+      const elements = document.querySelectorAll('p, h1, h2, h3, h4, li');
+      for (let el of elements) {
+        if (el.textContent && sentences[currentIndex] && el.textContent.includes(sentences[currentIndex].trim())) {
+          el.classList.add('speaking-highlight');
+          break;
+        }
+      }
+    };
+
+    utterance.onend = () => {
+      document.querySelectorAll('.speaking-highlight').forEach(el => el.classList.remove('speaking-highlight'));
+    };
+
+    window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
   };
 
   return (
     <button
       onClick={speak}
-      className="fixed bottom-6 right-6 bg-white border border-gray-300 hover:border-[#002B5B] text-[#002B5B] w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 z-40"
+      className="fixed bottom-8 right-8 bg-white border-2 border-[#002B5B] text-[#002B5B] w-14 h-14 rounded-3xl flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all z-50 text-3xl"
       title="Læs siden højt"
     >
       🔊
