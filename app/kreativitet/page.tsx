@@ -12,7 +12,7 @@ export default function KreativitetPage() {
         
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
-            I børnehaven er næsten 98 procent af børnene kreative på "genius-niveau".
+            I børnehaven er næsten 98 procent af børnene kreative på genius-niveau.
           </p>
           
           <p>
@@ -24,18 +24,31 @@ export default function KreativitetPage() {
             Vores uddannelsessystem kvæler kreativiteten systematisk.
           </p>
 
-          <h3 className="text-xl font-semibold mt-12 mb-4">Undersøgelsen</h3>
           <p>
-            Dette stammer fra en berømt longitudinal undersøgelse af George Land og Beth Jarman.<br />
-            I 1968 testede de 1.600 børn på 4-5 år i divergent tænkning.<br />
-            98 procent scorede på "genius-niveau".
+            Hver dag i danske klasser sker det samme.
           </p>
           <p>
-            De fulgte børnene gennem skolesystemet – og gentog testen.
+            Læreren stiller en opgave og forventer ét rigtigt svar fra alle.
           </p>
-
-          <p className="mt-8">
-            Resultatet er nedslående: Skolesystemet straffer divergent tænkning og belønner konvergent tænkning (én rigtig løsning).
+          <p>
+            Men mange elever forstår opgaven anderledes og kommer med et andet resultat – selvom deres argumenter er i orden.
+          </p>
+          <p className="text-xl font-semibold text-[#E30613]">
+            Når det sker, bliver det stemplet som forkert.
+          </p>
+          <p>
+            Det er ikke eleven, der fejler.<br />
+            Det er systemet, der straffer anderledes tænkning.
+          </p>
+          <p>
+            Fejl er ikke fiasko.<br />
+            Fejl er der, hvor vi lærer noget nyt.
+          </p>
+          <p>
+            Hvis vi aldrig begår fejl, stopper al udvikling.
+          </p>
+          <p>
+            Eleven bør aldrig straffes for at tænke anderledes.
           </p>
 
           <div className="bg-gray-50 border border-gray-200 rounded-3xl p-8 mt-12">
@@ -51,11 +64,6 @@ export default function KreativitetPage() {
               </div>
             </a>
           </div>
-
-          <h3 className="text-xl font-semibold mt-12 mb-4">Hvad kan vi gøre?</h3>
-          <p>
-            Vi kan ændre skolesystemet, så det belønner kreativ tænkning i stedet for at straffe den.
-          </p>
         </div>
       </div>
 
