@@ -12,7 +12,7 @@ export default function Nav() {
         
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-semibold tracking-tighter text-[#002B5B]">
-            @SynlighedNu TEST
+            @SynlighedNu
           </Link>
 
           <button
