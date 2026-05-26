@@ -26,25 +26,25 @@ export default function SynlighedNu() {
 
       <ConcreteAreas />
 
-      {/* Teaser til de to store dedikerede sider */}
+      {/* Teaser til de to kritiske områder */}
       <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white">
         <div className="grid md:grid-cols-2 gap-8">
           
-          {/* Kreativitet teaser */}
+          {/* Kreativitet */}
           <a href="/kreativitet" className="group block bg-gray-50 border border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
             <span className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">KRITISK OMRÅDE</span>
             <h3 className="text-3xl font-bold tracking-tighter mb-3 group-hover:text-[#E30613]">Kreativitet</h3>
             <p className="text-gray-600">
-              Fra 90 % kreative i børnehaven til kun 2 % som voksne. Hvorfor kvæler vores system kreativiteten?
+              Fra 98 % kreative i børnehaven til kun 2 % som voksne. Systemet kvæler kreativ tænkning.
             </p>
           </a>
 
-          {/* Demokrati 2.0 teaser */}
-          <a href="/demokrati-2-0" className="group block bg-gray-50 border border-gray-200 hover:border-[#002B5B] rounded-3xl p-8 transition-all">
-            <span className="inline-block px-5 py-1.5 bg-[#002B5B] text-white text-sm font-semibold tracking-widest rounded-full mb-4">VISION</span>
-            <h3 className="text-3xl font-bold tracking-tighter mb-3 group-hover:text-[#002B5B]">Demokrati 2.0</h3>
+          {/* Demokrati 2.0 */}
+          <a href="/demokrati-2-0" className="group block bg-gray-50 border border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
+            <span className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">KRITISK OMRÅDE</span>
+            <h3 className="text-3xl font-bold tracking-tighter mb-3 group-hover:text-[#E30613]">Demokrati 2.0</h3>
             <p className="text-gray-600">
-              Det gamle demokrati er blevet misbrugt. Vi er nødt til at opgradere det, før vi ender i idiokrati.
+              Det gamle demokrati er blevet misbrugt. Uden udvikling ender vi i idiokrati.
             </p>
           </a>
         </div>
