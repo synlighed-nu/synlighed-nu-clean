@@ -4,7 +4,7 @@ import SpeakerButton from '../components/_SpeakerButton';
 export default function BoligstottePage() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
-      <Nav simple />
+      <Nav />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
