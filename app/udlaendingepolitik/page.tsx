@@ -3,7 +3,7 @@ import Nav from '../components/_Nav';
 export default function UdlaendingepolitikPage() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
-      <Nav />
+      <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
