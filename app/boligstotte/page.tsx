@@ -17,6 +17,9 @@ export default function BoligstottePage() {
           <p className="text-2xl font-medium text-[#E30613]">
             Og så betaler vi for at kompensere for dem.
           </p>
+          <p className="text-xl font-semibold text-[#E30613]">
+            Det er derfor problemet ikke forsvinder.
+          </p>
 
           <p className="mt-8">
             Ca. 592.000 husstande modtager boligstøtte for ca. 18 milliarder kroner årligt.
