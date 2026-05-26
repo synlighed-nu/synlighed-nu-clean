@@ -21,7 +21,7 @@ export default function SynlighedNu() {
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      {/* === UNIVERSAL TOP – HOVEDINDLEDNING === */}
+      {/* === UNIVERSAL TOP – HOVEDINDLEDNING TIL HELE SIDEN === */}
       <div className="text-center pt-20 pb-16 px-6">
         <h1 className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
           Synlighed først.
@@ -72,11 +72,20 @@ export default function SynlighedNu() {
 
       {/* Modal til forklaring af områder */}
       {modal && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" onClick={() => setModal(null)}>
-          <div className="bg-white max-w-md w-full mx-4 rounded-3xl p-8 shadow-2xl" onClick={e => e.stopPropagation()}>
+        <div 
+          className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" 
+          onClick={() => setModal(null)}
+        >
+          <div 
+            className="bg-white max-w-md w-full mx-4 rounded-3xl p-8 shadow-2xl" 
+            onClick={e => e.stopPropagation()}
+          >
             <h3 className="text-2xl font-semibold mb-4">{modal.title}</h3>
             <p className="text-gray-600 leading-relaxed">{modal.text}</p>
-            <button onClick={() => setModal(null)} className="mt-8 w-full py-4 bg-[#002B5B] text-white rounded-2xl font-medium hover:bg-[#001B3D]">
+            <button 
+              onClick={() => setModal(null)} 
+              className="mt-8 w-full py-4 bg-[#002B5B] text-white rounded-2xl font-medium hover:bg-[#001B3D]"
+            >
               Luk
             </button>
           </div>
