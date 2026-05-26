@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-export default function Nav() {
+export default function Nav({ simple = false }: { simple?: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -17,19 +17,21 @@ export default function Nav() {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-3xl text-[#002B5B]"
+            className="md:hidden text-3xl text-[#002B5B] focus:outline-none"
           >
             {menuOpen ? '✕' : '☰'}
           </button>
         </div>
 
-        {/* Desktop knapper */}
-        <div className="hidden md:grid grid-cols-4 gap-3 mt-6">
-          <a href="#afstemning" className="px-5 py-3.5 bg-[#002B5B] hover:bg-[#001B3D] text-white text-sm font-semibold rounded-3xl transition-colors text-center">Afstemning</a>
-          <a href="#de-store-greb" className="px-5 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">De store greb</a>
-          <a href="#kreativitet" className="px-5 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">Kreativitet</a>
-          <a href="#demokrati-2-0" className="px-5 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">Demokrati 2.0</a>
-        </div>
+        {/* Desktop knapper – vises KUN hvis simple = false */}
+        {!simple && (
+          <div className="hidden md:flex gap-3 mt-6">
+            <a href="#afstemning" className="flex-1 md:flex-none px-6 py-3.5 bg-[#002B5B] hover:bg-[#001B3D] text-white text-sm font-semibold rounded-3xl transition-colors text-center">Afstemning</a>
+            <a href="#de-store-greb" className="flex-1 md:flex-none px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">De store greb</a>
+            <a href="#kreativitet" className="flex-1 md:flex-none px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">Kreativitet</a>
+            <a href="#demokrati-2-0" className="flex-1 md:flex-none px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">Demokrati 2.0</a>
+          </div>
+        )}
 
         {/* Mobil menu */}
         {menuOpen && (
