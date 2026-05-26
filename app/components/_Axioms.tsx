@@ -26,10 +26,11 @@ export default function Axioms() {
   return (
     <section className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white">
       
-      {/* Centreret overskrift + højtaler-knap */}
-      <div className="flex items-center justify-center gap-4 mb-8">
-        <h2 className="text-3xl font-bold tracking-tighter text-center">Axiom</h2>
-        <SpeakerButton />
+      {/* Axiom badge – samme stil som KRITISK OMRÅDE */}
+      <div className="text-center mb-8">
+        <span className="inline-block px-5 py-1.5 bg-[#002B5B] text-white text-sm font-semibold tracking-widest rounded-full">
+          AXIOM
+        </span>
       </div>
 
       <div className="min-h-[140px] flex items-center justify-center text-center px-8">
@@ -49,6 +50,8 @@ export default function Axioms() {
           />
         ))}
       </div>
+
+      <SpeakerButton />
     </section>
   );
 }
