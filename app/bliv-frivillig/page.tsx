@@ -14,10 +14,11 @@ export default function BlivFrivilligPage() {
           Du skal bare have lyst til at gøre noget ved det.
         </p>
 
-        <div className="prose prose-lg max-w-none text-gray-700 mb-12">
-          <p className="text-center">
+        <div className="prose prose-lg max-w-none text-gray-700 mb-12 text-center">
+          <p>
             Vi leder ikke efter flere talere eller mødedeltagere.<br />
-            Vi leder efter mennesker, der er trætte af at se skattekroner blive spildt og gerne vil bruge deres tid, viden eller energi på at skabe reel forandring.
+            Vi leder efter mennesker, der er trætte af at se skattekroner blive spildt, 
+            og som gerne vil bruge deres tid, viden eller energi på at skabe reel forandring.
           </p>
         </div>
 
@@ -42,7 +43,7 @@ export default function BlivFrivilligPage() {
             target="_blank"
             className="inline-block bg-[#002B5B] hover:bg-[#001B3D] text-white px-10 py-5 rounded-3xl font-semibold text-lg transition"
           >
-            Jeg vil gerne være med – skriv til mig på X
+            Skriv til os på X
           </a>
         </div>
 
