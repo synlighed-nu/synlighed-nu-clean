@@ -63,30 +63,23 @@ export default function SynlighedNu() {
         </div>
       </section>
 
-      {/* BLÅ BOKS – DIN ØNSKEDE TEKST */}
-      <div className="max-w-4xl mx-auto px-6 py-16 mt-16 bg-[#002B5B] rounded-3xl text-white text-center">
-        <h2 className="text-4xl font-bold tracking-tighter mb-2">
-          Synlighed.nu © 2026
-        </h2>
-        <p className="text-3xl font-semibold mb-6">
-          Vi gør det offentlige gennemsigtigt
-        </p>
-        <p className="text-xl text-white/90 mb-10">
-          Hurtigere. Bedre. Billigere.<br />
-          med agil reasoning og fuld synlighed.
-        </p>
-        
-        <a 
-          href="/bliv-frivillig" 
-          className="inline-flex items-center gap-3 bg-white text-[#002B5B] hover:bg-white/90 px-10 py-5 rounded-3xl font-semibold text-lg transition"
-        >
-          Bliv frivillig nu 
-          <span className="text-2xl leading-none">→</span>
-        </a>
-
-        <p className="text-white/70 text-sm mt-8">
-          @SynlighedNu
-        </p>
+      {/* Simpel firkantet blå boks i bunden */}
+      <div className="bg-[#002B5B] text-white py-16 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="text-3xl font-semibold mb-3">
+            Synlighed.nu © 2026
+          </p>
+          <p className="text-2xl font-medium mb-6">
+            Vi gør det offentlige gennemsigtigt
+          </p>
+          <p className="text-xl text-white/90">
+            Hurtigere. Bedre. Billigere.<br />
+            med agil reasoning og fuld synlighed.
+          </p>
+          <p className="text-white/70 text-sm mt-10">
+            @SynlighedNu
+          </p>
+        </div>
       </div>
 
       <Footer />
