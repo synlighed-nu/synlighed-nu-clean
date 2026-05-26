@@ -20,12 +20,18 @@ export default function BoligstottePage() {
           </p>
 
           <p>
-            Støtten hjælper mange i dag, men holder samtidig boligpriserne kunstigt høje og gør det sværere for unge og førstegangskøbere at komme ind på markedet.
+            Støtten hjælper mange i dag.
+          </p>
+          <p>
+            Men den holder samtidig boligpriserne kunstigt høje og gør det sværere for unge og førstegangskøbere at komme ind på markedet.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
-            Over de næste 5 år kunne vi gradvist afvikle boligstøtten samtidig med, at vi bygger et stort antal nye boliger, der er 100 % selvforsynende med sol, vind og batterier.
+            Over de næste 5 år kunne vi gradvist afvikle boligstøtten.
+          </p>
+          <p>
+            Samtidig kan vi bygge et stort antal nye boliger, der er 100 % selvforsynende med sol, vind og batterier.
           </p>
           <p>
             På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud.
@@ -52,7 +58,6 @@ export default function BoligstottePage() {
         </div>
       </div>
 
-      {/* Højtaler-knap */}
       <SpeakerButton />
     </div>
   );
