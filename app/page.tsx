@@ -148,27 +148,28 @@ export default function SynlighedNu() {
             </button>
           </div>
         </div>
-      )}
-      {/* Lille genvej til Bliv frivillig */}
-<div className="max-w-4xl mx-auto px-6 py-12 border-t border-gray-200 bg-gray-50 mt-12">
-  <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-    <div>
-      <p className="text-lg font-medium text-[#002B5B]">
-        Vil du være med til at gøre en forskel?
-      </p>
-      <p className="text-gray-600">
-        Hjælp med research, tekster, data eller teknik – ingen forpligtelse.
-      </p>
-    </div>
-    <a 
-      href="/bliv-frivillig" 
-      className="inline-flex items-center gap-3 bg-[#002B5B] hover:bg-[#001B3D] text-white px-8 py-4 rounded-3xl font-semibold transition"
-    >
-      Bliv frivillig 
-      <span className="text-xl">→</span>
-    </a>
-  </div>
+      {/* Blå genvejsboks – Bliv frivillig */}
+<div className="max-w-4xl mx-auto px-6 py-16 mt-16 bg-[#002B5B] rounded-3xl text-white text-center">
+  <h2 className="text-4xl font-bold tracking-tighter mb-4">
+    Vi gør det offentlige gennemsigtigt
+  </h2>
+  <p className="text-xl text-white/90 mb-8 max-w-lg mx-auto">
+    Sammen kan vi skabe synlighed, bedre prioritering og reel forandring.
+  </p>
+  
+  <a 
+    href="/bliv-frivillig" 
+    className="inline-flex items-center gap-3 bg-white text-[#002B5B] hover:bg-white/90 px-10 py-5 rounded-3xl font-semibold text-lg transition"
+  >
+    Bliv frivillig nu 
+    <span className="text-2xl leading-none">→</span>
+  </a>
+
+  <p className="text-white/70 text-sm mt-8">
+    Ingen forpligtelse • Kun lyst til at gøre en forskel
+  </p>
 </div>
+      )}
     </div>
   );
 }
