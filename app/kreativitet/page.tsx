@@ -12,12 +12,13 @@ export default function KreativitetPage() {
         
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
-            I børnehaven er næsten 98 procent af børnene kreative på genius-niveau.
+            I 1968 testede forskerne George Land og Beth Jarman 1.600 børn på 4-5 år.<br />
+            98 procent af dem scorede på genius-niveau i divergent tænkning.
           </p>
           
           <p>
-            Når de forlader gymnasiet, er det kun omkring 10 procent.<br />
-            Som voksne er det nede på cirka 2 procent.
+            Da de samme børn forlod gymnasiet, var det kun omkring 10 procent.<br />
+            Som voksne var det nede på cirka 2 procent.
           </p>
 
           <p className="text-xl font-semibold text-[#E30613] mt-10">
@@ -36,10 +37,12 @@ export default function KreativitetPage() {
           <p className="text-xl font-semibold text-[#E30613]">
             Når det sker, bliver det stemplet som forkert.
           </p>
+
           <p>
             Det er ikke eleven, der fejler.<br />
             Det er systemet, der straffer anderledes tænkning.
           </p>
+
           <p>
             Fejl er ikke fiasko.<br />
             Fejl er der, hvor vi lærer noget nyt.
