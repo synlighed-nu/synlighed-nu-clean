@@ -24,47 +24,34 @@ export default function SynlighedNu() {
       <VotingSection />
       <BigMoves />
 
-      {/* KREATIVITET */}
-      <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white">
-        <div className="text-center mb-8">
-          <span className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
-        </div>
-        <h2 className="text-4xl font-bold text-center tracking-tighter mb-8">Kreativitet</h2>
-        <div className="prose prose-lg max-w-none text-gray-700">
-          <p className="text-2xl font-medium text-center mb-10">
-            Fra ca. 98 % kreative i børnehaven<br />
-            til kun ca. 10 % i gymnasiet<br />
-            og helt ned til 2 % som voksne.
-          </p>
-          <p className="text-center mb-12">
-            Vores uddannelsessystem kvæler systematisk divergent tænkning og kreativitet.
-          </p>
-        </div>
-      </section>
-
       <ConcreteAreas />
 
-      {/* DEMOKRATI 2.0 */}
-      <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white">
-        <div className="text-center mb-10">
-          <span className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">VISION</span>
+      {/* Teaser til de to store dedikerede sider */}
+      <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white">
+        <div className="grid md:grid-cols-2 gap-8">
+          
+          {/* Kreativitet teaser */}
+          <a href="/kreativitet" className="group block bg-gray-50 border border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
+            <span className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">KRITISK OMRÅDE</span>
+            <h3 className="text-3xl font-bold tracking-tighter mb-3 group-hover:text-[#E30613]">Kreativitet</h3>
+            <p className="text-gray-600">
+              Fra 90 % kreative i børnehaven til kun 2 % som voksne. Hvorfor kvæler vores system kreativiteten?
+            </p>
+          </a>
+
+          {/* Demokrati 2.0 teaser */}
+          <a href="/demokrati-2-0" className="group block bg-gray-50 border border-gray-200 hover:border-[#002B5B] rounded-3xl p-8 transition-all">
+            <span className="inline-block px-5 py-1.5 bg-[#002B5B] text-white text-sm font-semibold tracking-widest rounded-full mb-4">VISION</span>
+            <h3 className="text-3xl font-bold tracking-tighter mb-3 group-hover:text-[#002B5B]">Demokrati 2.0</h3>
+            <p className="text-gray-600">
+              Det gamle demokrati er blevet misbrugt. Vi er nødt til at opgradere det, før vi ender i idiokrati.
+            </p>
+          </a>
         </div>
-        <h2 className="text-4xl font-bold text-center tracking-tighter mb-6">Demokrati 2.0</h2>
-        <div className="prose prose-lg max-w-none text-gray-700">
-          <p className="text-xl text-center mb-10">
-            Vi ved, hvor det nuværende demokrati ender, hvis vi ikke udvikler det.
-          </p>
-          <p className="font-semibold">
-            Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år.
-          </p>
-          <p className="text-2xl font-semibold text-center my-10 text-[#002B5B]">
-            Derfor er Demokrati 2.0 ikke en mulighed – det er en nødvendighed.
-          </p>
-        </div>
-      </section>
+      </div>
 
       <Footer />
-      
+
       {/* Modal */}
       {modal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" onClick={() => setModal(null)}>
