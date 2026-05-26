@@ -3,7 +3,7 @@
 import React from 'react';
 
 interface ConcreteAreasProps {
-  showExplanation: (title: string, text: string) => void;
+  showExplanation?: (title: string, text: string) => void;   // ← gjort valgfri
 }
 
 export default function ConcreteAreas({ showExplanation }: ConcreteAreasProps) {
@@ -27,7 +27,7 @@ export default function ConcreteAreas({ showExplanation }: ConcreteAreasProps) {
         {areas.map((item, i) => (
           <div
             key={i}
-            onClick={() => showExplanation(item.title, item.desc)}
+            onClick={() => showExplanation && showExplanation(item.title, item.desc)}
             className="group border rounded-2xl p-6 hover:border-[#002B5B] hover:shadow-md transition-all cursor-pointer"
           >
             <div className="flex justify-between items-start mb-2">
