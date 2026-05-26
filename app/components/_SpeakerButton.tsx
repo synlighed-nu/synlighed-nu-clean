@@ -1,38 +1,45 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 
 export default function SpeakerButton() {
   const speak = () => {
     const utterance = new SpeechSynthesisUtterance();
-    const mainContent = document.querySelector('main, .prose, section') || document.body;
-
-    // Fjern tidligere markeringer
+    
+    // Fjern tidligere highlights
     document.querySelectorAll('.speaking-highlight').forEach(el => {
       el.classList.remove('speaking-highlight');
     });
 
-    utterance.text = mainContent.textContent || '';
+    // Hent al tekst fra hovedindholdet
+    const content = document.querySelector('main, .prose, section') || document.body;
+    utterance.text = content.textContent || '';
     utterance.lang = 'da-DK';
-    utterance.rate = 0.92;
-    utterance.pitch = 1;
+    utterance.rate = 0.95;
+    utterance.pitch = 1.0;
 
-    // Highlight-effekt mens det læses
+    // Highlight den aktuelle paragraph mens det læses
     utterance.onboundary = (event) => {
-      const text = utterance.text;
-      const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
-      const currentIndex = Math.min(Math.floor(event.charIndex / 80), sentences.length - 1);
+      const paragraphs = Array.from(document.querySelectorAll('p, h1, h2, h3, h4, li'));
+      
+      // Find hvilken paragraph vi er i ud fra tegnposition
+      let currentParagraph = paragraphs[0];
+      let charCount = 0;
+
+      for (let p of paragraphs) {
+        charCount += (p.textContent || '').length + 1;
+        if (event.charIndex < charCount) {
+          currentParagraph = p;
+          break;
+        }
+      }
 
       // Fjern gamle highlights
       document.querySelectorAll('.speaking-highlight').forEach(el => el.classList.remove('speaking-highlight'));
 
-      // Find og highlight den aktuelle sætning
-      const elements = document.querySelectorAll('p, h1, h2, h3, h4, li');
-      for (let el of elements) {
-        if (el.textContent && sentences[currentIndex] && el.textContent.includes(sentences[currentIndex].trim())) {
-          el.classList.add('speaking-highlight');
-          break;
-        }
+      // Tilføj highlight til den aktuelle
+      if (currentParagraph) {
+        currentParagraph.classList.add('speaking-highlight');
       }
     };
 
