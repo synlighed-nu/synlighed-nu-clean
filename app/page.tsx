@@ -148,7 +148,6 @@ export default function SynlighedNu() {
             </button>
           </div>
         </div>
-                               {/* Blå genvejsboks – Bliv frivillig */}
       <div className="max-w-4xl mx-auto px-6 py-16 mt-16 bg-[#002B5B] rounded-3xl text-white text-center">
         <h2 className="text-4xl font-bold tracking-tighter mb-4">
           Vi gør det offentlige gennemsigtigt
