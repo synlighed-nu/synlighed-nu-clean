@@ -148,28 +148,3 @@ export default function SynlighedNu() {
             </button>
           </div>
         </div>
-      {/* Blå genvejsboks – Bliv frivillig */}
-<div className="max-w-4xl mx-auto px-6 py-16 mt-16 bg-[#002B5B] rounded-3xl text-white text-center">
-  <h2 className="text-4xl font-bold tracking-tighter mb-4">
-    Vi gør det offentlige gennemsigtigt
-  </h2>
-  <p className="text-xl text-white/90 mb-8 max-w-lg mx-auto">
-    Sammen kan vi skabe synlighed, bedre prioritering og reel forandring.
-  </p>
-  
-  <a 
-    href="/bliv-frivillig" 
-    className="inline-flex items-center gap-3 bg-white text-[#002B5B] hover:bg-white/90 px-10 py-5 rounded-3xl font-semibold text-lg transition"
-  >
-    Bliv frivillig nu 
-    <span className="text-2xl leading-none">→</span>
-  </a>
-
-  <p className="text-white/70 text-sm mt-8">
-    Ingen forpligtelse • Kun lyst til at gøre en forskel
-  </p>
-</div>
-      )}
-    </div>
-  );
-}
