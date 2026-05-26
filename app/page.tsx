@@ -24,7 +24,7 @@ export default function SynlighedNu() {
       <VotingSection />
       <BigMoves />
 
-      {/* KREATIVITET – KRITISK OMRÅDE */}
+      {/* KREATIVITET */}
       <section id="kreativitet" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white">
         <div className="text-center mb-8">
           <span className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
@@ -63,24 +63,23 @@ export default function SynlighedNu() {
         </div>
       </section>
 
-      {/* Simpel firkantet blå boks i bunden */}
-      <div className="bg-[#002B5B] text-white py-16 text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <p className="text-3xl font-semibold mb-2">Synlighed.nu © 2026</p>
-          <p className="text-2xl font-medium mb-6">Vi gør det offentlige gennemsigtigt</p>
-          <p className="text-xl text-white/90">
-            Hurtigere. Bedre. Billigere.<br />
-            med agil reasoning og fuld synlighed.
+      {/* Simpel og diskret blå boks i bunden */}
+      <div className="bg-[#002B5B] text-white py-10 text-center">
+        <div className="max-w-4xl mx-auto px-6 text-sm">
+          <p className="font-medium">
+            Synlighed.nu © 2026 – Vi gør det offentlige gennemsigtigt
           </p>
-          <p className="text-white/70 text-sm mt-10">@SynlighedNu</p>
-
-          {/* Genvej til frivillig */}
-          <a 
-            href="/bliv-frivillig" 
-            className="mt-10 inline-block bg-white text-[#002B5B] hover:bg-white/90 px-8 py-4 rounded-3xl font-semibold text-lg transition"
-          >
-            Bliv frivillig →
-          </a>
+          <p className="text-white/80 mt-1">
+            Hurtigere. Bedre. Billigere. med agil reasoning og fuld synlighed.
+          </p>
+          <p className="mt-6">
+            <a href="/bliv-frivillig" className="text-white/70 hover:text-white underline text-xs">
+              Bliv frivillig →
+            </a>
+          </p>
+          <p className="text-white/60 text-xs mt-8">
+            @SynlighedNu
+          </p>
         </div>
       </div>
 
