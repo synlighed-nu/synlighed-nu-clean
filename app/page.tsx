@@ -149,6 +149,26 @@ export default function SynlighedNu() {
           </div>
         </div>
       )}
+      {/* Lille genvej til Bliv frivillig */}
+<div className="max-w-4xl mx-auto px-6 py-12 border-t border-gray-200 bg-gray-50 mt-12">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+    <div>
+      <p className="text-lg font-medium text-[#002B5B]">
+        Vil du være med til at gøre en forskel?
+      </p>
+      <p className="text-gray-600">
+        Hjælp med research, tekster, data eller teknik – ingen forpligtelse.
+      </p>
+    </div>
+    <a 
+      href="/bliv-frivillig" 
+      className="inline-flex items-center gap-3 bg-[#002B5B] hover:bg-[#001B3D] text-white px-8 py-4 rounded-3xl font-semibold transition"
+    >
+      Bliv frivillig 
+      <span className="text-xl">→</span>
+    </a>
+  </div>
+</div>
     </div>
   );
 }
