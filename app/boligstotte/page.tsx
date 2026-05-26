@@ -12,7 +12,10 @@ export default function BoligstottePage() {
         
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
-            Ca. 592.000 husstande modtager boligstøtte for ca. 18 milliarder kroner årligt.
+            Ca. 592.000 husstande modtager boligstøtte.
+          </p>
+          <p>
+            Det koster staten omkring 18 milliarder kroner om året.
           </p>
           
           <p className="text-xl font-semibold text-[#E30613]">
@@ -20,28 +23,29 @@ export default function BoligstottePage() {
           </p>
 
           <p>
-            Støtten hjælper mange i dag.
+            Støtten hjælper mange mennesker i dag.
           </p>
           <p>
-            Men den holder samtidig boligpriserne kunstigt høje og gør det sværere for unge og førstegangskøbere at komme ind på markedet.
+            Men den holder samtidig boligpriserne kunstigt høje. 
+            Det gør det sværere for unge og førstegangskøbere at komme ind på markedet.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
-            Over de næste 5 år kunne vi gradvist afvikle boligstøtten.
+            Over de næste 5 år kan vi gradvist afvikle boligstøtten.
           </p>
           <p>
-            Samtidig kan vi bygge et stort antal nye boliger, der er 100 % selvforsynende med sol, vind og batterier.
+            Samtidig kan vi bygge mange nye boliger, der er 100 procent selvforsynende med sol, vind og batterier.
           </p>
           <p>
-            På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud.
+            På den måde sænker vi både boligomkostningerne og boligpriserne.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
           <ul className="list-disc pl-6 space-y-3">
             <li>Holder boligpriserne kunstigt høje</li>
             <li>Gør det sværere for unge at komme ind på boligmarkedet</li>
-            <li>Bruger milliarder uden at løse det underliggende problem</li>
+            <li>Bruger milliarder uden at løse det grundlæggende problem</li>
             <li>Skaber afhængighed af offentlig støtte</li>
           </ul>
         </div>
