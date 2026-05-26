@@ -33,7 +33,7 @@ export default function SynlighedNu() {
       <WhySection />
       <VotingSection />
       <BigMoves />
-      <ConcreteAreas />
+      <ConcreteAreas />   {/* ← her fjernes showExplanation */}
 
       {/* Demokrati 2.0 */}
       <section id="demokrati-2-0" className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
