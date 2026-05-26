@@ -10,11 +10,12 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 print:hidden">
       <div className="max-w-6xl mx-auto px-4 py-4">
         
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-semibold tracking-tighter text-[#002B5B]">
             @SynlighedNu
           </Link>
 
+          {/* Hamburger – kun mobil */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-3xl text-[#002B5B] focus:outline-none"
@@ -23,13 +24,13 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
           </button>
         </div>
 
-        {/* Desktop knapper – vises KUN hvis simple = false */}
+        {/* Desktop knapper – centreret */}
         {!simple && (
-          <div className="hidden md:flex gap-3 mt-6">
-            <a href="#afstemning" className="flex-1 md:flex-none px-6 py-3.5 bg-[#002B5B] hover:bg-[#001B3D] text-white text-sm font-semibold rounded-3xl transition-colors text-center">Afstemning</a>
-            <a href="#de-store-greb" className="flex-1 md:flex-none px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">De store greb</a>
-            <a href="#kreativitet" className="flex-1 md:flex-none px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">Kreativitet</a>
-            <a href="#demokrati-2-0" className="flex-1 md:flex-none px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors text-center">Demokrati 2.0</a>
+          <div className="hidden md:flex justify-center gap-3 mt-6">
+            <a href="#afstemning" className="px-6 py-3.5 bg-[#002B5B] hover:bg-[#001B3D] text-white text-sm font-semibold rounded-3xl transition-colors">Afstemning</a>
+            <a href="#de-store-greb" className="px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors">De store greb</a>
+            <a href="#kreativitet" className="px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors">Kreativitet</a>
+            <a href="#demokrati-2-0" className="px-6 py-3.5 bg-white border-2 border-[#002B5B] hover:bg-[#002B5B] hover:text-white text-[#002B5B] text-sm font-semibold rounded-3xl transition-colors">Demokrati 2.0</a>
           </div>
         )}
 
