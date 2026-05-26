@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 export default function Nav({ simple = false }: { simple?: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,14 +11,14 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo venstre */}
-          <div className="font-semibold text-2xl tracking-tighter">
+          {/* Logo – altid klikbar til forsiden */}
+          <Link href="/" className="font-semibold text-2xl tracking-tighter hover:text-[#002B5B]/80 transition">
             @SynlighedNu
-          </div>
+          </Link>
 
-          {/* Centrerede knapper på desktop/iPad */}
+          {/* Desktop knapper */}
           {!simple && (
-            <div className="hidden md:flex items-center gap-3 mx-auto">
+            <div className="hidden md:flex items-center gap-3">
               <a href="#afstemning" className="px-5 py-2 bg-[#002B5B] text-white text-sm font-medium rounded-3xl hover:bg-[#001B3D] transition">
                 Afstemning
               </a>
