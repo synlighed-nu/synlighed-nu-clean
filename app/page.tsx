@@ -64,21 +64,23 @@ export default function SynlighedNu() {
       </section>
 
       {/* Simpel firkantet blå boks i bunden */}
-      <div className="bg-[#002B5B] text-white py-12 text-center">
+      <div className="bg-[#002B5B] text-white py-16 text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-3xl font-semibold mb-2">
-            Synlighed.nu © 2026
-          </p>
-          <p className="text-2xl font-medium mb-4">
-            Vi gør det offentlige gennemsigtigt
-          </p>
-          <p className="text-lg text-white/90">
+          <p className="text-3xl font-semibold mb-2">Synlighed.nu © 2026</p>
+          <p className="text-2xl font-medium mb-6">Vi gør det offentlige gennemsigtigt</p>
+          <p className="text-xl text-white/90">
             Hurtigere. Bedre. Billigere.<br />
             med agil reasoning og fuld synlighed.
           </p>
-          <p className="text-white/70 text-sm mt-8">
-            @SynlighedNu
-          </p>
+          <p className="text-white/70 text-sm mt-10">@SynlighedNu</p>
+
+          {/* Genvej til frivillig */}
+          <a 
+            href="/bliv-frivillig" 
+            className="mt-10 inline-block bg-white text-[#002B5B] hover:bg-white/90 px-8 py-4 rounded-3xl font-semibold text-lg transition"
+          >
+            Bliv frivillig →
+          </a>
         </div>
       </div>
 
