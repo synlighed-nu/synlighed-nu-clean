@@ -9,19 +9,22 @@ export default function Footer() {
         <p className="text-sm opacity-70">
           Synlighed.nu © 2026 – Vi gør det offentlige gennemsigtigt
         </p>
-        <p className="text-xs opacity-50 mt-3">
+        <p className="text-xs opacity-50 mt-2">
           Hurtigere. Bedre. Billigere. med agil reasoning og fuld synlighed.
         </p>
         
-        <div className="mt-8 text-xs opacity-40">
+        <div className="mt-8 text-xs opacity-60">
           <a 
-            href="https://x.com/SynlighedNu" 
-            target="_blank"
-            className="hover:text-white transition-colors"
+            href="/bliv-frivillig" 
+            className="hover:text-white transition-colors underline"
           >
-            @SynlighedNu
+            Bliv frivillig →
           </a>
         </div>
+
+        <p className="text-white/40 text-xs mt-10">
+          @SynlighedNu
+        </p>
       </div>
     </footer>
   );
