@@ -7,19 +7,17 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 print:hidden">
+    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 print:hidden">
       <div className="max-w-6xl mx-auto px-4 py-4">
         
-        {/* Top row med logo og hamburger */}
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-semibold tracking-tighter text-[#002B5B]">
             @SynlighedNu
           </Link>
 
-          {/* Hamburger – kun på mobil */}
-          <button 
+          <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-[#002B5B] text-3xl focus:outline-none"
+            className="md:hidden text-3xl text-[#002B5B]"
           >
             {menuOpen ? '✕' : '☰'}
           </button>
