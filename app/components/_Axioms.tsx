@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import SpeakerButton from './_SpeakerButton';
 
 const axioms = [
@@ -27,17 +26,9 @@ export default function Axioms() {
   return (
     <section className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 bg-white">
       
-      {/* Centreret overskrift + knap */}
+      {/* Centreret overskrift + højtaler-knap */}
       <div className="flex items-center justify-center gap-4 mb-8">
         <h2 className="text-3xl font-bold tracking-tighter text-center">Axiom</h2>
-        
-        <Link 
-          href="/axiom" 
-          className="text-xs font-medium text-[#002B5B] hover:text-[#E30613] transition-colors underline flex items-center gap-1"
-        >
-          Se alle →
-        </Link>
-
         <SpeakerButton />
       </div>
 
