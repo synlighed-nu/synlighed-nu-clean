@@ -21,7 +21,7 @@ export default function SynlighedNu() {
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      {/* === UNIVERSAL TOP – HOVEDINDLEDNING TIL HELE SIDEN === */}
+      {/* === UNIVERSAL TOP – HOVEDINDLEDNING === */}
       <div className="text-center pt-20 pb-16 px-6">
         <h1 className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
           Synlighed først.
@@ -52,21 +52,6 @@ export default function SynlighedNu() {
           <p className="mt-8">Uden løbende forbedring bevæger vi os mod idiokrati eller kontrol. Vi skal opgradere det med fuld synlighed, agil reasoning og klare axiom’er.</p>
         </div>
       </section>
-
-      {/* Blå genvejsboks – Bliv frivillig */}
-      <div className="max-w-4xl mx-auto px-6 py-16 mt-16 bg-[#002B5B] rounded-3xl text-white text-center">
-        <h2 className="text-4xl font-bold tracking-tighter mb-4">Vi gør det offentlige gennemsigtigt</h2>
-        <p className="text-xl text-white/90 mb-8 max-w-lg mx-auto">
-          Sammen kan vi skabe synlighed, bedre prioritering og reel forandring.
-        </p>
-        <a 
-          href="/bliv-frivillig" 
-          className="inline-flex items-center gap-3 bg-white text-[#002B5B] hover:bg-white/90 px-10 py-5 rounded-3xl font-semibold text-lg transition"
-        >
-          Bliv frivillig nu 
-          <span className="text-2xl leading-none">→</span>
-        </a>
-      </div>
 
       <Footer />
 
