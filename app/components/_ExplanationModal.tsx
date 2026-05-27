@@ -2,13 +2,12 @@
 
 import React, { useState } from 'react';
 
-import Nav from './_Nav';
-import Hero from './_Hero';
-import WhySection from './_WhySection';
-import VotingSection from './_VotingSection';
-import BigMoves from './_BigMoves';
-import ConcreteAreas from './_ConcreteAreas';
-import Footer from './_Footer';
+import Nav from './common/_Nav';
+import Hero from './sections/_Hero';
+import WhySection from './sections/_WhySection';
+import VotingSection from './sections/_VotingSection';
+import BigMoves from './sections/_BigMoves';
+import ConcreteAreas from './sections/_ConcreteAreas';
 
 export default function SynlighedNu() {
   const [modal, setModal] = useState<{ title: string; text: string } | null>(null);
