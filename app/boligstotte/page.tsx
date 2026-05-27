@@ -21,14 +21,14 @@ export default function BoligstottePage() {
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      <div className="max-w-4xl mx-auto px-6 pt-28 pb-20 relative">
+      <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Højtaler-knap placeret øverst til højre */}
-        <div className="absolute top-8 right-6">
+        {/* Titel + højtaler-knap på samme linje */}
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
+          
           <SpeakerButton text={pageText} />
         </div>
-
-        <h1 className="text-5xl font-bold tracking-tighter mb-6">Boligstøtte</h1>
         
         <div className="prose prose-lg max-w-none text-gray-700">
           
