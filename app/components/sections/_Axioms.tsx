@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import SpeakerButton from './_SpeakerButton';
+import SpeakerButton from '../common/_SpeakerButton';
 
 const axioms = [
   "Synlighed begynder først, når man tør erkende sine begrænsninger.",
