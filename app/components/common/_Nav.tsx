@@ -1,21 +1,36 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Nav({ simple = false }: { simple?: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  // Animation på første indlæsning (2,5 sekunder)
+  useEffect(() => {
+    if (!hasAnimated) {
+      setTimeout(() => {
+        setMenuOpen(true);   // åbner
+      }, 800);
+
+      setTimeout(() => {
+        setMenuOpen(false);  // lukker igen
+        setHasAnimated(true);
+      }, 3300);
+    }
+  }, [hasAnimated]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo venstre */}
+          {/* Logo */}
           <div className="font-semibold text-2xl tracking-tighter">
             @SynlighedNu
           </div>
 
-          {/* Centrerede knapper på desktop / iPad */}
+          {/* Centrerede knapper på desktop/iPad */}
           {!simple && (
             <div className="hidden md:flex items-center gap-3 flex-1 justify-center">
               <a href="#afstemning" className="px-5 py-2 bg-[#002B5B] text-white text-sm font-medium rounded-3xl hover:bg-[#001B3D] transition">
@@ -33,13 +48,15 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
             </div>
           )}
 
-          {/* Hamburger på mobil */}
+          {/* Rød burger med animation – kun på mobil */}
           {!simple && (
             <button 
-              className="md:hidden text-3xl"
+              className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] focus:outline-none"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              ☰
+              <div className={`w-6 h-[2.5px] bg-[#E30613] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[3.5px]' : ''}`} />
+              <div className={`w-6 h-[2.5px] bg-[#E30613] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+              <div className={`w-6 h-[2.5px] bg-[#E30613] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[3.5px]' : ''}`} />
             </button>
           )}
         </div>
