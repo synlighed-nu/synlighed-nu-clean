@@ -8,6 +8,7 @@ import WhySection from './components/sections/_WhySection';
 import VotingSection from './components/sections/_VotingSection';
 import BigMoves from './components/sections/_BigMoves';
 import ConcreteAreas from './components/sections/_ConcreteAreas';
+import ExplanationPopup from './components/common/_ExplanationPopup';
 import Footer from './components/common/_Footer';
 
 export default function SynlighedNu() {
@@ -15,18 +16,17 @@ export default function SynlighedNu() {
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      {/* === UNIVERSAL TOP – HOVEDINDLEDNING === */}
-      <div className="text-center pt-20 pb-16 px-6">
+      {/* === HERO + POP-UP FORKLARING === */}
+      <div className="text-center pt-24 pb-16 px-6">
         <h1 className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
           Synlighed først.
         </h1>
         <p className="text-4xl md:text-5xl font-medium tracking-tighter mb-8 text-[#002B5B]">
           Hurtigere. Bedre. Billigere.
         </p>
-        <p className="max-w-2xl mx-auto text-xl md:text-2xl text-gray-600 leading-relaxed">
-          Det er det modsatte af, hvordan tingene ofte fungerer i det offentlige i dag – 
-          hvor processer bliver langsommere, dyrere og dårligere.
-        </p>
+
+        {/* Den nye hover-pop-up komponent */}
+        <ExplanationPopup />
       </div>
 
       <Axioms />
@@ -35,32 +35,22 @@ export default function SynlighedNu() {
       <BigMoves />
       <ConcreteAreas />
 
-      {/* === TO KRITISKE BOKSE I BUNDEN === */}
+      {/* Kritisk område boksene i bunden */}
       <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
-        <a href="/kreativitet" className="group block">
-          <div className="text-center mb-4">
-            <span className="inline-block px-5 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
+        <a href="/kreativitet" className="group block border-2 border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
+          <div className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
+            KRITISK OMRÅDE
           </div>
-          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#E30613] transition-all h-full">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">Kreativitet</h2>
-            <p className="text-gray-600">Fra 90 % kreative i børnehaven til kun ca. 10 % i gymnasiet. Systemet kvæler divergent tænkning.</p>
-            <div className="mt-6 text-[#E30613] font-medium flex items-center gap-2">
-              Læs mere <span className="text-xl">→</span>
-            </div>
-          </div>
+          <h3 className="text-3xl font-bold mb-3">Kreativitet</h3>
+          <p className="text-gray-600">Fra 90 % kreative i børnehaven til kun 10 % i gymnasiet. Systemet kvæler divergent tænkning.</p>
         </a>
 
-        <a href="/demokrati-2-0" className="group block">
-          <div className="text-center mb-4">
-            <span className="inline-block px-5 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
+        <a href="/demokrati-2-0" className="group block border-2 border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
+          <div className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
+            KRITISK OMRÅDE
           </div>
-          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#E30613] transition-all h-full">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">Demokrati 2.0</h2>
-            <p className="text-gray-600">Det gamle demokrati er blevet misbrugt, fordi vi ikke har udviklet det. Uden forbedring ender vi i idiokrati.</p>
-            <div className="mt-6 text-[#E30613] font-medium flex items-center gap-2">
-              Læs mere <span className="text-xl">→</span>
-            </div>
-          </div>
+          <h3 className="text-3xl font-bold mb-3">Demokrati 2.0</h3>
+          <p className="text-gray-600">Det gamle demokrati er blevet misbrugt fordi vi ikke har udviklet det. Vi risikerer at ende i idiokrati.</p>
         </a>
       </div>
 
