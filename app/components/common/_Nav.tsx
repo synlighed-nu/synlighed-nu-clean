@@ -10,6 +10,7 @@ export default function Nav({ simple = false }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
+  // Auto-animation af burger-ikonet første gang
   useEffect(() => {
     if (!hasAnimated && !simple) {
       setTimeout(() => setMenuOpen(true), 800);
@@ -19,6 +20,13 @@ export default function Nav({ simple = false }: NavProps) {
       }, 3300);
     }
   }, [hasAnimated, simple]);
+
+  // Haptic feedback hjælper (vibration)
+  const triggerHaptic = (duration = 50) => {
+    if ('vibrate' in navigator) {
+      navigator.vibrate(duration);
+    }
+  };
 
   if (simple) {
     return (
@@ -47,8 +55,12 @@ export default function Nav({ simple = false }: NavProps) {
             <a href="/demokrati-2-0" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Demokrati 2.0</a>
           </div>
 
+          {/* Rød burger */}
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => {
+              triggerHaptic(50);
+              setMenuOpen(!menuOpen);
+            }}
             className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
           >
             <div className={`w-6 h-0.5 bg-[#E30613] transition-all ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
@@ -62,18 +74,22 @@ export default function Nav({ simple = false }: NavProps) {
       {menuOpen && (
         <>
           <div
-            className="fixed top-16 inset-x-0 bottom-0 bg-black/30 z-40 md:hidden"
+            className="fixed top-16 inset-x-0 bottom-0 bg-black/40 z-40 md:hidden"
             onClick={() => setMenuOpen(false)}
           />
-          
+
           <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 md:hidden transition-transform duration-300 ease-out translate-x-0">
             <div className="p-6">
+              {/* Rødt kryds */}
               <button
-  onClick={() => setMenuOpen(false)}
-  className="mb-8 text-3xl text-[#E30613] hover:text-red-700 transition-colors"
->
-  ✕
-</button>
+                onClick={() => {
+                  triggerHaptic(40);
+                  setMenuOpen(false);
+                }}
+                className="mb-8 text-3xl text-[#E30613] hover:text-red-700 transition-colors"
+              >
+                ✕
+              </button>
 
               <div className="flex flex-col gap-6 text-lg font-medium">
                 <a href="#afstemning" className="py-3 border-b" onClick={() => setMenuOpen(false)}>Afstemning</a>
