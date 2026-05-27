@@ -1,15 +1,36 @@
+'use client';
+
 import Nav from '../components/common/_Nav';
+import SpeakerButton from '../components/common/_SpeakerButton';
 
 export default function SundhedPage() {
+  const pageText = `
+    Vi bruger ca. 280 milliarder kroner årligt på sundhed.
+    Stort fokus på medicin og behandling – meget lidt på at forebygge sygdom.
+    Vi reparerer mennesker, vi kunne have holdt sunde.
+
+    Et bedre alternativ:
+    Over de næste 5 år kan vi gradvist flytte ressourcer fra behandling til reel forebyggelse:
+    bedre mad- og måltidsvaner i dagtilbud, skoler og på arbejdspladser,
+    tidlig opsporing hos ældre og stærkere fokus på fysisk og mental sundhed.
+
+    Forebyggelse er både billigere og bedre end behandling – og det er den eneste måde at bryde den negative spiral på.
+  `;
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        <h1 className="text-5xl font-bold tracking-tighter mb-6">Sundhed</h1>
+        {/* Titel + højtaler-knap på samme linje */}
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-5xl font-bold tracking-tighter">Sundhed</h1>
+          <SpeakerButton text={pageText} />
+        </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
+          
           <p className="text-2xl font-medium">
             Vi bruger ca. <strong>280 milliarder kroner årligt</strong> på sundhed.
           </p>
@@ -22,7 +43,7 @@ export default function SundhedPage() {
             Vi reparerer mennesker, vi kunne have holdt sunde.
           </p>
 
-          <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
+          <h3 className="text-2xl font-semibold mt-12 mb-6">Et bedre alternativ</h3>
           <p>
             Over de næste 5 år kan vi gradvist flytte ressourcer fra behandling til reel forebyggelse: 
             bedre mad- og måltidsvaner i dagtilbud, skoler og på arbejdspladser, tidlig opsporing hos ældre og stærkere fokus på fysisk og mental sundhed.
