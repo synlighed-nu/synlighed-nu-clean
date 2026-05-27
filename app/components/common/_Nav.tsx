@@ -22,7 +22,7 @@ export default function Nav({ simple = false }: NavProps) {
 
   if (simple) {
     return (
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+      <nav className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center">
           <a href="/" className="text-2xl font-semibold tracking-tighter text-[#002B5B]">
             @SynlighedNu
@@ -33,7 +33,7 @@ export default function Nav({ simple = false }: NavProps) {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 bg-white shadow-sm z-[60] border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6">
         <div className="h-16 flex items-center justify-between">
           <a href="/" className="text-2xl font-semibold tracking-tighter text-[#002B5B]">
@@ -58,14 +58,16 @@ export default function Nav({ simple = false }: NavProps) {
         </div>
       </div>
 
-      {/* Mobil menu med lysere overlay */}
+      {/* Mobil menu - slide-in fra højre */}
       {menuOpen && (
         <>
+          {/* Lysere overlay der starter under nav-bar */}
           <div
-            className="fixed inset-0 bg-black/40 z-40 md:hidden"
+            className="fixed top-16 inset-x-0 bottom-0 bg-black/40 z-40 md:hidden"
             onClick={() => setMenuOpen(false)}
           />
           
+          {/* Menuen der glider ind fra højre */}
           <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 md:hidden transition-transform duration-300 ease-out translate-x-0">
             <div className="p-6">
               <button
