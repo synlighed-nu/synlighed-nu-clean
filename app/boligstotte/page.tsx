@@ -21,8 +21,13 @@ export default function BoligstottePage() {
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
+      <div className="max-w-4xl mx-auto px-6 pt-28 pb-20 relative">
         
+        {/* Højtaler-knap placeret øverst til højre */}
+        <div className="absolute top-8 right-6">
+          <SpeakerButton text={pageText} />
+        </div>
+
         <h1 className="text-5xl font-bold tracking-tighter mb-6">Boligstøtte</h1>
         
         <div className="prose prose-lg max-w-none text-gray-700">
@@ -88,11 +93,6 @@ export default function BoligstottePage() {
           >
             Danmarks Statistik – Boligstøtte <span className="text-xl">↗</span>
           </a>
-        </div>
-
-        {/* Højtaler-knap med tekst */}
-        <div className="mt-16 flex justify-center">
-          <SpeakerButton text={pageText} />
         </div>
       </div>
     </div>
