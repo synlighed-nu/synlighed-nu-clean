@@ -58,16 +58,14 @@ export default function Nav({ simple = false }: NavProps) {
         </div>
       </div>
 
-      {/* Mobil menu - slide-in fra højre */}
+      {/* Mobil menu */}
       {menuOpen && (
         <>
-          {/* Lysere overlay der starter under nav-bar */}
           <div
-            className="fixed top-16 inset-x-0 bottom-0 bg-black/40 z-40 md:hidden"
+            className="fixed top-16 inset-x-0 bottom-0 bg-black/30 z-40 md:hidden"
             onClick={() => setMenuOpen(false)}
           />
           
-          {/* Menuen der glider ind fra højre */}
           <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 md:hidden transition-transform duration-300 ease-out translate-x-0">
             <div className="p-6">
               <button
