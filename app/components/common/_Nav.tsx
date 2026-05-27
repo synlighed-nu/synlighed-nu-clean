@@ -69,11 +69,11 @@ export default function Nav({ simple = false }: NavProps) {
           <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 md:hidden transition-transform duration-300 ease-out translate-x-0">
             <div className="p-6">
               <button
-                onClick={() => setMenuOpen(false)}
-                className="mb-8 text-3xl text-gray-400 hover:text-gray-600"
-              >
-                ✕
-              </button>
+  onClick={() => setMenuOpen(false)}
+  className="mb-8 text-3xl text-[#E30613] hover:text-red-700 transition-colors"
+>
+  ✕
+</button>
 
               <div className="flex flex-col gap-6 text-lg font-medium">
                 <a href="#afstemning" className="py-3 border-b" onClick={() => setMenuOpen(false)}>Afstemning</a>
