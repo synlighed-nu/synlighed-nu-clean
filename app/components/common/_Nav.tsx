@@ -10,14 +10,10 @@ export default function Nav({ simple = false }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Haptic feedback (vibration på Android)
   const triggerHaptic = (duration = 50) => {
-    if ('vibrate' in navigator) {
-      navigator.vibrate(duration);
-    }
+    if ('vibrate' in navigator) navigator.vibrate(duration);
   };
 
-  // Auto-animation af burger første gang
   useEffect(() => {
     if (!hasAnimated && !simple) {
       setTimeout(() => setMenuOpen(true), 800);
@@ -48,12 +44,13 @@ export default function Nav({ simple = false }: NavProps) {
             @SynlighedNu
           </a>
 
-          {/* Desktop menu */}
+          {/* Desktop menu - 5 punkter */}
           <div className="hidden md:flex items-center gap-3 flex-1 justify-center">
             <a href="#afstemning" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Afstemning</a>
             <a href="#de-store-greb" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">De store greb</a>
             <a href="#de-konkrete-omrader" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">De konkrete områder</a>
-            <a href="/kreativitet" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Kritisk område</a>
+            <a href="/kreativitet" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Kreativitet</a>
+            <a href="/demokrati-2-0" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Demokrati 2.0</a>
           </div>
 
           {/* Rød burger */}
@@ -74,10 +71,7 @@ export default function Nav({ simple = false }: NavProps) {
       {/* Mobil menu */}
       {menuOpen && (
         <>
-          <div
-            className="fixed top-16 inset-x-0 bottom-0 bg-black/40 z-40 md:hidden"
-            onClick={() => setMenuOpen(false)}
-          />
+          <div className="fixed top-16 inset-x-0 bottom-0 bg-black/40 z-40 md:hidden" onClick={() => setMenuOpen(false)} />
           <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 md:hidden transition-transform duration-300 ease-out translate-x-0">
             <div className="p-6">
               <button
@@ -94,7 +88,8 @@ export default function Nav({ simple = false }: NavProps) {
                 <a href="#afstemning" className="py-3 border-b" onClick={() => setMenuOpen(false)}>Afstemning</a>
                 <a href="#de-store-greb" className="py-3 border-b" onClick={() => setMenuOpen(false)}>De store greb</a>
                 <a href="#de-konkrete-omrader" className="py-3 border-b" onClick={() => setMenuOpen(false)}>De konkrete områder</a>
-                <a href="/kreativitet" className="py-3 border-b" onClick={() => setMenuOpen(false)}>Kritisk område</a>
+                <a href="/kreativitet" className="py-3 border-b" onClick={() => setMenuOpen(false)}>Kreativitet</a>
+                <a href="/demokrati-2-0" className="py-3 border-b" onClick={() => setMenuOpen(false)}>Demokrati 2.0</a>
               </div>
             </div>
           </div>
