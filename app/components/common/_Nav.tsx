@@ -10,7 +10,6 @@ export default function Nav({ simple = false }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Auto-animation af burger-ikonet første gang (kun på normal nav)
   useEffect(() => {
     if (!hasAnimated && !simple) {
       setTimeout(() => setMenuOpen(true), 800);
@@ -37,12 +36,10 @@ export default function Nav({ simple = false }: NavProps) {
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6">
         <div className="h-16 flex items-center justify-between">
-          {/* Logo */}
           <a href="/" className="text-2xl font-semibold tracking-tighter text-[#002B5B]">
             @SynlighedNu
           </a>
 
-          {/* Desktop knapper */}
           <div className="hidden md:flex items-center gap-3 flex-1 justify-center">
             <a href="#afstemning" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Afstemning</a>
             <a href="#de-store-greb" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">De store greb</a>
@@ -50,7 +47,6 @@ export default function Nav({ simple = false }: NavProps) {
             <a href="/demokrati-2-0" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Demokrati 2.0</a>
           </div>
 
-          {/* Rød burger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
@@ -62,20 +58,16 @@ export default function Nav({ simple = false }: NavProps) {
         </div>
       </div>
 
-      {/* Slide-in menu fra højre side */}
+      {/* Mobil menu - slide-in fra højre */}
       {menuOpen && (
         <>
-          {/* Baggrund */}
+          {/* Mørkere overlay (nu mindre transparent) */}
           <div
-            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            className="fixed inset-0 bg-black/70 z-40 md:hidden"
             onClick={() => setMenuOpen(false)}
           />
           
-          {/* Menuen der glider ind fra højre */}
-          <div
-            className={`fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out md:hidden
-              ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}
-          >
+          <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-out translate-x-0">
             <div className="p-6">
               <button
                 onClick={() => setMenuOpen(false)}
