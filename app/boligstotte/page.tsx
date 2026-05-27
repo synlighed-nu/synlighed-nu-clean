@@ -19,19 +19,17 @@ export default function BoligstottePage() {
 
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
-      <Nav />
+      <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
         {/* Titel + højtaler-knap på samme linje */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
-          
           <SpeakerButton text={pageText} />
         </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
-          
           <p className="text-2xl font-medium">
             Vi bruger 18 milliarder kroner om året.
           </p>
