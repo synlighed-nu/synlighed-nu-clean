@@ -58,16 +58,14 @@ export default function Nav({ simple = false }: NavProps) {
         </div>
       </div>
 
-      {/* Mobil menu - slide-in fra højre */}
+      {/* Mobil menu med lysere overlay */}
       {menuOpen && (
         <>
-          {/* Mørkere overlay */}
           <div
-            className="fixed inset-0 bg-black/80 z-40 md:hidden"
+            className="fixed inset-0 bg-black/40 z-40 md:hidden"
             onClick={() => setMenuOpen(false)}
           />
           
-          {/* Hvid menu der glider ind */}
           <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-50 md:hidden transition-transform duration-300 ease-out translate-x-0">
             <div className="p-6">
               <button
