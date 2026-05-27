@@ -2,19 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 
-export default function Nav({ simple = false }: { simple?: boolean }) {
+export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Animation på første indlæsning (2,5 sekunder)
+  // Auto-animation: åbner og lukker efter 2-3 sekunder første gang
   useEffect(() => {
     if (!hasAnimated) {
+      setTimeout(() => setMenuOpen(true), 800);
       setTimeout(() => {
-        setMenuOpen(true);   // åbner
-      }, 800);
-
-      setTimeout(() => {
-        setMenuOpen(false);  // lukker igen
+        setMenuOpen(false);
         setHasAnimated(true);
       }, 3300);
     }
@@ -23,62 +20,43 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          
-          {/* Logo */}
-          <div className="font-semibold text-2xl tracking-tighter">
+        <div className="h-16 flex items-center justify-between">
+
+          {/* Logo / @SynlighedNu */}
+          <a href="/" className="text-2xl font-semibold tracking-tighter text-[#002B5B]">
             @SynlighedNu
+          </a>
+
+          {/* Desktop knapper - centrerede */}
+          <div className="hidden md:flex items-center gap-3 flex-1 justify-center">
+            <a href="#afstemning" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Afstemning</a>
+            <a href="#de-store-greb" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">De store greb</a>
+            <a href="/kreativitet" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Kreativitet</a>
+            <a href="/demokrati-2-0" className="px-6 py-2.5 text-sm font-medium hover:bg-gray-100 rounded-3xl transition">Demokrati 2.0</a>
           </div>
 
-          {/* Centrerede knapper på desktop/iPad */}
-          {!simple && (
-            <div className="hidden md:flex items-center gap-3 flex-1 justify-center">
-              <a href="#afstemning" className="px-5 py-2 bg-[#002B5B] text-white text-sm font-medium rounded-3xl hover:bg-[#001B3D] transition">
-                Afstemning
-              </a>
-              <a href="#de-store-greb" className="px-5 py-2 border border-[#002B5B] text-[#002B5B] text-sm font-medium rounded-3xl hover:bg-[#002B5B] hover:text-white transition">
-                De store greb
-              </a>
-              <a href="#kreativitet" className="px-5 py-2 border border-[#002B5B] text-[#002B5B] text-sm font-medium rounded-3xl hover:bg-[#002B5B] hover:text-white transition">
-                Kreativitet
-              </a>
-              <a href="#demokrati-2-0" className="px-5 py-2 border border-[#002B5B] text-[#002B5B] text-sm font-medium rounded-3xl hover:bg-[#002B5B] hover:text-white transition">
-                Demokrati 2.0
-              </a>
-            </div>
-          )}
-
-          {/* Rød burger med animation – kun på mobil */}
-          {!simple && (
-            <button 
-              className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] focus:outline-none"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <div className={`w-6 h-[2.5px] bg-[#E30613] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[3.5px]' : ''}`} />
-              <div className={`w-6 h-[2.5px] bg-[#E30613] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-              <div className={`w-6 h-[2.5px] bg-[#E30613] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[3.5px]' : ''}`} />
-            </button>
-          )}
+          {/* Rød burger menu - kun mobil */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
+            aria-label="Menu"
+          >
+            <div className={`w-6 h-0.5 bg-[#E30613] transition-all ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+            <div className={`w-6 h-0.5 bg-[#E30613] transition-all ${menuOpen ? 'opacity-0' : ''}`} />
+            <div className={`w-6 h-0.5 bg-[#E30613] transition-all ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+          </button>
         </div>
-
-        {/* Mobil menu */}
-        {!simple && menuOpen && (
-          <div className="md:hidden pb-6 flex flex-col gap-2">
-            <a href="#afstemning" className="px-6 py-4 bg-[#002B5B] text-white text-center rounded-3xl" onClick={() => setMenuOpen(false)}>
-              Afstemning
-            </a>
-            <a href="#de-store-greb" className="px-6 py-4 border border-[#002B5B] text-center rounded-3xl" onClick={() => setMenuOpen(false)}>
-              De store greb
-            </a>
-            <a href="#kreativitet" className="px-6 py-4 border border-[#002B5B] text-center rounded-3xl" onClick={() => setMenuOpen(false)}>
-              Kreativitet
-            </a>
-            <a href="#demokrati-2-0" className="px-6 py-4 border border-[#002B5B] text-center rounded-3xl" onClick={() => setMenuOpen(false)}>
-              Demokrati 2.0
-            </a>
-          </div>
-        )}
       </div>
+
+      {/* Mobil menu (åbner under nav) */}
+      {menuOpen && (
+        <div className="md:hidden bg-white border-t px-6 py-4 flex flex-col gap-3">
+          <a href="#afstemning" className="py-3 text-lg font-medium" onClick={() => setMenuOpen(false)}>Afstemning</a>
+          <a href="#de-store-greb" className="py-3 text-lg font-medium" onClick={() => setMenuOpen(false)}>De store greb</a>
+          <a href="/kreativitet" className="py-3 text-lg font-medium" onClick={() => setMenuOpen(false)}>Kreativitet</a>
+          <a href="/demokrati-2-0" className="py-3 text-lg font-medium" onClick={() => setMenuOpen(false)}>Demokrati 2.0</a>
+        </div>
+      )}
     </nav>
   );
 }
