@@ -3,11 +3,11 @@
 import React, { useState, useRef } from 'react';
 
 interface SpeakerButtonProps {
-  text: string;
+  text?: string;           // ← nu valgfri
   className?: string;
 }
 
-export default function SpeakerButton({ text, className = "" }: SpeakerButtonProps) {
+export default function SpeakerButton({ text = '', className = "" }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -16,24 +16,19 @@ export default function SpeakerButton({ text, className = "" }: SpeakerButtonPro
     const synth = window.speechSynthesis;
 
     if (isSpeaking && !isPaused) {
-      // Pause
       synth.pause();
       setIsPaused(true);
     } 
     else if (isPaused) {
-      // Resume
       synth.resume();
       setIsPaused(false);
     } 
     else {
-      // Start ny oplæsning
-      if (synth.speaking) {
-        synth.cancel();
-      }
+      if (synth.speaking) synth.cancel();
 
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'da-DK';        // Dansk
-      utterance.rate = 0.95;           // Lidt langsommere end standard (mere behageligt)
+      utterance.lang = 'da-DK';
+      utterance.rate = 0.95;
       utterance.pitch = 1;
 
       utterance.onend = () => {
