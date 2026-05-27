@@ -1,15 +1,35 @@
 'use client';
 
-import React from 'react';
 import Nav from '../components/common/_Nav';
+import SpeakerButton from '../components/common/_SpeakerButton';
 
 export default function EnergiPage() {
+  const pageText = `
+    Lokal produktion fjerner unødvendige tab i elnettet og central infrastruktur.
+    I et ideelt samfund med lokal energi ville vi skulle producere ca. 25 % mindre energi samlet set.
+    Alligevel prioriteres massive centraliserede projekter og milliarder i subsidier.
+
+    Et bedre alternativ:
+    Over de næste 5 år kan vi gradvist flytte til lokal energiproduktion (sol, vind og batterier) 
+    samtidig med at vi afvikler de dyre centrale projekter.
+
+    Hvorfor er det et problem i dag?
+    Store tab i elnettet spilder op til 25 % af energien.
+    Centraliserede projekter skaber høje omkostninger og afhængighed.
+    Subsidier går forud for den billigste løsning: lokal produktion.
+  `;
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
-        <h1 className="text-5xl font-bold tracking-tighter mb-2">Energi</h1>
+        
+        {/* Titel + højtaler-knap på samme linje */}
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-5xl font-bold tracking-tighter">Energi</h1>
+          <SpeakerButton text={pageText} />
+        </div>
         
         <div className="prose prose-lg text-gray-700">
           <p className="text-2xl leading-relaxed">
