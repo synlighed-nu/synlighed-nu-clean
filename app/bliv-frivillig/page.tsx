@@ -1,4 +1,4 @@
-import Nav from '../components/_Nav';
+import Nav from '../components/common/_Nav';
 
 export default function BlivFrivilligPage() {
   return (

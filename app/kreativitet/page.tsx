@@ -1,5 +1,5 @@
-import Nav from '../components/_Nav';
-import SpeakerButton from '../components/_SpeakerButton';
+import Nav from '../components/common/_Nav';
+import SpeakerButton from '../components/common/_SpeakerButton';
 
 export default function KreativitetPage() {
   return (
