@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 
 import Nav from './common/_Nav';
@@ -8,6 +7,7 @@ import WhySection from './sections/_WhySection';
 import VotingSection from './sections/_VotingSection';
 import BigMoves from './sections/_BigMoves';
 import ConcreteAreas from './sections/_ConcreteAreas';
+import Footer from './common/_Footer';
 
 export default function SynlighedNu() {
   const [modal, setModal] = useState<{ title: string; text: string } | null>(null);
