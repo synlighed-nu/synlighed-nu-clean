@@ -2,20 +2,20 @@
 
 import React from 'react';
 
-import Nav from './components/_Nav';
-import Axioms from './components/_Axioms';
-import WhySection from './components/_WhySection';
-import VotingSection from './components/_VotingSection';
-import BigMoves from './components/_BigMoves';
-import ConcreteAreas from './components/_ConcreteAreas';
-import Footer from './components/_Footer';
+import Nav from './components/common/_Nav';
+import Axioms from './components/sections/_Axioms';
+import WhySection from './components/sections/_WhySection';
+import VotingSection from './components/sections/_VotingSection';
+import BigMoves from './components/sections/_BigMoves';
+import ConcreteAreas from './components/sections/_ConcreteAreas';
+import Footer from './components/common/_Footer';
 
 export default function SynlighedNu() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      {/* === UNIVERSAL TOP === */}
+      {/* === UNIVERSAL TOP – HOVEDINDLEDNING === */}
       <div className="text-center pt-20 pb-16 px-6">
         <h1 className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
           Synlighed først.
@@ -37,8 +37,6 @@ export default function SynlighedNu() {
 
       {/* === TO KRITISKE BOKSE I BUNDEN === */}
       <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
-        
-        {/* Kreativitet boks */}
         <a href="/kreativitet" className="group block">
           <div className="text-center mb-4">
             <span className="inline-block px-5 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
@@ -52,7 +50,6 @@ export default function SynlighedNu() {
           </div>
         </a>
 
-        {/* Demokrati 2.0 boks */}
         <a href="/demokrati-2-0" className="group block">
           <div className="text-center mb-4">
             <span className="inline-block px-5 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full">KRITISK OMRÅDE</span>
