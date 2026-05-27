@@ -1,7 +1,22 @@
+'use client';
+
 import Nav from '../components/common/_Nav';
 import SpeakerButton from '../components/common/_SpeakerButton';
 
 export default function BoligstottePage() {
+  const pageText = `
+    Vi bruger 18 milliarder kroner om året. Men vi løser ikke problemet.
+    592.000 husstande modtager støtte. Det hjælper mange i dag.
+    Men holder samtidig priserne oppe.
+    Så vi gør noget mærkeligt: Vi betaler for høje priser. Og derefter betaler vi for at kompensere for dem.
+    Resultatet er et system, der har brug for støtten for at fungere.
+    Det svarer til næsten én hel Øresundsbro hvert eneste år.
+
+    Et bedre alternativ:
+    Over de næste 5 år kan vi gradvist afvikle boligstøtten samtidig med, at vi bygger et stort antal nye, 100 % selvforsynende boliger med sol, vind og batterier.
+    På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud.
+  `;
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
@@ -74,9 +89,12 @@ export default function BoligstottePage() {
             Danmarks Statistik – Boligstøtte <span className="text-xl">↗</span>
           </a>
         </div>
-      </div>
 
-      <SpeakerButton />
+        {/* Højtaler-knap med tekst */}
+        <div className="mt-16 flex justify-center">
+          <SpeakerButton text={pageText} />
+        </div>
+      </div>
     </div>
   );
 }
