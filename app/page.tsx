@@ -33,7 +33,9 @@ export default function SynlighedNu() {
       <WhySection />
       <VotingSection />
       <BigMoves />
-      <ConcreteAreas />
+      <section id="de-konkrete-omrader">
+  <ConcreteAreas />
+</section>
 
       {/* Kritisk område boksene i bunden */}
       <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
