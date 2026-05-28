@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 
 const AXIOMS = [
   "Synlighed begynder først, når man tør erkende sine begrænsninger.",
@@ -22,26 +22,15 @@ interface SpeakerButtonProps {
 export default function SpeakerButton({ text, endingAxiomIndex, className = "" }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const synthRef = useRef<SpeechSynthesis | null>(null);
-
-  const triggerHaptic = (duration = 50) => {
-    if ('vibrate' in navigator) navigator.vibrate(duration);
-  };
+  const synth = window.speechSynthesis;
 
   const toggleSpeech = () => {
-    if (typeof window === 'undefined') return;
-
-    const synth = window.speechSynthesis;
-    synthRef.current = synth;
-
     if (isSpeaking && !isPaused) {
       synth.pause();
       setIsPaused(true);
-      triggerHaptic(30);
     } else if (isPaused) {
       synth.resume();
       setIsPaused(false);
-      triggerHaptic(30);
     } else {
       if (synth.speaking) synth.cancel();
 
@@ -50,6 +39,7 @@ export default function SpeakerButton({ text, endingAxiomIndex, className = "" }
       utterance.rate = 0.95;
       utterance.pitch = 1.0;
 
+      // Når hovedteksten er færdig, læs Axiom
       utterance.onend = () => {
         if (endingAxiomIndex !== undefined && AXIOMS[endingAxiomIndex]) {
           const axiomUtterance = new SpeechSynthesisUtterance(AXIOMS[endingAxiomIndex]);
@@ -64,7 +54,6 @@ export default function SpeakerButton({ text, endingAxiomIndex, className = "" }
       synth.speak(utterance);
       setIsSpeaking(true);
       setIsPaused(false);
-      triggerHaptic(50);
     }
   };
 
