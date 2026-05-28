@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 const AXIOMS = [
   "Synlighed begynder først, når man tør erkende sine begrænsninger.",
@@ -21,48 +21,32 @@ interface SpeakerButtonProps {
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  console.log('🔊 SpeakerButton mounted');
-
-  const speak = (message: string, isAxiom = false) => {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
-      console.log('❌ speechSynthesis ikke tilgængelig');
-      return;
-    }
+  const speak = (message: string) => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
 
     window.speechSynthesis.cancel();
-    console.log(isAxiom ? '🟢 Starter AXIOM' : '🔊 Starter hovedtekst');
 
     const utterance = new SpeechSynthesisUtterance(message);
     utterance.lang = 'da-DK';
-    utterance.rate = isAxiom ? 0.92 : 0.95;
-    utterance.pitch = 1.0;
-
-    utterance.onend = () => {
-      console.log(isAxiom ? '✅ AXIOM færdig' : '✅ Hovedtekst færdig – starter AXIOM nu');
-      setIsSpeaking(false);
-
-      if (!isAxiom) {
-        const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
-        setTimeout(() => {
-          speak(axiomText, true);
-        }, 900);
-      }
-    };
-
-    utteranceRef.current = utterance;
+    utterance.rate = 0.95;
     window.speechSynthesis.speak(utterance);
-    setIsSpeaking(true);
   };
 
   const toggleSpeech = () => {
     if (isSpeaking) {
-      console.log('⏹️ Stopper tale');
       window.speechSynthesis.cancel();
       setIsSpeaking(false);
     } else {
+      setIsSpeaking(true);
       speak(text);
+
+      // Fast tid: start Axiom automatisk efter ca. 8 sekunder
+      setTimeout(() => {
+        const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
+        speak(axiomText);
+        setIsSpeaking(false);
+      }, 8000);
     }
   };
 
