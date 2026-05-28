@@ -26,7 +26,10 @@ export default function BoligstottePage() {
         {/* Titel + højtaler-knap på samme linje */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
-          <SpeakerButton text={pageText} />
+          <SpeakerButton 
+            text={pageText} 
+            endingAxiomIndex={2}     // "Vi løser problemer ved at kompensere for dem, i stedet for at ændre dem."
+          />
         </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
