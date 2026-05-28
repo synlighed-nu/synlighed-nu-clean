@@ -11,7 +11,7 @@ import BigMoves from './components/sections/_BigMoves';
 import ConcreteAreas from './components/sections/_ConcreteAreas';
 import Footer from './components/common/_Footer';
 
-// Dynamisk import – kun på klienten (undgår "window is not defined")
+// Dynamisk import – kun på klienten
 const ExplanationPopup = dynamic(
   () => import('./components/common/_ExplanationPopup'),
   { ssr: false }
@@ -22,7 +22,7 @@ export default function SynlighedNu() {
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      {/* === HERO + POP-UP FORKLARING === */}
+      {/* HERO + POP-UP */}
       <div className="text-center pt-24 pb-16 px-6">
         <h1 className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
           Synlighed først.
@@ -43,7 +43,7 @@ export default function SynlighedNu() {
         <ConcreteAreas />
       </section>
 
-      {/* Kritisk område boksene i bunden */}
+      {/* Kritisk område boksene */}
       <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
         <a href="/kreativitet" className="group block border-2 border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
           <div className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
