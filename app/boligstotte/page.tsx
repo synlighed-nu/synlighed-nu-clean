@@ -1,12 +1,7 @@
 'use client';
 
 import Nav from '../components/common/_Nav';
-import dynamic from 'next/dynamic';
-
-const SpeakerButton = dynamic(
-  () => import('../components/common/_SpeakerButton'),
-  { ssr: false }
-);
+import SpeakerButton from '../components/common/_SpeakerButton';
 
 export default function BoligstottePage() {
   const pageText = `
@@ -28,12 +23,11 @@ export default function BoligstottePage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + højtaler-knap på samme linje */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
           <SpeakerButton 
             text={pageText} 
-            endingAxiomIndex={2}
+            endingAxiomIndex={2}     // "Vi løser problemer ved at kompensere for dem, i stedet for at ændre dem."
           />
         </div>
         
