@@ -37,13 +37,16 @@ Synlighed begynder først, når man tør erkende sine begrænsninger.
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-4">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
-          <SpeakerButton text={pageText} />
+          <span className="text-red-600 font-mono text-sm font-bold tracking-widest bg-red-100 px-3 py-1 rounded-full">
+            DEV 28-05-2026 001 — Kun til test • Ikke offentlig
+          </span>
         </div>
 
-        {/* Visuel tekst på siden */}
-        <div className="prose prose-lg max-w-none text-gray-700">
+        <SpeakerButton text={pageText} />
+
+        <div className="prose prose-lg max-w-none text-gray-700 mt-8">
           <p className="text-2xl font-medium">Vi bruger 18 milliarder kroner om året.</p>
           <p className="text-2xl font-medium">Men vi løser ikke problemet.</p>
           <p className="text-xl mt-8">592.000 husstande modtager støtte.</p>
@@ -62,7 +65,7 @@ Synlighed begynder først, når man tør erkende sine begrænsninger.
             <li>Holder boligpriserne kunstigt høje</li>
             <li>Gør det sværere for unge at komme ind på boligmarkedet</li>
             <li>Bruger milliarder uden at løse det underliggende problem</li>
-            <li>Skaber et system, der er afhængigt af støtte for at fungere.</li>
+            <li>Skaber et system, der er afhængigt af støtte for at fungere</li>
           </ul>
         </div>
 
