@@ -1,28 +1,20 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
 
 import Nav from './components/common/_Nav';
-import Axioms from './components/sections/_Axioms';
 import WhySection from './components/sections/_WhySection';
 import VotingSection from './components/sections/_VotingSection';
 import BigMoves from './components/sections/_BigMoves';
 import ConcreteAreas from './components/sections/_ConcreteAreas';
 import Footer from './components/common/_Footer';
 
-// Dynamisk import – dette løser "window is not defined"
-const ExplanationPopup = dynamic(
-  () => import('./components/common/_ExplanationPopup'),
-  { ssr: false }
-);
-
 export default function SynlighedNu() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav />
 
-      {/* HERO + POP-UP */}
+      {/* HERO */}
       <div className="text-center pt-24 pb-16 px-6">
         <h1 className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
           Synlighed først.
@@ -30,11 +22,11 @@ export default function SynlighedNu() {
         <p className="text-4xl md:text-5xl font-medium tracking-tighter mb-8 text-[#002B5B]">
           Hurtigere. Bedre. Billigere.
         </p>
-
-        {/* <ExplanationPopup /> ← midlertidigt slået fra */}
       </div>
 
-      <Axioms />
+      {/* Axioms slået fra midlertidigt */}
+      {/* <Axioms /> */}
+
       <WhySection />
       <VotingSection />
       <BigMoves />
