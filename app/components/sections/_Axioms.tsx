@@ -51,7 +51,7 @@ export default function Axioms() {
         ))}
       </div>
 
-      <SpeakerButton />
+      <SpeakerButton text="Synlighed begynder først, når man tør erkende sine begrænsninger." />
     </section>
   );
 }
