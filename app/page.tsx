@@ -11,7 +11,7 @@ import BigMoves from './components/sections/_BigMoves';
 import ConcreteAreas from './components/sections/_ConcreteAreas';
 import Footer from './components/common/_Footer';
 
-// Dynamisk import så den kun kører på klienten
+// Dynamisk import – kun på klienten (undgår "window is not defined")
 const ExplanationPopup = dynamic(
   () => import('./components/common/_ExplanationPopup'),
   { ssr: false }
