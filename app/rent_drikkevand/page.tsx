@@ -1,13 +1,21 @@
 'use client';
 
 import Nav from '../components/common/_Nav';
-import SpeakerButton from '../components/common/_SpeakerButton';
+import dynamic from 'next/dynamic';
+
+const SpeakerButton = dynamic(
+  () => import('../components/common/_SpeakerButton'),
+  { ssr: false }
+);
 
 export default function RentDrikkevandPage() {
   const pageText = `
     Pesticidrester findes i over halvdelen af alle boringer.
     Vi bruger milliarder af kroner på oprensning og nye boringer i stedet for at beskytte grundvandet mod sprøjtning.
     Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
+
+    Et bedre alternativ:
+    Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider.
   `;
 
   return (
@@ -16,11 +24,12 @@ export default function RentDrikkevandPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
+        {/* Titel + højtaler-knap på samme linje */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Rent drikkevand</h1>
           <SpeakerButton 
             text={pageText} 
-            endingAxiomIndex={4}     // ← Her vælger du hvilket Axiom der skal læses til sidst
+            endingAxiomIndex={4}     // "Beskyttelse af grundvandet er ikke til forhandling."
           />
         </div>
         
