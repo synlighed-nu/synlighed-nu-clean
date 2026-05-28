@@ -1,7 +1,12 @@
 'use client';
 
 import Nav from '../components/common/_Nav';
-import SpeakerButton from '../components/common/_SpeakerButton';
+import dynamic from 'next/dynamic';
+
+const SpeakerButton = dynamic(
+  () => import('../components/common/_SpeakerButton'),
+  { ssr: false }
+);
 
 export default function Demokrati20Page() {
   const pageText = `
@@ -21,7 +26,7 @@ export default function Demokrati20Page() {
           <h1 className="text-5xl font-bold tracking-tighter">Demokrati 2.0</h1>
           <SpeakerButton 
             text={pageText} 
-            endingAxiomIndex={3}     // ← Systemet er ikke bygget til at lære...
+            endingAxiomIndex={3}     // "Systemet er ikke bygget til at lære – det er bygget til at fortsætte."
           />
         </div>
         
