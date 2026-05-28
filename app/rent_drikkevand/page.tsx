@@ -1,15 +1,34 @@
+'use client';
+
 import Nav from '../components/common/_Nav';
+import SpeakerButton from '../components/common/_SpeakerButton';
 
 export default function RentDrikkevandPage() {
+  const pageText = `
+    Pesticidrester findes i over halvdelen af alle boringer.
+    Vi bruger milliarder af kroner på oprensning og nye boringer i stedet for at beskytte grundvandet mod sprøjtning.
+    Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
+
+    Et bedre alternativ:
+    Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider.
+
+    Axiom: Beskyttelse af grundvandet er ikke til forhandling.
+  `;
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        <h1 className="text-5xl font-bold tracking-tighter mb-6">Rent drikkevand</h1>
+        {/* Titel + højtaler-knap på samme linje */}
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-5xl font-bold tracking-tighter">Rent drikkevand</h1>
+          <SpeakerButton text={pageText} />
+        </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
+          
           <p className="text-2xl font-medium">
             Pesticidrester findes i over halvdelen af alle boringer.
           </p>
@@ -22,7 +41,7 @@ export default function RentDrikkevandPage() {
             Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
           </p>
 
-          <h3 className="text-xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
+          <h3 className="text-2xl font-semibold mt-12 mb-6">Et bedre alternativ</h3>
           <p>
             Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider.
           </p>
