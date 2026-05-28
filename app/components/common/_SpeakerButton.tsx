@@ -2,12 +2,24 @@
 
 import React, { useState, useRef } from 'react';
 
+const AXIOMS = [
+  "Synlighed begynder først, når man tør erkende sine begrænsninger.",
+  "Problemet er ikke mangel på data – problemet er mangel på overblik.",
+  "Vi løser problemer ved at kompensere for dem, i stedet for at ændre dem.",
+  "Systemet er ikke bygget til at lære – det er bygget til at fortsætte.",
+  "Beskyttelse af grundvandet er ikke til forhandling.",
+  "Hurtigere. Bedre. Billigere. er det modsatte af, hvordan staten ofte fungerer.",
+  "Hvis vi ikke kan se, hvordan systemet virker, kan vi heller ikke ændre det.",
+  "Vi behandler konsekvenser – men ændrer ikke årsager.",
+];
+
 interface SpeakerButtonProps {
-  text?: string;           // ← nu valgfri
+  text: string;
+  endingAxiomIndex?: number;   // ← Her skriver du bare et tal (0-7)
   className?: string;
 }
 
-export default function SpeakerButton({ text = '', className = "" }: SpeakerButtonProps) {
+export default function SpeakerButton({ text, endingAxiomIndex, className = "" }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -18,20 +30,24 @@ export default function SpeakerButton({ text = '', className = "" }: SpeakerButt
     if (isSpeaking && !isPaused) {
       synth.pause();
       setIsPaused(true);
-    } 
-    else if (isPaused) {
+    } else if (isPaused) {
       synth.resume();
       setIsPaused(false);
-    } 
-    else {
+    } else {
       if (synth.speaking) synth.cancel();
 
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'da-DK';
       utterance.rate = 0.95;
-      utterance.pitch = 1;
 
       utterance.onend = () => {
+        // Slut af med valgt Axiom hvis der er angivet et index
+        if (endingAxiomIndex !== undefined && AXIOMS[endingAxiomIndex]) {
+          const axiomUtterance = new SpeechSynthesisUtterance(AXIOMS[endingAxiomIndex]);
+          axiomUtterance.lang = 'da-DK';
+          axiomUtterance.rate = 0.9;
+          synth.speak(axiomUtterance);
+        }
         setIsSpeaking(false);
         setIsPaused(false);
       };
