@@ -51,6 +51,7 @@ Skaber et system, der er afhængigt af støtte for at fungere.
         </div>
 
         <div className="prose prose-lg max-w-none text-gray-700">
+          {/* Visuel tekst på siden – samme som bliver læst op */}
           <p className="text-2xl font-medium">Vi bruger 18 milliarder kroner om året.</p>
           <p className="text-2xl font-medium">Men vi løser ikke problemet.</p>
 
