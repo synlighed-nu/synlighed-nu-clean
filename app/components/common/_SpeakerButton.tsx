@@ -26,21 +26,26 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
   const speak = (message: string, isAxiom = false) => {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
 
+    // Stop alt tidligere
     window.speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(message);
     utterance.lang = 'da-DK';
     utterance.rate = isAxiom ? 0.92 : 0.95;
-    utterance.pitch = 1;
+    utterance.pitch = 1.0;
 
     if (!isAxiom) {
+      // Når hovedteksten er færdig → start Axiom
       utterance.onend = () => {
         setIsSpeaking(false);
-        // Start axiom automatisk efter hovedteksten
         const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
         setTimeout(() => {
-          speak(axiomText, true);
-        }, 700);
+          const axiomUtterance = new SpeechSynthesisUtterance(axiomText);
+          axiomUtterance.lang = 'da-DK';
+          axiomUtterance.rate = 0.92;
+          axiomUtterance.pitch = 1.0;
+          window.speechSynthesis.speak(axiomUtterance);
+        }, 800);
       };
     } else {
       utterance.onend = () => setIsSpeaking(false);
