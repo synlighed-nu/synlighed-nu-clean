@@ -21,36 +21,75 @@ interface SpeakerButtonProps {
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const toggleSpeech = () => {
+  const API_KEY = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
+
+  const toggleSpeech = async () => {
     if (isSpeaking) {
-      window.speechSynthesis?.cancel();
       setIsSpeaking(false);
       return;
     }
 
-    setIsSpeaking(true);
+    if (!API_KEY) {
+      alert("Manglende ElevenLabs API key");
+      return;
+    }
+
+    setIsLoading(true);
 
     const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
     const fullText = text + "\n\n" + axiomText;
 
-    const utterance = new SpeechSynthesisUtterance(fullText);
-    utterance.lang = 'da-DK';
-    utterance.rate = 0.95;
+    try {
+      const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM', {
+        method: 'POST',
+        headers: {
+          'Accept': 'audio/mpeg',
+          'Content-Type': 'application/json',
+          'xi-api-key': API_KEY,
+        },
+        body: JSON.stringify({
+          text: fullText,
+          model_id: "eleven_multilingual_v2",
+          voice_settings: { stability: 0.75, similarity_boost: 0.85 }
+        }),
+      });
 
-    utterance.onend = () => setIsSpeaking(false);
+      if (!response.ok) throw new Error("ElevenLabs fejl");
 
-    window.speechSynthesis?.speak(utterance);
+      const audioBlob = await response.blob();
+      const audioUrl = URL.createObjectURL(audioBlob);
+      const audio = new Audio(audioUrl);
+
+      audio.onended = () => {
+        setIsSpeaking(false);
+        URL.revokeObjectURL(audioUrl);
+      };
+
+      audio.play();
+      setIsSpeaking(true);
+
+    } catch (error) {
+      console.error(error);
+      alert("Kunne ikke afspille lyd – tjek API-nøglen");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <button
       onClick={toggleSpeech}
-      className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 hover:border-[#E30613] rounded-2xl text-[#002B5B] transition-colors"
-      title={isSpeaking ? "Stop oplæsning" : "Læs siden højt"}
+      disabled={isLoading}
+      className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 hover:border-[#E30613] rounded-2xl text-[#002B5B] transition-colors disabled:opacity-50"
     >
-      <span className="text-2xl">{isSpeaking ? '⏹️' : '🔊'}</span>
-      <span className="text-sm font-medium">{isSpeaking ? 'Stop' : 'Læs højt'}</span>
+      <span className="text-2xl">
+        {isLoading ? '⏳' : isSpeaking ? '⏹️' : '🔊'}
+      </span>
+      <span className="text-sm font-medium">
+        {isLoading ? 'Genererer lyd...' : isSpeaking ? 'Afspiller' : 'Læs højt'}
+      </span>
     </button>
   );
 }
