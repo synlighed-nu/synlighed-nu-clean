@@ -3,6 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function ExplanationPopup() {
+  // Hård beskyttelse mod server-rendering
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
   const [showPopup, setShowPopup] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
@@ -30,23 +35,13 @@ export default function ExplanationPopup() {
     setExpanded(!expanded);
   };
 
-  // Kun på klienten
+  // Luk med Esc-tast
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closePopup();
     };
-
-    if (showPopup) {
-      window.addEventListener('keydown', handleEsc);
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('keydown', handleEsc);
-      }
-    };
+    if (showPopup) window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
   }, [showPopup]);
 
   return (
