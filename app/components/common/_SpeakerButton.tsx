@@ -31,13 +31,13 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
     setIsSpeaking(true);
 
-    // Start hovedteksten
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'da-DK';
-    utterance.rate = 0.95;
-    window.speechSynthesis?.speak(utterance);
+    // 1. Start hovedteksten
+    const mainUtterance = new SpeechSynthesisUtterance(text);
+    mainUtterance.lang = 'da-DK';
+    mainUtterance.rate = 0.95;
+    window.speechSynthesis?.speak(mainUtterance);
 
-    // Fast tid: start Axiom efter 12 sekunder
+    // 2. Start Axiom automatisk efter 18 sekunder (sikker buffer)
     setTimeout(() => {
       const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
       const axiomUtterance = new SpeechSynthesisUtterance(axiomText);
@@ -46,7 +46,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       window.speechSynthesis?.speak(axiomUtterance);
 
       setIsSpeaking(false);
-    }, 12000);
+    }, 18000);
   };
 
   return (
@@ -56,7 +56,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       title={isSpeaking ? "Stop oplæsning" : "Læs siden højt"}
     >
       <span className="text-2xl">{isSpeaking ? '⏹️' : '🔊'}</span>
-      <span className="text-sm font-medium">{isSpeaking ? 'Pause' : 'Læs højt'}</span>
+      <span className="text-sm font-medium">{isSpeaking ? 'Stop' : 'Læs højt'}</span>
     </button>
   );
 }
