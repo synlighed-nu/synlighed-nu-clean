@@ -30,7 +30,7 @@ export default function ExplanationPopup() {
     setExpanded(!expanded);
   };
 
-  // Luk med Esc-tast – kun på klienten
+  // Kun på klienten
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -75,7 +75,6 @@ export default function ExplanationPopup() {
             }`}
             onClick={e => e.stopPropagation()}
           >
-            {/* Top bar med knapper */}
             <div className="flex justify-between items-center mb-8">
               <button
                 onClick={toggleExpand}
@@ -97,7 +96,6 @@ export default function ExplanationPopup() {
               Synlighed først.
             </h2>
 
-            {/* Normal tekst */}
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="text-2xl leading-relaxed">
                 Vi ved hvad vi bruger penge på – men ikke om det virker.
@@ -108,7 +106,6 @@ export default function ExplanationPopup() {
               </p>
             </div>
 
-            {/* Ekstra tekst når man trykker på det grønne flueben */}
             {expanded && (
               <div className="mt-10 prose prose-lg text-gray-700 border-t pt-8">
                 <p className="font-medium">
