@@ -1,7 +1,12 @@
 'use client';
 
 import Nav from '../components/common/_Nav';
-import SpeakerButton from '../components/common/_SpeakerButton';
+import dynamic from 'next/dynamic';
+
+const SpeakerButton = dynamic(
+  () => import('../components/common/_SpeakerButton'),
+  { ssr: false }
+);
 
 export default function BoligstottePage() {
   const pageText = `
@@ -27,7 +32,7 @@ export default function BoligstottePage() {
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
           <SpeakerButton 
             text={pageText} 
-            endingAxiomIndex={2}     // "Vi løser problemer ved at kompensere for dem, i stedet for at ændre dem."
+            endingAxiomIndex={2}
           />
         </div>
         
