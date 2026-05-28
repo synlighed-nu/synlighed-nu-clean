@@ -11,7 +11,7 @@ import BigMoves from './components/sections/_BigMoves';
 import ConcreteAreas from './components/sections/_ConcreteAreas';
 import Footer from './components/common/_Footer';
 
-// Dynamisk import – kun på klienten
+// Dynamisk import – undgår "window is not defined"
 const ExplanationPopup = dynamic(
   () => import('./components/common/_ExplanationPopup'),
   { ssr: false }
@@ -39,13 +39,17 @@ export default function SynlighedNu() {
       <VotingSection />
       <BigMoves />
 
-      <section id="de-konkrete-omrader">
+      {/* De konkrete områder */}
+      <section id="de-konkrete-omrader" className="max-w-5xl mx-auto px-6 py-16">
         <ConcreteAreas />
       </section>
 
-      {/* Kritisk område boksene */}
+      {/* Kritisk område – to bokse */}
       <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
-        <a href="/kreativitet" className="group block border-2 border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
+        <a 
+          href="/kreativitet" 
+          className="group block border-2 border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all"
+        >
           <div className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
             KRITISK OMRÅDE
           </div>
@@ -53,7 +57,10 @@ export default function SynlighedNu() {
           <p className="text-gray-600">Fra 90 % kreative i børnehaven til kun 10 % i gymnasiet. Systemet kvæler divergent tænkning.</p>
         </a>
 
-        <a href="/demokrati-2-0" className="group block border-2 border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
+        <a 
+          href="/demokrati-2-0" 
+          className="group block border-2 border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all"
+        >
           <div className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
             KRITISK OMRÅDE
           </div>
