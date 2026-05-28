@@ -8,11 +8,6 @@ export default function RentDrikkevandPage() {
     Pesticidrester findes i over halvdelen af alle boringer.
     Vi bruger milliarder af kroner på oprensning og nye boringer i stedet for at beskytte grundvandet mod sprøjtning.
     Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
-
-    Et bedre alternativ:
-    Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider.
-
-    Axiom: Beskyttelse af grundvandet er ikke til forhandling.
   `;
 
   return (
@@ -21,14 +16,15 @@ export default function RentDrikkevandPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + højtaler-knap på samme linje */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Rent drikkevand</h1>
-          <SpeakerButton text={pageText} />
+          <SpeakerButton 
+            text={pageText} 
+            endingAxiomIndex={4}     // ← Her vælger du hvilket Axiom der skal læses til sidst
+          />
         </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
-          
           <p className="text-2xl font-medium">
             Pesticidrester findes i over halvdelen af alle boringer.
           </p>
