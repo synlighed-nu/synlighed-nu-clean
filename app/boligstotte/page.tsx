@@ -37,16 +37,16 @@ Synlighed begynder først, når man tør erkende sine begrænsninger.
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
-          <span className="text-red-600 font-mono text-sm font-bold tracking-widest bg-red-100 px-3 py-1 rounded-full">
-            DEV 28-05-2026 001 — Kun til test • Ikke offentlig
+          <span className="text-red-600 font-bold text-sm bg-red-100 px-3 py-1 rounded-full whitespace-nowrap">
+            DEV 28-05-2026 001 — Kun til test
           </span>
         </div>
 
         <SpeakerButton text={pageText} />
 
-        <div className="prose prose-lg max-w-none text-gray-700 mt-8">
+        <div className="prose prose-lg max-w-none text-gray-700 mt-10">
           <p className="text-2xl font-medium">Vi bruger 18 milliarder kroner om året.</p>
           <p className="text-2xl font-medium">Men vi løser ikke problemet.</p>
           <p className="text-xl mt-8">592.000 husstande modtager støtte.</p>
