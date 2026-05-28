@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import dynamic from 'next/dynamic';
 
 import Nav from './components/common/_Nav';
 import Axioms from './components/sections/_Axioms';
@@ -8,8 +9,13 @@ import WhySection from './components/sections/_WhySection';
 import VotingSection from './components/sections/_VotingSection';
 import BigMoves from './components/sections/_BigMoves';
 import ConcreteAreas from './components/sections/_ConcreteAreas';
-import ExplanationPopup from './components/common/_ExplanationPopup';
 import Footer from './components/common/_Footer';
+
+// Dynamisk import så den kun kører på klienten
+const ExplanationPopup = dynamic(
+  () => import('./components/common/_ExplanationPopup'),
+  { ssr: false }
+);
 
 export default function SynlighedNu() {
   return (
@@ -25,7 +31,6 @@ export default function SynlighedNu() {
           Hurtigere. Bedre. Billigere.
         </p>
 
-        {/* Den nye hover-pop-up komponent */}
         <ExplanationPopup />
       </div>
 
@@ -33,9 +38,10 @@ export default function SynlighedNu() {
       <WhySection />
       <VotingSection />
       <BigMoves />
+
       <section id="de-konkrete-omrader">
-  <ConcreteAreas />
-</section>
+        <ConcreteAreas />
+      </section>
 
       {/* Kritisk område boksene i bunden */}
       <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
