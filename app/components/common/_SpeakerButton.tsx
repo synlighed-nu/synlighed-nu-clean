@@ -31,22 +31,16 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
     setIsSpeaking(true);
 
-    // 1. Start hovedteksten
-    const mainUtterance = new SpeechSynthesisUtterance(text);
-    mainUtterance.lang = 'da-DK';
-    mainUtterance.rate = 0.95;
-    window.speechSynthesis?.speak(mainUtterance);
+    const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
+    const fullText = text + "\n\n" + axiomText;
 
-    // 2. Start Axiom automatisk efter 18 sekunder (sikker buffer)
-    setTimeout(() => {
-      const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
-      const axiomUtterance = new SpeechSynthesisUtterance(axiomText);
-      axiomUtterance.lang = 'da-DK';
-      axiomUtterance.rate = 0.92;
-      window.speechSynthesis?.speak(axiomUtterance);
+    const utterance = new SpeechSynthesisUtterance(fullText);
+    utterance.lang = 'da-DK';
+    utterance.rate = 0.95;
 
-      setIsSpeaking(false);
-    }, 18000);
+    utterance.onend = () => setIsSpeaking(false);
+
+    window.speechSynthesis?.speak(utterance);
   };
 
   return (
