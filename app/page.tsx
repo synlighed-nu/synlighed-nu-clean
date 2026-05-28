@@ -31,7 +31,7 @@ export default function SynlighedNu() {
           Hurtigere. Bedre. Billigere.
         </p>
 
-        <ExplanationPopup />
+        {/* <ExplanationPopup /> ← midlertidigt slået fra */}
       </div>
 
       <Axioms />
