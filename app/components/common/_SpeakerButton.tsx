@@ -15,19 +15,16 @@ const AXIOMS = [
 
 interface SpeakerButtonProps {
   text: string;
-  endingAxiomIndex?: number;   // f.eks. 0, 1, 2...
+  endingAxiomIndex?: number;
   className?: string;
 }
 
 export default function SpeakerButton({ text, endingAxiomIndex, className = "" }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const synthRef = useRef<SpeechSynthesis | null>(null);
+  const synth = window.speechSynthesis;
 
   const toggleSpeech = () => {
-    const synth = window.speechSynthesis;
-    synthRef.current = synth;
-
     if (isSpeaking && !isPaused) {
       synth.pause();
       setIsPaused(true);
@@ -43,7 +40,7 @@ export default function SpeakerButton({ text, endingAxiomIndex, className = "" }
       utterance.pitch = 1.0;
 
       utterance.onend = () => {
-        // Når hovedteksten er færdig, læs Axiom'et
+        // Læs Axiom når hovedteksten er færdig
         if (endingAxiomIndex !== undefined && AXIOMS[endingAxiomIndex]) {
           const axiomUtterance = new SpeechSynthesisUtterance(AXIOMS[endingAxiomIndex]);
           axiomUtterance.lang = 'da-DK';
