@@ -10,7 +10,7 @@ export default function ExplanationPopup() {
   const handleMouseEnter = () => {
     hoverTimeout.current = setTimeout(() => {
       setShowPopup(true);
-      setExpanded(false); // starter altid i normal tilstand
+      setExpanded(false);
     }, 1500);
   };
 
@@ -30,13 +30,23 @@ export default function ExplanationPopup() {
     setExpanded(!expanded);
   };
 
-  // Luk med Esc-tast
+  // Luk med Esc-tast – kun på klienten
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closePopup();
     };
-    if (showPopup) window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
+
+    if (showPopup) {
+      window.addEventListener('keydown', handleEsc);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('keydown', handleEsc);
+      }
+    };
   }, [showPopup]);
 
   return (
@@ -67,7 +77,6 @@ export default function ExplanationPopup() {
           >
             {/* Top bar med knapper */}
             <div className="flex justify-between items-center mb-8">
-              {/* Grønt flueben - venstre side */}
               <button
                 onClick={toggleExpand}
                 className="text-4xl text-green-600 hover:text-green-700 transition-colors"
@@ -76,7 +85,6 @@ export default function ExplanationPopup() {
                 ✓
               </button>
 
-              {/* Rødt kryds - højre side */}
               <button
                 onClick={closePopup}
                 className="text-4xl text-[#E30613] hover:text-red-700 transition-colors"
@@ -100,7 +108,7 @@ export default function ExplanationPopup() {
               </p>
             </div>
 
-            {/* Ekstra tekst der kommer frem når man trykker på det grønne flueben */}
+            {/* Ekstra tekst når man trykker på det grønne flueben */}
             {expanded && (
               <div className="mt-10 prose prose-lg text-gray-700 border-t pt-8">
                 <p className="font-medium">
