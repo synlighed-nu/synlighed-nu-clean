@@ -24,9 +24,17 @@ Og derefter betaler vi for at kompensere for dem.
 
 Resultatet er et system, der har brug for støtten for at fungere.
 
+Det svarer til næsten én hel Øresundsbro hvert eneste år.
+
 Et bedre alternativ:
-Over de næste 5 år kan vi gradvist afvikle boligstøtten samtidig med, at vi bygger et stort antal nye, 100 % selvforsynende boliger med sol, vind og batterier.
+Over de næste 5 år kan vi gradvist afvikle boligstøtten samtidig med, at vi bygger et stort antal nye, 100 % selvforsynende boliger (sol, vind og batterier).
 På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud.
+
+Hvorfor er det et problem i dag?
+Holder boligpriserne kunstigt høje.
+Gør det sværere for unge at komme ind på boligmarkedet.
+Bruger milliarder uden at løse det underliggende problem.
+Skaber et system, der er afhængigt af støtte for at fungere.
   `.trim();
 
   return (
@@ -38,7 +46,7 @@ På den måde sænker vi både de løbende boligomkostninger og boligpriserne ge
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
           <SpeakerButton 
             text={pageText} 
-            endingAxiomIndex={2}   // ← prøver Axiom nr. 3 (tæller fra 0)
+            endingAxiomIndex={2} 
           />
         </div>
 
@@ -56,9 +64,26 @@ På den måde sænker vi både de løbende boligomkostninger og boligpriserne ge
 
           <p className="text-xl font-semibold mt-8">Resultatet er et system, der har brug for støtten for at fungere.</p>
 
-          <h3 className="text-2xl font-semibold mt-16 mb-4">Et bedre alternativ</h3>
-          <p>Over de næste 5 år kan vi gradvist afvikle boligstøtten samtidig med, at vi bygger et stort antal nye, 100 % selvforsynende boliger med sol, vind og batterier.</p>
+          <p className="mt-12 text-2xl font-semibold text-[#E30613]">Det svarer til næsten én hel Øresundsbro hvert eneste år.</p>
+
+          <h3 className="text-2xl font-semibold mt-16 mb-6">Et bedre alternativ</h3>
+          <p>Over de næste 5 år kan vi gradvist afvikle boligstøtten samtidig med, at vi bygger et stort antal nye, 100 % selvforsynende boliger (sol, vind og batterier).</p>
           <p>På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud.</p>
+
+          <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
+          <ul className="list-disc pl-6 space-y-3 text-lg">
+            <li>Holder boligpriserne kunstigt høje</li>
+            <li>Gør det sværere for unge at komme ind på boligmarkedet</li>
+            <li>Bruger milliarder uden at løse det underliggende problem</li>
+            <li>Skaber et system, der er afhængigt af støtte for at fungere</li>
+          </ul>
+        </div>
+
+        <div className="mt-12 bg-gray-50 border border-gray-200 rounded-3xl p-8">
+          <p className="font-medium text-[#002B5B]">Officiel kilde:</p>
+          <a href="https://www.dst.dk/da/Statistik/emner/sociale-forhold/social-stoette/boligstoette" target="_blank" className="text-[#002B5B] hover:underline flex items-center gap-2 mt-3">
+            Danmarks Statistik – Boligstøtte <span className="text-xl">↗</span>
+          </a>
         </div>
       </div>
     </div>
