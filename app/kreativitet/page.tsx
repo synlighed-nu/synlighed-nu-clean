@@ -1,7 +1,12 @@
 'use client';
 
 import Nav from '../components/common/_Nav';
-import SpeakerButton from '../components/common/_SpeakerButton';
+import dynamic from 'next/dynamic';
+
+const SpeakerButton = dynamic(
+  () => import('../components/common/_SpeakerButton'),
+  { ssr: false }
+);
 
 export default function KreativitetPage() {
   const pageText = `
