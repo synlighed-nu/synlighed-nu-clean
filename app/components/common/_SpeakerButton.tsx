@@ -22,32 +22,31 @@ interface SpeakerButtonProps {
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  const speak = (message: string) => {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
-
-    window.speechSynthesis.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(message);
-    utterance.lang = 'da-DK';
-    utterance.rate = 0.95;
-    window.speechSynthesis.speak(utterance);
-  };
-
   const toggleSpeech = () => {
     if (isSpeaking) {
-      window.speechSynthesis.cancel();
+      window.speechSynthesis?.cancel();
       setIsSpeaking(false);
-    } else {
-      setIsSpeaking(true);
-      speak(text);
-
-      // Fast tid: start Axiom automatisk efter ca. 8 sekunder
-      setTimeout(() => {
-        const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
-        speak(axiomText);
-        setIsSpeaking(false);
-      }, 8000);
+      return;
     }
+
+    setIsSpeaking(true);
+
+    // Start hovedteksten
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'da-DK';
+    utterance.rate = 0.95;
+    window.speechSynthesis?.speak(utterance);
+
+    // Fast tid: start Axiom efter 12 sekunder
+    setTimeout(() => {
+      const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
+      const axiomUtterance = new SpeechSynthesisUtterance(axiomText);
+      axiomUtterance.lang = 'da-DK';
+      axiomUtterance.rate = 0.92;
+      window.speechSynthesis?.speak(axiomUtterance);
+
+      setIsSpeaking(false);
+    }, 12000);
   };
 
   return (
@@ -57,7 +56,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       title={isSpeaking ? "Stop oplæsning" : "Læs siden højt"}
     >
       <span className="text-2xl">{isSpeaking ? '⏹️' : '🔊'}</span>
-      <span className="text-sm font-medium">{isSpeaking ? 'Stop' : 'Læs højt'}</span>
+      <span className="text-sm font-medium">{isSpeaking ? 'Pause' : 'Læs højt'}</span>
     </button>
   );
 }
