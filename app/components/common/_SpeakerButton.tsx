@@ -23,33 +23,33 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
   const [isSpeaking, setIsSpeaking] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  const speak = (message: string, isAxiom = false) => {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+  console.log('🔊 SpeakerButton mounted');
 
-    // Stop alt tidligere
+  const speak = (message: string, isAxiom = false) => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      console.log('❌ speechSynthesis ikke tilgængelig');
+      return;
+    }
+
     window.speechSynthesis.cancel();
+    console.log(isAxiom ? '🟢 Starter AXIOM' : '🔊 Starter hovedtekst');
 
     const utterance = new SpeechSynthesisUtterance(message);
     utterance.lang = 'da-DK';
     utterance.rate = isAxiom ? 0.92 : 0.95;
     utterance.pitch = 1.0;
 
-    if (!isAxiom) {
-      // Når hovedteksten er færdig → start Axiom
-      utterance.onend = () => {
-        setIsSpeaking(false);
+    utterance.onend = () => {
+      console.log(isAxiom ? '✅ AXIOM færdig' : '✅ Hovedtekst færdig – starter AXIOM nu');
+      setIsSpeaking(false);
+
+      if (!isAxiom) {
         const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
         setTimeout(() => {
-          const axiomUtterance = new SpeechSynthesisUtterance(axiomText);
-          axiomUtterance.lang = 'da-DK';
-          axiomUtterance.rate = 0.92;
-          axiomUtterance.pitch = 1.0;
-          window.speechSynthesis.speak(axiomUtterance);
-        }, 800);
-      };
-    } else {
-      utterance.onend = () => setIsSpeaking(false);
-    }
+          speak(axiomText, true);
+        }, 900);
+      }
+    };
 
     utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
@@ -58,6 +58,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
   const toggleSpeech = () => {
     if (isSpeaking) {
+      console.log('⏹️ Stopper tale');
       window.speechSynthesis.cancel();
       setIsSpeaking(false);
     } else {
