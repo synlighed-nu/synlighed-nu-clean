@@ -46,23 +46,17 @@ Synlighed begynder først, når man tør erkende sine begrænsninger.
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">Vi bruger 18 milliarder kroner om året.</p>
           <p className="text-2xl font-medium">Men vi løser ikke problemet.</p>
-
           <p className="text-xl mt-8">592.000 husstande modtager støtte.</p>
           <p className="text-xl">Det hjælper mange i dag.</p>
           <p className="text-xl font-semibold text-[#E30613]">Men holder samtidig priserne oppe.</p>
-
           <p className="text-2xl font-medium mt-10">Så vi gør noget mærkeligt:</p>
           <p className="text-2xl font-medium text-[#E30613]">Vi betaler for høje priser.</p>
           <p className="text-2xl font-medium text-[#E30613]">Og derefter betaler vi for at kompensere for dem.</p>
-
           <p className="text-xl font-semibold mt-8">Resultatet er et system, der har brug for støtten for at fungere.</p>
-
           <p className="mt-12 text-2xl font-semibold text-[#E30613]">Det svarer til næsten én hel Øresundsbro hvert eneste år.</p>
-
           <h3 className="text-2xl font-semibold mt-16 mb-6">Et bedre alternativ</h3>
           <p>Over de næste 5 år kan vi gradvist afvikle boligstøtten samtidig med at vi bygger et stort antal nye 100 % selvforsynende boliger med sol, vind og batterier.</p>
           <p>På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud.</p>
-
           <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
           <ul className="list-disc pl-6 space-y-3 text-lg">
             <li>Holder boligpriserne kunstigt høje</li>
