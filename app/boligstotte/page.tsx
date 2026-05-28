@@ -81,7 +81,7 @@ export default function BoligstottePage() {
             <li>Holder boligpriserne kunstigt høje</li>
             <li>Gør det sværere for unge at komme ind på boligmarkedet</li>
             <li>Bruger milliarder uden at løse det underliggende problem</li>
-            <li>Skaber et system, der er afhængigt af støtte for at fungere.</li>
+            <li>Skaber et system, der er afhængigt af støtte for at fungere</li>
           </ul>
         </div>
 
