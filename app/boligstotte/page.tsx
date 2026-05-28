@@ -21,13 +21,15 @@ Resultatet er et system, der har brug for støtten for at fungere.
 
 Det svarer til næsten én hel Øresundsbro hvert eneste år.
 
-Et bedre alternativ: Over de næste 5 år kan vi gradvist afvikle boligstøtten samtidig med at vi bygger et stort antal nye 100 procent selvforsynende boliger med sol vind og batterier. På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud.
+Et bedre alternativ: Over de næste 5 år kan vi gradvist afvikle boligstøtten samtidig med at vi bygger et stort antal nye 100 procent selvforsynende boliger med sol, vind og batterier. På den måde sænker vi både de løbende boligomkostninger og boligpriserne gennem øget udbud.
 
 Hvorfor er det et problem i dag? 
 Holder boligpriserne kunstigt høje. 
 Gør det sværere for unge at komme ind på boligmarkedet. 
 Bruger milliarder uden at løse det underliggende problem. 
 Skaber et system der er afhængigt af støtte for at fungere.
+
+Synlighed begynder først, når man tør erkende sine begrænsninger.
   `.trim();
 
   return (
@@ -37,13 +39,10 @@ Skaber et system der er afhængigt af støtte for at fungere.
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
-          <SpeakerButton 
-            text={pageText} 
-            endingAxiomIndex={2} 
-          />
+          <SpeakerButton text={pageText} />
         </div>
 
-        {/* Visuel tekst på siden – samme indhold som bliver læst op */}
+        {/* Visuel tekst på siden */}
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">Vi bruger 18 milliarder kroner om året.</p>
           <p className="text-2xl font-medium">Men vi løser ikke problemet.</p>
