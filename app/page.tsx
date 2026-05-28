@@ -11,7 +11,7 @@ import BigMoves from './components/sections/_BigMoves';
 import ConcreteAreas from './components/sections/_ConcreteAreas';
 import Footer from './components/common/_Footer';
 
-// Dynamisk import – dette er det vigtigste for at undgå "window is not defined"
+// Dynamisk import – dette løser "window is not defined"
 const ExplanationPopup = dynamic(
   () => import('./components/common/_ExplanationPopup'),
   { ssr: false }
