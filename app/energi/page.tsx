@@ -1,7 +1,12 @@
 'use client';
 
 import Nav from '../components/common/_Nav';
-import SpeakerButton from '../components/common/_SpeakerButton';
+import dynamic from 'next/dynamic';
+
+const SpeakerButton = dynamic(
+  () => import('../components/common/_SpeakerButton'),
+  { ssr: false }
+);
 
 export default function EnergiPage() {
   const pageText = `
@@ -28,7 +33,10 @@ export default function EnergiPage() {
         {/* Titel + højtaler-knap på samme linje */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Energi</h1>
-          <SpeakerButton text={pageText} />
+          <SpeakerButton 
+            text={pageText} 
+            endingAxiomIndex={5}     // "Hurtigere. Bedre. Billigere. er det modsatte af, hvordan staten ofte fungerer."
+          />
         </div>
         
         <div className="prose prose-lg text-gray-700">
