@@ -1,14 +1,47 @@
+'use client';
+
 import Nav from '../components/common/_Nav';
 import SpeakerButton from '../components/common/_SpeakerButton';
 
 export default function KreativitetPage() {
+  const pageText = `
+    I 1968 testede forskerne George Land og Beth Jarman 1.600 børn på 4-5 år. 
+    98 procent af dem scorede på genius-niveau i divergent tænkning.
+
+    Da de samme børn forlod gymnasiet, var det kun omkring 10 procent.
+    Som voksne var det nede på cirka 2 procent.
+
+    Vores uddannelsessystem kvæler kreativiteten systematisk.
+
+    Hver dag i danske klasser sker det samme.
+    Læreren stiller en opgave og forventer ét rigtigt svar fra alle.
+    Men mange elever forstår opgaven anderledes og kommer med et andet resultat – selvom deres argumenter er i orden.
+    Når det sker, bliver det stemplet som forkert.
+
+    Det er ikke eleven, der fejler.
+    Det er systemet, der straffer anderledes tænkning.
+
+    Fejl er ikke fiasko.
+    Fejl er der, hvor vi lærer noget nyt.
+
+    Hvis vi aldrig begår fejl, stopper al udvikling.
+    Eleven bør aldrig straffes for at tænke anderledes.
+  `;
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        <h1 className="text-5xl font-bold tracking-tighter mb-6">Kreativitet</h1>
+        {/* Titel + højtaler-knap på samme linje */}
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-5xl font-bold tracking-tighter">Kreativitet</h1>
+          <SpeakerButton 
+            text={pageText} 
+            endingAxiomIndex={7}     // "Hvis vi aldrig begår fejl, stopper al udvikling."
+          />
+        </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
@@ -69,8 +102,6 @@ export default function KreativitetPage() {
           </div>
         </div>
       </div>
-
-      <SpeakerButton />
     </div>
   );
 }
