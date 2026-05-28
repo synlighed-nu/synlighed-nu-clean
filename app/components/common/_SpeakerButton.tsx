@@ -16,37 +16,35 @@ const AXIOMS = [
 
 interface SpeakerButtonProps {
   text: string;
-  endingAxiomIndex?: number;   // hvilket axiom der skal læses til sidst
+  endingAxiomIndex?: number;
 }
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  const speak = (message: string) => {
+  const speak = (message: string, isAxiom = false) => {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
 
-    // Stop evt. tidligere tale
     window.speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(message);
     utterance.lang = 'da-DK';
-    utterance.rate = 0.95;
+    utterance.rate = isAxiom ? 0.92 : 0.95;
     utterance.pitch = 1;
 
-    utterance.onend = () => {
-      setIsSpeaking(false);
-      // Hvis vi har et axiom-index, læs det automatisk til sidst
-      if (endingAxiomIndex !== undefined && message === text) {
+    if (!isAxiom) {
+      utterance.onend = () => {
+        setIsSpeaking(false);
+        // Start axiom automatisk efter hovedteksten
         const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
         setTimeout(() => {
-          const axiomUtterance = new SpeechSynthesisUtterance(axiomText);
-          axiomUtterance.lang = 'da-DK';
-          axiomUtterance.rate = 0.92;
-          window.speechSynthesis.speak(axiomUtterance);
-        }, 600);
-      }
-    };
+          speak(axiomText, true);
+        }, 700);
+      };
+    } else {
+      utterance.onend = () => setIsSpeaking(false);
+    }
 
     utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
