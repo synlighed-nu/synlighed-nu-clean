@@ -70,7 +70,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       </span>
 
       <span className="ml-2 text-[10px] font-mono bg-red-100 text-red-600 px-2 py-px rounded">
-        DEV 28-05-2026 003
+        DEV 28-05-2026 004
       </span>
     </button>
   );
