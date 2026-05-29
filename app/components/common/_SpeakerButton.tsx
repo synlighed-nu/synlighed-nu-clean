@@ -42,8 +42,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     const fullText = text + "\n\n" + axiomText;
 
     try {
-      const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/EXAVITQu4vr4xnSDx57X', {  
-        // ← Grace (klar og professionel kvindestemme – gratis tier)
+      const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB', {  // ← Adam (gratis)
         method: 'POST',
         headers: {
           'Accept': 'audio/mpeg',
@@ -53,11 +52,15 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         body: JSON.stringify({
           text: fullText,
           model_id: "eleven_multilingual_v2",
-          voice_settings: { stability: 0.8, similarity_boost: 0.85 }
+          voice_settings: { stability: 0.75, similarity_boost: 0.85 }
         }),
       });
 
-      if (!response.ok) throw new Error("ElevenLabs fejl");
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("ElevenLabs fejl:", response.status, errorText);
+        throw new Error(`Fejl ${response.status}`);
+      }
 
       const audioBlob = await response.blob();
       const audioUrl = URL.createObjectURL(audioBlob);
@@ -70,7 +73,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
     } catch (error) {
       console.error(error);
-      alert("Kunne ikke afspille lyd – tjek console");
+      alert("Kunne ikke afspille lyd – tjek console (F12)");
     } finally {
       setIsLoading(false);
     }
