@@ -21,7 +21,6 @@ interface SpeakerButtonProps {
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const API_KEY = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
@@ -45,8 +44,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       return;
     }
 
-    setIsLoading(true);
-    stopAudio(); // sikrer at gammel lyd stopper
+    stopAudio(); // sikrer at gammel afspilning stopper
 
     const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
     const fullText = text + "\n\n" + axiomText;
@@ -77,7 +75,6 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       audio.onended = () => {
         setIsSpeaking(false);
         audioRef.current = null;
-        URL.revokeObjectURL(audioUrl);
       };
 
       audio.play();
@@ -85,23 +82,20 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
     } catch (error) {
       console.error(error);
-      alert("Kunne ikke afspille lyd – tjek console");
-    } finally {
-      setIsLoading(false);
+      alert("Kunne ikke afspille lyd");
     }
   };
 
   return (
     <button
       onClick={toggleSpeech}
-      disabled={isLoading}
-      className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 hover:border-[#E30613] rounded-2xl text-[#002B5B] transition-colors disabled:opacity-50"
+      className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 hover:border-[#E30613] rounded-2xl text-[#002B5B] transition-colors"
     >
       <span className="text-2xl">
-        {isLoading ? '⏳' : isSpeaking ? '⏹️' : '🔊'}
+        {isSpeaking ? '⏹️' : '🔊'}
       </span>
       <span className="text-sm font-medium">
-        {isLoading ? 'Genererer lyd...' : isSpeaking ? 'Stop' : 'Læs højt'}
+        {isSpeaking ? 'Stop' : 'Læs højt'}
       </span>
     </button>
   );
