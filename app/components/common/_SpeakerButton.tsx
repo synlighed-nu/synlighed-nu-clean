@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { AXIOMS, DEV_VERSION } from '@/lib/constants';
+import { AXIOMS, DEV_VERSION } from '../../../lib/constants';   // ← rettet
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: string; endingAxiomIndex?: number }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -15,7 +15,6 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: st
       return;
     }
 
-    // Kun brug public axioms
     const publicAxioms = AXIOMS.filter(a => a.visibility === "public");
     const axiomText = publicAxioms[endingAxiomIndex % publicAxioms.length].text;
     
