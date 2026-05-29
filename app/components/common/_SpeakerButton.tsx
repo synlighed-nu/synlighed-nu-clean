@@ -3,15 +3,15 @@
 import React, { useState } from 'react';
 
 const AXIOMS = [
-  "Synlighed begynder først, når man tør erkende sine begrænsninger.",
-  "Problemet er ikke mangel på data – det er mangel på overblik.",
-  "Vi kalder det reformer, men det er ofte bare gentagelser.",
-  "Systemet er ikke designet til at lære – det er designet til at fortsætte.",
-  "Vi behandler konsekvenser, men ændrer sjældent årsagerne.",
-  "Hvis børnene ikke udvikler sig, har vi ingen fremtid.",
-  "Kreativitet skaber løsninger – systemet kvæler den.",
-  "Beskyttelse af grundvandet er ikke til forhandling.",
-  "Hurtigere. Bedre. Billigere. er det modsatte af statens normale måde at arbejde på."
+  "Synlighed begynder først, når man tør erkende sine begrænsninger",
+  "Problemet er ikke mangel på data – det er mangel på overblik",
+  "Vi kalder det reformer, men det er ofte bare gentagelser",
+  "Systemet er ikke designet til at lære – det er designet til at fortsætte",
+  "Vi behandler konsekvenser, men ændrer sjældent årsagerne",
+  "Hvis børnene ikke udvikler sig, har vi ingen fremtid",
+  "Kreativitet skaber løsninger – systemet kvæler den",
+  "Beskyttelse af grundvandet er ikke til forhandling",
+  "Hurtigere. Bedre. Billigere. er det modsatte af statens normale måde at arbejde på"
 ];
 
 interface SpeakerButtonProps {
@@ -36,8 +36,11 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     utterance.lang = 'da-DK';
     utterance.rate = 0.95;
 
-    utterance.onend = () => setIsSpeaking(false);
+    utterance.onend = () => {
+      setIsSpeaking(false);
+    };
 
+    window.speechSynthesis.cancel(); // stopper eventuel tidligere afspilning
     window.speechSynthesis.speak(utterance);
     setIsSpeaking(true);
   };
