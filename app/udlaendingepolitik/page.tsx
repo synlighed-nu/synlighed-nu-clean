@@ -1,13 +1,44 @@
+'use client';
+
 import Nav from '../components/common/_Nav';
+import dynamic from 'next/dynamic';
+
+const SpeakerButton = dynamic(
+  () => import('../components/common/_SpeakerButton'),
+  { ssr: false }
+);
 
 export default function UdlaendingepolitikPage() {
+  const pageText = `
+    Hvad koster den samlede udlændingepolitik og ulandshjælp reelt – og hvilke incitamenter skaber den på lang sigt?
+
+    Vi bruger milliarder på projekter, der ofte er ineffektive og skaber afhængighed.
+
+    Et bedre alternativ:
+    Over de næste 5 år kan vi skifte fra dyre, topstyrede projekter til mere effektive løsninger – 
+    bl.a. direkte kontantoverførsler og støtte til lokale initiativer.
+
+    Hvorfor er det et problem i dag?
+    De samlede økonomiske omkostninger er uigennemsigtige.
+    Mange projekter er ineffektive og skaber afhængighed.
+    Incitamentstrukturen belønner ofte det modsatte af integration og bæredygtighed.
+    Der er for lidt fokus på reel årsagsbehandling.
+  `;
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        <h1 className="text-5xl font-bold tracking-tighter mb-6">Udlændingepolitik & ulandshjælp</h1>
+        {/* Titel + højtaler-knap på samme linje */}
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-5xl font-bold tracking-tighter">Udlændingepolitik & ulandshjælp</h1>
+          <SpeakerButton 
+            text={pageText} 
+            endingAxiomIndex={3}     // Kan ændres efter behov
+          />
+        </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
