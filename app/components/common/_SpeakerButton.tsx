@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const AXIOMS = [
   "Synlighed begynder først, når man tør erkende sine begrænsninger.",
@@ -22,12 +22,21 @@ interface SpeakerButtonProps {
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const API_KEY = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
 
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
+    setIsSpeaking(false);
+  };
+
   const toggleSpeech = async () => {
     if (isSpeaking) {
-      setIsSpeaking(false);
+      stopAudio();
       return;
     }
 
@@ -37,12 +46,13 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     }
 
     setIsLoading(true);
+    stopAudio(); // sikrer at gammel lyd stopper
 
     const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
     const fullText = text + "\n\n" + axiomText;
 
     try {
-      const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB', {  // ← Adam (gratis)
+      const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB', {
         method: 'POST',
         headers: {
           'Accept': 'audio/mpeg',
@@ -56,24 +66,26 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         }),
       });
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error("ElevenLabs fejl:", response.status, errorText);
-        throw new Error(`Fejl ${response.status}`);
-      }
+      if (!response.ok) throw new Error("ElevenLabs fejl");
 
       const audioBlob = await response.blob();
       const audioUrl = URL.createObjectURL(audioBlob);
       const audio = new Audio(audioUrl);
 
-      audio.onended = () => setIsSpeaking(false);
+      audioRef.current = audio;
+
+      audio.onended = () => {
+        setIsSpeaking(false);
+        audioRef.current = null;
+        URL.revokeObjectURL(audioUrl);
+      };
 
       audio.play();
       setIsSpeaking(true);
 
     } catch (error) {
       console.error(error);
-      alert("Kunne ikke afspille lyd – tjek console (F12)");
+      alert("Kunne ikke afspille lyd – tjek console");
     } finally {
       setIsLoading(false);
     }
@@ -89,7 +101,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         {isLoading ? '⏳' : isSpeaking ? '⏹️' : '🔊'}
       </span>
       <span className="text-sm font-medium">
-        {isLoading ? 'Genererer lyd...' : isSpeaking ? 'Afspiller' : 'Læs højt'}
+        {isLoading ? 'Genererer lyd...' : isSpeaking ? 'Stop' : 'Læs højt'}
       </span>
     </button>
   );
