@@ -12,36 +12,15 @@ const AXIOMS = [
   "Kreativitet skaber løsninger – systemet kvæler den.",
 ];
 
-const DEV_VERSION = "DEV 28-05-2026 005";   // ← opdateret
+const DEV_VERSION = "DEV 28-05-2026 006";
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: string; endingAxiomIndex?: number }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  const stopSpeaking = () => {
-    window.speechSynthesis.cancel();
-    setIsSpeaking(false);
-    setIsPaused(false);
-    utteranceRef.current = null;
-  };
+  const speak = () => {
+    if (isSpeaking) return;
 
-  const toggleSpeech = () => {
-    if (isSpeaking) {
-      // Pause
-      window.speechSynthesis.pause();
-      setIsPaused(true);
-      setIsSpeaking(false);
-      return;
-    }
-
-    if (isPaused) {
-      // Fortsæt (starter forfra – det er browser-begrænsningen)
-      window.speechSynthesis.cancel();
-      setIsPaused(false);
-    }
-
-    // Start / genstart
     const axiomText = AXIOMS[endingAxiomIndex % AXIOMS.length];
     const fullText = `${text}\n\nAxiom: ${axiomText}`;
 
@@ -51,30 +30,54 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: st
 
     utterance.onend = () => {
       setIsSpeaking(false);
-      setIsPaused(false);
     };
 
     utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
-
     setIsSpeaking(true);
-    setIsPaused(false);
+  };
+
+  const pause = () => {
+    window.speechSynthesis.pause();
+  };
+
+  const stop = () => {
+    window.speechSynthesis.cancel();
+    setIsSpeaking(false);
+    utteranceRef.current = null;
   };
 
   return (
-    <button
-      onClick={toggleSpeech}
-      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#002B5B] hover:bg-[#001B3D] text-white rounded-3xl font-medium transition-all active:scale-95"
-    >
-      <span className="text-xl">
-        {isSpeaking ? '⏸️' : isPaused ? '▶️' : '🔊'}
-      </span>
-      <span>
-        {isSpeaking ? 'Pause' : isPaused ? 'Fortsæt' : 'Læs højt'}
-      </span>
-      <span className="text-[10px] font-mono opacity-40 ml-1 tracking-tighter">
+    <div className="inline-flex items-center gap-2 bg-[#002B5B] text-white rounded-3xl p-1">
+      {/* Læs højt */}
+      <button
+        onClick={speak}
+        className="flex items-center gap-2 px-5 py-2.5 hover:bg-white/10 rounded-3xl transition-all active:scale-95"
+      >
+        <span className="text-xl">🔊</span>
+        <span className="font-medium">Læs højt</span>
+      </button>
+
+      {/* Pause */}
+      <button
+        onClick={pause}
+        className="flex items-center gap-2 px-4 py-2.5 hover:bg-white/10 rounded-3xl transition-all active:scale-95"
+      >
+        <span className="text-xl">⏸️</span>
+      </button>
+
+      {/* Stop */}
+      <button
+        onClick={stop}
+        className="flex items-center gap-2 px-4 py-2.5 hover:bg-white/10 rounded-3xl transition-all active:scale-95"
+      >
+        <span className="text-xl">⏹️</span>
+      </button>
+
+      {/* DEV version */}
+      <span className="text-[10px] font-mono opacity-40 px-3">
         {DEV_VERSION}
       </span>
-    </button>
+    </div>
   );
 }
