@@ -21,10 +21,11 @@ interface SpeakerButtonProps {
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const audioRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
   const stopSpeaking = () => {
     window.speechSynthesis.cancel();
+    utteranceRef.current = null;
     setIsSpeaking(false);
   };
 
@@ -40,9 +41,14 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     const utterance = new SpeechSynthesisUtterance(fullText);
     utterance.lang = 'da-DK';
     utterance.rate = 0.95;
+    utterance.pitch = 1;
 
-    utterance.onend = () => setIsSpeaking(false);
+    utterance.onend = () => {
+      setIsSpeaking(false);
+      utteranceRef.current = null;
+    };
 
+    utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
     setIsSpeaking(true);
   };
