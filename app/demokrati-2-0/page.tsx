@@ -10,7 +10,7 @@ const SpeakerButton = dynamic(
 
 export default function Demokrati20Page() {
   const pageText = `
-    Det gamle demokrati er blevet misbrugt, fordi vi ikke har udviklet det i over 250 år.
+    Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år.
     Uden løbende forbedring bevæger vi os langsomt mod en blanding af idiokrati og kontrol.
 
     I filmen Idiokrati bliver samfundet dumt, fordi ingen længere tænker kritisk.
@@ -28,7 +28,6 @@ export default function Demokrati20Page() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + højtaler-knap på samme linje */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Demokrati 2.0</h1>
           <SpeakerButton 
@@ -41,9 +40,13 @@ export default function Demokrati20Page() {
           <p className="text-2xl leading-relaxed">
             Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år.
           </p>
-
           <p className="mt-8">
             Uden løbende forbedring bevæger vi os langsomt mod en blanding af <strong>Idiokrati</strong> og <strong>1984</strong>.
+          </p>
+
+          <p className="mt-8">
+            I filmen <strong>Idiokrati</strong> bliver samfundet dumt, fordi ingen længere tænker kritisk. 
+            I George Orwells <strong>1984</strong> bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.
           </p>
 
           <p className="text-2xl font-semibold text-[#002B5B] mt-12">
@@ -67,18 +70,10 @@ export default function Demokrati20Page() {
 
           <div className="mt-16 bg-gray-50 border border-gray-200 rounded-3xl p-8">
             <p className="font-medium mb-4">Se også:</p>
-            <a 
-              href="https://www.imdb.com/title/tt0387808/" 
-              target="_blank"
-              className="block text-[#002B5B] hover:underline flex items-center gap-2"
-            >
+            <a href="https://www.imdb.com/title/tt0387808/" target="_blank" className="block text-[#002B5B] hover:underline flex items-center gap-2">
               Filmen <strong>Idiokrati</strong> (2006) <span className="text-xl">↗</span>
             </a>
-            <a 
-              href="https://da.wikipedia.org/wiki/1984_(roman)" 
-              target="_blank"
-              className="block text-[#002B5B] hover:underline flex items-center gap-2 mt-3"
-            >
+            <a href="https://da.wikipedia.org/wiki/1984_(roman)" target="_blank" className="block text-[#002B5B] hover:underline flex items-center gap-2 mt-3">
               George Orwells roman <strong>1984</strong> <span className="text-xl">↗</span>
             </a>
           </div>
