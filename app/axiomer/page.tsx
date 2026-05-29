@@ -2,10 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/common/_Nav';
-import { AXIOMS, DEV_VERSION } from '@/lib/constants';
+import { AXIOMS, DEV_VERSION } from '../lib/constants';   // ← rettet sti
 
 export default function AxiomerPage() {
-  // Likes gemmes lokalt (anonymt)
   const [likes, setLikes] = useState<number[]>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('axiomLikes');
@@ -22,7 +21,6 @@ export default function AxiomerPage() {
     return new Array(AXIOMS.length).fill(false);
   });
 
-  // Gem i localStorage
   useEffect(() => {
     localStorage.setItem('axiomLikes', JSON.stringify(likes));
   }, [likes]);
@@ -47,10 +45,9 @@ export default function AxiomerPage() {
     setLikes(newLikes);
   };
 
-  // Top 3 (uanset visibility)
   const top3 = [...AXIOMS]
-    .map((item, i) => ({ ...item, likes: likes[i], index: i }))
-    .sort((a, b) => b.likes - a.likes)
+    .map((item: any, i: number) => ({ ...item, likes: likes[i], index: i }))
+    .sort((a: any, b: any) => b.likes - a.likes)
     .slice(0, 3);
 
   return (
@@ -85,7 +82,7 @@ export default function AxiomerPage() {
         <div className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">De mest værdsatte Axioms lige nu</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {top3.map((item, i) => (
+            {top3.map((item: any, i: number) => (
               <div key={i} className="bg-white border border-[#002B5B]/10 rounded-3xl p-6">
                 <div className="text-sm font-medium text-[#E30613] mb-2">#{i + 1}</div>
                 <p className="text-lg leading-relaxed">{item.text}</p>
@@ -100,7 +97,7 @@ export default function AxiomerPage() {
         {/* Alle Axioms */}
         <h2 className="text-2xl font-semibold mb-6">Alle Axioms</h2>
         <div className="space-y-6">
-          {AXIOMS.map((axiom, index) => (
+          {AXIOMS.map((axiom: any, index: number) => (
             <div key={index} className="flex gap-4 bg-white border border-gray-200 rounded-3xl p-6 hover:border-[#002B5B]/30 transition-colors">
               <div className="flex-1">
                 <p className="text-lg leading-relaxed">{axiom.text}</p>
