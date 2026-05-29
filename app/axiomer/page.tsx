@@ -64,6 +64,11 @@ export default function AxiomerPage() {
     setTimeout(() => setSuggestionSubmitted(false), 5000);
   };
 
+  const top3 = [...AXIOMS]
+    .map((item, i) => ({ ...item, likes: likes[i], index: i }))
+    .sort((a, b) => b.likes - a.likes)
+    .slice(0, 3);
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav simple />
@@ -99,19 +104,74 @@ export default function AxiomerPage() {
           </div>
         </div>
 
-        {/* Resten af siden (Top 3, alle Axioms, forslag) forbliver uændret */}
-        {/* ... (resten af koden er den samme som før) */}
-
         {/* Top 3 */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">De mest værdsatte Axioms lige nu</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {/* Top 3 kode som før */}
+            {top3.map((item, i) => (
+              <div key={i} className="bg-white border border-[#002B5B]/10 rounded-3xl p-6">
+                <div className="text-sm font-medium text-[#E30613] mb-2">#{i + 1}</div>
+                <p className="text-lg leading-relaxed">{item.text}</p>
+                <div className="mt-6 text-sm text-gray-500">
+                  {item.likes} personer synes dette er vigtigt
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Alle Axioms og forslag til nyt Axiom beholdes som tidligere */}
-        {/* ... */}
+        {/* Alle Axioms */}
+        <h2 className="text-2xl font-semibold mb-6">Alle Axioms</h2>
+        <div className="space-y-6">
+          {AXIOMS.map((axiom, index) => (
+            <div key={index} className="flex gap-4 bg-white border border-gray-200 rounded-3xl p-6 hover:border-[#002B5B]/30 transition-colors">
+              <div className="flex-1">
+                <p className="text-lg leading-relaxed">{axiom.text}</p>
+              </div>
+              <button
+                onClick={() => toggleLike(index)}
+                className={`flex flex-col items-center justify-center w-12 h-12 rounded-2xl transition-all ${
+                  userLikes[index] 
+                    ? 'bg-red-100 text-red-600' 
+                    : 'hover:bg-gray-100 text-gray-400 hover:text-gray-600'
+                }`}
+              >
+                <span className="text-2xl">❤️</span>
+                <span className="text-xs font-medium mt-1">{likes[index]}</span>
+              </button>
+              {userLikes[index] && (
+                <div className="text-xs text-[#002B5B] self-center font-medium">Du har liket dette</div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Forslag til nyt Axiom */}
+        <div className="mt-20 bg-gray-50 border border-gray-200 rounded-3xl p-8">
+          <h3 className="text-xl font-semibold mb-6">Forslag til nyt Axiom</h3>
+          <p className="text-sm text-gray-600 mb-4">
+            Har du et princip du synes bør være med? Vi er altid åbne for nye perspektiver.
+          </p>
+          <form onSubmit={handleSubmitSuggestion}>
+            <textarea 
+              className="w-full h-32 border border-gray-300 rounded-2xl p-4 focus:outline-none focus:border-[#002B5B]"
+              placeholder="Skriv dit forslag til et nyt Axiom her..."
+              required
+            />
+            <button 
+              type="submit"
+              className="mt-6 px-8 py-4 bg-[#002B5B] text-white rounded-3xl font-medium hover:bg-[#001B3D]"
+            >
+              Send forslag
+            </button>
+          </form>
+
+          {suggestionSubmitted && (
+            <div className="mt-6 p-4 bg-green-100 text-green-800 rounded-2xl text-center">
+              Tak for dit forslag! Vi kigger på det.
+            </div>
+          )}
+        </div>
 
         <div className="text-center text-xs text-gray-400 mt-12">
           {DEV_VERSION}
