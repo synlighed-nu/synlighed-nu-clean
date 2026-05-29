@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/common/_Nav';
+import SpeakerButton from '../components/common/_SpeakerButton';
 import { AXIOMS, DEV_VERSION } from '../lib/constants';
 
 export default function AxiomerPage() {
@@ -50,14 +51,8 @@ export default function AxiomerPage() {
   const handleSubmitSuggestion = (e: React.FormEvent) => {
     e.preventDefault();
     setSuggestionSubmitted(true);
-    // Her kan vi senere gemme forslaget – lige nu viser vi kun feedback
-    setTimeout(() => setSuggestionSubmitted(false), 5000); // gemmer beskeden efter 5 sek
+    setTimeout(() => setSuggestionSubmitted(false), 5000);
   };
-
-  const top3 = [...AXIOMS]
-    .map((item, i) => ({ ...item, likes: likes[i], index: i }))
-    .sort((a, b) => b.likes - a.likes)
-    .slice(0, 3);
 
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
@@ -87,30 +82,24 @@ export default function AxiomerPage() {
           </a>
         </div>
 
-        {/* Top 3 */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6">De mest værdsatte Axioms lige nu</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {top3.map((item, i) => (
-              <div key={i} className="bg-white border border-[#002B5B]/10 rounded-3xl p-6">
-                <div className="text-sm font-medium text-[#E30613] mb-2">#{i + 1}</div>
-                <p className="text-lg leading-relaxed">{item.text}</p>
-                <div className="mt-6 text-sm text-gray-500">
-                  {item.likes} personer synes dette er vigtigt
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Alle Axioms */}
+        {/* Alle Axioms med højtaler-knap */}
         <h2 className="text-2xl font-semibold mb-6">Alle Axioms</h2>
         <div className="space-y-6">
           {AXIOMS.map((axiom, index) => (
-            <div key={index} className="flex gap-4 bg-white border border-gray-200 rounded-3xl p-6 hover:border-[#002B5B]/30 transition-colors">
-              <div className="flex-1">
+            <div key={index} className="relative flex gap-4 bg-white border border-gray-200 rounded-3xl p-6 hover:border-[#002B5B]/30 transition-colors">
+              
+              {/* Højtaler-knap øverst til højre */}
+              <div className="absolute top-6 right-6">
+                <SpeakerButton 
+                  text={axiom.text} 
+                  endingAxiomIndex={index} 
+                />
+              </div>
+
+              <div className="flex-1 pt-1">
                 <p className="text-lg leading-relaxed">{axiom.text}</p>
               </div>
+
               <button
                 onClick={() => toggleLike(index)}
                 className={`flex flex-col items-center justify-center w-12 h-12 rounded-2xl transition-all ${
@@ -122,6 +111,7 @@ export default function AxiomerPage() {
                 <span className="text-2xl">❤️</span>
                 <span className="text-xs font-medium mt-1">{likes[index]}</span>
               </button>
+
               {userLikes[index] && (
                 <div className="text-xs text-[#002B5B] self-center font-medium">Du har liket dette</div>
               )}
@@ -135,7 +125,6 @@ export default function AxiomerPage() {
           <p className="text-sm text-gray-600 mb-4">
             Har du et princip du synes bør være med? Vi er altid åbne for nye perspektiver.
           </p>
-
           <form onSubmit={handleSubmitSuggestion}>
             <textarea 
               className="w-full h-32 border border-gray-300 rounded-2xl p-4 focus:outline-none focus:border-[#002B5B]"
