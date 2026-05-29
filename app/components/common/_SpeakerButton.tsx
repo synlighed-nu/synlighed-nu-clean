@@ -12,7 +12,7 @@ const AXIOMS = [
   "Kreativitet skaber løsninger – systemet kvæler den.",
 ];
 
-const DEV_VERSION = "DEV 28-05-2026 004";
+const DEV_VERSION = "DEV 28-05-2026 005";   // ← opdateret
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: string; endingAxiomIndex?: number }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -36,7 +36,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: st
     }
 
     if (isPaused) {
-      // Fortsæt (starter forfra – browser-begrænsning)
+      // Fortsæt (starter forfra – det er browser-begrænsningen)
       window.speechSynthesis.cancel();
       setIsPaused(false);
     }
@@ -72,7 +72,9 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: st
       <span>
         {isSpeaking ? 'Pause' : isPaused ? 'Fortsæt' : 'Læs højt'}
       </span>
-      <span className="text-[10px] opacity-40 font-mono ml-1">{DEV_VERSION}</span>
+      <span className="text-[10px] font-mono opacity-40 ml-1 tracking-tighter">
+        {DEV_VERSION}
+      </span>
     </button>
   );
 }
