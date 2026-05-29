@@ -25,8 +25,6 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
   const API_KEY = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
 
-  console.log("🔑 API Key status:", API_KEY ? "FINDES (starter med " + API_KEY.substring(0, 10) + "...)" : "MANGLER");
-
   const toggleSpeech = async () => {
     if (isSpeaking) {
       setIsSpeaking(false);
@@ -34,8 +32,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     }
 
     if (!API_KEY) {
-      console.error("❌ Ingen API key fundet i miljøvariabler");
-      alert("Manglende ElevenLabs API key – tjek Vercel Environment Variables");
+      alert("Manglende ElevenLabs API key");
       return;
     }
 
@@ -45,8 +42,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     const fullText = text + "\n\n" + axiomText;
 
     try {
-      console.log("🚀 Sender til ElevenLabs...");
-      const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM', {
+      const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB', {  // ← Gratis stemme (Adam)
         method: 'POST',
         headers: {
           'Accept': 'audio/mpeg',
@@ -62,7 +58,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
       if (!response.ok) {
         const errorText = await response.text();
-        console.error("❌ ElevenLabs fejl:", response.status, errorText);
+        console.error("ElevenLabs fejl:", response.status, errorText);
         throw new Error(`ElevenLabs fejl: ${response.status}`);
       }
 
@@ -79,8 +75,8 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       setIsSpeaking(true);
 
     } catch (error) {
-      console.error("🚨 Fejl ved afspilning:", error);
-      alert("Kunne ikke afspille lyd – tjek console for detaljer");
+      console.error(error);
+      alert("Kunne ikke afspille lyd – tjek console (F12)");
     } finally {
       setIsLoading(false);
     }
@@ -96,7 +92,7 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         {isLoading ? '⏳' : isSpeaking ? '⏹️' : '🔊'}
       </span>
       <span className="text-sm font-medium">
-        {isLoading ? 'Genererer...' : isSpeaking ? 'Afspiller' : 'Læs højt'}
+        {isLoading ? 'Genererer lyd...' : isSpeaking ? 'Afspiller' : 'Læs højt'}
       </span>
     </button>
   );
