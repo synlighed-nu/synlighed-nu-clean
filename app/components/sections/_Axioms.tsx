@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { AXIOMS } from '../../../lib/constants';   // ← rettet relativ sti
+import { AXIOMS } from '../../lib/constants';   // ← KORREKT sti her
 
 export default function Axioms() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,7 +28,6 @@ export default function Axioms() {
         </Link>
       </div>
 
-      {/* Karusel kort */}
       <Link href="/axiomer" className="block group">
         <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#002B5B]/30 transition-all">
           <div className="inline-block px-4 py-1 bg-[#002B5B] text-white text-xs font-semibold tracking-widest rounded-full mb-6">
@@ -40,7 +39,6 @@ export default function Axioms() {
         </div>
       </Link>
 
-      {/* Prikker */}
       <div className="flex justify-center gap-2 mt-8">
         {publicAxioms.map((_, i) => (
           <button
