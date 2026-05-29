@@ -21,69 +21,30 @@ interface SpeakerButtonProps {
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  const API_KEY = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
-
-  const stopAudio = () => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current = null;
-    }
+  const stopSpeaking = () => {
+    window.speechSynthesis.cancel();
     setIsSpeaking(false);
   };
 
-  const toggleSpeech = async () => {
+  const toggleSpeech = () => {
     if (isSpeaking) {
-      stopAudio();
+      stopSpeaking();
       return;
     }
-
-    if (!API_KEY) {
-      alert("Manglende ElevenLabs API key");
-      return;
-    }
-
-    stopAudio(); // sikrer at gammel afspilning stopper
 
     const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
     const fullText = text + "\n\n" + axiomText;
 
-    try {
-      const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB', {
-        method: 'POST',
-        headers: {
-          'Accept': 'audio/mpeg',
-          'Content-Type': 'application/json',
-          'xi-api-key': API_KEY,
-        },
-        body: JSON.stringify({
-          text: fullText,
-          model_id: "eleven_multilingual_v2",
-          voice_settings: { stability: 0.75, similarity_boost: 0.85 }
-        }),
-      });
+    const utterance = new SpeechSynthesisUtterance(fullText);
+    utterance.lang = 'da-DK';
+    utterance.rate = 0.95;
 
-      if (!response.ok) throw new Error("ElevenLabs fejl");
+    utterance.onend = () => setIsSpeaking(false);
 
-      const audioBlob = await response.blob();
-      const audioUrl = URL.createObjectURL(audioBlob);
-      const audio = new Audio(audioUrl);
-
-      audioRef.current = audio;
-
-      audio.onended = () => {
-        setIsSpeaking(false);
-        audioRef.current = null;
-      };
-
-      audio.play();
-      setIsSpeaking(true);
-
-    } catch (error) {
-      console.error(error);
-      alert("Kunne ikke afspille lyd");
-    }
+    window.speechSynthesis.speak(utterance);
+    setIsSpeaking(true);
   };
 
   return (
