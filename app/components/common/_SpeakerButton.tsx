@@ -1,44 +1,49 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const AXIOMS = [
-  "Synlighed begynder først, når man tør erkende sine begrænsninger",
-  "Problemet er ikke mangel på data – det er mangel på overblik",
-  "Vi kalder det reformer, men det er ofte bare gentagelser",
-  "Systemet er ikke designet til at lære – det er designet til at fortsætte",
-  "Vi behandler konsekvenser, men ændrer sjældent årsagerne",
-  "Hvis børnene ikke udvikler sig, har vi ingen fremtid",
-  "Kreativitet skaber løsninger – systemet kvæler den",
-  "Beskyttelse af grundvandet er ikke til forhandling",
-  "Hurtigere. Bedre. Billigere. er det modsatte af statens normale måde at arbejde på"
+  "Synlighed begynder først, når man tør erkende sine begrænsninger.",
+  "Problemet er ikke mangel på data – det er mangel på overblik.",
+  "Vi kalder det reformer, men det er ofte bare gentagelser.",
+  "Systemet er ikke designet til at lære – det er designet til at fortsætte.",
+  "Vi behandler konsekvenser, men ændrer sjældent årsagerne.",
+  "Hvis børnene ikke udvikler sig, har vi ingen fremtid.",
+  "Kreativitet skaber løsninger – systemet kvæler den.",
 ];
 
-interface SpeakerButtonProps {
-  text: string;
-  endingAxiomIndex?: number;
-}
+const DEV_VERSION = "DEV 28-05-2026 004";
 
-export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
+export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: string; endingAxiomIndex?: number }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+
+  const stopSpeaking = () => {
+    window.speechSynthesis.cancel();
+    setIsSpeaking(false);
+    setIsPaused(false);
+    utteranceRef.current = null;
+  };
 
   const toggleSpeech = () => {
     if (isSpeaking) {
       // Pause
-      window.speechSynthesis.cancel();
-      setIsSpeaking(false);
+      window.speechSynthesis.pause();
       setIsPaused(true);
+      setIsSpeaking(false);
       return;
     }
 
     if (isPaused) {
-      // Fortsæt = genstart (bedste løsning med browser API)
+      // Fortsæt (starter forfra – browser-begrænsning)
+      window.speechSynthesis.cancel();
       setIsPaused(false);
     }
 
-    const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
-    const fullText = text + "\n\nAxiom: " + axiomText;
+    // Start / genstart
+    const axiomText = AXIOMS[endingAxiomIndex % AXIOMS.length];
+    const fullText = `${text}\n\nAxiom: ${axiomText}`;
 
     const utterance = new SpeechSynthesisUtterance(fullText);
     utterance.lang = 'da-DK';
@@ -49,8 +54,9 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       setIsPaused(false);
     };
 
-    window.speechSynthesis.cancel();
+    utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
+
     setIsSpeaking(true);
     setIsPaused(false);
   };
@@ -58,18 +64,15 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
   return (
     <button
       onClick={toggleSpeech}
-      className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 hover:border-[#E30613] rounded-2xl text-[#002B5B] transition-colors"
+      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#002B5B] hover:bg-[#001B3D] text-white rounded-3xl font-medium transition-all active:scale-95"
     >
-      <span className="text-2xl">
+      <span className="text-xl">
         {isSpeaking ? '⏸️' : isPaused ? '▶️' : '🔊'}
       </span>
-      <span className="text-sm font-medium">
+      <span>
         {isSpeaking ? 'Pause' : isPaused ? 'Fortsæt' : 'Læs højt'}
       </span>
-
-      <span className="ml-2 text-[10px] font-mono bg-red-100 text-red-600 px-2 py-px rounded">
-        DEV 28-05-2026 005
-      </span>
+      <span className="text-[10px] opacity-40 font-mono ml-1">{DEV_VERSION}</span>
     </button>
   );
 }
