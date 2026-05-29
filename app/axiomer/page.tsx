@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/common/_Nav';
-import { AXIOMS, DEV_VERSION } from '../lib/constants';   // ← korrekt sti
+import { AXIOMS, DEV_VERSION } from '../lib/constants';
 
 export default function AxiomerPage() {
   const [likes, setLikes] = useState<number[]>(() => {
@@ -20,6 +20,8 @@ export default function AxiomerPage() {
     }
     return new Array(AXIOMS.length).fill(false);
   });
+
+  const [suggestionSubmitted, setSuggestionSubmitted] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('axiomLikes', JSON.stringify(likes));
@@ -45,6 +47,13 @@ export default function AxiomerPage() {
     setLikes(newLikes);
   };
 
+  const handleSubmitSuggestion = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuggestionSubmitted(true);
+    // Her kan vi senere gemme forslaget – lige nu viser vi kun feedback
+    setTimeout(() => setSuggestionSubmitted(false), 5000); // gemmer beskeden efter 5 sek
+  };
+
   const top3 = [...AXIOMS]
     .map((item, i) => ({ ...item, likes: likes[i], index: i }))
     .sort((a, b) => b.likes - a.likes)
@@ -57,6 +66,7 @@ export default function AxiomerPage() {
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         <h1 className="text-5xl font-bold tracking-tighter mb-8">Axioms</h1>
 
+        {/* Introduktion */}
         <div className="prose prose-lg max-w-none mb-16">
           <p className="text-xl leading-relaxed">
             Axioms er de få, enkle principper vi vælger at holde fast i. 
@@ -77,6 +87,7 @@ export default function AxiomerPage() {
           </a>
         </div>
 
+        {/* Top 3 */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">De mest værdsatte Axioms lige nu</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -92,6 +103,7 @@ export default function AxiomerPage() {
           </div>
         </div>
 
+        {/* Alle Axioms */}
         <h2 className="text-2xl font-semibold mb-6">Alle Axioms</h2>
         <div className="space-y-6">
           {AXIOMS.map((axiom, index) => (
@@ -117,18 +129,32 @@ export default function AxiomerPage() {
           ))}
         </div>
 
+        {/* Forslag til nyt Axiom */}
         <div className="mt-20 bg-gray-50 border border-gray-200 rounded-3xl p-8">
           <h3 className="text-xl font-semibold mb-6">Forslag til nyt Axiom</h3>
           <p className="text-sm text-gray-600 mb-4">
             Har du et princip du synes bør være med? Vi er altid åbne for nye perspektiver.
           </p>
-          <textarea 
-            className="w-full h-32 border border-gray-300 rounded-2xl p-4 focus:outline-none focus:border-[#002B5B]"
-            placeholder="Skriv dit forslag til et nyt Axiom her..."
-          />
-          <button className="mt-6 px-8 py-4 bg-[#002B5B] text-white rounded-3xl font-medium hover:bg-[#001B3D]">
-            Send forslag
-          </button>
+
+          <form onSubmit={handleSubmitSuggestion}>
+            <textarea 
+              className="w-full h-32 border border-gray-300 rounded-2xl p-4 focus:outline-none focus:border-[#002B5B]"
+              placeholder="Skriv dit forslag til et nyt Axiom her..."
+              required
+            />
+            <button 
+              type="submit"
+              className="mt-6 px-8 py-4 bg-[#002B5B] text-white rounded-3xl font-medium hover:bg-[#001B3D]"
+            >
+              Send forslag
+            </button>
+          </form>
+
+          {suggestionSubmitted && (
+            <div className="mt-6 p-4 bg-green-100 text-green-800 rounded-2xl text-center">
+              Tak for dit forslag! Vi kigger på det.
+            </div>
+          )}
         </div>
 
         <div className="text-center text-xs text-gray-400 mt-12">
