@@ -11,18 +11,7 @@ export default function Axioms() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
       
-      {/* Titel + genvej */}
-      <div className="flex justify-between items-baseline mb-8">
-        <h2 className="text-3xl font-bold tracking-tighter">Axioms</h2>
-        <Link 
-          href="/axiomer"
-          className="text-[#002B5B] hover:underline text-sm font-medium flex items-center gap-1"
-        >
-          Se alle Axioms →
-        </Link>
-      </div>
-
-      {/* Kort uden højtaler-knap */}
+      {/* Kun kortet uden titel og genvej */}
       <Link href="/axiomer" className="block group">
         <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#002B5B]/30 transition-all text-center">
           
