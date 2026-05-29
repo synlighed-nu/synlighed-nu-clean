@@ -23,7 +23,6 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
   const [isSpeaking, setIsSpeaking] = useState(false);
 
   const toggleSpeech = () => {
-    // Stop hvis der allerede tales
     if (isSpeaking) {
       window.speechSynthesis.cancel();
       setIsSpeaking(false);
@@ -31,20 +30,16 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     }
 
     const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
-    const fullText = text + "\n\n" + axiomText;
+    const fullText = text + "\n\nAxiom: " + axiomText;
 
     const utterance = new SpeechSynthesisUtterance(fullText);
     utterance.lang = 'da-DK';
     utterance.rate = 0.95;
 
-    utterance.onend = () => {
-      setIsSpeaking(false);
-    };
+    utterance.onend = () => setIsSpeaking(false);
 
-    // Sikrer at alt tidligere bliver stoppet
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
-
     setIsSpeaking(true);
   };
 
@@ -60,7 +55,6 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         {isSpeaking ? 'Stop' : 'Læs højt'}
       </span>
 
-      {/* DEV-nummer direkte i knappen */}
       <span className="ml-2 text-[10px] font-mono bg-red-100 text-red-600 px-2 py-px rounded">
         DEV 28-05-2026 002
       </span>
