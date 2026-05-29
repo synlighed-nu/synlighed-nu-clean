@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { AXIOMS } from '@/lib/constants';
+import { AXIOMS } from '../../../lib/constants';   // ← rettet relativ sti
 
 export default function Axioms() {
   const [currentIndex, setCurrentIndex] = useState(0);
