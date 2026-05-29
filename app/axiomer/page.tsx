@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/common/_Nav';
-import { AXIOMS, DEV_VERSION } from '../lib/constants';   // ← rettet sti
+import { AXIOMS, DEV_VERSION } from '../lib/constants';   // ← korrekt sti
 
 export default function AxiomerPage() {
   const [likes, setLikes] = useState<number[]>(() => {
@@ -46,8 +46,8 @@ export default function AxiomerPage() {
   };
 
   const top3 = [...AXIOMS]
-    .map((item: any, i: number) => ({ ...item, likes: likes[i], index: i }))
-    .sort((a: any, b: any) => b.likes - a.likes)
+    .map((item, i) => ({ ...item, likes: likes[i], index: i }))
+    .sort((a, b) => b.likes - a.likes)
     .slice(0, 3);
 
   return (
@@ -57,7 +57,6 @@ export default function AxiomerPage() {
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         <h1 className="text-5xl font-bold tracking-tighter mb-8">Axioms</h1>
 
-        {/* Introduktion */}
         <div className="prose prose-lg max-w-none mb-16">
           <p className="text-xl leading-relaxed">
             Axioms er de få, enkle principper vi vælger at holde fast i. 
@@ -78,11 +77,10 @@ export default function AxiomerPage() {
           </a>
         </div>
 
-        {/* Top 3 */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">De mest værdsatte Axioms lige nu</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {top3.map((item: any, i: number) => (
+            {top3.map((item, i) => (
               <div key={i} className="bg-white border border-[#002B5B]/10 rounded-3xl p-6">
                 <div className="text-sm font-medium text-[#E30613] mb-2">#{i + 1}</div>
                 <p className="text-lg leading-relaxed">{item.text}</p>
@@ -94,10 +92,9 @@ export default function AxiomerPage() {
           </div>
         </div>
 
-        {/* Alle Axioms */}
         <h2 className="text-2xl font-semibold mb-6">Alle Axioms</h2>
         <div className="space-y-6">
-          {AXIOMS.map((axiom: any, index: number) => (
+          {AXIOMS.map((axiom, index) => (
             <div key={index} className="flex gap-4 bg-white border border-gray-200 rounded-3xl p-6 hover:border-[#002B5B]/30 transition-colors">
               <div className="flex-1">
                 <p className="text-lg leading-relaxed">{axiom.text}</p>
@@ -120,7 +117,6 @@ export default function AxiomerPage() {
           ))}
         </div>
 
-        {/* Forslag til nyt Axiom */}
         <div className="mt-20 bg-gray-50 border border-gray-200 rounded-3xl p-8">
           <h3 className="text-xl font-semibold mb-6">Forslag til nyt Axiom</h3>
           <p className="text-sm text-gray-600 mb-4">
