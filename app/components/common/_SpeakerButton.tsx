@@ -36,11 +36,9 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     utterance.lang = 'da-DK';
     utterance.rate = 0.95;
 
-    utterance.onend = () => {
-      setIsSpeaking(false);
-    };
+    utterance.onend = () => setIsSpeaking(false);
 
-    window.speechSynthesis.cancel(); // stopper eventuel tidligere afspilning
+    window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
     setIsSpeaking(true);
   };
@@ -54,7 +52,11 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         {isSpeaking ? '⏹️' : '🔊'}
       </span>
       <span className="text-sm font-medium">
-        {isSpeaking ? 'Stop' : 'Læs højt'}
+        Læs højt
+      </span>
+      {/* DEV-mærke direkte i knappen */}
+      <span className="ml-2 text-[10px] font-mono bg-red-100 text-red-600 px-2 py-px rounded">
+        DEV 28-05-2026 002
       </span>
     </button>
   );
