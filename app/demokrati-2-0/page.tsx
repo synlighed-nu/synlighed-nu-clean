@@ -10,9 +10,16 @@ const SpeakerButton = dynamic(
 
 export default function Demokrati20Page() {
   const pageText = `
-    Det gamle demokrati er blevet misbrugt, fordi vi ikke har udviklet det.
-    Vi er nødt til at opgradere det med synlighed, agil reasoning og klare grundprincipper.
-    Ellers ender vi i idiokrati.
+    Det gamle demokrati er blevet misbrugt, fordi vi ikke har udviklet det i over 250 år.
+    Uden løbende forbedring bevæger vi os langsomt mod en blanding af idiokrati og kontrol.
+
+    I filmen Idiokrati bliver samfundet dumt, fordi ingen længere tænker kritisk.
+    I George Orwells 1984 bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.
+
+    Begge dystopier er advarsler om det samme: et samfund uden kritisk tænkning og kreativitet kollapser.
+
+    Derfor er Demokrati 2.0 ikke en mulighed – det er en nødvendighed.
+    Vi skal opgradere demokratiet med fuld synlighed, agil reasoning og klare, urokkelige axioms.
   `;
 
   return (
@@ -26,7 +33,7 @@ export default function Demokrati20Page() {
           <h1 className="text-5xl font-bold tracking-tighter">Demokrati 2.0</h1>
           <SpeakerButton 
             text={pageText} 
-            endingAxiomIndex={3}     // "Systemet er ikke bygget til at lære – det er bygget til at fortsætte."
+            endingAxiomIndex={3} 
           />
         </div>
         
@@ -34,8 +41,9 @@ export default function Demokrati20Page() {
           <p className="text-2xl leading-relaxed">
             Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år.
           </p>
+
           <p className="mt-8">
-            Uden løbende forbedring bevæger vi os langsomt mod en blanding af idiokrati og kontrol.
+            Uden løbende forbedring bevæger vi os langsomt mod en blanding af <strong>Idiokrati</strong> og <strong>1984</strong>.
           </p>
 
           <p className="text-2xl font-semibold text-[#002B5B] mt-12">
@@ -55,6 +63,24 @@ export default function Demokrati20Page() {
               <h4 className="font-semibold mb-2">Axiom</h4>
               <p className="text-gray-600">Nogle få grundlæggende regler der aldrig må forhandles væk.</p>
             </div>
+          </div>
+
+          <div className="mt-16 bg-gray-50 border border-gray-200 rounded-3xl p-8">
+            <p className="font-medium mb-4">Se også:</p>
+            <a 
+              href="https://www.imdb.com/title/tt0387808/" 
+              target="_blank"
+              className="block text-[#002B5B] hover:underline flex items-center gap-2"
+            >
+              Filmen <strong>Idiokrati</strong> (2006) <span className="text-xl">↗</span>
+            </a>
+            <a 
+              href="https://da.wikipedia.org/wiki/1984_(roman)" 
+              target="_blank"
+              className="block text-[#002B5B] hover:underline flex items-center gap-2 mt-3"
+            >
+              George Orwells roman <strong>1984</strong> <span className="text-xl">↗</span>
+            </a>
           </div>
         </div>
       </div>
