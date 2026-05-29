@@ -2,18 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/common/_Nav';
-
-const AXIOMS = [
-  "Synlighed begynder først, når man tør erkende sine begrænsninger.",
-  "Problemet er ikke mangel på data – det er mangel på overblik.",
-  "Vi kalder det reformer, men det er ofte bare gentagelser.",
-  "Systemet er ikke designet til at lære – det er designet til at fortsætte.",
-  "Vi behandler konsekvenser, men ændrer sjældent årsagerne.",
-  "Hvis børnene ikke udvikler sig, har vi ingen fremtid.",
-  "Kreativitet skaber løsninger – systemet kvæler den.",
-];
+import { AXIOMS, DEV_VERSION } from '@/lib/constants';
 
 export default function AxiomerPage() {
+  // Likes gemmes lokalt (anonymt)
   const [likes, setLikes] = useState<number[]>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('axiomLikes');
@@ -30,7 +22,7 @@ export default function AxiomerPage() {
     return new Array(AXIOMS.length).fill(false);
   });
 
-  // Gem likes i localStorage
+  // Gem i localStorage
   useEffect(() => {
     localStorage.setItem('axiomLikes', JSON.stringify(likes));
   }, [likes]);
@@ -44,11 +36,9 @@ export default function AxiomerPage() {
     const newLikes = [...likes];
 
     if (newUserLikes[index]) {
-      // Fjern like
       newUserLikes[index] = false;
       newLikes[index] = Math.max(0, newLikes[index] - 1);
     } else {
-      // Tilføj like
       newUserLikes[index] = true;
       newLikes[index] += 1;
     }
@@ -57,9 +47,9 @@ export default function AxiomerPage() {
     setLikes(newLikes);
   };
 
-  // Top 3
+  // Top 3 (uanset visibility)
   const top3 = [...AXIOMS]
-    .map((text, i) => ({ text, likes: likes[i], index: i }))
+    .map((item, i) => ({ ...item, likes: likes[i], index: i }))
     .sort((a, b) => b.likes - a.likes)
     .slice(0, 3);
 
@@ -113,7 +103,7 @@ export default function AxiomerPage() {
           {AXIOMS.map((axiom, index) => (
             <div key={index} className="flex gap-4 bg-white border border-gray-200 rounded-3xl p-6 hover:border-[#002B5B]/30 transition-colors">
               <div className="flex-1">
-                <p className="text-lg leading-relaxed">{axiom}</p>
+                <p className="text-lg leading-relaxed">{axiom.text}</p>
               </div>
               <button
                 onClick={() => toggleLike(index)}
@@ -146,6 +136,10 @@ export default function AxiomerPage() {
           <button className="mt-6 px-8 py-4 bg-[#002B5B] text-white rounded-3xl font-medium hover:bg-[#001B3D]">
             Send forslag
           </button>
+        </div>
+
+        <div className="text-center text-xs text-gray-400 mt-12">
+          {DEV_VERSION}
         </div>
       </div>
     </div>
