@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { AXIOMS, DEV_VERSION } from '../../../lib/constants';   // ← rettet
+import { AXIOMS, DEV_VERSION } from '../../lib/constants';   // ← korrekt sti
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: string; endingAxiomIndex?: number }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
