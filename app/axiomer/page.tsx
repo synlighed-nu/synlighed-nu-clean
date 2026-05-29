@@ -24,7 +24,6 @@ export default function AxiomerPage() {
 
   const [suggestionSubmitted, setSuggestionSubmitted] = useState(false);
 
-  // Introduktionstekst som skal læses højt
   const introText = `
     Axioms er de få, enkle principper vi vælger at holde fast i. 
     De er ikke absolutte sandheder, og vi er ikke bedrevidende. 
@@ -76,8 +75,8 @@ export default function AxiomerPage() {
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         <h1 className="text-5xl font-bold tracking-tighter mb-8">Axioms</h1>
 
-        {/* Introduktion med højtaler-knap til højre */}
-        <div className="flex gap-8 mb-16">
+        {/* Introduktion med højtaler-knap - bedre mobil layout */}
+        <div className="flex flex-col md:flex-row gap-8 mb-16">
           <div className="flex-1 prose prose-lg max-w-none">
             <p className="text-xl leading-relaxed">
               Axioms er de få, enkle principper vi vælger at holde fast i. 
@@ -98,8 +97,8 @@ export default function AxiomerPage() {
             </a>
           </div>
 
-          {/* Højtaler-knap placeret til højre */}
-          <div className="pt-2">
+          {/* Højtaler-knap - placeret pænt på både mobil og desktop */}
+          <div className="md:pt-2 flex justify-end md:justify-start">
             <SpeakerButton text={introText} endingAxiomIndex={0} />
           </div>
         </div>
