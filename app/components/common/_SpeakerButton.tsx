@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 
+const DEV_VERSION = "DEV 28-05-2026 004";   // ← ændr kun dette nummer fremover
+
 const AXIOMS = [
   "Synlighed begynder først, når man tør erkende sine begrænsninger",
   "Problemet er ikke mangel på data – det er mangel på overblik",
@@ -56,8 +58,9 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         {isSpeaking ? 'Stop' : 'Læs højt'}
       </span>
 
+      {/* Synligt DEV-nummer i knappen */}
       <span className="ml-2 text-[10px] font-mono bg-red-100 text-red-600 px-2 py-px rounded">
-        DEV 28-05-2026 003
+        {DEV_VERSION}
       </span>
     </button>
   );
