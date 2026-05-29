@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 const AXIOMS = [
   "Synlighed begynder først, når man tør erkende sine begrænsninger.",
@@ -21,17 +21,11 @@ interface SpeakerButtonProps {
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
-
-  const stopSpeaking = () => {
-    window.speechSynthesis.cancel();
-    utteranceRef.current = null;
-    setIsSpeaking(false);
-  };
 
   const toggleSpeech = () => {
     if (isSpeaking) {
-      stopSpeaking();
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
       return;
     }
 
@@ -41,14 +35,9 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     const utterance = new SpeechSynthesisUtterance(fullText);
     utterance.lang = 'da-DK';
     utterance.rate = 0.95;
-    utterance.pitch = 1;
 
-    utterance.onend = () => {
-      setIsSpeaking(false);
-      utteranceRef.current = null;
-    };
+    utterance.onend = () => setIsSpeaking(false);
 
-    utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
     setIsSpeaking(true);
   };
