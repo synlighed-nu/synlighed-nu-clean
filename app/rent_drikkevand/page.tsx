@@ -16,6 +16,12 @@ export default function RentDrikkevandPage() {
 
     Et bedre alternativ:
     Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider.
+
+    Hvorfor er det et problem i dag?
+    Pesticider forurener vores drikkevand.
+    Vi renser i stedet for at forebygge.
+    Det koster milliarder i oprensning og nye boringer.
+    Vi risikerer langsigtede helbredseffekter for befolkningen.
   `;
 
   return (
