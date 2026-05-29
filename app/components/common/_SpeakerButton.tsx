@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
-
-const DEV_VERSION = "DEV 28-05-2026 004";   // ← ændr kun dette nummer fremover
+import React, { useState, useRef } from 'react';
 
 const AXIOMS = [
   "Synlighed begynder først, når man tør erkende sine begrænsninger",
@@ -23,11 +21,19 @@ interface SpeakerButtonProps {
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+
+  const stopSpeaking = () => {
+    window.speechSynthesis.cancel();
+    if (utteranceRef.current) {
+      utteranceRef.current = null;
+    }
+    setIsSpeaking(false);
+  };
 
   const toggleSpeech = () => {
     if (isSpeaking) {
-      window.speechSynthesis.cancel();
-      setIsSpeaking(false);
+      stopSpeaking();
       return;
     }
 
@@ -38,11 +44,16 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
     utterance.lang = 'da-DK';
     utterance.rate = 0.95;
 
-    utterance.onend = () => setIsSpeaking(false);
+    utterance.onend = () => {
+      setIsSpeaking(false);
+      utteranceRef.current = null;
+    };
 
-    window.speechSynthesis.cancel();   // stopper alt tidligere
+    // Stop alt tidligere tale
+    stopSpeaking();
+
+    utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
-
     setIsSpeaking(true);
   };
 
@@ -58,9 +69,8 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         {isSpeaking ? 'Stop' : 'Læs højt'}
       </span>
 
-      {/* Synligt DEV-nummer i knappen */}
       <span className="ml-2 text-[10px] font-mono bg-red-100 text-red-600 px-2 py-px rounded">
-        {DEV_VERSION}
+        DEV 28-05-2026 003
       </span>
     </button>
   );
