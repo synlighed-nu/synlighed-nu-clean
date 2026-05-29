@@ -3,6 +3,7 @@
 import React from 'react';
 
 import Nav from './components/common/_Nav';
+import Axioms from './components/sections/_Axioms';        // ← Tilføjet
 import WhySection from './components/sections/_WhySection';
 import VotingSection from './components/sections/_VotingSection';
 import BigMoves from './components/sections/_BigMoves';
@@ -24,8 +25,8 @@ export default function SynlighedNu() {
         </p>
       </div>
 
-      {/* Axioms slået fra midlertidigt */}
-      {/* <Axioms /> */}
+      {/* Axioms karusel - nu aktiveret */}
+      <Axioms />
 
       <WhySection />
       <VotingSection />
