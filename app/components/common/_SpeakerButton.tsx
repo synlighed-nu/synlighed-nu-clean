@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 const AXIOMS = [
   "Synlighed begynder først, når man tør erkende sine begrænsninger",
@@ -21,20 +21,20 @@ interface SpeakerButtonProps {
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
-
-  const stopSpeaking = () => {
-    window.speechSynthesis.cancel();
-    if (utteranceRef.current) {
-      utteranceRef.current = null;
-    }
-    setIsSpeaking(false);
-  };
+  const [isPaused, setIsPaused] = useState(false);
 
   const toggleSpeech = () => {
     if (isSpeaking) {
-      stopSpeaking();
+      // Pause
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+      setIsPaused(true);
       return;
+    }
+
+    if (isPaused) {
+      // Fortsæt = genstart (bedste løsning med browser API)
+      setIsPaused(false);
     }
 
     const axiomText = AXIOMS[endingAxiomIndex] || AXIOMS[0];
@@ -46,15 +46,13 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
     utterance.onend = () => {
       setIsSpeaking(false);
-      utteranceRef.current = null;
+      setIsPaused(false);
     };
 
-    // Stop alt tidligere tale
-    stopSpeaking();
-
-    utteranceRef.current = utterance;
+    window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
     setIsSpeaking(true);
+    setIsPaused(false);
   };
 
   return (
@@ -63,14 +61,14 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
       className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 hover:border-[#E30613] rounded-2xl text-[#002B5B] transition-colors"
     >
       <span className="text-2xl">
-        {isSpeaking ? '⏹️' : '🔊'}
+        {isSpeaking ? '⏸️' : isPaused ? '▶️' : '🔊'}
       </span>
       <span className="text-sm font-medium">
-        {isSpeaking ? 'Stop' : 'Læs højt'}
+        {isSpeaking ? 'Pause' : isPaused ? 'Fortsæt' : 'Læs højt'}
       </span>
 
       <span className="ml-2 text-[10px] font-mono bg-red-100 text-red-600 px-2 py-px rounded">
-        DEV 28-05-2026 004
+        DEV 28-05-2026 005
       </span>
     </button>
   );
