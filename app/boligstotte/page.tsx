@@ -28,8 +28,6 @@ Holder boligpriserne kunstigt høje.
 Gør det sværere for unge at komme ind på boligmarkedet. 
 Bruger milliarder uden at løse det underliggende problem. 
 Skaber et system der er afhængigt af støtte for at fungere.
-
-Synlighed begynder først, når man tør erkende sine begrænsninger.
   `.trim();
 
   return (
@@ -40,7 +38,7 @@ Synlighed begynder først, når man tør erkende sine begrænsninger.
         <div className="flex items-center gap-4 mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
           <span className="text-red-600 font-bold text-sm bg-red-100 px-3 py-1 rounded-full whitespace-nowrap">
-            DEV 28-05-2026 001 — Kun til test
+            DEV 28-05-2026 003 — Kun til test
           </span>
         </div>
 
