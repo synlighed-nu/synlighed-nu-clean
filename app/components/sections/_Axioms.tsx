@@ -11,12 +11,12 @@ export default function Axioms() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
       
-      {/* Kun kortet uden titel og genvej */}
+      {/* Hele kortet er nu en genvej */}
       <Link href="/axiomer" className="block group">
         <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#002B5B]/30 transition-all text-center">
           
-          {/* Centreret badge */}
-          <div className="mx-auto inline-block px-4 py-1 bg-[#002B5B] text-white text-xs font-semibold tracking-widest rounded-full mb-6">
+          {/* Blåt AXIOM badge - klikbart */}
+          <div className="mx-auto inline-block px-4 py-1 bg-[#002B5B] text-white text-xs font-semibold tracking-widest rounded-full mb-6 hover:bg-[#001B3D] transition-colors">
             AXIOM
           </div>
 
