@@ -1,13 +1,47 @@
+'use client';
+
 import Nav from '../components/common/_Nav';
+import dynamic from 'next/dynamic';
+
+const SpeakerButton = dynamic(
+  () => import('../components/common/_SpeakerButton'),
+  { ssr: false }
+);
 
 export default function OffentligAdministrationPage() {
+  const pageText = `
+    En stor del af de offentlige udgifter går til proces, kontrol og administration – frem for reel værdi til borgerne.
+
+    Vi har skabt et embed-værk i stedet for et reasoning-værk.
+
+    Forslag til berørte medarbejdere:
+    Hvis en medarbejder har været ansat i det offentlige i mere end 2 år, skal vedkommende være berettiget til en fratrædelsesordning på 1 år med fuld løn. 
+    Det giver tryghed og tid til omstilling, så vi undgår kaos under de nødvendige forandringer.
+
+    Et bedre alternativ:
+    Over de næste 5 år kan vi ændre incitamenterne i den offentlige sektor, så der belønnes resultater og reel værdiskabelse frem for proces og kontrol.
+
+    Hvorfor er det et problem i dag?
+    En stor del af skattekronerne går til administration og kontrol.
+    Systemet belønner proces frem for resultater.
+    Det skaber unødvendigt bureaukrati og ineffektivitet.
+    Borgerne oplever langsommelighed og ringe værdi for pengene.
+  `;
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        <h1 className="text-5xl font-bold tracking-tighter mb-6">Offentlig administration</h1>
+        {/* Titel + højtaler-knap på samme linje */}
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-5xl font-bold tracking-tighter">Offentlig administration</h1>
+          <SpeakerButton 
+            text={pageText} 
+            endingAxiomIndex={3} 
+          />
+        </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
