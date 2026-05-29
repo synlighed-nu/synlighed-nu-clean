@@ -38,8 +38,9 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
 
     utterance.onend = () => setIsSpeaking(false);
 
-    window.speechSynthesis.cancel();
+    window.speechSynthesis.cancel();   // stopper alt tidligere
     window.speechSynthesis.speak(utterance);
+
     setIsSpeaking(true);
   };
 
@@ -55,7 +56,6 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: SpeakerBut
         {isSpeaking ? 'Stop' : 'Læs højt'}
       </span>
 
-      {/* Synligt DEV-nummer i knappen */}
       <span className="ml-2 text-[10px] font-mono bg-red-100 text-red-600 px-2 py-px rounded">
         DEV 28-05-2026 003
       </span>
