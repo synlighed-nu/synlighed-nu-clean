@@ -2,6 +2,7 @@
 
 import Nav from '../components/common/_Nav';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 const SpeakerButton = dynamic(
   () => import('../components/common/_SpeakerButton'),
@@ -17,20 +18,6 @@ export default function KreativitetPage() {
     Som voksne var det nede på cirka 2 procent.
 
     Vores uddannelsessystem kvæler kreativiteten systematisk.
-
-    Hver dag i danske klasser sker det samme.
-    Læreren stiller en opgave og forventer ét rigtigt svar fra alle.
-    Men mange elever forstår opgaven anderledes og kommer med et andet resultat – selvom deres argumenter er i orden.
-    Når det sker, bliver det stemplet som forkert.
-
-    Det er ikke eleven, der fejler.
-    Det er systemet, der straffer anderledes tænkning.
-
-    Fejl er ikke fiasko.
-    Fejl er der, hvor vi lærer noget nyt.
-
-    Hvis vi aldrig begår fejl, stopper al udvikling.
-    Eleven bør aldrig straffes for at tænke anderledes.
   `;
 
   return (
@@ -39,13 +26,9 @@ export default function KreativitetPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + højtaler-knap på samme linje */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Kreativitet</h1>
-          <SpeakerButton 
-            text={pageText} 
-            endingAxiomIndex={7}     // "Hvis vi aldrig begår fejl, stopper al udvikling."
-          />
+          <SpeakerButton text={pageText} endingAxiomIndex={7} />
         </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
@@ -105,6 +88,17 @@ export default function KreativitetPage() {
               </div>
             </a>
           </div>
+        </div>
+
+        {/* Genvej til Inspiration */}
+        <div className="mt-20 text-center">
+          <Link 
+            href="/inspiration"
+            className="inline-flex items-center gap-3 text-[#002B5B] hover:text-[#001B3D] font-medium text-lg"
+          >
+            Se flere inspirerende initiativer og projekter 
+            <span className="text-2xl">→</span>
+          </Link>
         </div>
       </div>
     </div>
