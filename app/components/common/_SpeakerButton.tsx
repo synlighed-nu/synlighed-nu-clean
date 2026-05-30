@@ -34,13 +34,11 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: st
   return (
     <button
       onClick={toggleSpeech}
-      className="inline-flex items-center gap-3 px-6 py-3 bg-[#002B5B] hover:bg-[#001B3D] text-white rounded-3xl font-medium transition-all active:scale-95 shadow-sm"
+      className="flex items-center justify-center w-11 h-11 bg-[#002B5B] hover:bg-[#001B3D] text-white rounded-2xl transition-all active:scale-95 shadow-sm"
+      title={isSpeaking ? "Stop" : "Læs højt"}   // title giver tooltip på hover
     >
-      <span className="text-2xl">
+      <span className="text-3xl">
         {isSpeaking ? '⏹️' : '▶️'}
-      </span>
-      <span className="text-lg">
-        {isSpeaking ? 'Stop' : 'Læs højt'}
       </span>
     </button>
   );
