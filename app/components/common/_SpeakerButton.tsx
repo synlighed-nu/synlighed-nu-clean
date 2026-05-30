@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { AXIOMS, DEV_VERSION } from '../../lib/constants';   // ← korrekt sti
+import { AXIOMS } from '../../lib/constants';
 
 export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: string; endingAxiomIndex?: number }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -36,9 +36,12 @@ export default function SpeakerButton({ text, endingAxiomIndex = 0 }: { text: st
       onClick={toggleSpeech}
       className="inline-flex items-center gap-3 px-6 py-3 bg-[#002B5B] hover:bg-[#001B3D] text-white rounded-3xl font-medium transition-all active:scale-95 shadow-sm"
     >
-      <span className="text-2xl">{isSpeaking ? '⏹️' : '▶️'}</span>
-      <span className="text-lg">{isSpeaking ? 'Stop' : 'Læs højt'}</span>
-      <span className="text-xs font-mono opacity-40 tracking-tighter">{DEV_VERSION}</span>
+      <span className="text-2xl">
+        {isSpeaking ? '⏹️' : '▶️'}
+      </span>
+      <span className="text-lg">
+        {isSpeaking ? 'Stop' : 'Læs højt'}
+      </span>
     </button>
   );
 }
