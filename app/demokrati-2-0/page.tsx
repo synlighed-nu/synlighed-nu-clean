@@ -2,6 +2,7 @@
 
 import Nav from '../components/common/_Nav';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 const SpeakerButton = dynamic(
   () => import('../components/common/_SpeakerButton'),
@@ -30,10 +31,7 @@ export default function Demokrati20Page() {
         
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-5xl font-bold tracking-tighter">Demokrati 2.0</h1>
-          <SpeakerButton 
-            text={pageText} 
-            endingAxiomIndex={3} 
-          />
+          <SpeakerButton text={pageText} endingAxiomIndex={3} />
         </div>
         
         <div className="prose prose-lg max-w-none text-gray-700">
@@ -67,16 +65,17 @@ export default function Demokrati20Page() {
               <p className="text-gray-600">Nogle få grundlæggende regler der aldrig må forhandles væk.</p>
             </div>
           </div>
+        </div>
 
-          <div className="mt-16 bg-gray-50 border border-gray-200 rounded-3xl p-8">
-            <p className="font-medium mb-4">Se også:</p>
-            <a href="https://www.imdb.com/title/tt0387808/" target="_blank" className="block text-[#002B5B] hover:underline flex items-center gap-2">
-              Filmen <strong>Idiokrati</strong> (2006) <span className="text-xl">↗</span>
-            </a>
-            <a href="https://da.wikipedia.org/wiki/1984_(roman)" target="_blank" className="block text-[#002B5B] hover:underline flex items-center gap-2 mt-3">
-              George Orwells roman <strong>1984</strong> <span className="text-xl">↗</span>
-            </a>
-          </div>
+        {/* Genvej til Inspiration */}
+        <div className="mt-20 text-center">
+          <Link 
+            href="/inspiration"
+            className="inline-flex items-center gap-3 text-[#002B5B] hover:text-[#001B3D] font-medium text-lg"
+          >
+            Se flere inspirerende initiativer og projekter 
+            <span className="text-2xl">→</span>
+          </Link>
         </div>
       </div>
     </div>
