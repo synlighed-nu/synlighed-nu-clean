@@ -11,12 +11,12 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo */}
+          {/* Logo - altid retur til forsiden */}
           <Link href="/" className="font-semibold text-2xl tracking-tighter text-[#002B5B]">
             @SynlighedNu
           </Link>
 
-          {/* Desktop menu */}
+          {/* Desktop menu - kun på forsiden */}
           {!simple && (
             <div className="hidden md:flex items-center gap-8 text-sm font-medium">
               <Link href="#afstemning" className="hover:text-[#001B3D] transition">Afstemning</Link>
@@ -27,20 +27,22 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
             </div>
           )}
 
-          {/* Mobil hamburger - 3 røde streger */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
-          >
-            <span className="block w-6 h-0.5 bg-red-600 transition-all"></span>
-            <span className="block w-6 h-0.5 bg-red-600 transition-all"></span>
-            <span className="block w-6 h-0.5 bg-red-600 transition-all"></span>
-          </button>
+          {/* Mobil burger - kun på forsiden */}
+          {!simple && (
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
+            >
+              <span className="block w-6 h-0.5 bg-red-600 transition-all"></span>
+              <span className="block w-6 h-0.5 bg-red-600 transition-all"></span>
+              <span className="block w-6 h-0.5 bg-red-600 transition-all"></span>
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Mobil menu */}
-      {mobileOpen && (
+      {/* Mobil menu - kun på forsiden */}
+      {mobileOpen && !simple && (
         <div className="md:hidden bg-white border-t border-gray-100 py-4">
           <div className="flex flex-col px-6 gap-4 text-sm font-medium">
             <Link href="#afstemning" className="py-2 hover:text-[#001B3D]" onClick={() => setMobileOpen(false)}>Afstemning</Link>
