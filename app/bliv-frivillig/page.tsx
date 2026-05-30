@@ -1,15 +1,45 @@
 'use client';
 
 import Nav from '../components/common/_Nav';
+import dynamic from 'next/dynamic';
+
+const SpeakerButton = dynamic(
+  () => import('../components/common/_SpeakerButton'),
+  { ssr: false }
+);
 
 export default function BlivFrivilligPage() {
+  const pageText = `
+    Bliv frivillig.
+
+    Du behøver ikke være ekspert. Du skal bare have lyst til at gøre noget ved det.
+
+    Vi leder ikke efter flere talere eller mødedeltagere.
+    Vi leder efter mennesker, der er trætte af at se skattekroner blive spildt, 
+    og som gerne vil bruge deres tid, viden eller energi på at skabe reel forandring.
+
+    Vi leder efter folk der vil hjælpe med:
+    - Research og data
+    - Skrivning og formidling
+    - Teknisk hjælp
+
+    Ingen forpligtelse. Ingen mødepligt. Kun lyst til at gøre en forskel.
+  `;
+
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
-      <Nav simple />   {/* ← rettet: simple mode */}
+      <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        <h1 className="text-5xl font-bold tracking-tighter mb-6 text-center">Bliv frivillig</h1>
+        {/* Titel + højtaler-knap på samme linje */}
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-5xl font-bold tracking-tighter">Bliv frivillig</h1>
+          <SpeakerButton 
+            text={pageText} 
+            endingAxiomIndex={6} 
+          />
+        </div>
         
         <p className="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-12">
           Du behøver ikke være ekspert.<br />
