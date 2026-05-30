@@ -11,12 +11,12 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo - altid retur til forsiden */}
+          {/* Logo */}
           <Link href="/" className="font-semibold text-2xl tracking-tighter text-[#002B5B]">
             @SynlighedNu
           </Link>
 
-          {/* Desktop menu - kun på forsiden */}
+          {/* Desktop menu */}
           {!simple && (
             <div className="hidden md:flex items-center gap-8 text-sm font-medium">
               <Link href="#afstemning" className="hover:text-[#001B3D] transition">Afstemning</Link>
@@ -27,7 +27,7 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
             </div>
           )}
 
-          {/* Mobil burger - kun på forsiden */}
+          {/* Mobil burger - 3 røde streger */}
           {!simple && (
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -41,10 +41,10 @@ export default function Nav({ simple = false }: { simple?: boolean }) {
         </div>
       </div>
 
-      {/* Mobil menu - kun på forsiden */}
+      {/* Mobil menu - tekst til højre */}
       {mobileOpen && !simple && (
         <div className="md:hidden bg-white border-t border-gray-100 py-4">
-          <div className="flex flex-col px-6 gap-4 text-sm font-medium">
+          <div className="flex flex-col px-6 gap-4 text-sm font-medium text-right">
             <Link href="#afstemning" className="py-2 hover:text-[#001B3D]" onClick={() => setMobileOpen(false)}>Afstemning</Link>
             <Link href="#de-store-greb" className="py-2 hover:text-[#001B3D]" onClick={() => setMobileOpen(false)}>De store greb</Link>
             <Link href="#de-konkrete-omrader" className="py-2 hover:text-[#001B3D]" onClick={() => setMobileOpen(false)}>De konkrete områder</Link>
