@@ -1,9 +1,11 @@
+'use client';
+
 import Nav from '../components/common/_Nav';
 
 export default function BlivFrivilligPage() {
   return (
     <div className="min-h-screen bg-white text-[#002B5B]">
-      <Nav />
+      <Nav simple />   {/* ← rettet: simple mode */}
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
