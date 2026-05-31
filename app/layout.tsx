@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import CookieSettingsButton from "./components/common/CookieSettingsButton";
+import CookieConsent from "./components/common/CookieConsent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +32,11 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         
-        {/* Global cookie-indstillinger knap - vises på alle sider */}
+        {/* Global lille cookie-knap nederst til venstre */}
         <CookieSettingsButton />
+        
+        {/* Cookie banner / modal */}
+        <CookieConsent />
       </body>
     </html>
   );

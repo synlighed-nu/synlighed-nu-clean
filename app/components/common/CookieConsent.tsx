@@ -1,49 +1,41 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function CookieConsent() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openBanner = () => setIsOpen(true);
+  // Åbn banneret når man klikker på den lille knap
+  useEffect(() => {
+    const handleOpen = () => setIsOpen(true);
+    window.addEventListener('openCookieBanner', handleOpen);
+    return () => window.removeEventListener('openCookieBanner', handleOpen);
+  }, []);
+
   const closeBanner = () => setIsOpen(false);
 
   return (
     <>
-      {/* Den lille knap nederst til venstre på alle sider */}
-      <button
-        onClick={openBanner}
-        className="fixed bottom-6 left-6 z-[9999] flex h-11 w-11 items-center justify-center rounded-2xl border border-gray-300 bg-white shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all active:scale-95"
-        title="Cookie-indstillinger"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#002B5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.058 11H1M12 3v2m0 16v2m9-9H15" />
-          <circle cx="18" cy="18" r="2" fill="#E30613" />
-          <circle cx="9" cy="9" r="2" fill="#002B5B" />
-        </svg>
-      </button>
-
-      {/* Cookie Banner / Modal */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/60 z-[10000] flex items-end md:items-center justify-center">
-          <div className="bg-white w-full max-w-lg mx-4 md:mx-0 rounded-3xl shadow-2xl overflow-hidden">
+        <div className="fixed inset-0 bg-black/60 z-[10000] flex items-end md:items-center justify-center p-4">
+          <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden">
             <div className="p-8">
               <h2 className="text-2xl font-bold tracking-tighter mb-4">Cookie-indstillinger</h2>
               <p className="text-gray-600 mb-8">
-                Vi bruger cookies til at forbedre din oplevelse på siden. 
-                Du kan vælge hvilke typer du accepterer.
+                Vi bruger cookies til at forbedre din oplevelse. 
+                Du kan vælge hvilke du accepterer.
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-center justify-between">
+                <div className="flex justify-between items-center">
                   <div>
                     <p className="font-medium">Nødvendige cookies</p>
                     <p className="text-sm text-gray-500">Kræves for at siden fungerer</p>
                   </div>
-                  <div className="text-green-600 font-medium">Aktiveret</div>
+                  <span className="text-green-600 font-medium">AltID aktiveret</span>
                 </div>
 
-                <div className="flex items-center justify-between">
+                <div className="flex justify-between items-center">
                   <div>
                     <p className="font-medium">Statistiske cookies</p>
                     <p className="text-sm text-gray-500">Hjælper os med at forbedre siden</p>
