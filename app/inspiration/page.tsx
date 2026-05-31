@@ -22,7 +22,6 @@ export default function InspirationPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + højtaler-knap */}
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Inspiration fra virkeligheden</h1>
           <SpeakerButton 
@@ -69,12 +68,12 @@ export default function InspirationPage() {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-3xl p-8">
-            <h4 className="font-semibold mb-3">4. Jim Lyngvild / Ravnsborg – Personlig agilitet</h4>
+            <h4 className="font-semibold mb-3">4. Drakonheart — Et magisk læringsfællesskab for alle børn</h4>
             <p className="text-gray-600">
-              Et eksempel på, hvordan man kan skabe store kulturelle projekter ved at handle hurtigt og direkte ud fra en klar vision.
+              Et inspirerende projekt der skaber kreative og magiske læringsmiljøer for børn.
             </p>
-            <a href="https://ravnsborg.dk" target="_blank" className="text-[#002B5B] hover:underline text-sm mt-4 inline-block">
-              Besøg Ravnsborg →
+            <a href="https://drakonheart.com" target="_blank" className="text-[#002B5B] hover:underline text-sm mt-4 inline-block">
+              Besøg Drakonheart →
             </a>
           </div>
 
