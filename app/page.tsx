@@ -3,7 +3,7 @@
 import React from 'react';
 
 import Nav from './components/common/_Nav';
-import Axioms from './components/sections/_Axioms';        // ← Tilføjet
+import Axioms from './components/sections/_Axioms';
 import WhySection from './components/sections/_WhySection';
 import VotingSection from './components/sections/_VotingSection';
 import BigMoves from './components/sections/_BigMoves';
@@ -25,12 +25,27 @@ export default function SynlighedNu() {
         </p>
       </div>
 
-      {/* Axioms karusel - nu aktiveret */}
       <Axioms />
-
       <WhySection />
       <VotingSection />
       <BigMoves />
+
+      {/* NY ØKONOMI-SEKTION */}
+      <section className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
+        <div className="flex justify-between items-baseline mb-8">
+          <h2 className="text-3xl font-bold tracking-tighter">Økonomi</h2>
+          <a 
+            href="/økonomi"
+            className="text-[#002B5B] hover:underline text-sm font-medium flex items-center gap-1"
+          >
+            Læs mere om økonomi →
+          </a>
+        </div>
+        <p className="text-xl text-gray-600 max-w-2xl">
+          Hvorfor bliver offentlige projekter ofte meget dyrere end nødvendigt? 
+          Hvordan fungerer "andre folks penge"-problemet i praksis?
+        </p>
+      </section>
 
       <section id="de-konkrete-omrader" className="max-w-5xl mx-auto px-6 py-16">
         <ConcreteAreas />
