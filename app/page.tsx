@@ -30,22 +30,28 @@ export default function SynlighedNu() {
       <VotingSection />
       <BigMoves />
 
-      {/* NY ØKONOMI-SEKTION */}
-      <section className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
-        <div className="flex justify-between items-baseline mb-8">
-          <h2 className="text-3xl font-bold tracking-tighter">Økonomi</h2>
-          <a 
-            href="/økonomi"
-            className="text-[#002B5B] hover:underline text-sm font-medium flex items-center gap-1"
-          >
-            Læs mere om økonomi →
-          </a>
-        </div>
-        <p className="text-xl text-gray-600 max-w-2xl">
-          Hvorfor bliver offentlige projekter ofte meget dyrere end nødvendigt? 
-          Hvordan fungerer "andre folks penge"-problemet i praksis?
-        </p>
-      </section>
+      {/* ØKONOMI som klikbart badge */}
+      <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
+        <a 
+          href="/økonomi"
+          className="block group"
+        >
+          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#002B5B]/40 transition-all flex items-center justify-between">
+            <div>
+              <div className="inline-block px-5 py-1.5 bg-[#002B5B] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
+                ØKONOMI
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter group-hover:text-[#001B3D]">
+                Andre folks penge på andre folk
+              </h2>
+              <p className="text-gray-600 mt-3 max-w-md">
+                Hvorfor bliver offentlige projekter ofte meget dyrere end nødvendigt?
+              </p>
+            </div>
+            <span className="text-4xl text-gray-300 group-hover:text-[#002B5B] transition-colors">→</span>
+          </div>
+        </a>
+      </div>
 
       <section id="de-konkrete-omrader" className="max-w-5xl mx-auto px-6 py-16">
         <ConcreteAreas />
