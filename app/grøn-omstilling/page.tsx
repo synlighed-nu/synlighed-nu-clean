@@ -13,11 +13,11 @@ export default function GrønOmstillingPage() {
     Den grønne omstilling handler ikke kun om mål.
     Den handler om, hvordan vi når dem.
 
+    Fokus: Den nuværende grønne omstilling forstærker de problemer, den skal løse.
+    Vi bygger store centrale anlæg, lange elkabler og tunge reguleringssystemer – i stedet for at satse på lokal og decentral produktion.
+    Resultatet er højere elpriser, større sårbarhed, større indgreb i landskabet og mindre innovation.
+
     Når vi griber ind i markedet med støtte og regulering, kan vi enten skabe bedre løsninger eller låse os fast i dårligere løsninger.
-
-    Hvis støtte og regulering ikke er designet rigtigt, risikerer vi, at nogle løsninger bliver beskyttet, konkurrencen svækkes, og innovationen går langsommere.
-
-    Så vinder ikke nødvendigvis den bedste løsning, men den der passer bedst ind i systemet.
 
     Et klart eksempel: Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, er det et tegn på at noget er fundamentalt galt. Løsningen er ikke mere tilskud.
 
@@ -25,7 +25,7 @@ export default function GrønOmstillingPage() {
 
     Derudover gør store centrale energisystemer os mere sårbare i krise og krig. Lange elkabler og få store anlæg kræver militær beskyttelse.
 
-    Endelig pynter store elkabler og vindmølleparker ikke ligefrem på landskabet – hverken på land eller til havs. Det er endnu en skjult omkostning ved den nuværende tilgang.
+    Endelig pynter store elkabler og vindmølleparker ikke ligefrem på landskabet – hverken på land eller til havs.
   `;
 
   return (
@@ -56,6 +56,31 @@ export default function GrønOmstillingPage() {
             <li>Skabe bedre løsninger</li>
             <li>Eller låse os fast i dårligere løsninger</li>
           </ul>
+
+          {/* === NY FOKUS-BOKS === */}
+          <div className="mt-12 bg-[#002B5B] text-white rounded-3xl p-8">
+            <div className="uppercase tracking-[2px] text-sm font-semibold mb-3 text-white/70">
+              Fokus
+            </div>
+            <p className="text-2xl font-semibold leading-tight">
+              Den nuværende grønne omstilling forstærker de problemer, den skal løse.
+            </p>
+            <p className="mt-4 text-white/90">
+              Vi bygger store centrale anlæg, lange elkabler og tunge reguleringssystemer – 
+              i stedet for at satse på lokal og decentral produktion.
+            </p>
+
+            <ul className="mt-6 space-y-2 text-white/90">
+              <li>• Højere elpriser (fordi vi betaler for systemet, ikke kun energien)</li>
+              <li>• Større sårbarhed i krise og krig</li>
+              <li>• Større indgreb i landskab og natur</li>
+              <li>• Mindre innovation og reel konkurrence</li>
+            </ul>
+
+            <p className="mt-6 text-sm text-white/70">
+              Vi siger, vi vil det grønne – men vi gentager det samme gamle systemdesign, bare i grøn indpakning.
+            </p>
+          </div>
 
           <p className="mt-10 text-xl font-semibold text-[#E30613]">
             Hvis støtte og regulering ikke er designet rigtigt, risikerer vi, at nogle løsninger bliver beskyttet, konkurrencen svækkes, og innovationen går langsommere.
@@ -139,7 +164,7 @@ export default function GrønOmstillingPage() {
             </p>
           </div>
 
-          {/* NY SEKTION: Landskab og natur */}
+          {/* Landskab */}
           <div className="mt-16">
             <h2 className="text-2xl font-bold tracking-tighter mb-6">En fjerde skjult pris: Landskab og natur</h2>
             
@@ -150,11 +175,7 @@ export default function GrønOmstillingPage() {
 
             <p className="mt-4">
               Når energiproduktionen koncentreres i få store anlæg, kræver det omfattende infrastruktur, der ændrer landskabet permanent. 
-              Decentral og lokal energiproduktion har typisk et væsentligt mindre fodaftryk pr. produceret kilowatt-time og kan integreres mere skånsomt i omgivelserne.
-            </p>
-
-            <p className="mt-6 text-sm text-gray-600 italic">
-              Det samlede regnestykke for den grønne omstilling inkluderer altså ikke kun elprisen, sikkerhed og sårbarhed – men også den fysiske påvirkning af det landskab, vi alle deler.
+              Decentral og lokal energiproduktion har typisk et væsentligt mindre fodaftryk og kan integreres mere skånsomt i omgivelserne.
             </p>
           </div>
         </div>
