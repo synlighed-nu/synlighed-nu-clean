@@ -53,6 +53,29 @@ export default function SynlighedNu() {
         </a>
       </div>
 
+      {/* GRØN OMSTILLING som klikbart badge */}
+      <div className="max-w-4xl mx-auto px-6 pb-16">
+        <a 
+          href="/grøn-omstilling"
+          className="block group"
+        >
+          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#002B5B]/40 transition-all flex items-center justify-between">
+            <div>
+              <div className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
+                GRØN OMSTILLING
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter group-hover:text-[#001B3D]">
+                Den grønne omstilling handler ikke kun om mål
+              </h2>
+              <p className="text-gray-600 mt-3 max-w-md">
+                Den handler om, hvordan vi når dem – og om vi skaber bedre eller dårligere løsninger.
+              </p>
+            </div>
+            <span className="text-4xl text-gray-300 group-hover:text-[#002B5B] transition-colors">→</span>
+          </div>
+        </a>
+      </div>
+
       <section id="de-konkrete-omrader" className="max-w-5xl mx-auto px-6 py-16">
         <ConcreteAreas />
       </section>
