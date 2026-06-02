@@ -11,7 +11,7 @@ const SpeakerButton = dynamic(
 export default function GrønOmstillingPage() {
   const pageText = `
     Den grønne omstilling handler ikke kun om mål.
-    Den handler om, hvordan vi nå dem.
+    Den handler om, hvordan vi når dem.
 
     Når vi griber ind i markedet med støtte og regulering, kan vi enten skabe bedre løsninger eller låse os fast i dårligere løsninger.
 
@@ -22,6 +22,8 @@ export default function GrønOmstillingPage() {
     Et klart eksempel: Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, er det et tegn på at noget er fundamentalt galt. Løsningen er ikke mere tilskud.
 
     Et andet konkret eksempel er din elregning. Du betaler næsten halvdelen af regningen til systemet omkring strømmen – ikke til selve energien. Det er præcis det samme mønster, der gentager sig i den grønne omstilling, når vi vælger store centrale løsninger i stedet for lokal produktion.
+
+    Derudover gør store centrale energisystemer os mere sårbare i krise og krig. Lange elkabler og få store anlæg kræver militær beskyttelse, og de omkostninger ender hos borgerne. Decentral produktion gør samfundet mere robust.
   `;
 
   return (
@@ -71,7 +73,7 @@ export default function GrønOmstillingPage() {
             </p>
           </div>
 
-          {/* NY SEKTION: Elregning */}
+          {/* Elregning */}
           <div className="mt-12">
             <h2 className="text-2xl font-bold tracking-tighter mb-6">Et andet konkret eksempel: Din elregning viser problemet</h2>
             
@@ -121,6 +123,25 @@ export default function GrønOmstillingPage() {
               Når vi laver grøn omstilling ved at bygge flere store centrale anlæg og lange elkabler, 
               forstærker vi netop den del af regningen, der allerede er alt for stor. 
               Lokal produktion og forbrug ville skære en stor del af transport, tab og administration væk.
+            </p>
+          </div>
+
+          {/* NY SEKTION: Sårbarhed og militære omkostninger */}
+          <div className="mt-16">
+            <h2 className="text-2xl font-bold tracking-tighter mb-6">En tredje skjult pris: Øget sårbarhed</h2>
+            
+            <p>
+              Store centrale energisystemer med lange elkabler og få store anlæg gør samfundet mere sårbart i krise og krig. 
+              Kritisk infrastruktur skal beskyttes, og det kræver ekstra militære ressourcer.
+            </p>
+
+            <p className="mt-4">
+              De omkostninger ender hos borgerne – enten direkte via skat eller indirekte gennem højere forsvarsbudgetter. 
+              Decentral og lokal energiproduktion reducerer denne sårbarhed og mindsker behovet for dyr beskyttelse af lange ledningsnet.
+            </p>
+
+            <p className="mt-6 text-sm text-gray-600 italic">
+              Det rigtige regnestykke for den grønne omstilling inkluderer altså ikke kun elregningen – men også de skjulte omkostninger til sårbarhed og sikkerhed.
             </p>
           </div>
         </div>
