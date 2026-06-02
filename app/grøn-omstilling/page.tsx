@@ -13,6 +13,8 @@ export default function GrønOmstillingPage() {
     Den grønne omstilling handler ikke kun om mål.
     Den handler om, hvordan vi når dem.
 
+    Kort sagt: Den nuværende grønne omstilling gentager de samme fejl som det gamle system – bare i grøn indpakning. Vi bygger dyre, sårbare og landskabsbelastende centrale løsninger i stedet for billigere og mere robuste lokale løsninger.
+
     Fokus: Den nuværende grønne omstilling forstærker de problemer, den skal løse.
     Vi bygger store centrale anlæg, lange elkabler og tunge reguleringssystemer – 
     i stedet for at satse på lokal og decentral produktion.
@@ -45,8 +47,18 @@ export default function GrønOmstillingPage() {
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
             Den grønne omstilling handler ikke kun om mål.<br />
-            Den handler om, hvordan vi når dem.
+            Den handler om, hvordan vi nå dem.
           </p>
+
+          {/* === KORT SAGT === */}
+          <div className="mt-8 bg-gray-100 border border-gray-200 rounded-3xl p-6">
+            <p className="font-semibold text-[#002B5B] mb-2">Kort sagt</p>
+            <p className="text-gray-700">
+              Den nuværende grønne omstilling gentager de samme fejl som det gamle system – 
+              bare i grøn indpakning. Vi bygger dyre, sårbare og landskabsbelastende centrale løsninger 
+              i stedet for billigere og mere robuste lokale løsninger.
+            </p>
+          </div>
 
           <p className="mt-8">
             Når vi griber ind i markedet med støtte og regulering, kan vi enten:
