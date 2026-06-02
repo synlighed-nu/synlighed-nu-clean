@@ -22,6 +22,12 @@ export default function Footer() {
           <Link href="https://opencollective.com/synlighed-nu" target="_blank" className="hover:text-white transition-colors underline">
             Støt projektet
           </Link>
+          
+          {/* Vores grundlag – fremhævet fordi det er kerne-dokumentet */}
+          <Link href="/vores-grundlag" className="hover:text-white transition-colors underline font-medium">
+            Vores grundlag
+          </Link>
+
           <Link href="/inspiration" className="hover:text-white transition-colors underline">
             Inspiration
           </Link>
