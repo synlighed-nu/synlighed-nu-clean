@@ -10,20 +10,22 @@ const SpeakerButton = dynamic(
 
 export default function EnergiPage() {
   const pageText = `
-    Lokal produktion fjerner unødvendige tab i elnettet og central infrastruktur.
-    I et ideelt samfund med lokal energi ville vi skulle producere ca. 25 % mindre energi samlet set.
+Lokal produktion fjerner unødvendige tab i elnettet og central infrastruktur. 
+I et ideelt samfund med lokal energi ville vi skulle producere cirka 25 procent mindre energi samlet set.
 
-    Alligevel prioriterer vi massive centraliserede projekter og milliarder i subsidier.
+Alligevel prioriterer vi stadig massive centraliserede projekter og milliarder i subsidier.
 
-    Fokus: Vi bygger et dyrt, tabsgivende og sårbart energisystem – i stedet for at satse på lokal produktion, der er billigere, mere robust og kræver mindre infrastruktur.
+Fokus: Vi bygger et dyrt, tabsgivende og sårbart energisystem – i stedet for at satse på lokal produktion, der er billigere, mere robust og kræver mindre infrastruktur.
 
-    Et bedre alternativ: Over de næste 5 år kan vi gradvist flytte til lokal energiproduktion (sol, vind og batterier) samtidig med at vi afvikler de dyre centrale projekter.
+Et bedre alternativ er at flytte gradvist over til lokal energiproduktion med sol, vind og batterier over de næste fem år, samtidig med at vi afvikler de dyre centrale projekter.
 
-    Hvorfor er det et problem i dag?
-    Store tab i elnettet spilder op til 25 % af energien.
-    Centraliserede projekter skaber høje omkostninger og afhængighed.
-    Subsidier går forud for den billigste løsning: lokal produktion.
-    Vi gør os samtidig mere sårbare og belaster landskabet unødvendigt.
+Hvorfor er det et problem i dag? 
+Store tab i elnettet spilder op til 25 procent af energien. 
+Centraliserede projekter skaber høje omkostninger og afhængighed. 
+Subsidier går forud for den billigste løsning, som er lokal produktion. 
+Samtidig gør vi samfundet mere sårbart og belaster landskabet unødvendigt.
+
+Den billigste og mest robuste løsning er ofte den, vi ikke vælger.
   `;
 
   return (
@@ -49,7 +51,7 @@ export default function EnergiPage() {
             I et ideelt samfund med lokal energi ville vi skulle producere ca. <strong>25 % mindre energi</strong> samlet set.
           </p>
 
-          {/* === FOKUS BOKS === */}
+          {/* FOKUS BOKS */}
           <div className="mt-12 bg-[#002B5B] text-white rounded-3xl p-8">
             <div className="uppercase tracking-[2px] text-sm font-semibold mb-3 text-white/70">
               Fokus
