@@ -14,8 +14,8 @@ export default function GrønOmstillingPage() {
     Den handler om, hvordan vi når dem.
 
     Fokus: Den nuværende grønne omstilling forstærker de problemer, den skal løse.
-    Vi bygger store centrale anlæg, lange elkabler og tunge reguleringssystemer – i stedet for at satse på lokal og decentral produktion.
-    Resultatet er højere elpriser, større sårbarhed, større indgreb i landskabet og mindre innovation.
+    Vi bygger store centrale anlæg, lange elkabler og tunge reguleringssystemer – 
+    i stedet for at satse på lokal og decentral produktion.
 
     Når vi griber ind i markedet med støtte og regulering, kan vi enten skabe bedre løsninger eller låse os fast i dårligere løsninger.
 
@@ -57,7 +57,7 @@ export default function GrønOmstillingPage() {
             <li>Eller låse os fast i dårligere løsninger</li>
           </ul>
 
-          {/* === NY FOKUS-BOKS === */}
+          {/* FOKUS BOKS */}
           <div className="mt-12 bg-[#002B5B] text-white rounded-3xl p-8">
             <div className="uppercase tracking-[2px] text-sm font-semibold mb-3 text-white/70">
               Fokus
@@ -177,6 +177,39 @@ export default function GrønOmstillingPage() {
               Når energiproduktionen koncentreres i få store anlæg, kræver det omfattende infrastruktur, der ændrer landskabet permanent. 
               Decentral og lokal energiproduktion har typisk et væsentligt mindre fodaftryk og kan integreres mere skånsomt i omgivelserne.
             </p>
+          </div>
+
+          {/* === STÆRK AFSLUTNING === */}
+          <div className="mt-20 border-t border-gray-200 pt-12">
+            <h2 className="text-3xl font-bold tracking-tighter mb-6">Hvad betyder det i praksis?</h2>
+            
+            <p className="text-xl">
+              Den grønne omstilling bliver kun reel, hvis vi stopper med at gentage de samme fejl i grøn indpakning.
+            </p>
+
+            <p className="mt-6">
+              Det kræver, at vi begynder at stille de rigtige spørgsmål:
+            </p>
+
+            <ul className="mt-4 space-y-2 text-lg">
+              <li>• Hvor meget af de grønne milliarder går egentlig til energiproduktion – og hvor meget går til systemet omkring den?</li>
+              <li>• Hvorfor prioriterer vi centrale løsninger, når lokale løsninger er billigere og mere robuste?</li>
+              <li>• Hvem betaler prisen for de store elkabler og vindmølleparker – både økonomisk og landskabeligt?</li>
+            </ul>
+
+            <p className="mt-10 text-xl font-semibold">
+              Vi har ikke brug for flere subsidier til det gamle system.<br />
+              Vi har brug for synlighed, lokale løsninger og ærlige regnestykker.
+            </p>
+
+            <div className="mt-10">
+              <a 
+                href="/vores-grundlag" 
+                className="inline-flex items-center gap-3 bg-[#002B5B] hover:bg-[#001B3D] text-white px-8 py-4 rounded-2xl font-semibold text-lg transition"
+              >
+                Læs vores grundlag →
+              </a>
+            </div>
           </div>
         </div>
       </div>
