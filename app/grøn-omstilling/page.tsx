@@ -10,24 +10,23 @@ const SpeakerButton = dynamic(
 
 export default function GrønOmstillingPage() {
   const pageText = `
-    Den grønne omstilling handler ikke kun om mål.
-    Den handler om, hvordan vi når dem.
+Den grønne omstilling handler ikke kun om mål. Den handler om, hvordan vi når dem.
 
-    Kort sagt: Den nuværende grønne omstilling gentager de samme fejl som det gamle system – bare i grøn indpakning. Vi bygger dyre, sårbare og landskabsbelastende centrale løsninger i stedet for billigere og mere robuste lokale løsninger.
+Kort sagt: Den nuværende grønne omstilling gentager de samme fejl som det gamle system – bare i grøn indpakning. Vi bygger dyre, sårbare og landskabsbelastende centrale løsninger i stedet for billigere og mere robuste lokale løsninger.
 
-    Fokus: Den nuværende grønne omstilling forstærker de problemer, den skal løse.
-    Vi bygger store centrale anlæg, lange elkabler og tunge reguleringssystemer – 
-    i stedet for at satse på lokal og decentral produktion.
+Fokus: Den nuværende grønne omstilling forstærker de problemer, den skal løse. Vi bygger store centrale anlæg, lange elkabler og tunge reguleringssystemer i stedet for at satse på lokal og decentral produktion. Resultatet er højere elpriser, større sårbarhed i krise og krig, større indgreb i landskabet og mindre innovation.
 
-    Når vi griber ind i markedet med støtte og regulering, kan vi enten skabe bedre løsninger eller låse os fast i dårligere løsninger.
+Når vi griber ind i markedet med støtte og regulering, kan vi enten skabe bedre løsninger eller låse os fast i dårligere løsninger. Hvis støtte og regulering ikke er designet rigtigt, risikerer vi at nogle løsninger bliver beskyttet, konkurrencen svækkes, og innovationen går langsommere.
 
-    Et klart eksempel: Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, er det et tegn på at noget er fundamentalt galt. Løsningen er ikke mere tilskud.
+Et klart eksempel: Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, er det et tegn på at noget er fundamentalt galt. Løsningen er ikke mere tilskud.
 
-    Et andet konkret eksempel er din elregning. Du betaler næsten halvdelen af regningen til systemet omkring strømmen – ikke til selve energien.
+Et andet konkret eksempel er din elregning. Du betaler næsten halvdelen af regningen til systemet omkring strømmen – ikke til selve energien. Når vi laver grøn omstilling ved at bygge flere store centrale anlæg og lange elkabler, forstærker vi netop den del af regningen, der allerede er alt for stor.
 
-    Derudover gør store centrale energisystemer os mere sårbare i krise og krig. Lange elkabler og få store anlæg kræver militær beskyttelse.
+Store centrale energisystemer gør os også mere sårbare i krise og krig, fordi kritisk infrastruktur skal beskyttes. Det kræver ekstra militære ressourcer, og omkostningerne ender hos borgerne.
 
-    Endelig pynter store elkabler og vindmølleparker ikke ligefrem på landskabet – hverken på land eller til havs.
+Endelig har store elkabler og vindmølleparker en markant visuel påvirkning på landskabet – både på land og til havs. Decentral og lokal energiproduktion har typisk et meget mindre fodaftryk.
+
+Den grønne omstilling bliver kun reel, hvis vi stopper med at gentage de samme fejl i grøn indpakning. Vi har ikke brug for flere subsidier til det gamle system. Vi har brug for synlighed, lokale løsninger og ærlige regnestykker.
   `;
 
   return (
@@ -47,18 +46,8 @@ export default function GrønOmstillingPage() {
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
             Den grønne omstilling handler ikke kun om mål.<br />
-            Den handler om, hvordan vi nå dem.
+            Den handler om, hvordan vi når dem.
           </p>
-
-          {/* === KORT SAGT === */}
-          <div className="mt-8 bg-gray-100 border border-gray-200 rounded-3xl p-6">
-            <p className="font-semibold text-[#002B5B] mb-2">Kort sagt</p>
-            <p className="text-gray-700">
-              Den nuværende grønne omstilling gentager de samme fejl som det gamle system – 
-              bare i grøn indpakning. Vi bygger dyre, sårbare og landskabsbelastende centrale løsninger 
-              i stedet for billigere og mere robuste lokale løsninger.
-            </p>
-          </div>
 
           <p className="mt-8">
             Når vi griber ind i markedet med støtte og regulering, kan vi enten:
