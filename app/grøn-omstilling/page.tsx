@@ -21,9 +21,11 @@ export default function GrønOmstillingPage() {
 
     Et klart eksempel: Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, er det et tegn på at noget er fundamentalt galt. Løsningen er ikke mere tilskud.
 
-    Et andet konkret eksempel er din elregning. Du betaler næsten halvdelen af regningen til systemet omkring strømmen – ikke til selve energien. Det er præcis det samme mønster, der gentager sig i den grønne omstilling, når vi vælger store centrale løsninger i stedet for lokal produktion.
+    Et andet konkret eksempel er din elregning. Du betaler næsten halvdelen af regningen til systemet omkring strømmen – ikke til selve energien.
 
-    Derudover gør store centrale energisystemer os mere sårbare i krise og krig. Lange elkabler og få store anlæg kræver militær beskyttelse, og de omkostninger ender hos borgerne. Decentral produktion gør samfundet mere robust.
+    Derudover gør store centrale energisystemer os mere sårbare i krise og krig. Lange elkabler og få store anlæg kræver militær beskyttelse.
+
+    Endelig pynter store elkabler og vindmølleparker ikke ligefrem på landskabet – hverken på land eller til havs. Det er endnu en skjult omkostning ved den nuværende tilgang.
   `;
 
   return (
@@ -126,22 +128,33 @@ export default function GrønOmstillingPage() {
             </p>
           </div>
 
-          {/* NY SEKTION: Sårbarhed og militære omkostninger */}
+          {/* Sårbarhed */}
           <div className="mt-16">
             <h2 className="text-2xl font-bold tracking-tighter mb-6">En tredje skjult pris: Øget sårbarhed</h2>
             
             <p>
               Store centrale energisystemer med lange elkabler og få store anlæg gør samfundet mere sårbart i krise og krig. 
-              Kritisk infrastruktur skal beskyttes, og det kræver ekstra militære ressourcer.
+              Kritisk infrastruktur skal beskyttes, og det kræver ekstra militære ressourcer. 
+              De omkostninger ender hos borgerne – enten direkte via skat eller indirekte gennem højere forsvarsbudgetter.
+            </p>
+          </div>
+
+          {/* NY SEKTION: Landskab og natur */}
+          <div className="mt-16">
+            <h2 className="text-2xl font-bold tracking-tighter mb-6">En fjerde skjult pris: Landskab og natur</h2>
+            
+            <p>
+              Store elkabler – både på land og til havs – og store vindmølleparker har en markant visuel påvirkning på landskabet. 
+              Det er ikke kun et spørgsmål om æstetik. Det handler også om, hvordan vi behandler naturen og folks oplevelse af deres lokalområde.
             </p>
 
             <p className="mt-4">
-              De omkostninger ender hos borgerne – enten direkte via skat eller indirekte gennem højere forsvarsbudgetter. 
-              Decentral og lokal energiproduktion reducerer denne sårbarhed og mindsker behovet for dyr beskyttelse af lange ledningsnet.
+              Når energiproduktionen koncentreres i få store anlæg, kræver det omfattende infrastruktur, der ændrer landskabet permanent. 
+              Decentral og lokal energiproduktion har typisk et væsentligt mindre fodaftryk pr. produceret kilowatt-time og kan integreres mere skånsomt i omgivelserne.
             </p>
 
             <p className="mt-6 text-sm text-gray-600 italic">
-              Det rigtige regnestykke for den grønne omstilling inkluderer altså ikke kun elregningen – men også de skjulte omkostninger til sårbarhed og sikkerhed.
+              Det samlede regnestykke for den grønne omstilling inkluderer altså ikke kun elprisen, sikkerhed og sårbarhed – men også den fysiske påvirkning af det landskab, vi alle deler.
             </p>
           </div>
         </div>
