@@ -18,6 +18,8 @@ export default function GrønOmstillingPage() {
     Hvis støtte og regulering ikke er designet rigtigt, risikerer vi, at nogle løsninger bliver beskyttet, konkurrencen svækkes, og innovationen går langsommere.
 
     Så vinder ikke nødvendigvis den bedste løsning, men den der passer bedst ind i systemet.
+
+    Et klart eksempel: Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, er det et tegn på at noget er fundamentalt galt. Løsningen er ikke mere tilskud.
   `;
 
   return (
@@ -26,7 +28,6 @@ export default function GrønOmstillingPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + højtaler-knap */}
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Grøn omstilling</h1>
           <SpeakerButton 
@@ -58,10 +59,12 @@ export default function GrønOmstillingPage() {
             Så vinder ikke nødvendigvis den bedste løsning – men den, der passer bedst ind i systemet.
           </p>
 
-          <div className="mt-16 bg-gray-50 border border-gray-200 rounded-3xl p-8">
-            <p className="font-medium">Kort sagt:</p>
+          <div className="mt-12 bg-gray-50 border border-gray-200 rounded-3xl p-8">
+            <p className="font-medium text-[#002B5B]">Et klart eksempel:</p>
             <p className="mt-3">
-              Den grønne omstilling bliver kun en succes, hvis vi designer incitamenterne, så de bedste og mest effektive løsninger naturligt vinder.
+              Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, 
+              er det et tegn på at noget er fundamentalt galt. 
+              Løsningen er ikke mere tilskud.
             </p>
           </div>
         </div>
