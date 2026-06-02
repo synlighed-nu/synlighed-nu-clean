@@ -11,7 +11,7 @@ const SpeakerButton = dynamic(
 export default function GrønOmstillingPage() {
   const pageText = `
     Den grønne omstilling handler ikke kun om mål.
-    Den handler om, hvordan vi når dem.
+    Den handler om, hvordan vi nå dem.
 
     Når vi griber ind i markedet med støtte og regulering, kan vi enten skabe bedre løsninger eller låse os fast i dårligere løsninger.
 
@@ -20,6 +20,8 @@ export default function GrønOmstillingPage() {
     Så vinder ikke nødvendigvis den bedste løsning, men den der passer bedst ind i systemet.
 
     Et klart eksempel: Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, er det et tegn på at noget er fundamentalt galt. Løsningen er ikke mere tilskud.
+
+    Et andet konkret eksempel er din elregning. Du betaler næsten halvdelen af regningen til systemet omkring strømmen – ikke til selve energien. Det er præcis det samme mønster, der gentager sig i den grønne omstilling, når vi vælger store centrale løsninger i stedet for lokal produktion.
   `;
 
   return (
@@ -59,12 +61,66 @@ export default function GrønOmstillingPage() {
             Så vinder ikke nødvendigvis den bedste løsning – men den, der passer bedst ind i systemet.
           </p>
 
+          {/* Eksempel 1: Vindmøller */}
           <div className="mt-12 bg-gray-50 border border-gray-200 rounded-3xl p-8">
             <p className="font-medium text-[#002B5B]">Et klart eksempel:</p>
             <p className="mt-3">
               Når regeringen vil have flere vindmøller, og der ikke er nogen der byder på forslaget, 
               er det et tegn på at noget er fundamentalt galt. 
               Løsningen er ikke mere tilskud.
+            </p>
+          </div>
+
+          {/* NY SEKTION: Elregning */}
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold tracking-tighter mb-6">Et andet konkret eksempel: Din elregning viser problemet</h2>
+            
+            <p>
+              Tag denne rigtige elregning fra februar 2026 (Andel Energi). Den afslører præcis det samme mønster:
+            </p>
+
+            <div className="mt-6 overflow-x-auto">
+              <table className="min-w-full border border-gray-200 rounded-2xl overflow-hidden text-sm">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="text-left px-6 py-4 font-semibold">Post</th>
+                    <th className="text-right px-6 py-4 font-semibold">Beløb</th>
+                    <th className="text-right px-6 py-4 font-semibold">Andel</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr>
+                    <td className="px-6 py-4">Ren strøm (288 kWh)</td>
+                    <td className="px-6 py-4 text-right">349,96 kr</td>
+                    <td className="px-6 py-4 text-right">~55 %</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4">Transport + afgifter</td>
+                    <td className="px-6 py-4 text-right">189,72 kr</td>
+                    <td className="px-6 py-4 text-right">~30 %</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4">Abonnementer</td>
+                    <td className="px-6 py-4 text-right">98,68 kr</td>
+                    <td className="px-6 py-4 text-right">~15 %</td>
+                  </tr>
+                  <tr className="font-medium bg-gray-50">
+                    <td className="px-6 py-4">I alt</td>
+                    <td className="px-6 py-4 text-right">638,36 kr</td>
+                    <td className="px-6 py-4 text-right">100 %</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="mt-6 font-medium">
+              Du betaler næsten halvdelen af regningen til <span className="text-[#E30613]">systemet omkring strømmen</span> – ikke til selve energien.
+            </p>
+
+            <p className="mt-4">
+              Når vi laver grøn omstilling ved at bygge flere store centrale anlæg og lange elkabler, 
+              forstærker vi netop den del af regningen, der allerede er alt for stor. 
+              Lokal produktion og forbrug ville skære en stor del af transport, tab og administration væk.
             </p>
           </div>
         </div>
