@@ -10,18 +10,16 @@ const SpeakerButton = dynamic(
 
 export default function RentDrikkevandPage() {
   const pageText = `
-    Pesticidrester findes i over halvdelen af alle boringer.
-    Vi bruger milliarder af kroner på oprensning og nye boringer i stedet for at beskytte grundvandet mod sprøjtning.
-    Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
+Pesticidrester findes i over halvdelen af alle boringer i Danmark. 
+Vi bruger milliarder af kroner på at rense grundvandet og lave nye boringer, i stedet for at beskytte det mod sprøjtning.
 
-    Et bedre alternativ:
-    Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider.
+Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
 
-    Hvorfor er det et problem i dag?
-    Pesticider forurener vores drikkevand.
-    Vi renser i stedet for at forebygge.
-    Det koster milliarder i oprensning og nye boringer.
-    Vi risikerer langsigtede helbredseffekter for befolkningen.
+Fokus: Vi vælger at forurene vores drikkevand med pesticider og betaler derefter milliarder for at rense det op. I stedet for at beskytte grundvandet, vælger vi at forurene det og så betale for oprensning bagefter.
+
+Et bedre alternativ er at indføre en langt stærkere beskyttelse af grundvandet og reducere brugen af pesticider markant over de næste fem år.
+
+Hvorfor er det et problem i dag? Fordi pesticider forurener vores drikkevand, vi renser i stedet for at forebygge, det koster milliarder i oprensning og nye boringer, og vi risikerer langsigtede helbredseffekter for befolkningen.
   `;
 
   return (
@@ -30,15 +28,28 @@ export default function RentDrikkevandPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + højtaler-knap på samme linje */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Rent drikkevand</h1>
           <SpeakerButton 
             text={pageText} 
-            endingAxiomIndex={4}     // "Beskyttelse af grundvandet er ikke til forhandling."
+            endingAxiomIndex={4} 
           />
         </div>
-        
+
+        {/* FOKUS BOKS */}
+        <div className="bg-[#002B5B] text-white rounded-3xl p-8 mb-12">
+          <div className="uppercase tracking-[2px] text-sm font-semibold mb-3 text-white/70">
+            Fokus
+          </div>
+          <p className="text-2xl font-semibold leading-tight">
+            Vi vælger at forurene vores drikkevand med pesticider<br />
+            og betaler derefter milliarder for at rense det op.
+          </p>
+          <p className="mt-4 text-white/90">
+            I stedet for at beskytte grundvandet, forurener vi det og betaler bagefter for oprensning.
+          </p>
+        </div>
+
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
             Pesticidrester findes i over halvdelen af alle boringer.
@@ -48,13 +59,14 @@ export default function RentDrikkevandPage() {
             Vi bruger milliarder af kroner på oprensning og nye boringer i stedet for at beskytte grundvandet mod sprøjtning.
           </p>
 
-          <p className="text-xl font-semibold text-[#E30613]">
+          <p className="text-xl font-semibold text-[#E30613] mt-6">
             Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
           </p>
 
           <h3 className="text-2xl font-semibold mt-12 mb-6">Et bedre alternativ</h3>
           <p>
-            Over de næste 5 år kan vi gradvist indføre strengere beskyttelse af grundvandet og reducere brugen af pesticider.
+            Over de næste 5 år kan vi gradvist indføre en langt stærkere beskyttelse af grundvandet 
+            og reducere brugen af pesticider markant.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
