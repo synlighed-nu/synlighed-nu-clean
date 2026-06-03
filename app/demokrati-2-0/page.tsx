@@ -11,16 +11,13 @@ const SpeakerButton = dynamic(
 
 export default function Demokrati20Page() {
   const pageText = `
-    Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år.
-    Uden løbende forbedring bevæger vi os langsomt mod en blanding af idiokrati og kontrol.
+Det gamle demokrati er ikke dårligt i sig selv. Det er bare ikke blevet opdateret i over 250 år.
 
-    I filmen Idiokrati bliver samfundet dumt, fordi ingen længere tænker kritisk.
-    I George Orwells 1984 bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.
+Demokrati har altid udviklet sig. Fra enevælde til repræsentativt demokrati. Fra almindelig stemmeret til kvinders stemmeret. Hver gang har det været et svar på tidens udfordringer.
 
-    Begge dystopier er advarsler om det samme: et samfund uden kritisk tænkning og kreativitet kollapser.
+I dag står vi over for nye problemer: manglende gennemsigtighed, langsommelighed og beslutninger, der ikke længere afspejler virkeligheden. Derfor er Demokrati 2.0 ikke en færdig løsning – det er det næste naturlige skridt.
 
-    Derfor er Demokrati 2.0 ikke en mulighed – det er en nødvendighed.
-    Vi skal opgradere demokratiet med fuld synlighed, agil reasoning og klare, urokkelige axioms.
+Uden løbende udvikling risikerer vi at bevæge os mod en blanding af idiokrati og kontrol. Derfor har vi brug for tre grundlæggende opgraderinger: fuld synlighed, agil reasoning og klare, urokkelige axioms.
   `;
 
   return (
@@ -29,29 +26,32 @@ export default function Demokrati20Page() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Demokrati 2.0</h1>
           <SpeakerButton text={pageText} endingAxiomIndex={3} />
         </div>
-        
+
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl leading-relaxed">
-            Det gamle demokrati er ikke dårligt i sig selv – det er bare blevet misbrugt og ikke opdateret i over 250 år.
-          </p>
-          <p className="mt-8">
-            Uden løbende forbedring bevæger vi os langsomt mod en blanding af <strong>Idiokrati</strong> og <strong>1984</strong>.
+            Det gamle demokrati er ikke dårligt i sig selv. Det er bare ikke blevet opdateret i over 250 år.
           </p>
 
-          <p className="mt-8">
-            I filmen <strong>Idiokrati</strong> bliver samfundet dumt, fordi ingen længere tænker kritisk. 
-            I George Orwells <strong>1984</strong> bliver samfundet kontrolleret og livløst, fordi kreativiteten og den frie tanke er systematisk udryddet.
+          <p className="mt-6 text-xl">
+            Demokrati har altid udviklet sig. Fra enevælde til repræsentativt demokrati. 
+            Fra almindelig stemmeret til kvinders stemmeret. Hver gang har det været et svar på tidens udfordringer.
           </p>
 
-          <p className="text-2xl font-semibold text-[#002B5B] mt-12">
-            Derfor er Demokrati 2.0 ikke en mulighed – det er en nødvendighed.
+          <p className="mt-8 text-xl">
+            I dag står vi over for nye problemer: manglende gennemsigtighed, langsommelighed og beslutninger, 
+            der ikke længere afspejler virkeligheden.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
+          <p className="mt-10 text-2xl font-semibold text-[#002B5B]">
+            Derfor er Demokrati 2.0 ikke en færdig løsning.<br />
+            Det er det næste naturlige skridt.
+          </p>
+
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
             <div className="bg-white border border-gray-200 rounded-3xl p-6">
               <h4 className="font-semibold mb-2">Fuld synlighed</h4>
               <p className="text-gray-600">Så alle kan se, hvor skattekronerne går hen og hvilke konsekvenser beslutningerne har.</p>
@@ -65,15 +65,20 @@ export default function Demokrati20Page() {
               <p className="text-gray-600">Nogle få grundlæggende regler der aldrig må forhandles væk.</p>
             </div>
           </div>
+
+          <p className="mt-12 text-lg text-gray-600">
+            Uden løbende udvikling bevæger vi os langsomt mod en blanding af <strong>Idiokrati</strong> og <strong>1984</strong> – 
+            enten et samfund, der bliver for dumt til at styre sig selv, eller et samfund, der bliver for kontrolleret til at være frit.
+          </p>
         </div>
 
         {/* Genvej til Inspiration */}
-        <div className="mt-20 text-center">
+        <div className="mt-16 text-center">
           <Link 
-            href="/inspiration"
+            href="/inspiration" 
             className="inline-flex items-center gap-3 text-[#002B5B] hover:text-[#001B3D] font-medium text-lg"
           >
-            Se flere inspirerende initiativer og projekter 
+            Se eksempler på initiativer, der allerede arbejder på denne måde 
             <span className="text-2xl">→</span>
           </Link>
         </div>
