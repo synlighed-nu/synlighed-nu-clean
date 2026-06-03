@@ -11,11 +11,13 @@ const SpeakerButton = dynamic(
 export default function SundhedPage() {
   const pageText = `
 Vi bruger cirka 280 milliarder kroner om året på sundhed i Danmark. 
+Udgifterne stiger år efter år, selvom vi bruger stadig flere penge på behandling.
+
 Stort fokus på medicin og behandling – meget lidt på at forebygge sygdom.
 
 Vi reparerer mennesker, vi kunne have holdt sunde.
 
-Fokus: Vi bruger enorme summer på at behandle sygdomme, vi i mange tilfælde kunne have forebygget. Systemet belønner behandling frem for forebyggelse, og medicinindustrien har stor indflydelse på prioriteringerne.
+Fokus: Vi bruger enorme summer på at behandle sygdomme, vi i mange tilfælde kunne have forebygget. Systemet belønner behandling frem for forebyggelse, og medicinindustrien har stor indflydelse på prioriteringerne. Dygtige læger og sundhedsprofessionelle følger naturligt de incitamenter, systemet skaber.
 
 Et bedre alternativ er at flytte ressourcer fra behandling til reel forebyggelse over de næste fem år – blandt andet gennem bedre madvaner i institutioner, tidligere opsporing og stærkere fokus på fysisk og mental sundhed.
 
@@ -46,13 +48,17 @@ Hvorfor er det et problem i dag? Fordi vi primært betaler for at reparere i ste
             vi i mange tilfælde kunne have forebygget.
           </p>
           <p className="mt-4 text-white/90">
-            Systemet belønner behandling frem for forebyggelse, og medicinindustrien har stor indflydelse på prioriteringerne.
+            Udgifterne stiger år efter år. Systemet belønner behandling frem for forebyggelse, 
+            og dygtige læger og sundhedsprofessionelle følger de incitamenter, der findes.
           </p>
         </div>
 
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
             Vi bruger ca. <strong>280 milliarder kroner årligt</strong> på sundhed.
+          </p>
+          <p>
+            Udgifterne stiger år efter år, selvom vi bruger stadig flere penge på behandling og medicin.
           </p>
           <p>
             Stort fokus på medicin og behandling – meget lidt på at forebygge sygdom.
@@ -68,15 +74,16 @@ Hvorfor er det et problem i dag? Fordi vi primært betaler for at reparere i ste
             og et stærkere fokus på fysisk og mental sundhed i hverdagen.
           </p>
           <p className="mt-4">
-            Forebyggelse er både billigere og bedre end behandling – og det er den eneste måde at bryde den negative spiral på.
+            Forebyggelse er både billigere og bedre end behandling – og det er den eneste måde at bremse den stigende udgiftskurve på længere sigt.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
           <ul className="list-disc pl-6 space-y-3">
+            <li>Udgifterne stiger år efter år, uden at vi får markant bedre sundhed</li>
             <li>Penge bruges primært på at reparere frem for at forebygge</li>
+            <li>Systemet belønner sygdom frem for sundhed</li>
             <li>Medicinindustrien har stor indflydelse på prioriteringer</li>
             <li>Forebyggelse giver både bedre sundhed og store langsigtede besparelser</li>
-            <li>Systemet belønner sygdom frem for sundhed</li>
           </ul>
 
           <div className="mt-12 bg-gray-50 border border-gray-200 rounded-3xl p-8">
