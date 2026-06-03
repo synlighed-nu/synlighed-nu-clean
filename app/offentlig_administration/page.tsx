@@ -10,22 +10,17 @@ const SpeakerButton = dynamic(
 
 export default function OffentligAdministrationPage() {
   const pageText = `
-    En stor del af de offentlige udgifter går til proces, kontrol og administration – frem for reel værdi til borgerne.
+En stor del af de offentlige udgifter går til proces, kontrol og administration – frem for reel værdi til borgerne.
 
-    Vi har skabt et embed-værk i stedet for et reasoning-værk.
+Vi har skabt et embed-værk i stedet for et reasoning-værk.
 
-    Forslag til berørte medarbejdere:
-    Hvis en medarbejder har været ansat i det offentlige i mere end 2 år, skal vedkommende være berettiget til en fratrædelsesordning på 1 år med fuld løn. 
-    Det giver tryghed og tid til omstilling, så vi undgår kaos under de nødvendige forandringer.
+Fokus: En stor del af skattekronerne går ikke til borgerne, men til administration, kontrol og bureaukrati. Systemet belønner proces frem for resultater, og det skaber unødvendigt bureaukrati og ineffektivitet.
 
-    Et bedre alternativ:
-    Over de næste 5 år kan vi ændre incitamenterne i den offentlige sektor, så der belønnes resultater og reel værdiskabelse frem for proces og kontrol.
+Et bedre alternativ er at ændre incitamenterne i den offentlige sektor over de næste fem år, så der belønnes resultater og reel værdiskabelse frem for proces og kontrol.
 
-    Hvorfor er det et problem i dag?
-    En stor del af skattekronerne går til administration og kontrol.
-    Systemet belønner proces frem for resultater.
-    Det skaber unødvendigt bureaukrati og ineffektivitet.
-    Borgerne oplever langsommelighed og ringe værdi for pengene.
+For at give tryghed under forandringerne foreslår vi, at medarbejdere der har været ansat i det offentlige i mere end to år, får ret til en fratrædelsesordning på et år med fuld løn.
+
+Hvorfor er det et problem i dag? Fordi en stor del af skattekronerne går til administration og kontrol, systemet belønner proces frem for resultater, det skaber unødvendigt bureaukrati og ineffektivitet, og borgerne oplever langsommelighed og ringe værdi for pengene.
   `;
 
   return (
@@ -34,27 +29,41 @@ export default function OffentligAdministrationPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + højtaler-knap på samme linje */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Offentlig administration</h1>
           <SpeakerButton 
             text={pageText} 
             endingAxiomIndex={3} 
           />
         </div>
-        
+
+        {/* FOKUS BOKS */}
+        <div className="bg-[#002B5B] text-white rounded-3xl p-8 mb-12">
+          <div className="uppercase tracking-[2px] text-sm font-semibold mb-3 text-white/70">
+            Fokus
+          </div>
+          <p className="text-2xl font-semibold leading-tight">
+            En stor del af skattekronerne går ikke til borgerne, <br />
+            men til administration, kontrol og bureaukrati.
+          </p>
+          <p className="mt-4 text-white/90">
+            Systemet belønner proces frem for resultater – og det skaber unødvendigt bureaukrati og ineffektivitet.
+          </p>
+        </div>
+
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
             En stor del af de offentlige udgifter går til proces, kontrol og administration – frem for reel værdi til borgerne.
           </p>
 
-          <p className="text-xl font-semibold text-[#E30613]">
+          <p className="text-xl font-semibold text-[#E30613] mt-6">
             Vi har skabt et embed-værk i stedet for et reasoning-værk.
           </p>
 
           <h3 className="text-xl font-semibold mt-12 mb-4">Forslag til berørte medarbejdere</h3>
           <p>
-            Hvis en medarbejder har været ansat i det offentlige i mere end 2 år, skal vedkommende være berettiget til en <strong>fratrædelsesordning på 1 år</strong> med fuld løn. 
+            Hvis en medarbejder har været ansat i det offentlige i mere end 2 år, skal vedkommende være berettiget til en 
+            <strong> fratrædelsesordning på 1 år</strong> med fuld løn. 
             Det giver tryghed og tid til omstilling, så vi undgår kaos under de nødvendige forandringer.
           </p>
 
@@ -73,27 +82,20 @@ export default function OffentligAdministrationPage() {
 
           <div className="mt-12 bg-gray-50 border border-gray-200 rounded-3xl p-8">
             <p className="font-medium text-[#002B5B]">Officielle kilder:</p>
-            <div className="mt-4 space-y-4">
+            <div className="mt-4 space-y-3">
               <a 
                 href="https://www.kl.dk/media/ugjnkfvp/benspaend-fra-staten-skaber-unoedvendigt-bureaukrati-i-kommunerne-maj2023.pdf" 
                 target="_blank"
-                className="block text-[#002B5B] hover:underline flex items-center gap-2"
+                className="block text-[#002B5B] hover:underline"
               >
-                KL – Benspænd fra staten skaber unødvendigt bureaukrati <span className="text-xl">↗</span>
+                KL – Benspænd fra staten skaber unødvendigt bureaukrati
               </a>
               <a 
                 href="https://www.rigsrevisionen.dk/" 
                 target="_blank"
-                className="block text-[#002B5B] hover:underline flex items-center gap-2"
+                className="block text-[#002B5B] hover:underline"
               >
-                Rigsrevisionen – Revision af statens administration <span className="text-xl">↗</span>
-              </a>
-              <a 
-                href="https://www.dst.dk/da/Statistik/emner/oekonomi/offentlig-oekonomi/offentlig-sektors-oekonomi" 
-                target="_blank"
-                className="block text-[#002B5B] hover:underline flex items-center gap-2"
-              >
-                Danmarks Statistik – Offentlig sektors økonomi og administration <span className="text-xl">↗</span>
+                Rigsrevisionen – Revision af statens administration
               </a>
             </div>
           </div>
