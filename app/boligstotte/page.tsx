@@ -19,9 +19,9 @@ Så vi gør noget mærkeligt: Vi betaler for høje boligpriser, og bagefter beta
 
 Det svarer til næsten én hel Øresundsbro hvert eneste år.
 
-Et bedre alternativ er at afvikle boligstøtten gradvist over de næste fem år, samtidig med at vi bygger et stort antal nye, 100 procent selvforsynende boliger med sol, vind og batterier. På den måde kan vi både sænke de løbende boligomkostninger og presse boligpriserne ned gennem øget udbud.
+Fokus: Vi bruger milliarder på at holde boligpriserne kunstigt høje – og betaler derefter endnu flere penge for at kompensere for de samme høje priser. Systemet er blevet afhængigt af støtten i stedet for at løse det grundlæggende problem.
 
-Hvorfor er det et problem i dag? Fordi systemet holder boligpriserne kunstigt høje, gør det sværere for unge at komme ind på boligmarkedet, og bruger milliarder uden at løse det underliggende problem. Det skaber et system, der er afhængigt af støtte for at fungere.
+Et bedre alternativ er at afvikle boligstøtten gradvist over de næste fem år, samtidig med at vi bygger et stort antal nye, 100 procent selvforsynende boliger med sol, vind og batterier. På den måde kan vi både sænke de løbende boligomkostninger og presse boligpriserne ned gennem øget udbud.
   `.trim();
 
   return (
@@ -29,6 +29,8 @@ Hvorfor er det et problem i dag? Fordi systemet holder boligpriserne kunstigt h�
       <Nav simple />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
+        
+        {/* Titel + DEV + SpeakerButton */}
         <div className="flex items-center gap-4 mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
           <span className="text-red-600 font-bold text-sm bg-red-100 px-3 py-1 rounded-full whitespace-nowrap">
@@ -38,7 +40,21 @@ Hvorfor er det et problem i dag? Fordi systemet holder boligpriserne kunstigt h�
 
         <SpeakerButton text={pageText} />
 
-        <div className="prose prose-lg max-w-none text-gray-700 mt-10">
+        {/* FOKUS BOKS - Tidligt på siden */}
+        <div className="mt-10 bg-[#002B5B] text-white rounded-3xl p-8">
+          <div className="uppercase tracking-[2px] text-sm font-semibold mb-3 text-white/70">
+            Fokus
+          </div>
+          <p className="text-2xl font-semibold leading-tight">
+            Vi bruger milliarder på at holde boligpriserne kunstigt høje –<br />
+            og betaler derefter endnu flere penge for at kompensere for de samme høje priser.
+          </p>
+          <p className="mt-4 text-white/90">
+            Systemet er blevet afhængigt af støtten i stedet for at løse det grundlæggende boligproblem.
+          </p>
+        </div>
+
+        <div className="prose prose-lg max-w-none text-gray-700 mt-12">
           <p className="text-2xl font-medium">Vi bruger 18 milliarder kroner om året.</p>
           <p className="text-2xl font-medium">Men vi løser ikke problemet.</p>
 
