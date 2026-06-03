@@ -14,7 +14,7 @@ Vores grundlag handler om tre ting: Synlighed først, Agil reasoning og klare Ax
 
 Vi tror på et samfund hvor alle kan se, hvad der egentlig sker med vores fælles penge. Hvor beslutninger ikke bliver truffet i lukkede rum. Hvor man ikke bare skal betale regningen uden at vide, hvad man egentlig betaler for.
 
-Det nuværende system gentager de samme fejl år efter år, fordi ingen rigtig kan se konsekvenserne af vores beslutninger. Vi løser problemer ved at kompensere for dem i stedet for at fjerne årsagerne. Derfor bliver tingene dyrere, langsommere og dårligere – selv når vi siger, at vi vil det modsatte.
+Det nuværende system gentager de samme fejl år efter år, fordi ingen rigtig kan se konsekvenserne af vores beslutninger. Vi løser problemer ved at kompensere for dem i stedet for at fjerne årsagerne.
 
 Derfor er vores grundlag simpelt:
 
@@ -24,7 +24,7 @@ Agil reasoning – når virkeligheden er kendt, skal vi kunne handle hurtigt og 
 
 Axiom – nogle få grundlæggende regler der aldrig må forhandles væk.
 
-Demokrati 2.0 er ikke en mulighed. Det er en nødvendighed. Uden løbende udvikling bevæger vi os mod idiokrati.
+Vi ser Demokrati 2.0 som det næste naturlige skridt i udviklingen af demokratiet. Ikke som en endelig model, men som en nødvendig opgradering af det system, vi har arvet. Uden løbende udvikling bevæger vi os mod idiokrati.
 
 Vi er ikke bedrevidende. Vi er nysgerrige. Vi vil ikke erstatte det gamle system – vi vil gøre det gennemsigtigt, så det kan blive bedre.
 
@@ -53,7 +53,8 @@ Du behøver ikke at acceptere, at det er sådan det er. Du kan kræve at se regn
           </p>
 
           <p className="mt-10">
-            Det nuværende system gentager de samme fejl år efter år, fordi vi ikke kan se konsekvenserne af vores beslutninger. Vi løser problemer ved at kompensere for dem i stedet for at fjerne årsagerne.
+            Det nuværende system gentager de samme fejl år efter år, fordi vi ikke kan se konsekvenserne af vores beslutninger. 
+            Vi løser problemer ved at kompensere for dem i stedet for at fjerne årsagerne.
           </p>
 
           <h2 className="text-3xl font-bold mt-16 mb-6">Derfor er vores grundlag simpelt</h2>
@@ -64,9 +65,10 @@ Du behøver ikke at acceptere, at det er sådan det er. Du kan kræve at se regn
           </ul>
 
           <p className="mt-12 text-2xl font-semibold">
-            Demokrati 2.0 er ikke en mulighed. Det er en nødvendighed.
+            Vi ser Demokrati 2.0 som det næste naturlige skridt i udviklingen af demokratiet.
           </p>
           <p className="text-xl">
+            Ikke som en endelig model, men som en nødvendig opgradering af det system, vi har arvet. 
             Uden løbende udvikling bevæger vi os mod idiokrati.
           </p>
 
