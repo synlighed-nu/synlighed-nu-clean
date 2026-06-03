@@ -43,7 +43,7 @@ Hvorfor er det et problem i dag? Fordi en stor del af skattekronerne går til ad
             Fokus
           </div>
           <p className="text-2xl font-semibold leading-tight">
-            En stor del af skattekronerne går ikke til borgerne, <br />
+            En stor del af skattekronerne går ikke til borgerne,<br />
             men til administration, kontrol og bureaukrati.
           </p>
           <p className="mt-4 text-white/90">
