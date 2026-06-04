@@ -24,7 +24,7 @@ Agil reasoning – når virkeligheden er kendt, skal vi kunne handle hurtigt og 
 
 Axiom – nogle få grundlæggende regler der aldrig må forhandles væk.
 
-Et af de vigtigste Axiomer er: Vi ødelægger ikke vores drikkevand, vores natur eller de næste generationers evne til at tænke selv.
+Hurtigere. Bedre. Billigere. er ikke bare en slogan. Det er et værktøj til at vurdere, om en løsning faktisk forbedrer systemet på en holdbar måde. Hvis noget kun bliver bedre på én parameter, mens de to andre forværres, er det sjældent en reel forbedring – det er blot en forskydning af problemet.
 
 Vi ser Demokrati 2.0 som det næste naturlige skridt i udviklingen af demokratiet. Ikke som en endelig model, men som en nødvendig opgradering af det system, vi har arvet. Uden løbende udvikling bevæger vi os mod idiokrati.
 
@@ -67,14 +67,22 @@ Du behøver ikke at acceptere, at det er sådan det er. Du kan kræve at se regn
             <li><strong>Axiom</strong> – nogle få grundlæggende regler der aldrig må forhandles væk.</li>
           </ul>
 
-          {/* NYT SAMMENBINDEDE AXIOM - mere integreret */}
+          {/* NYT AXIOM */}
           <div className="mt-10 border-l-4 border-[#002B5B] pl-6">
             <p className="font-semibold text-xl">Et af de vigtigste Axiomer:</p>
             <p className="mt-2 text-xl font-medium text-[#002B5B]">
               Vi ødelægger ikke vores drikkevand, vores natur eller de næste generationers evne til at tænke selv.
             </p>
-            <p className="mt-2 text-gray-600">
-              Dette princip binder mange af vores andre principper sammen. Det handler om langsigtet ansvar.
+          </div>
+
+          {/* Ny kort forklaring af sloganet */}
+          <div className="mt-10">
+            <p className="text-xl font-semibold">
+              "Hurtigere. Bedre. Billigere." er ikke bare en slogan.
+            </p>
+            <p className="mt-2 text-lg text-gray-700">
+              Det er et værktøj til at vurdere, om en løsning faktisk forbedrer systemet på en holdbar måde. 
+              Hvis noget kun bliver bedre på én parameter, mens de to andre forværres, er det sjældent en reel forbedring – det er blot en forskydning af problemet.
             </p>
           </div>
 
