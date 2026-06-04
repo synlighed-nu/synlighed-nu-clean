@@ -8,19 +8,17 @@ const SpeakerButton = dynamic(
   { ssr: false }
 );
 
-export default function ØkonomiPage() {
+export default function OffentligAdministrationPage() {
   const pageText = `
-Andre folks penge på andre folk.
+En stor del af de offentlige udgifter går til proces, kontrol og administration frem for reel værdi til borgerne.
 
-Milton Friedman beskrev det præcist: Der findes fire måder at bruge penge på. Den fjerde og farligste er at bruge andre folks penge på andre folk.
+Vi har skabt et embed-værk i stedet for et reasoning-værk.
 
-Det er præcis, hvad der sker, når staten, regioner eller kommuner bygger stort. Det er ikke politikerens eller embedsmandens egne penge. Det er heller ikke deres egne børn eller naboer, der skal bruge det færdige byggeri. Det er skatteborgernes penge.
+Fokus: En stor del af skattekronerne går ikke til borgerne, men til administration, kontrol og bureaukrati. Systemet belønner proces frem for resultater, og det skaber unødvendigt bureaukrati og ineffektivitet.
 
-Når ingen af de involverede har deres egen hud i spillet, forsvinder den sunde økonomiske nærrighed og den naturlige omtanke, som vi alle har, når vi bruger vores egne penge.
+Et bedre alternativ er at ændre incitamenterne i den offentlige sektor over de næste fem år, så der belønnes resultater og reel værdiskabelse frem for proces og kontrol. For at give tryghed under en sådan omstilling kan man give medarbejdere, der har været ansat i mange år, en ordentlig overgangsordning.
 
-I et privat byggeri står håndværkeren ansigt til ansigt med kunden. I et stort offentligt byggeri forsvinder dette ansvar næsten fuldstændigt. Ansvaret bliver spredt ud i et bureaukratisk vakuum.
-
-Derudover belønner systemet ofte det modsatte af sund fornuft: Hvis en offentlig afdeling ikke bruger hele sit budget, risikerer den at få mindre næste år. Derfor er der et indbygget incitament til at bruge pengene op – selv når det er unødvendigt.
+Hvorfor er det et problem i dag? Fordi en stor del af skattekronerne går til administration og kontrol, systemet belønner proces frem for resultater, det skaber unødvendigt bureaukrati og ineffektivitet, og borgerne oplever langsommelighed og ringe værdi for pengene.
   `;
 
   return (
@@ -30,8 +28,8 @@ Derudover belønner systemet ofte det modsatte af sund fornuft: Hvis en offentli
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-5xl font-bold tracking-tighter">Økonomi</h1>
-          <SpeakerButton text={pageText} endingAxiomIndex={2} />
+          <h1 className="text-5xl font-bold tracking-tighter">Offentlig administration</h1>
+          <SpeakerButton text={pageText} endingAxiomIndex={3} />
         </div>
 
         {/* FOKUS BOKS */}
@@ -40,61 +38,59 @@ Derudover belønner systemet ofte det modsatte af sund fornuft: Hvis en offentli
             Fokus
           </div>
           <p className="text-2xl font-semibold leading-tight">
-            Vi bruger andre folks penge på andre folk.
+            En stor del af skattekronerne går ikke til borgerne,<br />
+            men til administration, kontrol og bureaukrati.
           </p>
           <p className="mt-4 text-white/90">
-            Når ingen af de involverede har deres egen hud i spillet, forsvinder den sunde økonomiske nærrighed og den naturlige omtanke.
+            Systemet belønner proces frem for resultater – og det skaber unødvendigt bureaukrati og ineffektivitet.
           </p>
         </div>
 
         <div className="prose prose-lg max-w-none text-gray-700">
-          <h2 className="text-3xl font-semibold mb-6">Andre folks penge på andre folk</h2>
-          
-          <p className="text-xl">
-            Milton Friedman beskrev det præcist: Der findes fire måder at bruge penge på. 
-            Den fjerde og farligste er:
-          </p>
-          <p className="text-2xl font-medium text-[#E30613] my-8">
-            „At bruge andre folks penge på andre folk.“
+          <p className="text-2xl font-medium">
+            En stor del af de offentlige udgifter går til proces, kontrol og administration – frem for reel værdi til borgerne.
           </p>
 
+          <p className="text-xl font-semibold text-[#E30613] mt-6">
+            Vi har skabt et embed-værk i stedet for et reasoning-værk.
+          </p>
+
+          <h3 className="text-2xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
-            Det er præcis, hvad der sker, når staten, regioner eller kommuner bygger stort. 
-            Det er ikke politikerens eller embedsmandens egne penge. Det er heller ikke deres egne børn eller naboer, 
-            der skal bruge det færdige byggeri. Det er <strong>skatteborgernes penge</strong>, der bruges på projekter til borgerne.
-          </p>
-
-          <p className="mt-6">
-            Når ingen af de involverede har deres egen hud i spillet, forsvinder den sunde økonomiske nærrighed 
-            og den naturlige omtanke, som vi alle har, når vi bruger vores egne penge.
-          </p>
-
-          <h3 className="text-2xl font-semibold mt-14 mb-6">Hvorfor det går galt</h3>
-          <p>
-            I et privat byggeri står håndværkeren ansigt til ansigt med kunden. Fejl og ekstraregninger har direkte konsekvenser 
-            for hans rygte og fremtidige ordrer.
+            Over de næste 5 år kan vi ændre incitamenterne i den offentlige sektor, så der belønnes 
+            resultater og reel værdiskabelse frem for proces og kontrol.
           </p>
           <p className="mt-4">
-            I et stort offentligt byggeri forsvinder dette ansvar næsten fuldstændigt. Ansvabet bliver spredt ud i et bureaukratisk vakuum, 
-            hvor alle kan pege på hinanden.
+            For at give tryghed under en sådan omstilling kan man give medarbejdere, der har været ansat i mange år, 
+            en ordentlig overgangsordning – så de ikke bliver tabere i en nødvendig modernisering.
           </p>
 
-          <p className="mt-6">
-            Derudover belønner systemet ofte det modsatte af sund fornuft: Hvis en offentlig afdeling ikke bruger hele sit budget, 
-            risikerer den at få mindre næste år. Derfor er der et indbygget incitament til at bruge pengene op – selv når det er unødvendigt.
-          </p>
+          <h3 className="text-2xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
+          <ul className="list-disc pl-6 space-y-3">
+            <li>En stor del af skattekronerne går til administration og kontrol i stedet for borgerne</li>
+            <li>Systemet belønner proces og dokumentation frem for resultater</li>
+            <li>Det skaber unødvendigt bureaukrati og ineffektivitet</li>
+            <li>Borgerne oplever langsommelighed og ringe værdi for pengene</li>
+          </ul>
 
-          <h3 className="text-2xl font-semibold mt-14 mb-6">Et lysende modstykke</h3>
-          <p>
-            Da man byggede Øresundsbroen, valgte man en helt anden model: et lukket, kommercielt konsortium, der lånte pengene på det private marked 
-            og skulle betale dem tilbage gennem broafgifter. De havde rigtige penge på spil og stod ansigt til ansigt med både banker og fremtidige brugere.
-          </p>
-
-          <div className="mt-16 border-t border-gray-200 pt-12">
-            <p className="text-center text-gray-600">
-              Når vi fjerner det personlige ansvar og den direkte forbindelse mellem dem, der bruger pengene, og dem, der betaler, 
-              ødelægger vi den naturlige feedback-loop, der ellers ville sikre, at de bedste løsninger vinder.
-            </p>
+          <div className="mt-12 bg-gray-50 border border-gray-200 rounded-3xl p-8">
+            <p className="font-medium text-[#002B5B]">Officielle kilder:</p>
+            <div className="mt-4 space-y-3">
+              <a 
+                href="https://www.kl.dk/media/ugjnkfvp/benspaend-fra-staten-skaber-unoedvendigt-bureaukrati-i-kommunerne-maj2023.pdf" 
+                target="_blank"
+                className="block text-[#002B5B] hover:underline"
+              >
+                KL – Benspænd fra staten skaber unødvendigt bureaukrati
+              </a>
+              <a 
+                href="https://www.rigsrevisionen.dk/" 
+                target="_blank"
+                className="block text-[#002B5B] hover:underline"
+              >
+                Rigsrevisionen – Revision af statens administration
+              </a>
+            </div>
           </div>
         </div>
       </div>
