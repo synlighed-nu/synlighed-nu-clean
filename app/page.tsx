@@ -30,12 +30,9 @@ export default function SynlighedNu() {
       <VotingSection />
       <BigMoves />
 
-      {/* ØKONOMI som klikbart badge */}
+      {/* ØKONOMI */}
       <div className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200">
-        <a 
-          href="/økonomi"
-          className="block group"
-        >
+        <a href="/økonomi" className="block group">
           <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#002B5B]/40 transition-all flex items-center justify-between">
             <div>
               <div className="inline-block px-5 py-1.5 bg-[#002B5B] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
@@ -53,12 +50,9 @@ export default function SynlighedNu() {
         </a>
       </div>
 
-      {/* GRØN OMSTILLING som klikbart badge */}
+      {/* GRØN OMSTILLING */}
       <div className="max-w-4xl mx-auto px-6 pb-16">
-        <a 
-          href="/grøn-omstilling"
-          className="block group"
-        >
+        <a href="/grøn-omstilling" className="block group">
           <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#002B5B]/40 transition-all flex items-center justify-between">
             <div>
               <div className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
@@ -80,7 +74,7 @@ export default function SynlighedNu() {
         <ConcreteAreas />
       </section>
 
-      {/* Kritisk område bokse */}
+      {/* KRITISKE OMRÅDER */}
       <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
         <a href="/kreativitet" className="group block border-2 border-gray-200 hover:border-[#E30613] rounded-3xl p-8 transition-all">
           <div className="inline-block px-4 py-1 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
@@ -95,11 +89,11 @@ export default function SynlighedNu() {
             KRITISK OMRÅDE
           </div>
           <h3 className="text-3xl font-bold mb-3">Demokrati 2.0</h3>
-          <p className="text-gray-600">Det gamle demokrati er blevet misbrugt fordi vi ikke har udviklet det. Vi risikerer at ende i idiokrati.</p>
+          <p className="text-gray-600">Det gamle demokrati er ikke blevet opdateret i over 250 år. Det er på tide at tage det næste skridt.</p>
         </a>
       </div>
 
-      {/* VORES GRUNDLAG – lille teaser */}
+      {/* VORES GRUNDLAG – stærkere teaser */}
       <div className="max-w-4xl mx-auto px-6 pb-16">
         <a 
           href="/vores-grundlag" 
@@ -111,11 +105,11 @@ export default function SynlighedNu() {
                 VORES GRUNDLAG
               </div>
               <h2 className="text-3xl font-bold tracking-tighter group-hover:text-[#001B3D]">
-                Vores grundlag
+                Demokrati 2.0 er ikke en endestation
               </h2>
               <p className="text-gray-600 mt-3 max-w-md">
-                Synlighed først. Agil reasoning. Klare axiom.<br />
-                Det er det fundament vi bygger på.
+                Det er det næste naturlige skridt i udviklingen af demokratiet.<br />
+                Synlighed først. Agil reasoning. Klare axiom.
               </p>
             </div>
             <span className="text-4xl text-gray-300 group-hover:text-[#002B5B] transition-colors">→</span>
