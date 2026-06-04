@@ -58,11 +58,20 @@ Du behøver ikke at acceptere, at det er sådan det er. Du kan kræve at se regn
           </p>
 
           <h2 className="text-3xl font-bold mt-16 mb-6">Derfor er vores grundlag simpelt</h2>
+          
           <ul className="space-y-6 text-xl">
             <li><strong>Synlighed først</strong> – alle skal kunne se, hvor pengene går hen og hvilke trade-offs der bliver truffet.</li>
             <li><strong>Agil reasoning</strong> – når virkeligheden er kendt, skal vi kunne handle hurtigt og fornuftigt.</li>
             <li><strong>Axiom</strong> – nogle få grundlæggende regler der aldrig må forhandles væk.</li>
           </ul>
+
+          {/* NYT AXIOM */}
+          <div className="mt-10 p-6 border-l-4 border-[#002B5B] bg-gray-50">
+            <p className="font-semibold text-xl">Axiom – De uforhandlelige grundvilkår</p>
+            <p className="mt-2 text-lg">
+              Vi ødelægger ikke vores drikkevand, vores natur eller de næste generationers evne til at tænke selv.
+            </p>
+          </div>
 
           <p className="mt-12 text-2xl font-semibold">
             Vi ser Demokrati 2.0 som det næste naturlige skridt i udviklingen af demokratiet.
