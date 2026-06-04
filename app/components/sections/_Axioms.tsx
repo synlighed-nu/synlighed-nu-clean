@@ -9,13 +9,13 @@ export default function Axioms() {
   const [isPaused, setIsPaused] = useState(false);
   const publicAxioms = AXIOMS.filter(a => a.visibility === "public");
 
-  // Automatisk rotation
+  // Automatisk rotation hvert 5. sekund
   useEffect(() => {
     if (isPaused || publicAxioms.length === 0) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % publicAxioms.length);
-    }, 5000); // Skifter hvert 5. sekund
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [isPaused, publicAxioms.length]);
