@@ -15,11 +15,11 @@ Vi bruger milliarder af kroner på at rense grundvandet og lave nye boringer, i 
 
 Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
 
-Fokus: Vi vælger at forurene vores drikkevand med pesticider og betaler derefter milliarder for at rense det op. I stedet for at beskytte grundvandet, vælger vi at forurene det og så betale for oprensning bagefter.
+Fokus: Vi vælger at forurene vores drikkevand med pesticider og betaler derefter milliarder for at rense det op. I stedet for at beskytte grundvandet, vælger vi at forurene det og så betale for oprensning bagefter. Det er et grundlæggende Axiom-brud.
 
 Et bedre alternativ er at indføre en langt stærkere beskyttelse af grundvandet og reducere brugen af pesticider markant over de næste fem år.
 
-Hvorfor er det et problem i dag? Fordi pesticider forurener vores drikkevand, vi renser i stedet for at forebygge, det koster milliarder i oprensning og nye boringer, og vi risikerer langsigtede helbredseffekter for befolkningen.
+Hvorfor er det et problem i dag? Fordi vi systematisk ødelægger vores egen drikkevandsforsyning, vi renser i stedet for at forebygge, det koster milliarder i oprensning og nye boringer, og vi risikerer langsigtede helbredseffekter for befolkningen. Rent drikkevand er et af de grundlæggende Axiomer, der aldrig må forhandles væk.
   `;
 
   return (
@@ -46,13 +46,14 @@ Hvorfor er det et problem i dag? Fordi pesticider forurener vores drikkevand, vi
             og betaler derefter milliarder for at rense det op.
           </p>
           <p className="mt-4 text-white/90">
-            I stedet for at beskytte grundvandet, forurener vi det og betaler bagefter for oprensning.
+            I stedet for at beskytte grundvandet, forurener vi det og betaler bagefter for oprensning. 
+            Det er et grundlæggende Axiom-brud.
           </p>
         </div>
 
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-2xl font-medium">
-            Pesticidrester findes i over halvdelen af alle boringer.
+            Pesticidrester findes i over halvdelen af alle boringer i Danmark.
           </p>
           
           <p>
@@ -63,18 +64,20 @@ Hvorfor er det et problem i dag? Fordi pesticider forurener vores drikkevand, vi
             Vi forurener vores egen drikkevands-kilde – og betaler dyrt for at rense den bagefter.
           </p>
 
-          <h3 className="text-2xl font-semibold mt-12 mb-6">Et bedre alternativ</h3>
+          <h3 className="text-2xl font-semibold mt-12 mb-4">Et bedre alternativ</h3>
           <p>
             Over de næste 5 år kan vi gradvist indføre en langt stærkere beskyttelse af grundvandet 
-            og reducere brugen af pesticider markant.
+            og reducere brugen af pesticider markant. Rent drikkevand er en grundlæggende ressource, 
+            der ikke bør kompromitteres af kortsigtede hensyn.
           </p>
 
-          <h3 className="text-xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
+          <h3 className="text-2xl font-semibold mt-12 mb-4">Hvorfor er det et problem i dag?</h3>
           <ul className="list-disc pl-6 space-y-3">
-            <li>Pesticider forurener vores drikkevand</li>
-            <li>Vi renser i stedet for at forebygge</li>
+            <li>Vi ødelægger systematisk vores egen drikkevandsforsyning</li>
+            <li>Vi renser i stedet for at forebygge – det er dyrt og ineffektivt</li>
             <li>Det koster milliarder i oprensning og nye boringer</li>
             <li>Vi risikerer langsigtede helbredseffekter for befolkningen</li>
+            <li>Det er i strid med et af vores grundlæggende Axiomer: Vi må ikke ødelægge vores drikkevand</li>
           </ul>
 
           <div className="mt-12 bg-gray-50 border border-gray-200 rounded-3xl p-8">
