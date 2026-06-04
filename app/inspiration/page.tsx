@@ -10,10 +10,11 @@ const SpeakerButton = dynamic(
 
 export default function InspirationPage() {
   const pageText = `
-    Vi er ikke alene om at ville et mere gennemsigtigt, agilt og fornuftigt samfund. 
-    Overalt opstår der initiativer, der eksperimenterer med nye måder at organisere, tænke og finansiere på.
+Vi er ikke alene om at ville et mere gennemsigtigt, agilt og fornuftigt samfund. Overalt opstår der initiativer, der eksperimenterer med nye måder at organisere, tænke og finansiere på.
 
-    Her er fire konkrete eksempler på projekter, der arbejder med principper som åbenhed, kreativitet og systemtænkning.
+Disse eksempler viser, at det er muligt at arbejde med fuld synlighed, agil reasoning og klare principper i praksis – uden at vente på, at det store system ændrer sig først.
+
+Fokus: Vi viser disse initiativer, fordi de demonstrerer, at vores principper ikke bare er teori. De kan realiseres her og nu af almindelige mennesker og organisationer, der vælger en anden vej end det bureaukratiske system.
   `;
 
   return (
@@ -29,7 +30,21 @@ export default function InspirationPage() {
             endingAxiomIndex={2} 
           />
         </div>
-        
+
+        {/* FOKUS BOKS */}
+        <div className="bg-[#002B5B] text-white rounded-3xl p-8 mb-12">
+          <div className="uppercase tracking-[2px] text-sm font-semibold mb-3 text-white/70">
+            Fokus
+          </div>
+          <p className="text-2xl font-semibold leading-tight">
+            Vi viser disse initiativer, fordi de demonstrerer, <br />
+            at vores principper kan realiseres her og nu.
+          </p>
+          <p className="mt-4 text-white/90">
+            De arbejder med fuld synlighed, agil reasoning og klare principper – uden at vente på det store system.
+          </p>
+        </div>
+
         <p className="text-xl text-gray-600 mb-12">
           Vi er ikke alene om at ville et mere gennemsigtigt, agilt og fornuftigt samfund. 
           Overalt opstår der initiativer, der eksperimenterer med nye måder at organisere, tænke og finansiere på.
@@ -68,7 +83,7 @@ export default function InspirationPage() {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-3xl p-8">
-            <h4 className="font-semibold mb-3">4. Drakonheart — Et magisk læringsfællesskab for alle børn</h4>
+            <h4 className="font-semibold mb-3">4. Drakonheart – Et magisk læringsfællesskab for alle børn</h4>
             <p className="text-gray-600">
               Et inspirerende projekt der skaber kreative og magiske læringsmiljøer for børn.
             </p>
@@ -81,7 +96,7 @@ export default function InspirationPage() {
 
         <p className="text-center text-gray-600 mt-16 max-w-2xl mx-auto">
           Disse projekter viser, at det er muligt at skabe forandring gennem gennemsigtighed, kreativitet og praktisk agilitet. 
-          Vi vil gerne lære af dem og bringe de bedste elementer med ind i arbejdet med <strong>Demokrati 2.0</strong>.
+          De er konkrete eksempler på, at vores principper kan fungere i virkeligheden – og de inspirerer os i arbejdet med <strong>Demokrati 2.0</strong>.
         </p>
 
       </div>
