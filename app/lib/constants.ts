@@ -36,6 +36,11 @@ export const AXIOMS: AxiomItem[] = [
     text: "Kreativitet skaber løsninger – systemet kvæler den.",
     visibility: "public"
   },
+  // NYT SAMMENBINDEDE AXIOM
+  {
+    text: "Vi ødelægger ikke vores drikkevand, vores natur eller de næste generationers evne til at tænke selv.",
+    visibility: "public"
+  },
 ];
 
 export const DEV_VERSION = "DEV 28-05-2026 010";
