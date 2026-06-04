@@ -8,7 +8,7 @@ const SpeakerButton = dynamic(
   { ssr: false }
 );
 
-export default function VoresGrundlagPage() {
+export default function VoursGrundlagPage() {
   const pageText = `
 Vores grundlag handler om tre ting: Synlighed først, Agil reasoning og klare Axiom.
 
@@ -23,6 +23,8 @@ Synlighed først – alle skal kunne se, hvor pengene går hen og hvilke trade-o
 Agil reasoning – når virkeligheden er kendt, skal vi kunne handle hurtigt og fornuftigt.
 
 Axiom – nogle få grundlæggende regler der aldrig må forhandles væk.
+
+Et af de vigtigste Axiomer er: Vi ødelægger ikke vores drikkevand, vores natur eller de næste generationers evne til at tænke selv.
 
 Vi ser Demokrati 2.0 som det næste naturlige skridt i udviklingen af demokratiet. Ikke som en endelig model, men som en nødvendig opgradering af det system, vi har arvet. Uden løbende udvikling bevæger vi os mod idiokrati.
 
@@ -65,11 +67,14 @@ Du behøver ikke at acceptere, at det er sådan det er. Du kan kræve at se regn
             <li><strong>Axiom</strong> – nogle få grundlæggende regler der aldrig må forhandles væk.</li>
           </ul>
 
-          {/* NYT AXIOM */}
-          <div className="mt-10 p-6 border-l-4 border-[#002B5B] bg-gray-50">
-            <p className="font-semibold text-xl">Axiom – De uforhandlelige grundvilkår</p>
-            <p className="mt-2 text-lg">
+          {/* NYT SAMMENBINDEDE AXIOM - mere integreret */}
+          <div className="mt-10 border-l-4 border-[#002B5B] pl-6">
+            <p className="font-semibold text-xl">Et af de vigtigste Axiomer:</p>
+            <p className="mt-2 text-xl font-medium text-[#002B5B]">
               Vi ødelægger ikke vores drikkevand, vores natur eller de næste generationers evne til at tænke selv.
+            </p>
+            <p className="mt-2 text-gray-600">
+              Dette princip binder mange af vores andre principper sammen. Det handler om langsigtet ansvar.
             </p>
           </div>
 
