@@ -5,7 +5,6 @@ import React from 'react';
 import Nav from './components/common/_Nav';
 import Axioms from './components/sections/_Axioms';
 import WhySection from './components/sections/_WhySection';
-import VotingSection from './components/sections/_VotingSection';
 import BigMoves from './components/sections/_BigMoves';
 import ConcreteAreas from './components/sections/_ConcreteAreas';
 import Footer from './components/common/_Footer';
@@ -27,7 +26,6 @@ export default function SynlighedNu() {
 
       <Axioms />
       <WhySection />
-      <VotingSection />
       <BigMoves />
 
       {/* ØKONOMI */}
@@ -93,7 +91,27 @@ export default function SynlighedNu() {
         </a>
       </div>
 
-      {/* VORES GRUNDLAG – stærkere teaser */}
+      {/* AFSTEMNING – teaser */}
+      <div className="max-w-4xl mx-auto px-6 pb-8">
+        <a href="/afstemning" className="block group">
+          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:border-[#002B5B]/40 transition-all flex items-center justify-between">
+            <div>
+              <div className="inline-block px-5 py-1.5 bg-[#E30613] text-white text-sm font-semibold tracking-widest rounded-full mb-4">
+                AFSTEMNING
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter group-hover:text-[#001B3D]">
+                Hvad mener du er vigtigst?
+              </h2>
+              <p className="text-gray-600 mt-3 max-w-md">
+                Vælg de 3 områder, du mener bør prioriteres først. Din stemme tæller.
+              </p>
+            </div>
+            <span className="text-4xl text-gray-300 group-hover:text-[#002B5B] transition-colors">→</span>
+          </div>
+        </a>
+      </div>
+
+      {/* VORES GRUNDLAG – teaser */}
       <div className="max-w-4xl mx-auto px-6 pb-16">
         <a 
           href="/vores-grundlag" 
