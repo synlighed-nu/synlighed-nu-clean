@@ -8,7 +8,7 @@ const SpeakerButton = dynamic(
   { ssr: false }
 );
 
-export default function VoursGrundlagPage() {
+export default function VoresGrundlagPage() {
   const pageText = `
 Vores grundlag handler om tre ting: Synlighed først, Agil reasoning og klare Axiom.
 
@@ -24,13 +24,11 @@ Agil reasoning – når virkeligheden er kendt, skal vi kunne handle hurtigt og 
 
 Axiom – nogle få grundlæggende regler der aldrig må forhandles væk.
 
-Hurtigere. Bedre. Billigere. er ikke bare en slogan. Det er et værktøj til at vurdere, om en løsning faktisk forbedrer systemet på en holdbar måde. Hvis noget kun bliver bedre på én parameter, mens de to andre forværres, er det sjældent en reel forbedring – det er blot en forskydning af problemet.
+Hurtigere. Bedre. Billigere. er ikke bare en slogan. Det er et værktøj til at vurdere, om en løsning faktisk forbedrer systemet på en holdbar måde.
 
 Vi ser Demokrati 2.0 som det næste naturlige skridt i udviklingen af demokratiet. Ikke som en endelig model, men som en nødvendig opgradering af det system, vi har arvet. Uden løbende udvikling bevæger vi os mod idiokrati.
 
 Vi er ikke bedrevidende. Vi er nysgerrige. Vi vil ikke erstatte det gamle system – vi vil gøre det gennemsigtigt, så det kan blive bedre.
-
-Du behøver ikke at acceptere, at det er sådan det er. Du kan kræve at se regnskabet. Du kan stille de rigtige spørgsmål. Og du kan være med til at bygge noget, der er hurtigere, bedre og billigere – for alle.
   `;
 
   return (
@@ -74,6 +72,30 @@ Du behøver ikke at acceptere, at det er sådan det er. Du kan kræve at se regn
               Vi ødelægger ikke vores drikkevand, vores natur eller de næste generationers evne til at tænke selv.
             </p>
           </div>
+
+          {/* NYT AFSNIT: GENERATIONER */}
+          <section className="mt-16 border-t border-gray-200 pt-10">
+            <h2 className="text-3xl font-bold tracking-tighter mb-6">Et fælles sprog på tværs af generationer</h2>
+            
+            <div className="prose prose-lg text-gray-700">
+              <p>
+                De unge er ofte mere agile og hurtigere til at se nye muligheder. De ældre har derimod lært at navigere i det system, der er – og har tilpasset sig dets begrænsninger over tid. Begge perspektiver har værdi.
+              </p>
+              
+              <p>
+                Problemet opstår, når de to generationer ikke forstår hinandens udgangspunkt. Så bliver debatten let til enten forsvar for status quo eller krav om afvikling.
+              </p>
+
+              <p className="font-semibold">
+                Agil reasoning og klare Axiomer kan fungere som et fælles sprog på tværs af alder. 
+                De tvinger os til at stille de samme grundlæggende spørgsmål: Hvad er synligt? Hvad virker i praksis? Hvad er ikke til forhandling?
+              </p>
+
+              <p>
+                På den måde kan vi bevæge os væk fra polariseringen mellem "bevar alt" og "riv det hele ned" – og i stedet arbejde med reel udvikling af det, vi allerede har.
+              </p>
+            </div>
+          </section>
 
           {/* Ny kort forklaring af sloganet */}
           <div className="mt-10">
