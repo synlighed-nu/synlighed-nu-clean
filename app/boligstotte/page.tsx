@@ -30,17 +30,14 @@ Et bedre alternativ er at afvikle boligstøtten gradvist over de næste fem år,
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         
-        {/* Titel + DEV + SpeakerButton */}
         <div className="flex items-center gap-4 mb-8">
           <h1 className="text-5xl font-bold tracking-tighter">Boligstøtte</h1>
-          <span className="text-red-600 font-bold text-sm bg-red-100 px-3 py-1 rounded-full whitespace-nowrap">
-            DEV 28-05-2026 003 — Kun til test
-          </span>
+          {/* DEV-badge er fjernet */}
         </div>
 
         <SpeakerButton text={pageText} />
 
-        {/* FOKUS BOKS - Tidligt på siden */}
+        {/* FOKUS BOKS */}
         <div className="mt-10 bg-[#002B5B] text-white rounded-3xl p-8">
           <div className="uppercase tracking-[2px] text-sm font-semibold mb-3 text-white/70">
             Fokus
