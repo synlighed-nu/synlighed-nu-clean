@@ -17,6 +17,14 @@ Demokrati har altid udviklet sig. Fra enevælde til repræsentativt demokrati. F
 
 I dag står vi over for nye problemer: manglende gennemsigtighed, langsommelighed og beslutninger, der ikke længere afspejler virkeligheden. Derfor er Demokrati 2.0 ikke en færdig løsning – det er det næste naturlige skridt.
 
+De unge er ofte mere agile og hurtigere til at se nye muligheder. De ældre har lært at navigere i det system, der er – og har tilpasset sig dets begrænsninger over tid. Begge perspektiver har værdi.
+
+Når de to generationer ikke forstår hinandens udgangspunkt, bliver debatten let til enten forsvar for status quo eller krav om afvikling.
+
+Agil reasoning og klare Axiomer kan fungere som et fælles sprog på tværs af alder. De tvinger os til at stille de samme grundlæggende spørgsmål: Hvad er synligt? Hvad virker i praksis? Hvad er ikke til forhandling?
+
+På den måde kan vi bevæge os væk fra polariseringen mellem "bevar alt" og "riv det hele ned" – og i stedet arbejde med reel udvikling af demokratiet.
+
 Uden løbende udvikling risikerer vi at bevæge os mod en blanding af idiokrati og kontrol. Derfor har vi brug for tre grundlæggende opgraderinger: fuld synlighed, agil reasoning og klare, urokkelige axioms.
   `;
 
@@ -65,6 +73,30 @@ Uden løbende udvikling risikerer vi at bevæge os mod en blanding af idiokrati 
               <p className="text-gray-600">Nogle få grundlæggende regler der aldrig må forhandles væk.</p>
             </div>
           </div>
+
+          {/* NYT AFSNIT: GENERATIONER */}
+          <section className="mt-16 border-t border-gray-200 pt-10">
+            <h2 className="text-3xl font-bold tracking-tighter mb-6">Et fælles sprog på tværs af generationer</h2>
+            
+            <div className="prose prose-lg text-gray-700">
+              <p>
+                De unge er ofte mere agile og hurtigere til at se nye muligheder. De ældre har lært at navigere i det system, der er – og har tilpasset sig dets begrænsninger over tid. Begge perspektiver har værdi.
+              </p>
+              
+              <p>
+                Når de to generationer ikke forstår hinandens udgangspunkt, bliver debatten let til enten forsvar for status quo eller krav om afvikling.
+              </p>
+
+              <p className="font-semibold">
+                Agil reasoning og klare Axiomer kan fungere som et fælles sprog på tværs af alder. 
+                De tvinger os til at stille de samme grundlæggende spørgsmål: Hvad er synligt? Hvad virker i praksis? Hvad er ikke til forhandling?
+              </p>
+
+              <p>
+                På den måde kan vi bevæge os væk fra polariseringen mellem "bevar alt" og "riv det hele ned" – og i stedet arbejde med reel udvikling af demokratiet.
+              </p>
+            </div>
+          </section>
 
           <p className="mt-12 text-lg text-gray-600">
             Uden løbende udvikling bevæger vi os langsomt mod en blanding af <strong>Idiokrati</strong> og <strong>1984</strong> – 
