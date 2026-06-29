@@ -24,7 +24,17 @@ Agil reasoning – når virkeligheden er kendt, skal vi kunne handle hurtigt og 
 
 Axiom – nogle få grundlæggende regler der aldrig må forhandles væk.
 
-Hurtigere. Bedre. Billigere. er ikke bare en slogan. Det er et værktøj til at vurdere, om en løsning faktisk forbedrer systemet på en holdbar måde.
+Gennem historien har samfund gentagne gange vist en tendens til at undgå at forholde sig til forhold, der var ubehagelige eller vanskelige at håndtere. Når fakta bliver for udfordrende, bliver de ofte ikke anerkendt som grundlæggende problemer. I stedet tilpasser man sig det bestående – og det bestående bliver hurtigt til det normale.
+
+Dette mønster er ikke nyt. Det har vist sig i mange forskellige sammenhænge og til forskellige tider. Når ubehagelige sandheder ikke får lov til at være Axiomer, mister man evnen til at træffe de rigtige beslutninger på længere sigt. Resultatet bliver ofte, at de samme grundlæggende fejl gentages, blot i nye former.
+
+Her spiller kreativitet en afgørende rolle. Kreativitet handler ikke primært om at finde på nye idéer, men om viljen til at se virkeligheden, som den er – også når den er ubehagelig – og om at turde begå fejl i processen. Når frygten for at fejle bliver større end viljen til at forstå, stopper udviklingen. Omvendt opstår reel udvikling, når man tør erkende det, der er svært, og handle derefter.
+
+Det er også derfor, vi ser på det nuværende demokrati som Demokrati 1.0. Det er ikke dårligt i sig selv, men det er et system, der i stigende grad mangler evnen til at håndtere de udfordringer, vi står overfor i dag.
+
+Det er her Synlighed, Agil reasoning og klare Axiomer bliver centrale. De er ikke kun redskaber til bedre beslutninger. De er også en måde at styrke evnen til at erkende det, der er svært – og dermed skabe grundlag for reel udvikling i stedet for gentagelse.
+
+"Hurtigere. Bedre. Billigere." er ikke bare en slogan. Det er et værktøj til at vurdere, om en løsning faktisk forbedrer systemet på en holdbar måde.
 
 Vi ser Demokrati 2.0 som det næste naturlige skridt i udviklingen af demokratiet. Ikke som en endelig model, men som en nødvendig opgradering af det system, vi har arvet. Uden løbende udvikling bevæger vi os mod idiokrati.
 
@@ -73,31 +83,34 @@ Vi er ikke bedrevidende. Vi er nysgerrige. Vi vil ikke erstatte det gamle system
             </p>
           </div>
 
-          {/* NYT AFSNIT: GENERATIONER */}
+          {/* NYT AFSNIT: HVORFOR VI GENTAGER DE SAMME FEJL */}
           <section className="mt-16 border-t border-gray-200 pt-10">
-            <h2 className="text-3xl font-bold tracking-tighter mb-6">Et fælles sprog på tværs af generationer</h2>
+            <h2 className="text-3xl font-bold tracking-tighter mb-6">Hvorfor vi gentager de samme fejl</h2>
             
             <div className="prose prose-lg text-gray-700">
               <p>
-                De unge er ofte mere agile og hurtigere til at se nye muligheder. De ældre har derimod lært at navigere i det system, der er – og har tilpasset sig dets begrænsninger over tid. Begge perspektiver har værdi.
-              </p>
-              
-              <p>
-                Problemet opstår, når de to generationer ikke forstår hinandens udgangspunkt. Så bliver debatten let til enten forsvar for status quo eller krav om afvikling.
-              </p>
-
-              <p className="font-semibold">
-                Agil reasoning og klare Axiomer kan fungere som et fælles sprog på tværs af alder. 
-                De tvinger os til at stille de samme grundlæggende spørgsmål: Hvad er synligt? Hvad virker i praksis? Hvad er ikke til forhandling?
+                Gennem historien har samfund gentagne gange vist en tendens til at undgå at forholde sig til forhold, der var ubehagelige eller vanskelige at håndtere. Når fakta bliver for udfordrende, bliver de ofte ikke anerkendt som grundlæggende problemer. I stedet tilpasser man sig det bestående – og det bestående bliver hurtigt til det normale.
               </p>
 
               <p>
-                På den måde kan vi bevæge os væk fra polariseringen mellem "bevar alt" og "riv det hele ned" – og i stedet arbejde med reel udvikling af det, vi allerede har.
+                Dette mønster er ikke nyt. Det har vist sig i mange forskellige sammenhænge og til forskellige tider. Når ubehagelige sandheder ikke får lov til at være Axiomer, mister man evnen til at træffe de rigtige beslutninger på længere sigt. Resultatet bliver ofte, at de samme grundlæggende fejl gentages, blot i nye former.
+              </p>
+
+              <p>
+                Her spiller <strong>kreativitet</strong> en afgørende rolle. Kreativitet handler ikke primært om at finde på nye idéer, men om viljen til at se virkeligheden, som den er – også når den er ubehagelig – og om at turde begå fejl i processen. Når frygten for at fejle bliver større end viljen til at forstå, stopper udviklingen. Omvendt opstår reel udvikling, når man tør erkende det, der er svært, og handle derefter.
+              </p>
+
+              <p>
+                Det er også derfor, vi ser på det nuværende demokrati som Demokrati 1.0. Det er ikke dårligt i sig selv, men det er et system, der i stigende grad mangler evnen til at håndtere de udfordringer, vi står overfor i dag.
+              </p>
+
+              <p>
+                Det er her Synlighed, Agil reasoning og klare Axiomer bliver centrale. De er ikke kun redskaber til bedre beslutninger. De er også en måde at styrke evnen til at erkende det, der er svært – og dermed skabe grundlag for reel udvikling i stedet for gentagelse.
               </p>
             </div>
           </section>
 
-          {/* Ny kort forklaring af sloganet */}
+          {/* Forklaring af sloganet */}
           <div className="mt-10">
             <p className="text-xl font-semibold">
               "Hurtigere. Bedre. Billigere." er ikke bare en slogan.
